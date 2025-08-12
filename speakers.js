@@ -25,7 +25,7 @@ export const Sessions = {
     },
     "MatheusGuimares": {
         name: "Matheus Guimarães",
-        jobTitle: "Senior Developer Advocate, UK/IR",
+        jobTitle: "Senior Developer Advocate, UK/IR @ AWS",
         bio: (
             <>
                 <p>Hey there 👋 I’m Matheus Guimarães—also known online as @codingmatheus— a .NET and microservices specialist, international keynote speaker, and Developer Advocate at AWS.</p>
