@@ -28,11 +28,7 @@ export const Sessions = {
         jobTitle: "Senior Developer Advocate, UK/IR @ AWS",
         bio: (
             <>
-                <p>Hey there 👋 I’m Matheus Guimarães—also known online as @codingmatheus— a .NET and microservices specialist, international keynote speaker, and Developer Advocate at AWS.</p>
-                <p>I’ve been building software for over 20 years, ever since my first job as a junior video game programmer back when C++ ruled the world and .NET was just a glimmer on the horizon. I was one of the early adopters of .NET (even before my first full-time job!) and it’s been a passion ever since—guiding my path through roles like developer, tech lead, architect, CTO, and startup founder.</p>
-                <p>Over the years, I’ve helped companies of all sizes modernize and scale their systems—from scrappy startups to global enterprises like Novartis, McLaren, Dewalt, PRS For Music, Coca Cola and more. I’ve led digital transformations, migrated legacy systems, and designed cloud-native architectures with a hands-on, people-first approach.</p>
-                <p>Today, I share what I learn with developers around the world as @codingmatheus—through talks, blogs, videos, and very geeky whiteboard sessions. I’ve spoken at conferences across the globe (including keynotes), and I’m passionate about helping others grow in this industry that gave me so much.</p>
-                <p>Outside of tech, I’m a gamer (Final Fantasy forever), karaoke lover, swimmer, musician, and occasional actor. I believe creativity and code go hand in hand—and there’s always more to explore.</p>
+                <p>Matheus Guimaraes (@codingmatheus) is a digital transformation specialist focused on Al adoption and microservices architecture. An international keynote speaker with over 20 years in tech, he's worn many hats-from junior game programmer to CTO and tech co-founder. Matheus has helped companies of all sizes modernize and. scale their systems, leading transformation programs and designing cloud-native, Al-ready architectures. Today, he shares his expertise globally through talks, blogs, and videos, passionate about helping others grow in the industry. Outside his professional life, he's a gamer, swimmer, musician, and firm believer in the powerful intersection of sports creativity and technology.</p>
             </>
         ),
         talkTitle:
