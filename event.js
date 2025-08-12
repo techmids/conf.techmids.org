@@ -37,7 +37,12 @@ export const sponsorTiers = {
     bronze: {
         name: "Bronze Sponsors",
         sponsors: [
-             {
+            {
+                name: "Bluetel",
+                image: "/sponsors/Bluetel.png",
+                url: "https://www.bluetel.co.uk/"
+            },
+            {
                 name: "Spinks",
                 image: "/sponsors/Spinks.png",
                 url: "https://www.wearespinks.com/"
