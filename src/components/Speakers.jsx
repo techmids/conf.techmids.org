@@ -4,6 +4,7 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import {Sessions} from "../../speakers";
+import { EVENT } from 'event';
 
 export function Speakers({sharing = false}) {
   let id = useId()
@@ -127,6 +128,25 @@ export function Speakers({sharing = false}) {
                     </div>
                   </a>
               ))}
+              
+              {EVENT.speakersTBC && <div className="flex flex-col items-center justify-center">
+                  <div className="group relative h-[10rem] sm:h-[17.5rem]] md:h-[17.5rem] lg:h-[17.5rem] transform overflow-hidden rounded-4xl border-2 border-dashed border-btw-cyan-dark flex items-center justify-center">
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 100 100"
+                      className="w-3/4 h-3/4 sm:w-4/5 sm:h-4/5 text-btw-cyan-dark"
+                    >
+                      <path d="M50 15v70M15 50h70" stroke="currentColor" strokeWidth="10" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                  <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900 text-center">
+                    More Speakers
+                  </h3>
+                  <p className="mt-1 text-base tracking-tight text-slate-500 text-center">
+                    To be announced soon
+                  </p>
+                </div>
+              }
             </div>
         </Container>
       </section>

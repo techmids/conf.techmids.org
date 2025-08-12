@@ -11,6 +11,7 @@ export const EVENT = {
     titoId: 'tech-events-birmingham/techmids-conf-2025',
     CFPLink: "https://www.papercall.io/techmids-conf-2025",
     CFPOpen: true,
+    speakersTBC: true,
     capacity: 250,
     tagline: "",
 }
@@ -19,7 +20,7 @@ export const EVENT = {
 export const AVAILABLE_INFORMATION = {
     scheduleAvailable: false,
     locationAvailable: true, 
-    speakersAvailable: false,
+    speakersAvailable: true,
     sponsorsAvailable: true,
 }
 
