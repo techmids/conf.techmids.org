@@ -129,7 +129,7 @@ export function Speakers({sharing = false}) {
                   </a>
               ))}
               
-              {EVENT.speakersTBC && <div className="flex flex-col items-center justify-center">
+              {EVENT.speakersTBC && <div className="flex flex-col">
                   <div className="group relative h-[10rem] sm:h-[17.5rem]] md:h-[17.5rem] lg:h-[17.5rem] transform overflow-hidden rounded-4xl border-2 border-dashed border-btw-cyan-dark flex items-center justify-center">
                     <svg
                       aria-hidden="true"
@@ -139,10 +139,10 @@ export function Speakers({sharing = false}) {
                       <path d="M50 15v70M15 50h70" stroke="currentColor" strokeWidth="10" strokeLinecap="round" />
                     </svg>
                   </div>
-                  <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900 text-center">
+                  <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
                     More Speakers
                   </h3>
-                  <p className="mt-1 text-base tracking-tight text-slate-500 text-center">
+                  <p className="mt-1 text-base tracking-tight text-slate-500">
                     To be announced soon
                   </p>
                 </div>
