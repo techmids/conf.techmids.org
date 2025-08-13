@@ -50,20 +50,14 @@ export function Hero() {
                       <br/> All day, full stack conference
                   </h1>
                   <div className="mt-6 space-y-6 font-display text-lg text-gray-300">
+                     
                       <p>
-                          <b>TechMids Conf is a full stack conference</b>, back for 2025!
+                          <b>TechMids Conf is a full stack conference</b>, on 14th November 2025, made up of all your favourite meetups from <b>Fusion</b>, to <b>Women in Tech</b>, to <b>Golang</b>, to <b>.NET/MAUI</b> and everything in-between.
                          
                       </p>
                       <p>
-                          Hear from world class speakers, engage in social chatter, and find
-                          out how to get involved with the community.
+                          Hear from awesome speakers - from the local community and beyond - across 3 tracks hosted in the delightful Everyman Mailbox venue, enjoy the 'hallway track', and find out how to get involved with the community.
                       </p>
-                      <p>
-                          TechMids is made up of all your favourite meetups from{' '}
-                          <b>Brum.js</b> to <b>Fusion</b>, to <b>Golang</b>, to{' '}
-                          <b>DevOps</b> and everything in-between.
-                      </p>
-                      <p>TechMids Conf is a community run, not for profit conference.</p>
                   </div>
 
               </div>
