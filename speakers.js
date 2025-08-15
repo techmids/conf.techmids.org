@@ -1,4 +1,5 @@
-import CarlyRichmondImg from "./public/speakers/MatheusGuimares.jpg"
+import MatheusGuimares from "./public/speakers/MatheusGuimares.jpg"
+import SalmaAlamNaylor from "./public/speakers/SalmaAlamNaylor.jpeg"
 
 export const Sessions = {
     "MatheusGuimares": {
@@ -16,32 +17,32 @@ export const Sessions = {
         description: (
             <></>
         ),
-        image: CarlyRichmondImg,
+        image: MatheusGuimares,
         linkedin: "https://www.linkedin.com/in/codingmatheus/",
         website: "https://codingmatheus.com/",
         sessionType: "Keynote",
         speakerCard: false,
         speakerCardImage: "",
     },
-    "MatheusGuimares": {
-        name: "Matheus Guimarães",
-        jobTitle: "Senior Developer Advocate, UK/IR @ AWS",
+    "SalmaAlamNaylor": {
+        name: "Salma Alam-Naylor",
+        jobTitle: "Head of Dev Ed @ Nordcraft",
         bio: (
             <>
-                <p>Matheus Guimaraes (@codingmatheus) is a digital transformation specialist focused on Al adoption and microservices architecture. An international keynote speaker with over 20 years in tech, he's worn many hats-from junior game programmer to CTO and tech co-founder. Matheus has helped companies of all sizes modernize and. scale their systems, leading transformation programs and designing cloud-native, Al-ready architectures. Today, he shares his expertise globally through talks, blogs, and videos, passionate about helping others grow in the industry. Outside his professional life, he's a gamer, swimmer, musician, and firm believer in the powerful intersection of sports creativity and technology.</p>
+                <p>I write code for your entertainment. I help developers build cool stuff by writing blog posts, making videos, coding live on the internet, and publishing open source projects. After a career as a music teacher and comedian, I transitioned to technology in 2014, working as a front end developer and tech lead for startups, agencies and global e-commerce, moving to Developer Experience and Developer Education in 2021. Active in the developer community, I am a GitHub Star, a former Microsoft MVP for Developer Technologies (2021-2025), winner of the Jamstack Conf Community Creator Award 2021, and a partnered Twitch streamer. I also make videos on YouTube about tech and the history of The Internet.</p>
             </>
         ),
         talkTitle:
-            "TBC",
+            "An Introduction to the World Wide Web for Very Senior Programmers",
         description: (
-            <></>
+            <>As we witness the much-anticipated release of HTML 2.0, there is no better time to surf the World Wide Web. But how did we get here? And what may the future hold? And why are we still writing HTML documents using text in 1995?</>
         ),
-        image: CarlyRichmondImg,
-        linkedin: "https://www.linkedin.com/in/codingmatheus/",
-        website: "https://codingmatheus.com/",
-        youtube: "https://www.youtube.com/@codingmatheus",
+        image: SalmaAlamNaylor,
+        linkedin: "https://www.linkedin.com/in/whitep4nth3r/",
+        website: "https://whitep4nth3r.com/",
+        youtube: "https://www.youtube.com/whitep4nth3r",
         sessionType: "Keynote",
         speakerCard: false,
         speakerCardImage: "",
-    },
+    }
 }
