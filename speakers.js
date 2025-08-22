@@ -1,5 +1,6 @@
 import MatheusGuimares from "./public/speakers/MatheusGuimares.jpg"
 import SalmaAlamNaylor from "./public/speakers/SalmaAlamNaylor.jpeg"
+import TomCamp from "./public/speakers/TomCamp.jpeg"
 
 export const Sessions = {
     "MatheusGuimares": {
@@ -42,6 +43,26 @@ export const Sessions = {
         website: "https://whitep4nth3r.com/",
         youtube: "https://www.youtube.com/whitep4nth3r",
         sessionType: "Keynote",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+        "TomCamp": {
+        name: "Tom Camp (AKA @Zoinkwiz)",
+        jobTitle: "Freelance Software Engineer",
+        bio: (
+            <>
+                <p>Tom Camp is a developer relations engineer and freelancer with a background in realtime APIs. Being involved in game dev as a side quest for a decade, he is a committed gamer and occasional streamer, doing both under the pseudonym @Zoinkwiz. He is the creator and maintainer of Quest Helper, the most-downloaded community plugin for Old School RuneScape, one of the world’s largest and most iconic MMORPGs.</p>    
+            </>
+        ),
+        talkTitle:
+            "One Small Favour: Growing a Gaming Plugin from Personal Project to 700k Weekly Users and a Thriving Open Source Community",
+        description: (
+            <>I’ll share how personal frustration with an in-game quest led to building a plugin that now helps 700k players weekly. I’ll cover helping developers contribute to the project, providing end-user support, and handling spicy controversies - all with some fun stories sprinkled in along the way.</>
+        ),
+        image: TomCamp,
+        linkedin: "https://www.linkedin.com/in/thomascamp333/",
+        website: "https://github.com/Zoinkwiz/quest-helper",
+        sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
     }
