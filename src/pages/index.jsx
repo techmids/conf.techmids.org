@@ -36,6 +36,7 @@ const HomePageWrapper = ({children}) => {
                 />
                 <meta name="image" property="og:image" content="https://conf.techmids.io/launch.jpg"/>
                 <meta name="google-site-verification" content="2y4-3KQkzYOn2-fx1oSZ-8AMc9gwySoCQJlji4Q1yp0" />
+                <meta name="google-site-verification" content="QbrP8JrBjruuQ7UVZ5OfaVbT7ewQlygk6zAk0hTy01I" />
                 <script dangerouslySetInnerHTML={
                     {
                         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
