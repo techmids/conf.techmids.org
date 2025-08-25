@@ -23,8 +23,8 @@ export default function Document() {
           <NextScript />
           <noscript
               dangerouslySetInnerHTML={{
-                  __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5C7RQDHK"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+                  __html: `<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXHLR8XH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>`,
               }}
           />
           </body>
