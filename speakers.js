@@ -1,5 +1,6 @@
 import MatheusGuimares from "./public/speakers/MatheusGuimares.jpg"
 import SalmaAlamNaylor from "./public/speakers/SalmaAlamNaylor.jpeg"
+import StuartClark from "./public/speakers/StuartClark.jpeg"
 import TomCamp from "./public/speakers/TomCamp.jpeg"
 
 export const Sessions = {
@@ -65,5 +66,24 @@ export const Sessions = {
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
-    }
+    },
+    "StuartClark": {
+        name: "Stuart Clark",
+        jobTitle: "Senior Developer Advocate @ Spotify",
+        bio: (
+            <>
+                <p>Stuart is a sought-after speaker, TEDx presenter, and champion for sustainable software. He’s passionate about the impact of software and AI on the climate and empowers developers to build a more sustainable future. As a leading expert in programmability and DevOps, he frequently graces industry stages worldwide, sharing his knowledge and inspiring others. He lives in Lincoln, England, with his wife, Natalie, and their son, Maddox. He plays guitar and rocks an impressive two-foot beard while drinking coffee. You can find him on social media @bigevilbeard</p>    
+            </>
+        ),
+        talkTitle:
+            "Scale or Fail as Spotify's Growth Exposed the Abstraction Paradox",    
+        description: (
+            <>At Spotify, serving 675M users, hyper-growth in 2014 created system fragmentation that made onboarding engineers difficult. Our abstractions oversimplified complexity, hindering incident response. We learned effective abstraction teaches complexity rather than hiding it.</>),
+        image: StuartClark,
+        linkedin: "https://www.linkedin.com/in/stuarteclark/",
+        website: "https://bigevilbeard.github.io/",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
 }
