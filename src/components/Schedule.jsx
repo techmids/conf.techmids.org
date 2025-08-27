@@ -96,17 +96,12 @@ function DailySchedule({ day }) {
                                         <td className="time w-1/2 whitespace-nowrap py-1 text-sm font-display font-bold sm:text-lg tracking-tight text-brand-900 sm:w-[200px]">
                                             {timeSlot.start} - {timeSlot.end}
                                         </td>
+                                        
                                         <td className="speaker hidden whitespace-nowrap px-3 text-sm font-display sm:text-lg tracking-tight text-brand-800 w-1/2 sm:w-[250px] md:table-cell">
-                                            {timeSlot.name === 'Coffee, Snacks, Sponsors, Chat!' ? (
-                                                <div className="text-sm">Coffee, Snacks, Sponsors, Chat!</div>
-                                            ) : timeSlot.name ? (
-                                                timeSlot.name
-                                            ) : (
-                                                Sessions[timeSlot.session].name
-                                            )}
+                                            {timeSlot?.name ?? "TBC"}
                                         </td>
                                         <td className="summary font-semibold text-sm sm:text-md tracking-tight text-brand-900 w-1/2 sm:w-[400px]">
-                                            {timeSlot.description ? timeSlot.description : Sessions[timeSlot.session]?.talkTitle}
+                                            {timeSlot?.description ?? "TBC"}
                                         </td>
                                     </>
                                 )}
@@ -132,7 +127,7 @@ export function Schedule() {
                         Schedule
                     </p>
                     <p className="w-full mt-4 font-display text-2xl text-brand-900">
-                        Your day will be composed of 20 minute sessions including plenty of time to chat and network.
+                        Your day will be composed of 30-40 minute sessions including plenty of time to chat, network and move between talks.
                     </p>
                 </div>
                 {Object.keys(schedule).map((track) => {

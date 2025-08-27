@@ -1,3 +1,4 @@
+/* 
 const openingWelcomeStart = '09:15AM'
 const openingWelcomeEnd = '09:35AM'
 
@@ -39,12 +40,6 @@ const session9End = '15:25PM'
 
 const closingRemarksStart = '15:30PM'
 const closingRemarksEnd = '15:50PM'
-
-
-
-
-
-
 
 const conferenceSchedule = {
     room: "The ICC",
@@ -331,444 +326,6 @@ const stageOne = {
     ]
 }
 
-//         // {
-//         //     name: 'Conference',
-//         //     description: 'Conference',
-//         //     start: '08:00AM',
-//         //     end: '17:15PM',
-//         // }
-//         {
-//             name: 'Registration',
-//             description: 'Registration',
-//             start: '08:00AM',
-//             end: '08:50AM',
-//         },
-//         {
-//             name: 'Event organisers',
-//             description: 'Opening Welcome',
-//             start: '09:00AM',
-//             end: '09:15AM',
-//         },
-//         {
-//             session: ['molly-watt'],
-//             start: '09:15AM',
-//             end: '09:45AM',
-//
-//         },
-//         {
-//             session: ["jamie-tanna"],
-//             start: '09:45AM',
-//             end: '10:15AM',
-//         },
-//         {
-//             session: ["kirsty-thomas-brown"],
-//             start: '10:15AM',
-//             end: '10:25AM',
-//         },
-//         {
-//             name: 'Coffee, Snacks, Sponsors, Chat!',
-//             description: 'Morning Break',
-//             start: '10:25AM',
-//             end: '10:55PM',
-//         },
-//         {
-//             session: ["esther-agbaje"],
-//             start: '11:00AM',
-//             end: '11:30AM',
-//         },
-//         {
-//             session: ["steve-mcdougall"],
-//             start: '11:30AM',
-//             end: '12:00PM',
-//         },
-//         {
-//             session: ['pooja-mistry'],
-//             start: '12:00PM',
-//             end: '12:30PM',
-//         },
-//         {
-//             session: ['jake-clarkson'],
-//             start: '12:30PM',
-//             end: '12:40PM',
-//         },
-//         {
-//             name: 'Lunch',
-//             description: 'Lunch',
-//             start: '12:40PM',
-//             end: '13:40PM',
-//         },
-//         {
-//             session: ["christopher-phillips", "dalwinder-bagdi"],
-//             start: '13:45PM',
-//             end: '14:15PM',
-//         },
-//         {
-//             session: ["david-simmons"],
-//             start: '14:15PM',
-//             end: '14:45PM',
-//         },
-//         {
-//             session: ['lorna-mitchell'],
-//             start: '14:45PM',
-//             end: '15:15PM',
-//         },
-//         {
-//             name: 'Coffee, Snacks, Sponsors, Chat!',
-//             description: 'Afternoon Break',
-//             start: '15:15AM',
-//             end: '15:45PM',
-//         },
-//         {
-//             session: ["matheus-guimaraes"],
-//             start: '15:50PM',
-//             end: '16:20PM',
-//         },
-//         {
-//             session: ["james-seconde"],
-//             start: '16:20PM',
-//             end: '16:50PM',
-//         },
-//         {
-//             session: ["mark-perkin", "caroline-brown"],
-//             start: '16:50AM',
-//             end: '17:10PM',
-//         },
-//         {
-//             name: 'Event organisers',
-//             description: 'Closing Remarks',
-//             start: '17:10PM',
-//             end: '17:15PM',
-//         }
-//         // {
-//         //     session: "max-woolf",
-//         //     start: '16:00PM',
-//         //     end: '16:30PM',
-//         // },
-//         // {
-//         //     name: 'Event organisers',
-//         //     description: 'Closing Remarks',
-//         //     start: '16:30PM',
-//         //     end: '16:40PM',
-//         // },
-//     ]
-
-// const auditoriumDay2 = {
-//     timeOfDay: 'Auditorium Day 2',
-//     date: '2023-06-16',
-//     summary: '08:30 - 17:00 BST',
-//     dayName: "Day 2",
-//     timeSlots: [
-//         {
-//             name: 'Registration',
-//             description: 'Registration',
-//             start: '08:00AM',
-//             end: '08:50AM',
-//         },
-//         {
-//             name: 'Event organisers',
-//             description: 'Opening Welcome',
-//             start: '09:00AM',
-//             end: '09:15AM',
-//         },
-//         {
-//             session: "kat-cosgrove",
-//             start: '09:20AM',
-//             end: '09:50AM',
-//         },
-//         {
-//             session: "stuart-langridge",
-//             start: '09:55AM',
-//             end: '10:25AM',
-//         },
-//         {
-//             name: 'Coffee, Snacks, Sponsors, Chat!',
-//             description: 'Morning Break',
-//             start: '10:25AM',
-//             end: '10:45AM',
-//         },
-//         {
-//             session: "zakariya-mohummed",
-//             start: '10:50AM',
-//             end: '11:20AM',
-//         },
-//         {
-//             session:"baruch-sadogursky",
-//             start: '11:25AM',
-//             end: '11:55AM',
-//         },
-//         {
-//             name: 'Ignite talks',
-//             description: '(6 x 5 minute sessions)',
-//             start: '12:00PM',
-//             end: '12:30PM',
-//         },
-//         {
-//             name: 'Open Space Introduction',
-//             description: 'Learn how open spaces work',
-//             start: '12:30PM',
-//             end: '12:45PM',
-//         },
-//         {
-//             name: 'Lunch',
-//             description: 'Lunch',
-//             start: '12:45PM',
-//             end: '13:45PM',
-//         },
-//         {
-//             name: 'Event organisers',
-//             description: 'Afternoon Intro',
-//             start: '13:50PM',
-//             end: '14:05PM',
-//         },
-//         {
-//             session: "hila-fish",
-//             start: '14:10PM',
-//             end: '14:40PM',
-//         },
-//         {
-//             session: "andy-burgin",
-//             start: '14:40PM',
-//             end: '15:10PM',
-//         },
-//         {
-//             name: 'Coffee, Snacks, Sponsors, Chat!',
-//             description: 'Afternoon Break',
-//             start: '15:10PM',
-//             end: '15:30PM',
-//         },
-//         {
-//             session: "krisztian-fekete",
-//             start: '15:30PM',
-//             end: '16:00PM',
-//         },
-//         {
-//             session: "joanna-suau",
-//             start: '16:00PM',
-//             end: '16:30PM',
-//         },
-//         {
-//             name: 'Event organisers',
-//             description: 'Closing Remarks',
-//             start: '16:30PM',
-//             end: '16:40PM',
-//         },
-//     ],
-// }
-//
-//
-// const thinkTankDay1 = {
-//     timeOfDay: 'ThinkTank Day 1',
-//     date: '2023-06-15',
-//     summary: '08:30 - 17:00 BST',
-//     dayName: "Day 1",
-//     timeSlots: [
-//         // {
-//         //     name: 'Registration',
-//         //     description: 'Registration',
-//         //     start: '08:00AM',
-//         //     end: '08:50AM',
-//         // },
-//         // {
-//         //     name: 'Event organisers',
-//         //     description: 'Opening Welcome',
-//         //     start: '09:00AM',
-//         //     end: '09:15AM',
-//         // },
-//         // {
-//         //     session: "hannah-mitchell",
-//         //     start: '09:20AM',
-//         //     end: '09:50AM',
-//         // },
-//         // {
-//         //     session: "fawaz-ghali",
-//         //     start: '09:55AM',
-//         //     end: '10:25AM',
-//         // },
-//         // {
-//         //     name: 'Coffee, Snacks, Sponsors, Chat!',
-//         //     description: 'Morning Break',
-//         //     start: '10:25AM',
-//         //     end: '10:45AM',
-//         // },
-//         // {
-//         //     session: "omar-qureshi",
-//         //     start: '10:50AM',
-//         //     end: '11:20AM',
-//         // },
-//         // {
-//         //     session: "elizabeth-lawel",
-//         //     start: '11:25AM',
-//         //     end: '11:55AM',
-//         // },
-//         // {
-//         //     session: "carly-richmond",
-//         //     start: '12:00PM',
-//         //     end: '12:30PM',
-//         // },
-//         // {
-//         //     name: 'Open Space Introduction',
-//         //     description: 'Learn how open spaces work',
-//         //     start: '12:30PM',
-//         //     end: '12:45PM',
-//         // },
-//         // {
-//         //     name: 'Lunch',
-//         //     description: 'Lunch',
-//         //     start: '12:45PM',
-//         //     end: '13:45PM',
-//         // },
-//         // {
-//         //     name: 'Event organisers',
-//         //     description: 'Open Space Planning',
-//         //     start: '13:50PM',
-//         //     end: '14:05PM',
-//         // },
-//         // {
-//         //     name: "Open Space Session 1",
-//         //     description: "Open Space Session 1",
-//         //     start: '14:10PM',
-//         //     end: '14:40PM',
-//         // },
-//         // {
-//         //     name: "Open Space Session 2",
-//         //     description: "Open Space Session 2",
-//         //     start: '14:40PM',
-//         //     end: '15:10PM',
-//         // },
-//         // {
-//         //     name: 'Coffee, Snacks, Sponsors, Chat!',
-//         //     description: 'Afternoon Break',
-//         //     start: '15:10PM',
-//         //     end: '15:30PM',
-//         // },
-//         // {
-//         //     name: "Open Space Session 3",
-//         //     description: "Open Space Session 3",
-//         //     start: '15:30PM',
-//         //     end: '16:00PM',
-//         // },
-//         // {
-//         //     name: "Open Space Session 4",
-//         //     description: "Open Space Session 4",
-//         //     start: '16:00PM',
-//         //     end: '16:30PM',
-//         // },
-//         // {
-//         //     name: 'Event organisers',
-//         //     description: 'Closing Remarks',
-//         //     start: '16:30PM',
-//         //     end: '16:40PM',
-//         // },
-//     ],
-// }
-//
-//
-// const thinkTankDay2 = {
-//     timeOfDay: 'ThinkTank Day 2',
-//     date: '2023-06-16',
-//     summary: '08:30 - 17:00 BST',
-//     dayName: "Day 2",
-//     timeSlots: [
-//         // {
-//         //     name: 'Registration',
-//         //     description: 'Registration',
-//         //     start: '08:00AM',
-//         //     end: '08:50AM',
-//         // },
-//         // {
-//         //     name: 'Event organisers',
-//         //     description: 'Opening Welcome',
-//         //     start: '09:00AM',
-//         //     end: '09:15AM',
-//         // },
-//         // {
-//         //     session: "lin-sun",
-//         //     start: '09:20AM',
-//         //     end: '09:50AM',
-//         // },
-//         // {
-//         //     session: "louise-paling",
-//         //     start: '09:55AM',
-//         //     end: '10:25AM',
-//         // },
-//         // {
-//         //     name: 'Coffee, Snacks, Sponsors, Chat!',
-//         //     description: 'Morning Break',
-//         //     start: '10:25AM',
-//         //     end: '10:45AM',
-//         // },
-//         // {
-//         //     session: "esther-barthel",
-//         //     start: '10:50AM',
-//         //     end: '11:20AM',
-//         // },
-//         // {
-//         //     session: "steve-heyes",
-//         //     start: '11:25AM',
-//         //     end: '11:55AM',
-//         // },
-//         // {
-//         //     session: "daniel-oates-lee",
-//         //     start: '12:00PM',
-//         //     end: '12:30PM',
-//         // },
-//         // {
-//         //     name: 'Open Space Introduction',
-//         //     description: 'Learn how open spaces work',
-//         //     start: '12:30PM',
-//         //     end: '12:45PM',
-//         // },
-//         // {
-//         //     name: 'Lunch',
-//         //     description: 'Lunch',
-//         //     start: '12:45PM',
-//         //     end: '13:45PM',
-//         // },
-//         // {
-//         //     name: 'Event organisers',
-//         //     description: 'Open Space Planning',
-//         //     start: '13:50PM',
-//         //     end: '14:05PM',
-//         // },
-//         // {
-//         //     name: "Open Space Session 1",
-//         //     description: "Open Space Session 1",
-//         //     start: '14:10PM',
-//         //     end: '14:40PM',
-//         // },
-//         // {
-//         //     name: "Open Space Session 2",
-//         //     description: "Open Space Session 2",
-//         //     start: '14:40PM',
-//         //     end: '15:10PM',
-//         // },
-//         // {
-//         //     name: 'Coffee, Snacks, Sponsors, Chat!',
-//         //     description: 'Afternoon Break',
-//         //     start: '15:10PM',
-//         //     end: '15:30PM',
-//         // },
-//         // {
-//         //     name: "Open Space Session 3",
-//         //     description: "Open Space Session 3",
-//         //     start: '15:30PM',
-//         //     end: '16:00PM',
-//         // },
-//         // {
-//         //     name: "Open Space Session 4",
-//         //     description: "Open Space Session 4",
-//         //     start: '16:00PM',
-//         //     end: '16:30PM',
-//         // },
-//         // {
-//         //     name: 'Event organisers',
-//         //     description: 'Closing Remarks',
-//         //     start: '16:30PM',
-//         //     end: '16:40PM',
-//         // },
-//     ],
-// }
-
 export const Schedule = {
     conferenceSchedule: {
         day1: conferenceSchedule,
@@ -783,3 +340,220 @@ export const Schedule = {
         day1: stageOne,
     },
 }
+*/
+
+export const OVERALL_START = '09:00AM'
+export const OVERALL_END = '17:00PM'
+
+// Event Metadata
+const eventDate = '2025-10-14'
+const eventOpenAndEndTime = `${OVERALL_START} - ${OVERALL_END} BST`
+
+// Conference 2025 Overall Times
+const registrationStart = '08:00AM';
+const registrationEnd = '09:30AM';
+
+const morningSessionStart = '09:30AM';
+const morningSessionEnd = '12:00PM';
+
+const lunchStart = '12:00PM';
+const lunchEnd = '13:00PM';
+
+const afternoonSessionStart = '13:00PM';
+const afternoonSessionEnd = '15:00PM';
+
+const afternoonBreakStart = '15:00PM';
+const afternoonBreakEnd = '15:30PM';
+
+const lateAfternoonSessionStart = '15:30PM';
+const lateAfternoonSessionSessionEnd = '17:00PM';
+
+// singular session times
+const session1Start = '09:45 AM'
+const session1End = '10:30 AM'
+
+const session2Start = '10:30 AM'
+const session2End = '11:15 AM'
+
+const session3Start = '11:15 AM'
+const session3End = '12:00 AM'
+
+const session4Start = '13:00 AM'
+const session4End = '13:45 AM'
+
+const session5Start = '13:45 AM'
+const session5End = '14:30 AM'
+
+const session6Start = '14:30 AM'
+const session6End = '15:15 AM'
+
+const session7Start = '15:45 AM'
+const session7End = '16:30 AM'
+
+const session8Start = '16:30 AM'
+const session8End = '17:15 AM'
+
+// Keynotes and global sessions
+const placeholder = (name, startTime, endTime) => ({
+    name: name,
+    description: 'To be announced',
+    start: startTime,
+    end: endTime,
+})
+
+const registration =  {
+    name: 'Registration',
+    description: 'Registration',
+    start: registrationStart,
+    end: registrationEnd,
+}
+
+const welcome = {
+    name: 'Welcome',
+    description: 'Welcome to TechMids Conf 2025!',
+    start: '09:30AM',
+    end: '09:45AM',
+}
+
+const openingKeynote = {
+    name: 'Opening Keynote - TBC',
+    description: 'Opening Keynote from Matheus Guimarães @ AWS - talk details TBC',
+    start: session1Start,
+    end: session1End,
+    session: ['MatheusGuimares'],
+}
+
+const closingKeynote = {
+    session: ['SalmaAlamNaylor'],
+    start: session8Start,
+    end: session8End,
+}
+
+// Breaks 
+const lunch = {
+    name: 'Lunch',
+    description: 'Grab the popcorn 🍿',
+    start: lunchStart,
+    end: lunchEnd,
+}
+
+const afternoonBreak = {
+    name: 'Afternoon Break',
+    description: 'Coffee, Snacks, Sponsors, Chat!',
+    start: afternoonBreakStart,
+    end: afternoonBreakEnd,
+}
+
+const conferenceSchedule = {
+    room: "The Everyman Cinema",
+    timeOfDay: 'Overall Schedule',
+    date: eventDate,
+    summary: eventOpenAndEndTime,
+    dayName: "Day 1",
+    timeSlots: [
+        registration,
+        welcome,
+        {
+            name: 'Morning Sessions',
+            description: 'Three tracks of brilliant talks including an opening keynote',
+            start: morningSessionStart,
+            end: morningSessionEnd,
+        },
+        lunch,
+        {
+            name: 'Afternoon Sessions',
+            description: 'Three tracks of brilliant talks',
+            start: afternoonSessionStart,
+            end: afternoonSessionEnd,
+        },
+        afternoonBreak,
+        {
+            name: 'Late Afternoon Sessions',
+            description: 'Three tracks of brilliant talks including a closing keynote',
+            start: lateAfternoonSessionStart,
+            end: lateAfternoonSessionSessionEnd,
+        }
+    ]
+}
+
+
+const screen1Schedule = {
+    room: "Screen 1",
+    timeOfDay: 'Screen 1',
+    date: eventDate,
+    summary: eventOpenAndEndTime,
+    dayName: "Day 1",
+    timeSlots: [
+        welcome,
+        placeholder('Session 1 - TBC', session1Start, session1End),
+        placeholder('Session 2 - TBC', session2Start, session2End),
+        placeholder('Session 3 - TBC', session3Start, session3End),
+        lunch,
+        placeholder('Session 4 - TBC', session4Start, session4End),
+        placeholder('Session 5 - TBC', session5Start, session5End),
+        afternoonBreak,
+        placeholder('Session 6 - TBC', session6Start, session6End),
+        placeholder('Session 7 - TBC', session7Start, session7End),
+        placeholder('Session 8 - TBC', session8Start, session8End),
+    ]
+}
+
+
+const screen2Schedule = {
+    room: "Screen 2",
+    timeOfDay: 'Screen 2',
+    date: eventDate,
+    summary: eventOpenAndEndTime,
+    dayName: "Day 1",
+    timeSlots: [
+        welcome,
+        placeholder('Session 1 - TBC', session1Start, session1End),
+        placeholder('Session 2 - TBC', session2Start, session2End),
+        placeholder('Session 3 - TBC', session3Start, session3End),
+        lunch,
+        placeholder('Session 4 - TBC', session4Start, session4End),
+        placeholder('Session 5 - TBC', session5Start, session5End),
+        afternoonBreak,
+        placeholder('Session 6 - TBC', session6Start, session6End),
+        placeholder('Session 7 - TBC', session7Start, session7End),
+        placeholder('Session 8 - TBC', session8Start, session8End),
+    ]
+}
+
+const screen3Schedule = {
+    room: "Screen 3",
+    timeOfDay: 'Screen 3',
+    date: '2024-10-25',
+    summary: eventOpenAndEndTime,
+    dayName: "Day 1",
+    timeSlots: [
+        welcome,
+        openingKeynote,
+        placeholder('Session 2 - TBC', session2Start, session2End),
+        placeholder('Session 3 - TBC', session3Start, session3End),
+        lunch,
+        placeholder('Session 4 - TBC', session4Start, session4End),
+        placeholder('Session 5 - TBC', session5Start, session5End),
+        afternoonBreak,
+        placeholder('Session 6 - TBC', session6Start, session6End),
+        placeholder('Session 7 - TBC', session7Start, session7End),
+        closingKeynote,
+    ]
+}
+
+
+export const Schedule = {
+    conferenceSchedule: {
+        day1: conferenceSchedule,
+    },
+    screen3: {
+        day1: screen3Schedule,
+    },
+    screen2: {
+        day1: screen2Schedule,
+    },
+    screen1: {
+        day1: screen1Schedule,
+    },
+}
+

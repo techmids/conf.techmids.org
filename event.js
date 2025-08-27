@@ -1,10 +1,12 @@
+import { OVERALL_END, OVERALL_START} from "schedule"
+
 export const EVENT = {
     date: 'Friday 14th November 2025',
     title: 'TechMids Conf',
     venue: 'Everyman Cinema',
     address: 'Mailbox, Birmingham',
-    startTime: 'TBC',
-    endTime: 'TBC',
+    startTime: OVERALL_START,
+    endTime: OVERALL_END,
     ticketLink: 'https://ti.to/tech-events-birmingham/techmids-conf-2025',
     onSale: true, //swap to true to embed ticket widget
     soldOut: false,
@@ -18,7 +20,7 @@ export const EVENT = {
 
 //  Marks what information is available on the website
 export const AVAILABLE_INFORMATION = {
-    scheduleAvailable: false,
+    scheduleAvailable: true,
     locationAvailable: true, 
     speakersAvailable: true,
     sponsorsAvailable: true,
