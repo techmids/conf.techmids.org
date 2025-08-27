@@ -1,4 +1,5 @@
 import MatheusGuimares from "./public/speakers/MatheusGuimares.jpg"
+import MaxWoolf from "./public/speakers/MaxWoolf.jpeg"
 import SalmaAlamNaylor from "./public/speakers/SalmaAlamNaylor.jpeg"
 import StuartClark from "./public/speakers/StuartClark.jpeg"
 import TomCamp from "./public/speakers/TomCamp.jpeg"
@@ -82,6 +83,46 @@ export const Sessions = {
         image: StuartClark,
         linkedin: "https://www.linkedin.com/in/stuarteclark/",
         website: "https://bigevilbeard.github.io/",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+        "MaxWoolf": {
+        name: "Max Woolf",
+        jobTitle: "Staff Backend Engineer @ GitLab",
+        bio: (
+            <>
+                <p>"Max Woolf is a local software engineer with 13 years of professional experience at companies of all sizes. He currently works at GitLab on the API team as a Staff Backend Engineer and spends a lot of his time either writing, or improving SQL queries. Outside of work he runs Friends of Cotteridge Park, mentors junior software engineers, likes climbing up mountains and is a semi-reasonable pianist."</p>
+            </>
+        ),
+        talkTitle:
+            "Why Your Production Database Hates You (And How to Fix It)",    
+        description: (
+            <>
+            Remember when your database had a few thousand records and everything was fast? “We’ll deal with indexes later.” Yeah, those days are over. Your application has actual, real, data now. Megabytes became gigabytes. Gigabytes became terabytes, and before you knew it, 20% of engineering time is spent tracking down and fixing slow database queries.
+            <br />
+            <br />
+            At GitLab scale, a missing index isn’t just “oh, that’s a bit slow”, it’s “oh, that doesn’t work.” I learned this the hard way, and now I’m here to save you from the same panic-inducing experience. Lots of folks know that indexes can fix these issues; but knowing the right index to use in the right place is a skill in itself. This talk is your beginner-level crash course in PostgreSQL indexing that actually matters in production. We’re talking real-world scenarios where the difference between a good index and a bad index is measured in user happiness (and your stress levels).
+            <br />
+            <h4 style={{"font-weight": "bold"}}>What You’ll Actually Learn:</h4>
+            <ul>
+                <li>- B-tree Index Mastery: The one index type that’ll solve 95% of your problems (and how to use it right)</li>
+                <li>- Composite Index Strategy: Why column order can make or break your query performance</li>
+                <li>- Partial Index Magic: Index only what you need and watch your database thank you</li>
+                <li>- Query Plans Demystified: The best way to verify what your database is doing</li>
+            </ul>
+            <h4 style={{"font-weight": "bold"}}>You’ll Leave With:</h4>
+            <ul>
+                <li>- The ability to read query plans like a database detective</li>
+                <li>- Index design patterns that scale from day one</li>
+                <li>- Diagnostic techniques to spot problems before they become fires</li>
+            </ul>
+            <br/>
+            No fluff, nor theory you’ll never use. Just the indexing knowledge that turns “why is everything slow?” into “how did I make it so fast?”
+            </>),
+        image: MaxWoolf,
+        linkedin: "https://www.linkedin.com/in/maxcodes/",
+        website: "https://max.woolf.io",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
