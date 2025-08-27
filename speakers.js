@@ -6,7 +6,7 @@ import TomCamp from "./public/speakers/TomCamp.jpeg"
 export const Sessions = {
     "MatheusGuimares": {
         name: "Matheus Guimarães",
-        jobTitle: "Senior Developer Advocate, UK/IR",
+        jobTitle: "Senior Developer Advocate, UK/IR @ AWS",
         bio: (
             <>
                 <p>
