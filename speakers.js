@@ -1,3 +1,4 @@
+import JoshuaMo from "./public/speakers/JoshuaMo.jpeg"
 import MatheusGuimares from "./public/speakers/MatheusGuimares.jpg"
 import MaxWoolf from "./public/speakers/MaxWoolf.jpeg"
 import SalmaAlamNaylor from "./public/speakers/SalmaAlamNaylor.jpeg"
@@ -123,6 +124,37 @@ export const Sessions = {
         image: MaxWoolf,
         linkedin: "https://www.linkedin.com/in/maxcodes/",
         website: "https://max.woolf.io",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+        "JoshuaMo": {
+        name: "Joshua Mo",
+        jobTitle: "DevRel Engineer @ Playgrounds Analytics Inc.",
+        bio: (
+            <>
+                <p>Joshua is currently a DevRel Engineer who is working at the intersection of Rust & AI with Playgrounds Analytics Inc. I am part of the core maintainer team for Rig, an agentic AI framework written in Rust. I also regularly give talks on Rust, as well as other subjects. My primary area of work also involves WebAssembly (via wasm-bindgen) and I am currently spearheading a project to make Rig usable from JavaScript via WebAseembly.</p>    
+            </>
+        ),
+        talkTitle:
+            "Why is Rust taking over the Python ecosystem?",    
+        description: (
+            <>Python is the undisputed king of data science, scripting, and rapid prototyping. But behind the scenes, Rust is rapidly reshaping the Python ecosystem by powering performance-critical tools that Python alone struggles to handle efficiently. Many Rust-powered tools like uv, ruff and polars are becoming the new default for those in the know - and for good reason.
+            <br></br>
+            <br></br>
+            <b>In this talk, we will cover:</b>
+            <br></br>
+            - Why Rust is the go-to for speed-ups in Python tooling & more
+            <br></br>
+            - How the Rust-Python bridge works: PyO3, Maturin & FFI
+            <br></br>
+            - Practical tips for writing Rust-Python extension that just work
+            <br></br>
+            - Real-world examples and use cases</>
+            ),
+        image: JoshuaMo,
+        linkedin: "https://www.linkedin.com/in/joshua-mo-4146aa220/",
+        website: "https://joshmo.ooo/",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
