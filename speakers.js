@@ -5,6 +5,7 @@ import MaxWoolf from "./public/speakers/MaxWoolf.jpeg"
 import SalmaAlamNaylor from "./public/speakers/SalmaAlamNaylor.jpeg"
 import StuartClark from "./public/speakers/StuartClark.jpeg"
 import TomCamp from "./public/speakers/TomCamp.jpeg"
+import TonyEdwards from "./public/speakers/TonyEdwards.jpeg"
 
 export const Sessions = {
     "MatheusGuimares": {
@@ -201,6 +202,34 @@ export const Sessions = {
         image: CarlyRichmond,
         linkedin: "https://www.linkedin.com/in/carly-richmond/",
         website: "https://carlyrichmond.com/",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "TonyEdwards": {
+        name: "Tony Edwards",
+        jobTitle: "Mobile App Developer",
+        bio: (
+            <>
+                <p>
+                    Tony is a software engineering, event organising, university lecturing geek at heart. A broad range of tech and business skills mix to help businesses and individuals meet their goals... usually over a cuppa. On any given day he might be engineering cross platform software, scaffolding a marketing strategy, crafting written content, educating the next generation, or inspiring the one after that. With a background in community events management, a multi award winning career in the education sector, and a long history of making a fool of himself, Tony’s sessions are sure to engage the audience and spark conversation. You’ll certainly remember this talk!
+                </p>
+            </>
+        ),
+        talkTitle:
+            "Beats, Rhymes, & Neural Nets",
+        description: (
+            <>The Web Speech API has been the undisputed champion of in browser speech recognition since it’s release in 2012. Backed by Google API’s, it’s allowed developers to achieve near realtime recognition, transcription, and text to speech synthesis for more than a decade.
+            <br></br>
+            <br></br>
+            In recent years, a venture backed contender has appeared, threatening to take the crown away from our beloved browser APIs. Whisper promises to be the most accurate, most tolerant, and quickest way to transcribe speech. But does this stand true when its applied to the humble web browser?
+            <br></br>
+            <br></br>
+            In this battle of the ages, Tony sets out to pit Whisper against the Browser in search of the best option in helping write rap lyrics. Following an introduction to the two tech stacks, Tony will iterate through a series of tests to see which one is most suited to the world of Hip-Hop, leading to a crescendo you will never forget.</>
+        ),
+        image: TonyEdwards,
+        linkedin: "https://www.linkedin.com/in/tonyedwardspz/",
+        website: "https://tonyedwardspz.co.uk/",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
