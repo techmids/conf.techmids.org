@@ -1,3 +1,4 @@
+import CarlyRichmond from "./public/speakers/CarlyRichmond.jpeg"
 import JoshuaMo from "./public/speakers/JoshuaMo.jpeg"
 import MatheusGuimares from "./public/speakers/MatheusGuimares.jpg"
 import MaxWoolf from "./public/speakers/MaxWoolf.jpeg"
@@ -155,6 +156,51 @@ export const Sessions = {
         image: JoshuaMo,
         linkedin: "https://www.linkedin.com/in/joshua-mo-4146aa220/",
         website: "https://joshmo.ooo/",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "CarlyRichmond": {
+        name: "Carly Richmond",
+        jobTitle: "Developer Advocate Lead @ Elastic",
+        bio: (
+            <>
+                <p>Carly is Developer Advocate Lead at Elastic, based in London, UK. Before joining Elastic in 2022, she spent over 10 years working as a technologist at a large investment bank, specialising in Frontend Web development and agility. She is an agile evangelist, UI enthusiast, and regular blogger. In her spare time, she enjoys cooking, photography, drinking tea and chasing after her young son.</p>
+            </>
+        ),
+        talkTitle:
+            "OTel You It's Not Just for Backend! ",
+        description: (
+            <>
+            <h2>Background</h2>
+            Before joining Elastic as a Developer Advocate, I spent over 10 years working for a bank as a frontend engineer. I have felt the pain of trying to diagnose issues and errors in UIs using logs and diving into minified JavaScript code.
+
+            In that time, the state of DevOps and SRE has established many practices to help developers instrument their applications to identify unexpected behaviour and performance issues. These practices are generally, backend focused. By combining backend tracing with frontend tracing and metrics, we can better understand how our application behaves and where the issue lies.
+            <br></br>
+            <h2>Outline</h2>
+            I will discuss the state of OTel for frontend instrumentation, specifically:
+
+            Communication of the OTel SDKs that can be used for web, and a mention that client telemetry for web is experimental.
+            Examples showing how front-to-back tracing can be achieved using OpenTelemetry web instrumentation combined with backend OTel instrumentation.
+            An example of how to build a custom instrumentation using OTel web and Core Web Vitals JS library to gain performance insights using industry standard metrics.
+
+            <br></br>
+            <h2>Target Audience</h2>
+            I believe the following individuals would be interested in this talk:
+
+            UI Developers interested in observing their applications and unsure how to instrument their applications or the tools currently available.
+            SRE engineers looking to monitor frontends as part of a wide system-estate.
+            More experienced frontend engineers or designers looking for tools to measure application performance as a regular best practice compared to ad-hoc profiling of web applications.
+            Tech leads and team leads looking for ways to be alerted to potential application issues and behaviours that impact the user experience.
+            
+            <br></br>
+            <h2>Resources</h2>
+            Sample code: https://github.com/carlyrichmond/otel-record-store Blog: https://www.elastic.co/observability-labs/blog/web-frontend-instrumentation-with-opentelemetry"
+        </>
+        ),
+        image: CarlyRichmond,
+        linkedin: "https://www.linkedin.com/in/carly-richmond/",
+        website: "https://carlyrichmond.com/",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
