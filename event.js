@@ -37,6 +37,16 @@ export const sponsorTiers = {
             }
         ]
     },
+    silver: {
+        name: "Silver Sponsors",
+        sponsors: [
+            {
+                name: "AdvancedOne",
+                image: "/sponsors/OneAdvanced.png",
+                url: "https://www.oneadvanced.com/"
+            }
+        ]
+    },
     bronze: {
         name: "Bronze Sponsors",
         sponsors: [

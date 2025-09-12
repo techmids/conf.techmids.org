@@ -40,6 +40,7 @@ export function SponsorTiers() {
     return (
         <div className="mt-12 mb-8 bg-white">
             {printSponsors("Headline", sponsorTiers.headline.sponsors, 2)}
+            {printSponsors("Silver", sponsorTiers.silver.sponsors, 1.5)}
             {printSponsors("Bronze", sponsorTiers.bronze.sponsors)}
 
         </div>
