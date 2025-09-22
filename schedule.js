@@ -343,7 +343,7 @@ export const Schedule = {
 */
 
 export const OVERALL_START = '09:00AM'
-export const OVERALL_END = '17:00PM'
+export const OVERALL_END = '17:15PM'
 
 // Event Metadata
 const eventDate = '2025-10-14'
@@ -366,7 +366,7 @@ const afternoonBreakStart = '15:00PM';
 const afternoonBreakEnd = '15:30PM';
 
 const lateAfternoonSessionStart = '15:30PM';
-const lateAfternoonSessionSessionEnd = '17:00PM';
+const lateAfternoonSessionSessionEnd = '17:15PM';
 
 // singular session times
 const session1Start = '09:45 AM'
