@@ -376,22 +376,22 @@ const session2Start = '10:30 AM'
 const session2End = '11:15 AM'
 
 const session3Start = '11:15 AM'
-const session3End = '12:00 AM'
+const session3End = '12:00 PM'
 
-const session4Start = '13:00 AM'
-const session4End = '13:45 AM'
+const session4Start = '13:00 PM'
+const session4End = '13:45 PM'
 
-const session5Start = '13:45 AM'
-const session5End = '14:30 AM'
+const session5Start = '13:45 PM'
+const session5End = '14:30 PM'
 
-const session6Start = '14:30 AM'
-const session6End = '15:15 AM'
+const session6Start = '14:30 PM'
+const session6End = '15:15 PM'
 
-const session7Start = '15:45 AM'
-const session7End = '16:30 AM'
+const session7Start = '15:45 PM'
+const session7End = '16:30 PM'
 
-const session8Start = '16:30 AM'
-const session8End = '17:15 AM'
+const session8Start = '16:30 PM'
+const session8End = '17:15 PM'
 
 // Keynotes and global sessions
 const placeholder = (name, startTime, endTime) => ({

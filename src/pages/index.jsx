@@ -16,8 +16,8 @@ export default function Home() {
         <HomePageWrapper>
             <Hero/>            
             <Images/>
-            {AVAILABLE_INFORMATION.scheduleAvailable && <Schedule/>}
             {AVAILABLE_INFORMATION.speakersAvailable && <Speakers/>}
+            {AVAILABLE_INFORMATION.scheduleAvailable && <Schedule/>}
             <Testimonials/>
             <Sponsors/>
             <Meetups/>
