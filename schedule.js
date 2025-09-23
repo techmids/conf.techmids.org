@@ -416,7 +416,7 @@ const welcome = {
 }
 
 const openingKeynote = {
-    name: 'Opening Keynote - TBC',
+    name: 'Matheus Guimarães',
     description: 'Opening Keynote from Matheus Guimarães @ AWS - talk details TBC',
     start: session1Start,
     end: session1End,
@@ -432,7 +432,7 @@ const closingKeynote = {
 // Breaks 
 const lunch = {
     name: 'Lunch',
-    description: 'Grab the popcorn 🍿',
+    description: 'Grab some food 🍔, perhaps even some popcorn 🍿',
     start: lunchStart,
     end: lunchEnd,
 }
@@ -442,6 +442,16 @@ const afternoonBreak = {
     description: 'Coffee, Snacks, Sponsors, Chat!',
     start: afternoonBreakStart,
     end: afternoonBreakEnd,
+}
+
+const socialStart = '17:30 PM'
+const socialEnd = 'LATE'
+
+const social = {
+    name: 'Post-Conference Social 🎉',
+    description: 'Chats, drinks, and a generally fab time!',
+    start: socialStart,
+    end: socialEnd,
 }
 
 const conferenceSchedule = {
@@ -455,27 +465,92 @@ const conferenceSchedule = {
         welcome,
         {
             name: 'Morning Sessions',
-            description: 'Three tracks of brilliant talks including an opening keynote',
+            description: 'Talks whilst you\'re full of energy ⚡',
             start: morningSessionStart,
             end: morningSessionEnd,
         },
         lunch,
         {
             name: 'Afternoon Sessions',
-            description: 'Three tracks of brilliant talks',
+            description: 'Talks whilst you\'re full of food 🍔',
             start: afternoonSessionStart,
             end: afternoonSessionEnd,
         },
         afternoonBreak,
         {
             name: 'Late Afternoon Sessions',
-            description: 'Three tracks of brilliant talks including a closing keynote',
+            description: 'Talks whilst you\'re full of... caffeine? ☕',
             start: lateAfternoonSessionStart,
             end: lateAfternoonSessionSessionEnd,
-        }
+        },
+        social
     ]
 }
 
+
+const richardBrough = {
+    name: 'Richard Brough',
+    description: 'A llama sets up a lemonade stall',
+    start: session1Start,
+    end: session1End,
+    session: ['RichardBrough'],
+}
+
+const joshuaMo = {
+    name: 'Joshua Mo',
+    description: 'Why is Rust taking over the Python ecosystem?',
+    start: session2Start,
+    end: session2End,
+    session: ['JoshuaMo'],
+}
+
+const cynthiaAkiotu = {
+    name: 'Cynthia Akiotu',
+    description: 'Securing AI Agents Before They Secure Your Stack',
+    start: session3Start,
+    end: session3End,
+    session: ['CynthiaAkiotu'],
+}
+
+const ricardoSueiras = {
+    name: 'Ricardo Sueiras',
+    description: 'Build without limits - zero to shipped in 20 minutes',
+    start: session4Start,
+    end: session4End,
+    session: ['RicardoSueiras'],
+}
+
+const carlyRichmond = {
+    name: 'Carly Richmond',
+    description: 'OTel You It\'s Not Just for Backend!',
+    start: session5Start,
+    end: session5End,
+    session: ['CarlyRichmond'],
+}
+
+const andyCarter = {
+    name: 'Andy Carter',
+    description: 'Ulysses versus The Very Hungry Caterpillar',
+    start: session6Start,
+    end: session6End,
+    session: ['AndyCarter'],
+}
+
+const stuartLangridge = {
+    name: 'Stuart Langridge',
+    description: 'The mazy web she whirls: starting Open Web Advocacy',
+    start: session7Start,
+    end: session7End,
+    session: ['StuartLangridge'],
+}
+
+const shaunLawrence = {
+    name: 'Shaun Lawrence',
+    description: 'If .NET brewed beer',
+    start: session8Start,
+    end: session8End,
+    session: ['ShaunLawrence'],
+}
 
 const screen1Schedule = {
     room: "Screen 1",
@@ -485,17 +560,82 @@ const screen1Schedule = {
     dayName: "Day 1",
     timeSlots: [
         welcome,
-        placeholder('Session 1 - TBC', session1Start, session1End),
-        placeholder('Session 2 - TBC', session2Start, session2End),
-        placeholder('Session 3 - TBC', session3Start, session3End),
+        richardBrough,
+        joshuaMo,
+        cynthiaAkiotu,
         lunch,
-        placeholder('Session 4 - TBC', session4Start, session4End),
-        placeholder('Session 5 - TBC', session5Start, session5End),
+        ricardoSueiras,
+        carlyRichmond,
         afternoonBreak,
-        placeholder('Session 6 - TBC', session6Start, session6End),
-        placeholder('Session 7 - TBC', session7Start, session7End),
-        placeholder('Session 8 - TBC', session8Start, session8End),
+        andyCarter,
+        stuartLangridge,
+        shaunLawrence,
     ]
+}
+
+
+const danielTallentire = {
+    name: 'Daniel Tallentire',
+    description: 'Jar-gone... how to talk tech to non-techies',
+    start: session1Start,
+    end: session1End,
+    session: ['DanielTallentire'],
+}
+
+const beckiFloyd = {
+    name: 'Becki Floyd',
+    description: 'UX in 2025: Designing at the Speed of AI-Driven Development',
+    start: session2Start,
+    end: session2End,
+    session: ['BeckiFloyd'],
+}
+
+const guyBarker = {
+    name: 'Guy Barker',
+    description: 'Empowering All Your Users: Simple Steps for Building Accessible App Experiences',
+    start: session3Start,
+    end: session3End,
+    session: ['GuyBarker'],
+}
+
+const jimSeconde = {
+    name: 'Jim Seconde',
+    description: 'CLIs Aren\'t As Easy As You Might Think',
+    start: session4Start,
+    end: session4End,
+    session: ['JimSeconde'],
+}
+
+const danBeglin = {
+    name: 'Dan Beglin',
+    description: 'What\'s Actually in Your 30-Year-Old Legacy Database? How We Used AST and Javascript to Find Out',
+    start: session5Start,
+    end: session5End,
+    session: ['DanBeglin'],
+}
+
+const lenaPismeny = {
+    name: 'Lena Pismeny',
+    description: 'Steps and Struggles: My Journey Through Tech, Disability, and Immigration',
+    start: session6Start,
+    end: session6End,
+    session: ['LenaPismeny'],
+}
+
+const dileepMarway = {
+    name: 'Dileep Marway',
+    description: 'Turning Tension into Teamwork - With a Little Help from AI',
+    start: session7Start,
+    end: session7End,
+    session: ['DileepMarway'],
+}
+
+const chrisMiller = {
+    name: 'Chris Miller',
+    description: 'The Gift of Beginner\'s Mind: Why Getting Older in Tech Isn\'t About Keeping Up',
+    start: session8Start,
+    end: session8End,
+    session: ['ChrisMiller'],
 }
 
 
@@ -507,17 +647,66 @@ const screen2Schedule = {
     dayName: "Day 1",
     timeSlots: [
         welcome,
-        placeholder('Session 1 - TBC', session1Start, session1End),
-        placeholder('Session 2 - TBC', session2Start, session2End),
-        placeholder('Session 3 - TBC', session3Start, session3End),
+        danielTallentire,
+        beckiFloyd,
+        guyBarker,
         lunch,
-        placeholder('Session 4 - TBC', session4Start, session4End),
-        placeholder('Session 5 - TBC', session5Start, session5End),
+        jimSeconde,
+        danBeglin,
         afternoonBreak,
-        placeholder('Session 6 - TBC', session6Start, session6End),
-        placeholder('Session 7 - TBC', session7Start, session7End),
-        placeholder('Session 8 - TBC', session8Start, session8End),
+        lenaPismeny,
+        dileepMarway,
+        chrisMiller,
     ]
+}
+
+
+const maxWoolf = {
+    name: 'Max Woolf',
+    description: 'Why Your Production Database Hates You (And How to Fix It)',
+    start: session2Start,
+    end: session2End,
+    session: ['MaxWoolf'],
+}
+
+const EliHolderness = {
+    name: 'Eli Holderness',
+    description: 'You Shall Not Password: Modern Authentication for Web Apps',
+    start: session3Start,
+    end: session3End,
+    session: ['EliHolderness'],
+}
+
+const tonyEdwards = {
+    name: 'Tony Edwards',
+    description: 'Beats, Rhymes, & Neural Nets',
+    start: session4Start,
+    end: session4End,
+    session: ['TonyEdwards'],
+}
+
+const tomCamp = {
+    name: 'Tom Camp',
+    description: 'One Small Favour: Growing a Gaming Plugin from Personal Project to 700k Weekly Users and a Thriving Open Source Community',
+    start: session5Start,
+    end: session5End,
+    session: ['TomCamp'],
+}
+
+const jamesHolland = {
+    name: 'James Holland',
+    description: 'The Stack that Secures the Stack: A Deep Dive into Automating Black Hat\'s Next Gen SOC',
+    start: session6Start,
+    end: session6End,
+    session: ['JamesHolland'],
+}
+
+const stuartClark = {
+    name: 'Stuart Clark',
+    description: 'Scale or Fail as Spotify\'s Growth Exposed the Abstraction Paradox',
+    start: session7Start,
+    end: session7End,
+    session: ['StuartClark'],
 }
 
 const screen3Schedule = {
@@ -529,14 +718,14 @@ const screen3Schedule = {
     timeSlots: [
         welcome,
         openingKeynote,
-        placeholder('Session 2 - TBC', session2Start, session2End),
-        placeholder('Session 3 - TBC', session3Start, session3End),
+        maxWoolf,
+        EliHolderness,
         lunch,
-        placeholder('Session 4 - TBC', session4Start, session4End),
-        placeholder('Session 5 - TBC', session5Start, session5End),
+        tonyEdwards,
+        tomCamp,
         afternoonBreak,
-        placeholder('Session 6 - TBC', session6Start, session6End),
-        placeholder('Session 7 - TBC', session7Start, session7End),
+        jamesHolland,
+        stuartClark,
         closingKeynote,
     ]
 }
