@@ -360,12 +360,12 @@ const lunchStart = '12:00PM';
 const lunchEnd = '13:00PM';
 
 const afternoonSessionStart = '13:00PM';
-const afternoonSessionEnd = '15:00PM';
+const afternoonSessionEnd = '14:30PM';
 
-const afternoonBreakStart = '15:00PM';
-const afternoonBreakEnd = '15:30PM';
+const afternoonBreakStart = '14:30PM';
+const afternoonBreakEnd = '15:00PM';
 
-const lateAfternoonSessionStart = '15:30PM';
+const lateAfternoonSessionStart = '15:00PM';
 const lateAfternoonSessionSessionEnd = '17:15PM';
 
 // singular session times
@@ -384,8 +384,8 @@ const session4End = '13:45 PM'
 const session5Start = '13:45 PM'
 const session5End = '14:30 PM'
 
-const session6Start = '14:30 PM'
-const session6End = '15:15 PM'
+const session6Start = '15:00 PM'
+const session6End = '15:45 PM'
 
 const session7Start = '15:45 PM'
 const session7End = '16:30 PM'
