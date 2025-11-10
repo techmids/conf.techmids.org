@@ -8,6 +8,7 @@ import DileepMarway from "./public/speakers/DileepMarway.jpeg"
 import DanielTallentire from "./public/speakers/DanielTallentire.jpeg"
 import EliHolderness from "./public/speakers/EliHolderness.jpeg"
 import GuyBarker from "./public/speakers/GuyBarker.jpeg"
+import IndyPahal from "./public/speakers/IndyPahal.jpg"
 import JamesHolland from "./public/speakers/JamesHolland.jpeg"
 import JimSeconde from "./public/speakers/JimSeconde.jpeg"
 import JoshuaMo from "./public/speakers/JoshuaMo.jpeg"
@@ -18,6 +19,7 @@ import RicardoSueiras from "./public/speakers/RicardoSueiras.jpeg"
 import RichardBrough from "./public/speakers/RichardBrough.jpeg"
 import SalmaAlamNaylor from "./public/speakers/SalmaAlamNaylor.jpeg"
 import ShaunLawrence from "./public/speakers/ShaunLawrence.jpeg"
+import SiJobling from "./public/speakers/SiJobling.jpeg"
 import StuartClark from "./public/speakers/StuartClark.jpeg"
 import StuartLangridge from "./public/speakers/StuartLangridge.jpeg"
 import TomCamp from "./public/speakers/TomCamp.jpeg"
@@ -87,25 +89,25 @@ export const Sessions = {
         speakerCard: false,
         speakerCardImage: "",
     },
-    "StuartClark": {
-        name: "Stuart Clark",
-        jobTitle: "Senior Developer Advocate @ Spotify",
-        bio: (
-            <>
-                <p>Stuart is a sought-after speaker, TEDx presenter, and champion for sustainable software. He’s passionate about the impact of software and AI on the climate and empowers developers to build a more sustainable future. As a leading expert in programmability and DevOps, he frequently graces industry stages worldwide, sharing his knowledge and inspiring others. He lives in Lincoln, England, with his wife, Natalie, and their son, Maddox. He plays guitar and rocks an impressive two-foot beard while drinking coffee. You can find him on social media @bigevilbeard</p>    
-            </>
-        ),
-        talkTitle:
-            "Scale or Fail as Spotify's Growth Exposed the Abstraction Paradox",    
-        description: (
-            <>At Spotify, serving 675M users, hyper-growth in 2014 created system fragmentation that made onboarding engineers difficult. Our abstractions oversimplified complexity, hindering incident response. We learned effective abstraction teaches complexity rather than hiding it.</>),
-        image: StuartClark,
-        linkedin: "https://www.linkedin.com/in/stuarteclark/",
-        website: "https://bigevilbeard.github.io/",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
+    // "StuartClark": {
+    //     name: "Stuart Clark",
+    //     jobTitle: "Senior Developer Advocate @ Spotify",
+    //     bio: (
+    //         <>
+    //             <p>Stuart is a sought-after speaker, TEDx presenter, and champion for sustainable software. He’s passionate about the impact of software and AI on the climate and empowers developers to build a more sustainable future. As a leading expert in programmability and DevOps, he frequently graces industry stages worldwide, sharing his knowledge and inspiring others. He lives in Lincoln, England, with his wife, Natalie, and their son, Maddox. He plays guitar and rocks an impressive two-foot beard while drinking coffee. You can find him on social media @bigevilbeard</p>    
+    //         </>
+    //     ),
+    //     talkTitle:
+    //         "Scale or Fail as Spotify's Growth Exposed the Abstraction Paradox",    
+    //     description: (
+    //         <>At Spotify, serving 675M users, hyper-growth in 2014 created system fragmentation that made onboarding engineers difficult. Our abstractions oversimplified complexity, hindering incident response. We learned effective abstraction teaches complexity rather than hiding it.</>),
+    //     image: StuartClark,
+    //     linkedin: "https://www.linkedin.com/in/stuarteclark/",
+    //     website: "https://bigevilbeard.github.io/",
+    //     sessionType: "Talk",
+    //     speakerCard: false,
+    //     speakerCardImage: "",
+    // },
         "MaxWoolf": {
         name: "Max Woolf",
         jobTitle: "Staff Backend Engineer @ GitLab",
@@ -821,38 +823,91 @@ I focus on working out what the next most important problem to solve is, then so
         speakerCard: false,
         speakerCardImage: "",
     },
-    "LenaPismeny": {
-        name: "Lena Pismeny",
-        jobTitle: "Senior DevOps Engineer",
+    "SiJobling": {
+        name: "Si Jobling",
+        jobTitle: "Engineering Manager @ Rightmove",
         bio: (
             <>
                 <p>
-                    Lena is a Senior DevOps and DevSecOps Engineer with over 12 years of experience designing secure, scalable, cloud-native infrastructure. I specialize in automating cloud environments (AWS, GCP), infrastructure as code (Terraform, CloudFormation), Configuration management (Ansible, Puppet), and building robust CI/CD pipelines (Jenkins, GitLab). I enjoy building things from scratch, improving team velocity, and ensuring security is embedded in every stage of the delivery process. I bring a strong mix of hands-on engineering and cross-functional collaboration across security, legal, and development teams.
+                    I'm Si Jobling, an Engineering Manager at Rightmove with over 20 years in tech and a background spanning ASOS, Alibaba, and Yahoo. I started my career at West Midlands Fire Service where I also engaged with the local community through our monthly Multipack meetups and hosting events with ASOS at Custard Factory. I've led teams through complex delivery, cultural shifts, and burnout recovery. I created the PETALS framework to help teams reflect more honestly and consistently on their wellbeing, and it's now used by over 100 active teams across multiple organisations.
                 </p>
             </>
         ),
         talkTitle:
-            "Steps and Struggles: My Journey Through Tech, Disability, and Immigration",
+            "Burndown Charts bs Burnt-Out Teams: A people-first approach to improving psychological safety in tech",
         description: (
             <>
-                What happens when a DevOps engineer with deep AWS and security expertise is forced to start over—this time with vision loss, limited mobility, and in a foreign country?
-                <br></br>    
-                <br></br>    
+                Your sprint velocity looks great; your burndown chart's on target. But half your team is quietly overwhelmed, two are looking for new jobs, and retros feel like a box-ticking exercise.
 
-                This talk isn’t just about technology—it’s about grit, identity, and adaptation. Before moving to the Netherlands, I had already lost much of my vision. Over the past year, walking long distances and climbing stairs has also become difficult. Yet through it all, I’ve rebuilt my tech career from the ground up—drawing on my expertise in cloud infrastructure, DevOps, and security to stay in the game.
-                <br></br>    
-                <br></br>    
+                In this talk, we'll explore why traditional delivery metrics don't tell the whole story, and how burnout, disengagement, and disconnection can hide in plain sight. You'll learn about PETALS, a lightweight, people-first framework used by tech teams around the world to spot early signs of team strain and build psychologically safe, high-trust environments.
 
-                I’ll share the raw, real story of navigating a new country and industry while my body demanded new ways of working. From accessibility gaps in tech to the emotional toll of “just pushing through,” this talk brings a rare perspective on resilience, inclusion, and thriving when nothing is easy. Whether you come for the cloud or the human story behind it, you’ll leave with fresh insight into what adaptability really looks like in tech.
+                Expect real-world stories, simple tools, and an honest look at what makes teams thrive, or quietly unravel. Whether you're part of a team or lead one, this talk will give you practical ways to start better conversations, before the people behind the code burn out.
             </>
         ),
-        image: LenaPismeny,
-        linkedin: "https://www.linkedin.com/in/laenaren/",
+        image: SiJobling,
+        linkedin: "https://www.linkedin.com/in/sijobling/",
+        website: "https://petals.team/",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "IndyPahal": {
+        name: "Indy Pahal",
+        jobTitle: "IT Director @ SOCOTEC UK",
+        bio: (
+            <>
+                <p>
+                    I'm an experienced Tech Leader, having gone through the journey myself and mentored multiple people going from technical roles to more management and leadership roles.
+                </p>
+            </>
+        ),
+        talkTitle:
+            "Leadership and Management for Techies",
+        description: (
+            <>Many brilliant software developers eventually find themselves asking: what's next? For some, the natural step is to move into leadership or management—but the leap isn't as straightforward as it seems. My talk is designed to help technical professionals explore this transition, understand what it really means, and decide if leadership is the path they want to take.
+
+</>
+        ),
+        image: IndyPahal,
+        linkedin: "https://www.linkedin.com/in/indy-pahal-76328075/",
         website: "",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
     },
+
+    // "LenaPismeny": {
+    //     name: "Lena Pismeny",
+    //     jobTitle: "Senior DevOps Engineer",
+    //     bio: (
+    //         <>
+    //             <p>
+    //                 Lena is a Senior DevOps and DevSecOps Engineer with over 12 years of experience designing secure, scalable, cloud-native infrastructure. I specialize in automating cloud environments (AWS, GCP), infrastructure as code (Terraform, CloudFormation), Configuration management (Ansible, Puppet), and building robust CI/CD pipelines (Jenkins, GitLab). I enjoy building things from scratch, improving team velocity, and ensuring security is embedded in every stage of the delivery process. I bring a strong mix of hands-on engineering and cross-functional collaboration across security, legal, and development teams.
+    //             </p>
+    //         </>
+    //     ),
+    //     talkTitle:
+    //         "Steps and Struggles: My Journey Through Tech, Disability, and Immigration",
+    //     description: (
+    //         <>
+    //             What happens when a DevOps engineer with deep AWS and security expertise is forced to start over—this time with vision loss, limited mobility, and in a foreign country?
+    //             <br></br>    
+    //             <br></br>    
+
+    //             This talk isn’t just about technology—it’s about grit, identity, and adaptation. Before moving to the Netherlands, I had already lost much of my vision. Over the past year, walking long distances and climbing stairs has also become difficult. Yet through it all, I’ve rebuilt my tech career from the ground up—drawing on my expertise in cloud infrastructure, DevOps, and security to stay in the game.
+    //             <br></br>    
+    //             <br></br>    
+
+    //             I’ll share the raw, real story of navigating a new country and industry while my body demanded new ways of working. From accessibility gaps in tech to the emotional toll of “just pushing through,” this talk brings a rare perspective on resilience, inclusion, and thriving when nothing is easy. Whether you come for the cloud or the human story behind it, you’ll leave with fresh insight into what adaptability really looks like in tech.
+    //         </>
+    //     ),
+    //     image: LenaPismeny,
+    //     linkedin: "https://www.linkedin.com/in/laenaren/",
+    //     website: "",
+    //     sessionType: "Talk",
+    //     speakerCard: false,
+    //     speakerCardImage: "",
+    // },
 
     //     "": {
     //     name: "",

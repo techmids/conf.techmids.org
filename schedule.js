@@ -342,7 +342,7 @@ export const Schedule = {
 }
 */
 
-export const OVERALL_START = '09:00AM'
+export const OVERALL_START = '08:30AM'
 export const OVERALL_END = '17:15PM'
 
 // Event Metadata
@@ -350,7 +350,7 @@ const eventDate = '2025-10-14'
 const eventOpenAndEndTime = `${OVERALL_START} - ${OVERALL_END} BST`
 
 // Conference 2025 Overall Times
-const registrationStart = '08:00AM';
+const registrationStart = '08:30AM';
 const registrationEnd = '09:30AM';
 
 const morningSessionStart = '09:30AM';
@@ -512,12 +512,12 @@ const cynthiaAkiotu = {
     session: ['CynthiaAkiotu'],
 }
 
-const ricardoSueiras = {
-    name: 'Ricardo Sueiras',
-    description: 'Build without limits - zero to shipped in 20 minutes',
+const indyPahal = {
+    name: 'Indy Pahal',
+    description: 'Leadership and Management for Techies',
     start: session4Start,
     end: session4End,
-    session: ['RicardoSueiras'],
+    session: ['IndyPahal'],
 }
 
 const carlyRichmond = {
@@ -564,7 +564,7 @@ const screen1Schedule = {
         joshuaMo,
         cynthiaAkiotu,
         lunch,
-        ricardoSueiras,
+        indyPahal,
         carlyRichmond,
         afternoonBreak,
         andyCarter,
@@ -614,12 +614,20 @@ const danBeglin = {
     session: ['DanBeglin'],
 }
 
-const lenaPismeny = {
-    name: 'Lena Pismeny',
-    description: 'Steps and Struggles: My Journey Through Tech, Disability, and Immigration',
+// const lenaPismeny = {
+//     name: 'Lena Pismeny',
+//     description: 'Steps and Struggles: My Journey Through Tech, Disability, and Immigration',
+//     start: session6Start,
+//     end: session6End,
+//     session: ['LenaPismeny'],
+// }
+
+const siJobling = {
+    name: 'Si Jobling',
+    description: 'Burndown Charts bs Burnt-Out Teams: A people-first approach to improving psychological safety in tech',  
     start: session6Start,
     end: session6End,
-    session: ['LenaPismeny'],
+    session: ['SiJobling'],
 }
 
 const dileepMarway = {
@@ -654,7 +662,7 @@ const screen2Schedule = {
         jimSeconde,
         danBeglin,
         afternoonBreak,
-        lenaPismeny,
+        siJobling,
         dileepMarway,
         chrisMiller,
     ]
@@ -701,12 +709,20 @@ const jamesHolland = {
     session: ['JamesHolland'],
 }
 
-const stuartClark = {
-    name: 'Stuart Clark',
-    description: 'Scale or Fail as Spotify\'s Growth Exposed the Abstraction Paradox',
-    start: session7Start,
-    end: session7End,
-    session: ['StuartClark'],
+// const stuartClark = {
+//     name: 'Stuart Clark',
+//     description: 'Scale or Fail as Spotify\'s Growth Exposed the Abstraction Paradox',
+//     start: session7Start,
+//     end: session7End,
+//     session: ['StuartClark'],
+// }
+
+const ricardoSueiras = {
+    name: 'Ricardo Sueiras',
+    description: 'Build without limits - zero to shipped in 20 minutes',
+    start: session4Start,
+    end: session4End,
+    session: ['RicardoSueiras'],
 }
 
 const screen3Schedule = {
@@ -725,7 +741,7 @@ const screen3Schedule = {
         tomCamp,
         afternoonBreak,
         jamesHolland,
-        stuartClark,
+        ricardoSueiras,
         closingKeynote,
     ]
 }
