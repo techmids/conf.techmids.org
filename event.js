@@ -44,6 +44,11 @@ export const sponsorTiers = {
                 name: "AdvancedOne",
                 image: "/sponsors/OneAdvanced.png",
                 url: "https://www.oneadvanced.com/"
+            },
+            {
+                name: "BCS Birmingham Branch",
+                image: "/sponsors/bcs.jpg",
+                url: "https://www.bcs.org/membership-and-registrations/member-communities/birmingham-branch/"
             }
         ]
     },
