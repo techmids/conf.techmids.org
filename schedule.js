@@ -720,8 +720,8 @@ const jamesHolland = {
 const ricardoSueiras = {
     name: 'Ricardo Sueiras',
     description: 'Build without limits - zero to shipped in 20 minutes',
-    start: session4Start,
-    end: session4End,
+    start: session7Start,
+    end: session7End,
     session: ['RicardoSueiras'],
 }
 
