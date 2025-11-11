@@ -152,14 +152,14 @@ function CombinedScheduleView({ parsedDate, today, timeIrl }) {
                     <thead className="bg-brand-100 hidden md:table-header-group">
                         <tr>
                             <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900">Time</th>
-                            <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900">Screen 1</th>
-                            <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900">Screen 2</th>
                             <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900">Screen 3</th>
+                            <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900">Screen 2</th>
+                            <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900">Screen 1</th>
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-brand-700 bg-white">
                         {timeSlots.map((slot, index) => {
-                            const isRowActive = isCurrentTimeSlot(slot.screen1 || slot.screen2 || slot.screen3, parsedDate, today, timeIrl);
+                            const isRowActive = isCurrentTimeSlot(slot.screen3 || slot.screen2 || slot.screen1, parsedDate, today, timeIrl);
                             const isSameAcrossAll = areSlotsSame(slot.screen1, slot.screen2) && areSlotsSame(slot.screen1, slot.screen3) && slot.screen1;
 
                             return (
@@ -179,16 +179,16 @@ function CombinedScheduleView({ parsedDate, today, timeIrl }) {
                                     ) : (
                                         <>
                                             <td className="block md:table-cell px-0 md:px-3 py-0 md:py-2">
-                                                <div className="font-bold md:hidden px-3 pt-2">Screen 1</div>
-                                                <SessionCell slot={slot.screen1} isHappening={isCurrentTimeSlot(slot.screen1, parsedDate, today, timeIrl)} />
+                                                <div className="font-bold md:hidden px-3 pt-2">Screen 3</div>
+                                                <SessionCell slot={slot.screen3} isHappening={isCurrentTimeSlot(slot.screen3, parsedDate, today, timeIrl)} />
                                             </td>
                                             <td className="block md:table-cell px-0 md:px-3 py-0 md:py-2">
                                                 <div className="font-bold md:hidden px-3 pt-2">Screen 2</div>
                                                 <SessionCell slot={slot.screen2} isHappening={isCurrentTimeSlot(slot.screen2, parsedDate, today, timeIrl)} />
                                             </td>
                                             <td className="block md:table-cell px-0 md:px-3 py-0 md:py-2">
-                                                <div className="font-bold md:hidden px-3 pt-2">Screen 3</div>
-                                                <SessionCell slot={slot.screen3} isHappening={isCurrentTimeSlot(slot.screen3, parsedDate, today, timeIrl)} />
+                                                <div className="font-bold md:hidden px-3 pt-2">Screen 1</div>
+                                                <SessionCell slot={slot.screen1} isHappening={isCurrentTimeSlot(slot.screen1, parsedDate, today, timeIrl)} />
                                             </td>
                                         </>
                                     )}
