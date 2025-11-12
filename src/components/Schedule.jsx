@@ -53,7 +53,7 @@ const SessionCell = ({ slot, isHappening }) => {
 // The original "stacked" view for a single day/track
 function StackedScheduleView({ day, parsedDate, today, timeIrl }) {
     return (
-        <div className="w-full mt-8 sm:-mx-8">
+        <div id="schedule" className="w-full mt-8 sm:-mx-8">
             <div className="sm:flex-auto">
                 <h1 className="font-display text-4xl font-medium tracking-tighter text-brand-800 sm:text-5xl">
                     {day.timeOfDay}
