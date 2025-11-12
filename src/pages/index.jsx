@@ -17,7 +17,7 @@ export default function Home() {
             <Hero/>            
             <Images/>
             {AVAILABLE_INFORMATION.speakersAvailable && <Speakers/>}
-            {AVAILABLE_INFORMATION.scheduleAvailable && <Schedule/>}
+            {AVAILABLE_INFORMATION.scheduleAvailable && <Schedule id="schedule"/>}
             <Testimonials/>
             <Sponsors/>
             <Meetups/>
