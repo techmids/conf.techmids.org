@@ -18,7 +18,7 @@ export default function Covid() {
         />
       </Head>
       <Header />
-      <main>
+      <main id="Schedule">
         {AVAILABLE_INFORMATION.scheduleAvailable ? (
           <main>
             <h1 className="text-4xl font-bold text-center my-8">Schedule</h1>
