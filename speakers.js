@@ -37,9 +37,9 @@ export const Sessions = {
             </>
         ),
         talkTitle:
-            "TBC",
+            "From Apps to Agents: The Next Wave of Digital Transformation",
         description: (
-            <></>
+            <>We’ve moved from monoliths to microservices, from on-prem to the cloud and, with each wave of digital transformation, we have changed how we design, build, and scale systems. Today, we’re entering a new era: the shift from traditional apps to intelligent, autonomous agents. Let's explore what this shift means in practice, how it impacts software architecture, and why it’s not just about AI, but about a new model of software thinking. Join me for practical insights, some laughs, and a fresh look at the future of intelligent software.</>
         ),
         image: MatheusGuimares,
         linkedin: "https://www.linkedin.com/in/codingmatheus/",
