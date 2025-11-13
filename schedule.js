@@ -539,8 +539,8 @@ const andyCarter = {
 const stuartLangridge = {
     name: 'Stuart Langridge',
     description: 'The mazy web she whirls: starting Open Web Advocacy',
-    start: session7Start,
-    end: session7End,
+    start: session3Start,
+    end: session3End,
     session: ['StuartLangridge'],
 }
 
@@ -568,7 +568,7 @@ const screen1Schedule = {
         carlyRichmond,
         afternoonBreak,
         andyCarter,
-        stuartLangridge,
+        placeholder("Oliver Davies", session7Start, session7End),
         shaunLawrence,
     ]
 }
@@ -735,7 +735,7 @@ const screen3Schedule = {
         welcome,
         openingKeynote,
         maxWoolf,
-        EliHolderness,
+        stuartLangridge,
         lunch,
         tonyEdwards,
         tomCamp,
