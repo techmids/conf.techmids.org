@@ -45,7 +45,7 @@ const conferenceSchedule = {
     room: "The ICC",
     timeOfDay: 'Overall Schedule',
     date: '2024-10-25',
-    summary: '09:00 - 16:00 BST',
+    summary: '09:00 - 16:00 GMT',
     dayName: "Day 1",
     timeSlots: [
         {
@@ -92,7 +92,7 @@ const mainHall = {
     room: "The Colosseum",
     timeOfDay: 'The Colosseum',
     date: '2024-10-25',
-    summary: '09:00 - 16:00 BST',
+    summary: '09:00 - 16:00 GMT',
     dayName: "Day 1",
     timeSlots: [
         {
@@ -182,7 +182,7 @@ const stageA = {
     room: "The Agora",
     timeOfDay: 'The Agora',
     date: '2024-10-25',
-    summary: '09:00 - 16:00 BST',
+    summary: '09:00 - 16:00 GMT',
     dayName: "Day 1",
     timeSlots: [
         {
@@ -255,7 +255,7 @@ const stageOne = {
     room: "The Forum",
     timeOfDay: 'The Forum',
     date: '2024-10-25',
-    summary: '09:00 - 16:00 BST',
+    summary: '09:00 - 16:00 GMT',
     dayName: "Day 1",
     timeSlots: [
         {
@@ -347,7 +347,7 @@ export const OVERALL_END = '17:15PM'
 
 // Event Metadata
 const eventDate = '2025-10-14'
-const eventOpenAndEndTime = `${OVERALL_START} - ${OVERALL_END} BST`
+const eventOpenAndEndTime = `${OVERALL_START} - ${OVERALL_END} GMT`
 
 // Conference 2025 Overall Times
 const registrationStart = '08:30AM';
