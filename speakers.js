@@ -24,6 +24,7 @@ import StuartClark from "./public/speakers/StuartClark.jpeg"
 import StuartLangridge from "./public/speakers/StuartLangridge.jpeg"
 import TomCamp from "./public/speakers/TomCamp.jpeg"
 import TonyEdwards from "./public/speakers/TonyEdwards.jpeg"
+import OliverDavies from "./public/speakers/OliverDavies.png"
 
 export const Sessions = {
     "MatheusGuimares": {
@@ -770,6 +771,26 @@ Away from the work, Andy runs Street Art Sheffield, documenting the Steel Cityâ€
         image: AndyCarter,
         linkedin: "https://www.linkedin.com/in/drandycarter/",
         website: "https://andycarter.dev/",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "OliverDavies": {
+        name: "Oliver Davies",
+        jobTitle: "Drupal Developer, Consultant and Speaker",
+        bio: (
+            <>Oliver is a Software Developer and Drupal expert with 18 years experience. He specialises in code quality, automated testing and test-driven development, is a Linux enthusiast and an advocate for open source software.</>
+        ),
+        talkTitle:
+             "Nix for PHP Developers (and everyone else)",
+        description: (
+            <>Nix is a package manager with more than 120,000 packages, an operating system with more than 20,000 options, and a build tool for creating reproducible and reliable software that works the same for everyone, every time.
+            <br></br>
+            In this talk, Oliver will explain what Nix is, show how to create development shells for PHP (or anything else) that mean you no longer need to use containers or virtual machines, and how to package applications that are easy to deploy and distribute.
+            <br></br>
+            Note the slides and code examples are focus on PHP, but the same concepts and tools apply to other programming languages. You don't need to be a PHP Developer to learn from this talk.</>),
+        image: OliverDavies,
+        website: "https://www.oliverdavies.uk/",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",

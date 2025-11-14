@@ -544,6 +544,14 @@ const stuartLangridge = {
     session: ['StuartLangridge'],
 }
 
+const oliverDavies = {
+    name: 'Oliver Davies',
+    description: 'Nix for PHP Developers',
+    start: session7Start,
+    end: session7End,
+    session: ['OliverDavies'],
+}
+
 const shaunLawrence = {
     name: 'Shaun Lawrence',
     description: 'If .NET brewed beer',
@@ -568,7 +576,7 @@ const screen1Schedule = {
         carlyRichmond,
         afternoonBreak,
         andyCarter,
-        placeholder("Oliver Davies", session7Start, session7End),
+        oliverDavies,
         shaunLawrence,
     ]
 }
