@@ -449,7 +449,7 @@ const socialEnd = 'LATE'
 
 const social = {
     name: 'Post-Conference Social 🎉',
-    description: 'Chats, drinks, and a generally fab time!',
+    description: 'Chats, drinks, and a generally fab time @ BOX Brindleyplace!',
     start: socialStart,
     end: socialEnd,
 }
