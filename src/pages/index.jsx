@@ -34,7 +34,7 @@ const HomePageWrapper = ({children}) => {
                     name="description"
                     content={`TechMids Conf is an all day, full stack conference on ${EVENT.date} Come along for a day of inspiring talks, social chatter and fun.`}
                 />
-                <meta name="image" property="og:image" content="https://conf.techmids.io/launch.jpg"/>
+                <meta name="image" property="og:image" content="https://conf.techmids.org/launch.jpg"/>
                 <meta name="google-site-verification" content="2y4-3KQkzYOn2-fx1oSZ-8AMc9gwySoCQJlji4Q1yp0" />
                 <meta name="google-site-verification" content="QbrP8JrBjruuQ7UVZ5OfaVbT7ewQlygk6zAk0hTy01I" />
                 <script dangerouslySetInnerHTML={

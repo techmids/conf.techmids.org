@@ -16,8 +16,19 @@ const pastEventMetadata = {
     imageUrl: '/gallery/audience-icc.jpg',
     niceDate: 'Friday 20th Oct 2023',
     datetime: '2023-10-20'
+  },
+  "2024-10-25": {
+    title: 'TechMids Conf October 2024',
+    imageUrl: '/gallery/audience-icc.jpg',
+    niceDate: 'Friday 25th Oct 2024',
+    datetime: '2024-10-25'
+  },
+  "2025-11-14": {
+    title: 'TechMids Conf November 2025',
+    imageUrl: '/gallery/everyman-foyer.png',
+    niceDate: 'Friday 14 Nov 2025',
+    datetime: '2024-10-25'
   }
-  // More past events...
 }
 
 

@@ -2,10 +2,10 @@ _    _ _  _ _  _  ___ ____  ___ _  _ ____  ___  ____ ____ ___
 |    | |\ | |_/    |  |  |   |  |__| |___  |__] |__| [__   |  
 |___ | | \| | \_   |  |__|   |  |  | |___  |    |  | ___]  |  
 
-# Building "past" versions of the conf.techmids.io.website
+# Building "past" versions of the conf.techmids.org.website
 
 
-The conf.techmids.io website ought to have all the previous versions of the website available for browsing, so people can see what went on and who spoke at each previous event.
+The conf.techmids.org website ought to have all the previous versions of the website available for browsing, so people can see what went on and who spoke at each previous event.
 
 That's what this is for.
 
@@ -13,7 +13,7 @@ Every time there's a new TechMids conference, the website changes to be about th
 
 So, that's what this extra script does.
 
-The idea here is that, when a TechMids event has happened, this script is run to "archive" the current state of the website; it will then be available at conf.techmids.io/past/2023-06/ or similar. The script is run once to archive the current version of the website; after this, the site can then safely be changed to reference and describe the _next_ upcoming event. The script doesn't need to be run every time or on every build; it's a specific action, taken on the day that the website starts being updated for a new event.
+The idea here is that, when a TechMids event has happened, this script is run to "archive" the current state of the website; it will then be available at conf.techmids.org/past/2023-06/ or similar. The script is run once to archive the current version of the website; after this, the site can then safely be changed to reference and describe the _next_ upcoming event. The script doesn't need to be run every time or on every build; it's a specific action, taken on the day that the website starts being updated for a new event.
 
 To run the script, do:
 
