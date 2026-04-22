@@ -45,14 +45,17 @@ export function Hero() {
                   <div className="mt-24 sm:mt-32 lg:mt-16">
                   </div>
                   <h1 className="font-display text-4xl font-bold tracking-tighter text-white sm:text-7xl">
-                      <span className="sr-only">TechMids Conf - </span>
-                      <span className="text-brand-500">{EVENT.date}</span>
-                      <br/> All day, full stack conference
+                      {!EVENT.dateTbc && (<>
+                        <span className="sr-only">TechMids Conf - </span>
+                        <span className="text-brand-500">{EVENT.date}</span>
+                        <br/>
+                      </>)}
+                      All day, full stack conference
                   </h1>
                   <div className="mt-6 space-y-6 font-display text-lg text-gray-300">
                      
                       <p>
-                          <b>TechMids Conf is a full stack conference</b>, on 14th November 2025, made up of all your favourite meetups from <b>Fusion</b>, to <b>Women in Tech</b>, to <b>Golang</b>, to <b>.NET/MAUI</b> and everything in-between.
+                          <b>TechMids Conf is a full stack conference</b>, made up of all your favourite meetups from <b>Fusion</b>, to <b>Women in Tech</b>, to <b>Golang</b>, to <b>.NET/MAUI</b> and everything in-between.
                          
                       </p>
                       <p>

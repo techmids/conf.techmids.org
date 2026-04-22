@@ -15,7 +15,7 @@ const lines = [
 "|    | |\\ | |_/    |  |  |   |  |__| |___  |__] |__| [__   |  ",
 "|___ | | \\| | \\_   |  |__|   |  |  | |___  |    |  | ___]  |  ",
 "",
-"The conf.techmids.io website ought to have all the previous",
+"The conf.techmids.org website ought to have all the previous",
 "versions of the website available for browsing, so people",
 "can see what went on and who spoke at each previous event.",
 "",
