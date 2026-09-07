@@ -25,48 +25,26 @@ export const AVAILABLE_INFORMATION = {
     scheduleAvailable: false,
     locationAvailable: true, 
     speakersAvailable: false,
-    sponsorsAvailable: false,
+    sponsorsAvailable: true,
 }
 
 export const sponsorTiers = {
-//    headline: {
-//        name: "Headline Sponsor",
-//        sponsors: [
-//            {
-//                name: "Amazon Web Services",
-//                image: "/sponsors/AWS.svg",
-//                url: "https://aws.amazon.com/"
-//            }
-//        ]
-//    },
-//    silver: {
-//        name: "Silver Sponsors",
-//        sponsors: [
-//            {
-//                name: "AdvancedOne",
-//                image: "/sponsors/OneAdvanced.png",
-//                url: "https://www.oneadvanced.com/"
-//            },
-//            {
-//                name: "BCS Birmingham Branch",
-//                image: "/sponsors/bcs.jpg",
-//                url: "https://www.bcs.org/membership-and-registrations/member-communities/birmingham-branch/"
-//            }
-//        ]
-//    },
-//    bronze: {
-//        name: "Bronze Sponsors",
-//        sponsors: [
-//            {
-//                name: "Bluetel",
-//                image: "/sponsors/Bluetel.png",
-//                url: "https://www.bluetel.co.uk/"
-//            },
-//            {
-//                name: "Spinks",
-//                image: "/sponsors/Spinks.png",
-//                url: "https://www.wearespinks.com/"
-//            }
-//        ]
-//    },
+    headline: {
+        name: "Headline Sponsor",
+        sponsors: [
+            {
+                name: "Goldman Sachs",
+                image: "/sponsors/GoldmanSachs.png",
+                url: "https://www.goldmansachs.com/"
+            }
+        ]
+    },
+    silver: {
+        name: "Silver Sponsors",
+        sponsors: []
+    },
+    bronze: {
+        name: "Bronze Sponsors",
+        sponsors: []
+    },
 }
