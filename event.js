@@ -1,7 +1,7 @@
 import { OVERALL_END, OVERALL_START} from "schedule"
 
 export const EVENT = {
-    date: 'November 27th 2026',
+    date: '27th November 2026',
     dateTbc: false,
     title: 'TechMids Conf',
     year: '2026',
