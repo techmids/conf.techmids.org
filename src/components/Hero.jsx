@@ -1,6 +1,7 @@
 import { ButtonCTA } from '@/components/ButtonCTA'
 import {EVENT} from "../../event";
 import { VenueInfo } from './VenueInfo';
+import { LogoConf } from '@/components/LogoConf'
 
 export function Hero() {
   return (
@@ -45,6 +46,7 @@ export function Hero() {
               <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
                   <div className="mt-24 sm:mt-32 lg:mt-16">
                   </div>
+                <LogoConf className="h-64 w-auto text-slate-900" />
                   <h1 className="font-display text-4xl font-bold tracking-tighter text-white sm:text-7xl">
                       {!EVENT.dateTbc && (<>
                         <span className="sr-only">TechMids Conf - </span>
