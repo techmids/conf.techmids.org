@@ -6,7 +6,6 @@ export default function Document() {
   return (
       <Html className="bg-white antialiased" lang="en">
           <Head>
-              <Meta name="google-site-verification" content="GdmzzVKmmOb3Y48Uze04WSJZStzlLo28q2RRd_lyZvI" />
               <link rel="preconnect" href="https://fonts.googleapis.com" />
               <link
                   rel="preconnect"
