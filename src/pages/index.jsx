@@ -29,14 +29,20 @@ export default function Home() {
 const HomePageWrapper = ({children}) => {
     return <>
             <Head>
-                <title>TechMids Conf - A community-driven tech conference</title>
+                <title>TechMids Conf - Birmingham's community-driven tech conference</title>
                 <meta
                     name="description"
                     content={`TechMids Conf is an all day, full stack conference on ${EVENT.date} Come along for a day of inspiring talks, social chatter and fun.`}
                 />
-                <meta name="image" property="og:image" content="https://conf.techmids.org/launch.jpg"/>
-                <meta name="google-site-verification" content="2y4-3KQkzYOn2-fx1oSZ-8AMc9gwySoCQJlji4Q1yp0" />
-                <meta name="google-site-verification" content="QbrP8JrBjruuQ7UVZ5OfaVbT7ewQlygk6zAk0hTy01I" />
+                <link rel="canonical" href="https://conf.techmids.org/" />
+                {/* Open Graph / Social Media cards */}
+                <meta property="og:site_name" content="TechMids Conf" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://conf.techmids.org/" />
+                <meta property="og:title" content="TechMids Conf 2026" />
+                <meta property="og:description" content="Birmingham's community-driven tech conference." />
+                <meta property="og:image" content="https://conf.techmids.org/launch.jpg"/>
+
                 <script dangerouslySetInnerHTML={
                     {
                         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

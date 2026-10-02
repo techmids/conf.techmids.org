@@ -1,14 +1,15 @@
 import { ButtonLink } from '@/components/Button'
 import {EVENT, AVAILABLE_INFORMATION} from "../../event";
-import Head from "next/head";
+import Script from "next/script";
 import { VenueInfo } from './VenueInfo';
 
 export function ButtonCTA() {
     return (
       <>
-        <Head>
-          <script src="https://js.tito.io/v2/with/inline" async></script>
-        </Head>
+        <Script
+          src="https://js.tito.io/v2/with/inline"
+          strategy="lazyOnload">
+        </Script>
         <div className="my-4 grid gap-10 px-4">
           <div className="grid grid-cols-1 gap-10">
             {EVENT.onSale ? (

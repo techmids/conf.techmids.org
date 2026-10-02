@@ -1,10 +1,10 @@
 import { OVERALL_END, OVERALL_START} from "schedule"
 
 export const EVENT = {
-    date: 'November 27th 2026',
+    date: '27th November 2026',
     dateTbc: false,
     title: 'TechMids Conf',
-    edition: 'TechMids Conf 2026',
+    year: '2026',
     venue: 'Everyman Cinema',
     address: 'Mailbox, Birmingham',
     startTime: OVERALL_START,
@@ -18,6 +18,9 @@ export const EVENT = {
     speakersTBC: true,
     capacity: 250,
     tagline: "",
+    get edition() {
+    return `${this.title} ${this.year}`;
+  }
 }
 
 //  Marks what information is available on the website
