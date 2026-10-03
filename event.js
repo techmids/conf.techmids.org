@@ -14,7 +14,7 @@ export const EVENT = {
     soldOut: false,
     titoId: 'tech-events-birmingham/techmids-conf-2026',
     CFPLink: "https://forms.gle/mhQxq1BuJFiqzxS6A",
-    CFPOpen: true,
+    CFPOpen: false,
     speakersTBC: true,
     capacity: 250,
     tagline: "",

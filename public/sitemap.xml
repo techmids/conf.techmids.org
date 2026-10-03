@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+  
+  <!-- 1. Homepage Route -->
+  <url>
+    <loc>https://conf.techmids.org</loc>
+  </url>
+
+  <!-- 2. Code of conduct Page -->
+  <url>
+    <loc>https://conf.techmids.org/code-of-conduct</loc>
+  </url>
+
+  <!-- 2. Speaker list standalone Page -->
+  <url>
+    <loc>https://conf.techmids.org/speakers</loc>
+  </url>
+
+  <!-- 3. Past events page -->
+  <url>
+    <loc>https://conf.techmids.org/past-events</loc>
+  </url>
+</urlset>
