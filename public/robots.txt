@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /sharing/
+
+Sitemap: https://conf.techmids.org/sitemap.xml
