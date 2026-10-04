@@ -2,6 +2,7 @@ import React from "react";
 import {Speakers} from "@/components/Speakers";
 import Head from "next/head";
 import {Header} from "@/components/Header";
+import {EVENT, AVAILABLE_INFORMATION} from "../../../event";
 import {Sponsors} from "@/components/Sponsors";
 import {Footer} from "@/components/Footer";
 
@@ -17,7 +18,7 @@ export const SpeakersPage = () => {
             </Head>
             <Header/>
             <main>
-                <Speakers/>
+                {AVAILABLE_INFORMATION.speakersAvailable && <Speakers/>}
                 <Sponsors/>
             </main>
             <Footer/>
