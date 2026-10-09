@@ -1,312 +1,48 @@
-import AndyCarter from "./public/speakers/AndyCarter.jpeg"
 import BeckiFloyd from "./public/speakers/BeckiFloyd.jpeg"
-import CarlyRichmond from "./public/speakers/CarlyRichmond.jpeg"
-import ChrisMiller from "./public/speakers/ChrisMiller.jpeg"
-import CynthiaAkiotu from "./public/speakers/CynthiaAkiotu.jpeg"
-import DanBeglin from "./public/speakers/DanBeglin.jpeg"
-import DileepMarway from "./public/speakers/DileepMarway.jpeg"
-import DanielTallentire from "./public/speakers/DanielTallentire.jpeg"
-import EliHolderness from "./public/speakers/EliHolderness.jpeg"
-import GuyBarker from "./public/speakers/GuyBarker.jpeg"
-import IndyPahal from "./public/speakers/IndyPahal.jpg"
-import JamesHolland from "./public/speakers/JamesHolland.jpeg"
-import JimSeconde from "./public/speakers/JimSeconde.jpeg"
-import JoshuaMo from "./public/speakers/JoshuaMo.jpeg"
-import LenaPismeny from "./public/speakers/LenaPismeny.jpeg"
-import MatheusGuimares from "./public/speakers/MatheusGuimares.jpg"
-import MaxWoolf from "./public/speakers/MaxWoolf.jpeg"
-import RicardoSueiras from "./public/speakers/RicardoSueiras.jpeg"
-import RichardBrough from "./public/speakers/RichardBrough.jpeg"
-import SalmaAlamNaylor from "./public/speakers/SalmaAlamNaylor.jpeg"
 import ShaunLawrence from "./public/speakers/ShaunLawrence.jpeg"
-import SiJobling from "./public/speakers/SiJobling.jpeg"
-import StuartClark from "./public/speakers/StuartClark.jpeg"
-import StuartLangridge from "./public/speakers/StuartLangridge.jpeg"
-import TomCamp from "./public/speakers/TomCamp.jpeg"
+import EriolFox from "./public/speakers/EriolFox.jpeg"
+import EliHolderness from "./public/speakers/EliHolderness.jpeg"
+import MartinReynolds from "./public/speakers/MartinReynolds.jpeg"
+import AndyCarter from "./public/speakers/AndyCarter.jpeg"
+import CliffAgius from "./public/speakers/CliffAgius.jpeg"
 import TonyEdwards from "./public/speakers/TonyEdwards.jpeg"
-import OliverDavies from "./public/speakers/OliverDavies.png"
+import KevlinHenney from "./public/speakers/KevlinHenney.jpeg"
+import ColindaLatour from "./public/speakers/ColindaLatour.jpeg"
+import LiamWestley from "./public/speakers/LiamWestley.jpeg"
+import MikeIrving from "./public/speakers/MikeIrving.jpeg"
+import StevenTrotter from "./public/speakers/StevenTrotter.jpeg"
+import StefanCornea from "./public/speakers/StefanCornea.jpeg"
+import EdaEren from "./public/speakers/EdaEren.jpeg"
+import FaithSodipe from "./public/speakers/FaithSodipe.jpeg"
+import RobertCurran from "./public/speakers/RobertCurran.jpeg"
+import SteveWade from "./public/speakers/SteveWade.jpeg"
+import SteveHeyes from "./public/speakers/SteveHeyes.jpeg"
+import JimSeconde from "./public/speakers/JimSeconde.jpeg"
 
 export const Sessions = {
-    "MatheusGuimares": {
-        name: "Matheus Guimarães",
-        jobTitle: "Senior Developer Advocate, UK/IR @ AWS",
+    "BeckiFloyd": {
+        name: "Becki Floyd",
+        jobTitle: "User Experience Designer @ Voxpopme",
         bio: (
             <>
-                <p>
-                    Matheus Guimarães, known online as @codingmatheus, is a .NET and microservices specialist, international keynote speaker, and Senior Developer Advocate at AWS. With over 20 years of software development experience, starting as a junior video game programmer when C++ dominated and becoming an early .NET adopter, he has progressed through roles including developer, tech lead, architect, CTO, and startup founder. He has helped companies ranging from startups to global enterprises like Novartis, McLaren, Dewalt, PRS For Music, and Coca Cola modernize and scale their systems, leading digital transformations and designing cloud-native architectures with a hands-on, people-first approach. Today, he shares his expertise with developers worldwide through talks, blogs, videos, and whiteboard sessions, having delivered keynotes and presentations at conferences across the globe while remaining passionate about helping others grow in the technology industry.
-                </p>
+                <p>{"Becki Floyd is a UX designer and researcher who leads design for an AI video research platform. She spent nearly 20 years in the charity sector running national advice projects and leading a full digital transformation, before retraining through a coding bootcamp while working full-time and moving into tech. Since then she has designed AI tools, mobile apps, and public services across the public, private, and charity sectors, always with a focus on inclusion. She won a Women in Tech Award for Best Use of Tech in the Public Sector, and was listed in the TechWomen100. She has trained hundreds of people to use AI and offers free research and training to charities."}</p>
             </>
         ),
         talkTitle:
-            "From Apps to Agents: The Next Wave of Digital Transformation",
-        description: (
-            <>We’ve moved from monoliths to microservices, from on-prem to the cloud and, with each wave of digital transformation, we have changed how we design, build, and scale systems. Today, we’re entering a new era: the shift from traditional apps to intelligent, autonomous agents. Let's explore what this shift means in practice, how it impacts software architecture, and why it’s not just about AI, but about a new model of software thinking. Join me for practical insights, some laughs, and a fresh look at the future of intelligent software.</>
-        ),
-        image: MatheusGuimares,
-        linkedin: "https://www.linkedin.com/in/codingmatheus/",
-        website: "https://codingmatheus.com/",
-        sessionType: "Keynote",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "SalmaAlamNaylor": {
-        name: "Salma Alam-Naylor",
-        jobTitle: "Head of Dev Ed @ Nordcraft",
-        bio: (
-            <>
-                <p>I write code for your entertainment. I help developers build cool stuff by writing blog posts, making videos, coding live on the internet, and publishing open source projects. After a career as a music teacher and comedian, I transitioned to technology in 2014, working as a front end developer and tech lead for startups, agencies and global e-commerce, moving to Developer Experience and Developer Education in 2021. Active in the developer community, I am a GitHub Star, a former Microsoft MVP for Developer Technologies (2021-2025), winner of the Jamstack Conf Community Creator Award 2021, and a partnered Twitch streamer. I also make videos on YouTube about tech and the history of The Internet.</p>
-            </>
-        ),
-        talkTitle:
-            "An Introduction to the World Wide Web for Very Senior Programmers",
-        description: (
-            <>As we witness the much-anticipated release of HTML 2.0, there is no better time to surf the World Wide Web. But how did we get here? And what may the future hold? And why are we still writing HTML documents using text in 1995?</>
-        ),
-        image: SalmaAlamNaylor,
-        linkedin: "https://www.linkedin.com/in/whitep4nth3r/",
-        website: "https://whitep4nth3r.com/",
-        youtube: "https://www.youtube.com/whitep4nth3r",
-        sessionType: "Keynote",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-        "TomCamp": {
-        name: "Tom Camp (AKA @Zoinkwiz)",
-        jobTitle: "Freelance Software Engineer",
-        bio: (
-            <>
-                <p>Tom Camp is a developer relations engineer and freelancer with a background in realtime APIs. Being involved in game dev as a side quest for a decade, he is a committed gamer and occasional streamer, doing both under the pseudonym @Zoinkwiz. He is the creator and maintainer of Quest Helper, the most-downloaded community plugin for Old School RuneScape, one of the world’s largest and most iconic MMORPGs.</p>    
-            </>
-        ),
-        talkTitle:
-            "One Small Favour: Growing a Gaming Plugin from Personal Project to 700k Weekly Users and a Thriving Open Source Community",
-        description: (
-            <>I’ll share how personal frustration with an in-game quest led to building a plugin that now helps 700k players weekly. I’ll cover helping developers contribute to the project, providing end-user support, and handling spicy controversies - all with some fun stories sprinkled in along the way.</>
-        ),
-        image: TomCamp,
-        linkedin: "https://www.linkedin.com/in/thomascamp333/",
-        website: "https://github.com/Zoinkwiz/quest-helper",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    // "StuartClark": {
-    //     name: "Stuart Clark",
-    //     jobTitle: "Senior Developer Advocate @ Spotify",
-    //     bio: (
-    //         <>
-    //             <p>Stuart is a sought-after speaker, TEDx presenter, and champion for sustainable software. He’s passionate about the impact of software and AI on the climate and empowers developers to build a more sustainable future. As a leading expert in programmability and DevOps, he frequently graces industry stages worldwide, sharing his knowledge and inspiring others. He lives in Lincoln, England, with his wife, Natalie, and their son, Maddox. He plays guitar and rocks an impressive two-foot beard while drinking coffee. You can find him on social media @bigevilbeard</p>    
-    //         </>
-    //     ),
-    //     talkTitle:
-    //         "Scale or Fail as Spotify's Growth Exposed the Abstraction Paradox",    
-    //     description: (
-    //         <>At Spotify, serving 675M users, hyper-growth in 2014 created system fragmentation that made onboarding engineers difficult. Our abstractions oversimplified complexity, hindering incident response. We learned effective abstraction teaches complexity rather than hiding it.</>),
-    //     image: StuartClark,
-    //     linkedin: "https://www.linkedin.com/in/stuarteclark/",
-    //     website: "https://bigevilbeard.github.io/",
-    //     sessionType: "Talk",
-    //     speakerCard: false,
-    //     speakerCardImage: "",
-    // },
-        "MaxWoolf": {
-        name: "Max Woolf",
-        jobTitle: "Staff Backend Engineer @ GitLab",
-        bio: (
-            <>
-                <p>"Max Woolf is a local software engineer with 13 years of professional experience at companies of all sizes. He currently works at GitLab on the API team as a Staff Backend Engineer and spends a lot of his time either writing, or improving SQL queries. Outside of work he runs Friends of Cotteridge Park, mentors junior software engineers, likes climbing up mountains and is a semi-reasonable pianist."</p>
-            </>
-        ),
-        talkTitle:
-            "Why Your Production Database Hates You (And How to Fix It)",    
+            "From Hackathon to Parliament: Using Research and AI to Fix How Councils House People (Case study session)",
         description: (
             <>
-            Remember when your database had a few thousand records and everything was fast? “We’ll deal with indexes later.” Yeah, those days are over. Your application has actual, real, data now. Megabytes became gigabytes. Gigabytes became terabytes, and before you knew it, 20% of engineering time is spent tracking down and fixing slow database queries.
-            <br />
-            <br />
-            At GitLab scale, a missing index isn’t just “oh, that’s a bit slow”, it’s “oh, that doesn’t work.” I learned this the hard way, and now I’m here to save you from the same panic-inducing experience. Lots of folks know that indexes can fix these issues; but knowing the right index to use in the right place is a skill in itself. This talk is your beginner-level crash course in PostgreSQL indexing that actually matters in production. We’re talking real-world scenarios where the difference between a good index and a bad index is measured in user happiness (and your stress levels).
-            <br />
-            <h4 style={{"font-weight": "bold"}}>What You’ll Actually Learn:</h4>
-            <ul>
-                <li>- B-tree Index Mastery: The one index type that’ll solve 95% of your problems (and how to use it right)</li>
-                <li>- Composite Index Strategy: Why column order can make or break your query performance</li>
-                <li>- Partial Index Magic: Index only what you need and watch your database thank you</li>
-                <li>- Query Plans Demystified: The best way to verify what your database is doing</li>
-            </ul>
-            <h4 style={{"font-weight": "bold"}}>You’ll Leave With:</h4>
-            <ul>
-                <li>- The ability to read query plans like a database detective</li>
-                <li>- Index design patterns that scale from day one</li>
-                <li>- Diagnostic techniques to spot problems before they become fires</li>
-            </ul>
-            <br/>
-            No fluff, nor theory you’ll never use. Just the indexing knowledge that turns “why is everything slow?” into “how did I make it so fast?”
-            </>),
-        image: MaxWoolf,
-        linkedin: "https://www.linkedin.com/in/maxcodes/",
-        website: "https://max.woolf.io",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-        "JoshuaMo": {
-        name: "Joshua Mo",
-        jobTitle: "DevRel Engineer @ Playgrounds Analytics Inc.",
-        bio: (
-            <>
-                <p>Joshua is currently a DevRel Engineer who is working at the intersection of Rust & AI with Playgrounds Analytics Inc. I am part of the core maintainer team for Rig, an agentic AI framework written in Rust. I also regularly give talks on Rust, as well as other subjects. My primary area of work also involves WebAssembly (via wasm-bindgen) and I am currently spearheading a project to make Rig usable from JavaScript via WebAseembly.</p>    
+                <p>{"At a local government hackathon our team built MATCH, an AI tool that matches people to accommodation that fits their actual lives. We won, then pitched it to MPs in Parliament. It was not built on a hunch. We ran async video research through Voxpopme to hear directly from people who had been through the system, fed that straight into prototyping so the design sharpened in near real time, then used AI to build the presentation we took to Westminster. Problem to tested prototype to Parliament, with a small team and almost no time."}</p>
+                <p>{"Every designer knows the feeling. The devs have shipped three tickets while you are still trying to recruit participants."}</p>
+                <p>{"As the sole designer on an AI product, I could either be the bottleneck or rebuild the process. I chose the second."}</p>
+                <p>{"Now the groundwork happens before I open the ticket. Agents gather what the wider industry already knows, so I start from a position of knowledge rather than a blank page. I use that to shape sharper discovery questions, and I get insight back in hours rather than weeks. "}</p>
+                <p>{"Concepts get pressure tested by agents playing expert and user before a single human sees them. Real people test what survives, and I run the deeper conversations myself."}</p>
+                <p>{"This talk walks through the whole pipeline. Where it saves weeks, where it produced confident nonsense, and the line I will not let agents cross. "}</p>
             </>
         ),
-        talkTitle:
-            "Why is Rust taking over the Python ecosystem?",    
-        description: (
-            <>Python is the undisputed king of data science, scripting, and rapid prototyping. But behind the scenes, Rust is rapidly reshaping the Python ecosystem by powering performance-critical tools that Python alone struggles to handle efficiently. Many Rust-powered tools like uv, ruff and polars are becoming the new default for those in the know - and for good reason.
-            <br></br>
-            <br></br>
-            <b>In this talk, we will cover:</b>
-            <br></br>
-            - Why Rust is the go-to for speed-ups in Python tooling & more
-            <br></br>
-            - How the Rust-Python bridge works: PyO3, Maturin & FFI
-            <br></br>
-            - Practical tips for writing Rust-Python extension that just work
-            <br></br>
-            - Real-world examples and use cases</>
-            ),
-        image: JoshuaMo,
-        linkedin: "https://www.linkedin.com/in/joshua-mo-4146aa220/",
-        website: "https://joshmo.ooo/",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "CarlyRichmond": {
-        name: "Carly Richmond",
-        jobTitle: "Developer Advocate Lead @ Elastic",
-        bio: (
-            <>
-                <p>Carly is Developer Advocate Lead at Elastic, based in London, UK. Before joining Elastic in 2022, she spent over 10 years working as a technologist at a large investment bank, specialising in Frontend Web development and agility. She is an agile evangelist, UI enthusiast, and regular blogger. In her spare time, she enjoys cooking, photography, drinking tea and chasing after her young son.</p>
-            </>
-        ),
-        talkTitle:
-            "OTel You It's Not Just for Backend! ",
-        description: (
-            <>
-            <h2>Background</h2>
-            Before joining Elastic as a Developer Advocate, I spent over 10 years working for a bank as a frontend engineer. I have felt the pain of trying to diagnose issues and errors in UIs using logs and diving into minified JavaScript code.
-
-            In that time, the state of DevOps and SRE has established many practices to help developers instrument their applications to identify unexpected behaviour and performance issues. These practices are generally, backend focused. By combining backend tracing with frontend tracing and metrics, we can better understand how our application behaves and where the issue lies.
-            <br></br>
-            <h2>Outline</h2>
-            I will discuss the state of OTel for frontend instrumentation, specifically:
-
-            Communication of the OTel SDKs that can be used for web, and a mention that client telemetry for web is experimental.
-            Examples showing how front-to-back tracing can be achieved using OpenTelemetry web instrumentation combined with backend OTel instrumentation.
-            An example of how to build a custom instrumentation using OTel web and Core Web Vitals JS library to gain performance insights using industry standard metrics.
-
-            <br></br>
-            <h2>Target Audience</h2>
-            I believe the following individuals would be interested in this talk:
-
-            UI Developers interested in observing their applications and unsure how to instrument their applications or the tools currently available.
-            SRE engineers looking to monitor frontends as part of a wide system-estate.
-            More experienced frontend engineers or designers looking for tools to measure application performance as a regular best practice compared to ad-hoc profiling of web applications.
-            Tech leads and team leads looking for ways to be alerted to potential application issues and behaviours that impact the user experience.
-            
-            <br></br>
-            <h2>Resources</h2>
-            Sample code: https://github.com/carlyrichmond/otel-record-store Blog: https://www.elastic.co/observability-labs/blog/web-frontend-instrumentation-with-opentelemetry"
-        </>
-        ),
-        image: CarlyRichmond,
-        linkedin: "https://www.linkedin.com/in/carly-richmond/",
-        website: "https://carlyrichmond.com/",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "TonyEdwards": {
-        name: "Tony Edwards",
-        jobTitle: "Mobile App Developer",
-        bio: (
-            <>
-                <p>
-                    Tony is a software engineering, event organising, university lecturing geek at heart. A broad range of tech and business skills mix to help businesses and individuals meet their goals... usually over a cuppa. On any given day he might be engineering cross platform software, scaffolding a marketing strategy, crafting written content, educating the next generation, or inspiring the one after that. With a background in community events management, a multi award winning career in the education sector, and a long history of making a fool of himself, Tony’s sessions are sure to engage the audience and spark conversation. You’ll certainly remember this talk!
-                </p>
-            </>
-        ),
-        talkTitle:
-            "Beats, Rhymes, & Neural Nets",
-        description: (
-            <>The Web Speech API has been the undisputed champion of in browser speech recognition since it’s release in 2012. Backed by Google API’s, it’s allowed developers to achieve near realtime recognition, transcription, and text to speech synthesis for more than a decade.
-            <br></br>
-            <br></br>
-            In recent years, a venture backed contender has appeared, threatening to take the crown away from our beloved browser APIs. Whisper promises to be the most accurate, most tolerant, and quickest way to transcribe speech. But does this stand true when its applied to the humble web browser?
-            <br></br>
-            <br></br>
-            In this battle of the ages, Tony sets out to pit Whisper against the Browser in search of the best option in helping write rap lyrics. Following an introduction to the two tech stacks, Tony will iterate through a series of tests to see which one is most suited to the world of Hip-Hop, leading to a crescendo you will never forget.</>
-        ),
-        image: TonyEdwards,
-        linkedin: "https://www.linkedin.com/in/tonyedwardspz/",
-        website: "https://tonyedwardspz.co.uk/",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-        "TonyEdwards": {
-        name: "Tony Edwards",
-        jobTitle: "Mobile App Developer",
-        bio: (
-            <>
-                <p>
-                    Tony is a software engineering, event organising, university lecturing geek at heart. A broad range of tech and business skills mix to help businesses and individuals meet their goals... usually over a cuppa. On any given day he might be engineering cross platform software, scaffolding a marketing strategy, crafting written content, educating the next generation, or inspiring the one after that. With a background in community events management, a multi award winning career in the education sector, and a long history of making a fool of himself, Tony’s sessions are sure to engage the audience and spark conversation. You’ll certainly remember this talk!
-                </p>
-            </>
-        ),
-        talkTitle:
-            "Beats, Rhymes, & Neural Nets",
-        description: (
-            <>The Web Speech API has been the undisputed champion of in browser speech recognition since it’s release in 2012. Backed by Google API’s, it’s allowed developers to achieve near realtime recognition, transcription, and text to speech synthesis for more than a decade.
-            <br></br>
-            <br></br>
-            In recent years, a venture backed contender has appeared, threatening to take the crown away from our beloved browser APIs. Whisper promises to be the most accurate, most tolerant, and quickest way to transcribe speech. But does this stand true when its applied to the humble web browser?
-            <br></br>
-            <br></br>
-            In this battle of the ages, Tony sets out to pit Whisper against the Browser in search of the best option in helping write rap lyrics. Following an introduction to the two tech stacks, Tony will iterate through a series of tests to see which one is most suited to the world of Hip-Hop, leading to a crescendo you will never forget.</>
-        ),
-        image: TonyEdwards,
-        linkedin: "https://www.linkedin.com/in/tonyedwardspz/",
-        website: "https://tonyedwardspz.co.uk/",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "StuartLangridge": {
-        name: "Stuart Langridge",
-        jobTitle: "Founder @ Kryogenix Consulting",
-        bio: (
-            <>
-                <p>
-                    
-                </p>
-            </>
-        ),
-        talkTitle:
-            "The mazy web she whirls: starting Open Web Advocacy",
-        description: (
-            <>
-            <p> 
-                There is an organisation called OWA. There is a muse called the Lady of Shalott. They both believe in opening the web. And both need your help. If you’ve ever wondered why you are half-sick of drop-shadow(), or why the web is cracked from side to side… your loyal knight and true is here.            </p>
-            <br></br>
-            <br></br>
-            <p>
-                Open Web Advocacy are a group of web developers who have come together to work on opening the web. We've worked with government regulators in the UK, EU, USA, Australia, Japan, and others, and we've seen (and are continuing to see) change and regulation _against_ browser and platform vendors locking down and hindering the open web, and _for_ ensuring that anyone can publish an app with the web without having to ask permission, just as the web has always promised. I am one of the founder members of OWA; here I'll talk about how we started, the successes we've had, how you can help, and what the hell the Lady of Shalott has to do with all of this.
-            </p>
-            </>
-        ),
-        image: StuartLangridge,
-        linkedin: "https://www.linkedin.com/in/stuartlangridge/",
-        website: "https://www.kryogenix.org/",
+        image: BeckiFloyd,
+        linkedin: "https://www.linkedin.com/in/nass84/",
+        website: "https://www.beckifloyd.com/",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
@@ -316,426 +52,112 @@ export const Sessions = {
         jobTitle: "Principal Software Engineer @ TinySoft Ltd",
         bio: (
             <>
-                <p>
-                    Shaun is an avid gamer, learner and experimenter, these combined with a profession in software development make for some really fun journeys.
-
-                    Father to two amazing children and many, many unfinished side projects.
-
-                    Shaun is a Microsoft MVP, speaker and published author.
-                </p>
+                <p>{"Shaun is an avid gamer, learner and experimenter, these combined with a profession in software development make for some really fun journeys."}</p>
+                <p>{"Father to two amazing children and many, many unfinished side projects."}</p>
+                <p>{"Shaun is a Microsoft MVP, speaker and published author."}</p>
             </>
         ),
         talkTitle:
-            "If .NET Brewed Beer",
+            "Choose your own adventure",
         description: (
             <>
-            Come along and learn all about my favourite recipe for brewing beer; writing some .NET code, throw in some relatively cheap IoT devices, mix in some raw ingredients and wait for a great tasting brew.
-            It would be fast, efficient and run directly on the low powered devices controlling it!
-          
-           <br></br>
-           <br></br>
-            Come along and learn all about my journey into brewing beer, automating the process through the use of a Raspberry Pi/Meadow board. We will cover how to use common techniques to build on a low powered device and targeted towards machine control.
-            This session is great for anyone looking to get into developing for IoT devices using .NET - a framework that we are known for and love.
-            <br></br>
-            <br></br>
-          
-            I love a good IPA, what do you like?
+                <p>{"Join us for an interactive adventure where you control the journey. We’ll build game-like experiences, use SignalR for real-time multiplayer interaction, tackle bugs and challenges, and discover how to make apps feel truly alive."}</p>
+                <p>{"Remember those choose your own adventure books where every decision could send the story in a completely different direction? In this session, we’re bringing that idea to life — and you’re going to be part of the game."}</p>
+                <p>{"Together, we’ll build and play our way through an interactive adventure. Along the way, the audience will make decisions, shape the journey, unlock new areas, encounter unexpected challenges, and perhaps even take on a final boss."}</p>
+                <p>{"But there’s a catch: if an entire room is going to control one game, we’re going to need some technology to make that possible."}</p>
+                <p>{"As our adventure unfolds, we’ll explore how to create engaging game-like experiences, how SignalR can provide real-time multiplayer interaction, and how techniques such as shared state, animations, connectivity and responsive UI can make our applications feel truly alive."}</p>
+                <p>{"Rather than simply talking about the technology, we’ll use it to power the session itself. Your choices will influence what happens next."}</p>
+                <p>{"So choose your path carefully."}</p>
+                <p>{"There may be bugs."}</p>
+                <p>{"There will probably be goblins."}</p>
             </>
         ),
         image: ShaunLawrence,
         linkedin: "https://www.linkedin.com/in/shaun-lawrence-53a0099/",
-        website: "https://x.com/bijington?lang=en",
+        website: "https://blog.bijington.com",
+        github: "https://github.com/bijington",
+        x: "https://x.com/bijington",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
     },
-    "BeckiFloyd": {
-        name: "Becki Floyd",
-        jobTitle: "UX Designer @ Voxpopme",
+    "EriolFox": {
+        name: "Eriol Fox",
+        jobTitle: "Open Source Designer",
         bio: (
             <>
-                <p>
-                    I’ve lived both sides of the speed challenge. I started out solving complex problems at Citizens Advice and later worked in digital roles at the NHS, where projects could take months to move forward. Now I work in a fast-paced AI team at Voxpopme, where development happens in days and UX needs to keep up.
-
-                    Since joining, I’ve completely reshaped my process to stay user-led without slowing down product teams. I run real research, gather voice-led feedback, prototype with tools like Replit, and feed insights straight into design.
-                </p>
+                <p>{"Eriol has been working as a designer for 15+ years in for-profits and then NGO’s and open-source software organisations, working on complex problems like sustainable food systems, peace-building, censorship circumvention OSS, Human Rights OSS tools and crisis response technology. Eriol now works at The Open Home Foundation on OSS first smart home technology, and is a non-binary, queer person who uses they/them pronouns."}</p>
+                <p>{"Eriol is part of the core teams at "}<a href="https://opensourcedesign.net/" target="_blank" rel="noreferrer noopener">{"Open Source Design"}</a>{" and the "}<a href="https://sustainoss.org/working-groups/design-and-ux/" target="_blank" rel="noreferrer noopener">{"Sustain UX & Design working group"}</a>{", and helps host a "}<a href="https://sosdesign.sustainoss.org/" target="_blank" rel="noreferrer noopener">{"podcast about open source and design"}</a>{". Eriol speaks at conferences for both FOSS and Design, and Eriol’s talks, workshops and panels all ultimately have the same goal: To improve the usability of FOSS for all kinds of users and contributors and ensure that design in FOSS becomes a standard and design’s value is supported and recognised."}</p>
             </>
         ),
         talkTitle:
-            "UX in 2025: Designing at the Speed of AI-Driven Development",
+            "Designing for security and privacy: Design lessons from human rights and civic technology",
         description: (
             <>
-            
-            In 2025, developers are shipping faster than ever with AI. I’ll show you how I gather user feedback in the morning and design smarter flows by the afternoon. UX can still lead, even when the code is flying out the door.
-
-            This talk shows what UX looks like in a world where developers are building at AI speed. I’ll walk through the process I now follow to gather user feedback in the morning and turn it into working flows by the afternoon. I’ll show how async video research, natural language insight, and tools like Replit help me stay in sync with fast-moving dev teams. This is not about cutting corners. It’s about staying close to users while keeping pace with the work.
-
-            <br></br>
-            <br></br>
-
-            <h4 style={{"font-weight": "bold"}}>You’ll leave with a process you can use to:</h4>
-            <ul>
-                <li>- Gather user feedback in hours, not weeks</li>
-                <li>- Turn real feedback into intuitive user journeys</li>
-                <li>- Prototype and iterate alongside developers</li>
-                <li>- Keep UX relevant and user-led, even in AI-powered teams</li>
-            </ul>
-            <br></br>
-            This is how UX works now. Come see it in action.
-
+                <p>{"Techies want to know and hear that there is work to be done that makes the world better and not more evil/worse. This talk covers those projects and processes and gives hope to techies that they can make the world a better place with tech."}</p>
+                <p>{"Eriol has been working on human rights technology for over 10 years. When we think about how to design for privacy, security and known and unknown human rights, we start with a security and privacy focus to our human centred design, using methods and processes that think about what malicious people or governments could do with data, information and access to devices. Making sure all technology is safe for high risk people to use is critical to the future of private, secure and respectful design that doesn't rely on dark/deceptive design patterns and brings people into the full knowledge of what their software and hardware does. Eriol will talk about how they have worked with highly secure design research practices, how we design for journalists, human rights activists and civil society and how all designers can use methods to make their design more private, secure and resilient against malicious attacks."}</p>
             </>
         ),
-        image: BeckiFloyd,
-        linkedin: "https://www.linkedin.com/in/nass84",
-        website: "https://www.beckifloyd.com/",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "RichardBrough": {
-        name: "Richard Brough",
-        jobTitle: "CTO @ Blue Beck Ltd",
-        bio: (
-            <>
-                <p>
-                    Richard is the CTO at Blue Beck Ltd, an experienced software professional focussed on Machine Learning and Apps with a passion for Open Source AI and a strong interest in novel ways Machine Learning can be used on locally on low power devices. His background is in backend service and mobile development, going back to when the first releases of the Android and iOS SDKs became available, and older devices before that, having started his career at RARE as a console game developer.
-                </p>
-            </>
-        ),
-        talkTitle:
-            "A llama sets up a lemonade stall",
-        description: (
-            <>
-            We created a Model Context Protocol (MCP) server game about running a soft drinks business, designed to look to a Large Language Model like a real business, not a game. This is the story of what happened when different LLMs were connected to it and prompted to do bad things.
-            <br></br>
-            <br></br>
-            Tool use by LLMs has increased dramatically recently, especially with the rise of MCP.   The number of anecdotes and papers about unexpected or misaligned tool use has also been growing.  We will take a look at some of these, along with how we created our MCP game and how different LLMs interacted with it when prompted in different ways.
-            </>
-        ),
-        image: RichardBrough,
-        linkedin: "https://www.linkedin.com/in/richard-n-brough/",
-        website: "https://x.com/RichardNBrough",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "RicardoSueiras": {
-        name: "Ricardo Sueiras",
-        jobTitle: "Dev Advocate @ AWS",
-        bio: (
-            <>
-                <p>
-                    A highly experienced technologist and change agent with an track record specializing in innovation, Cloud and Open Source. I am enthusiastic, passionate, articulate, creative and unconventional - an evangelist that seeks to accelerate the adoption of new technologies.
-                </p>
-            </>
-        ),
-        talkTitle:
-            "Build without limits - zero to shipped in 20 minutes",
-        description: (
-            <>
-                In this zero slides session, I will start with a blank IDE and I will walk through successful strategies in how to use AI Coding Assistants so that you can feel in control and get more out of these next generation developer tools.
-               
-                <br></br><br></br>
-               
-                This session is about understanding both how to use AI coding assistants, passing on tips that will make developers more successful. It is also a lesson in setting expectations - helping developers know what they can and cannot expect them to do. Spoiler - our jobs as developers are VERY safe!
-            </>
-        ),
-        image: RicardoSueiras,
-        linkedin: "https://www.linkedin.com/in/ricardosueiras",
-        website: "https://x.com/ricardo_sueiras",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "CynthiaAkiotu": {
-        name: "Cynthia Akiotu",
-        jobTitle: "Cloud Security Architect",
-        bio: (
-            <>
-                <p>
-                    Cynthia is a Cybersecurity Architect and Identity Specialist with deep expertise in Identity & Access Management (IAM), data governance, and Zero Trust implementation. Her work centres on securing environments where AI agents, autonomous models, and machine identities are rapidly expanding the attack surface. With experience across diverse sectors, Cynthia has led projects on secure cloud adoption, privileged access management, insider risk mitigation, and identity governance for AI-driven environments. Driven by a commitment to secure innovation, she champions identity governance as a foundation for trust in AI-native ecosystems.
-
-"
-                </p>
-            </>
-        ),
-        talkTitle:
-            "Securing AI Agents Before They Secure Your Stack",
-        description: (
-            <>
-            Securing AI agents before they secure your stack. AI agents are becoming part of every developer’s workflow. generating code, integrating APIs, and automating tasks. But with great power comes hidden risk: when agents gain access to API keys, tokens, or credentials, they can unintentionally act like insider threats.
-
-            <br></br>
-
-            <h4 style={{"font-weight": "bold"}}>In this talk, you will learn:</h4>
-            <ul>
-                <li> - Real-world examples of AI agents exposing sensitive data or misusing privileges.</li>
-                <li> - The hidden risks of giving agents unchecked access in your stack.</li>
-                <li> - The developer’s role in securing secrets inside codebases and pipelines.</li>
-                <li> - Practical guardrails that let you innovate with AI while keeping systems safe.</li>
-            </ul>
-            <br></br>
-            Whether you are coding in Golang, building .NET apps, or experimenting with AI-driven workflows, this session will give you the mindset and tools to secure AI agents without slowing AI agents aren’t just tools, they are part of your team. It’s time to secure them like one.
-
-            </>
-        ),
-        image: CynthiaAkiotu,
-        linkedin: "https://www.linkedin.com/in/cynthia-akiotu/",
-        website: "",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "DanBeglin": {
-        name: "Dan Beglin",
-        jobTitle: "Lead Developer @ Griffiths Waite",
-        bio: (
-            <>
-                <p>
-                    Dan is currently Lead Developer at Griffiths Waite, based in Birmingham. He focuses on providing technical solutions to the Financial Services industry and building software development teams that don’t hate their job. Dan generally works with Typescript, OracleDB and Azure. Outside of work, his particular interests are catching pokemon, woodwork and trying new whiskeys.
-                </p>
-            </>
-        ),
-        talkTitle:
-            "What's Actually in Your 30-Year-Old Legacy Database? How We Used AST and Javascript to Find Out",
-        description: (
-            <>        
-            Every company has a haunted database—ours was 30 years old, undocumented, and everything depended on it. We cracked it open with an AST parser, building a dependency map of procedures, tables, and views. Learn how compiler techniques can turn legacy chaos into something you can work with.
-            <br></br>
-            <br></br>
-            Behind every enterprise application stack hides a database that’s been evolving for decades. It started as a few well-structured tables, but years of stored procedures, cursors, replication rules, and “temporary fixes” have turned it into an undocumented dependency web. Migrating away is risky, yet the entire organisation depends on it and its painful to work with.
-            <br></br>
-            <br></br>
-            We faced this exact challenge with a 30-year-old Oracle database at the heart of the business. All our microservices depended on it, migration programs had stalled, and no one could say with certainty which tables or procedures were truly in use.
-            <br></br>
-            <br></br>
-            Our approach was to treat the database like source code. Using Abstract Syntax Trees (ASTs) and Typescript, we built a recursive parsing engine that could: • Extract and catalog procedures and functions directly from the database. • Analyse procedure calls, views, cursors, and table usage. • Construct a dependency graph to visualise critical business logic.
-            <br></br>
-            <br></br>
-            The result was a living map of the system that allowed us to really get what we were using under the hood and reduce our dependancies safely
-            <br></br>
-            <br></br>
-            This talk walks through the architecture of the parser, how we optimised it for PL/SQL code, and how we’ve expanded the same method to other languages. You’ll learn how compiler techniques actually work and how you can use them against your own codebases - and then what you could do with what you discover.
-            <br></br>
-            <br></br>
-            If you’ve ever been blocked by a “black box” legacy database, you’ll leave with practical strategies, open-source tools, and proof that even a 30-year-old Oracle system can be demystified.
-
-            </>
-        ),
-        image: DanBeglin,
-        linkedin: "https://www.linkedin.com/in/dan-beglin/",
-        website: "https://medium.com/@smarthomedan",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "GuyBarker": {
-        name: "Guy Barker",
-        jobTitle: "Technical Accessibility Enthusiast",
-        bio: (
-            <>
-                <p>
-                    Guy worked for more than twenty years as a developer at Microsoft, with most of his time focused on accessibility. In the Windows Accessibility Team he worked on the Narrator screen reader, Magnifier, On-Screen Keyboard, and UI Automation, the API that powers all accessibility in Windows. He later worked in Apps teams, again focusing on the accessibility of those apps, and finally as an accessibility consultant helping product teams across Microsoft. In his own time, Guy explored many accessibility-related topics, building free experimental assistive technology tools and soliciting feedback.
-                </p>
-            </>
-        ),
-        talkTitle:
-            "Empowering All Your Users: Simple Steps for Building Accessible App Experiences",
-        description: (
-            <>
-                No-one should be blocked from employment, communication, creativity, or enjoyment due to constraints in the apps they use. Never has it been easier for devs to build accessible apps which fully support everyone, so learn some simple steps which have incredible impact!
-                <br></br>
-                <br></br>
-                Today a few simple design and dev considerations can make the difference between an app being usable and unusable for many people. Many UI frameworks support apps being built to empower all users, regardless of how those users interact with their devices. In this talk, I’ll demo a .NET MAUI app specifically designed to highlight considerations around accessibility, including some of the app’s features impacting the experience for blind and partially sighted users, and users who use voice input or switch input. As examples of the sorts of things I’ll demo with the accessible .NET MAUI app, here are Playing Accessible Solitaire with the iOS VoiceOver screen reader on an iPad mini, The Accessible Solitaire game using voice control on a Windows 11 laptop and an iPad mini, and The Accessible Solitaire on iPad being played with a switch device. While this app is built using .NET MAUI, the principles around accessibility apply to any app.
-                <br></br>
-                <br></br>
-                The app I’ll be demoing is the Accessible Solitaire app, freely available at the Apple, Google, and Microsoft Stores, and will show how one simple .NET MAUI property can make or break the usability of an app. The app code is publicly available for reference. While the app itself may seem quite basic, one user who’s blind has said that with the app, he’s completed a game of solitaire for the first time in his life. With .NET MAUI, the steps for supporting everyone on iOS, Android, and Windows is not the complicated part of building your app.
-                <br></br>
-                <br></br>
-                I worked as a dev at Microsoft for more than twenty years, focusing mainly in the area of accessibility. Over that period in my own time I built a variety of apps exploring the accessibility of current tech, and shared all my learnings, most recently at Barker’s Articles. These articles include some thoughts on great questions raised at the .NET MAUI Day in London earlier in 2025, Q&A from a .NET MAUI Community Standup.
-                <br></br>
-                <br></br>
-                After the talk, you’ll be able to consider how you can deliver more usable experiences for more people with your own apps!
-            </>
-        ),
-        image: GuyBarker,
-        linkedin: "",
-        website: "",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "JimSeconde": {
-        name: "Jim Seconde",
-        jobTitle: "Senior Developer Advocate @ Vonage",
-        bio: (
-            <>
-                <p>
-                    A trained actor with a curious background: from Theatre Studies, to Q/A, to Business Intelligence development, to full stack web development, I am the resident specialist PHP Developer Advocate at Global Cloud Communications giant Vonage. I founded Birmingham, UK’s current PHP usergroup BrumPHP, hosted the Fusion Meetup Series, and organised the TechMids Developer Conference. I mentor, write and speak on PHP, JavaScript, DevOps, DevRel and tech culture. I pretended to be a DJ on the way.
-                </p>
-            </>
-        ),
-        talkTitle:
-            "CLIs Aren't As Easy As You Might Think",
-        description: (
-            <>
-            
-            It's built in the muscle memory - you do the same commands over and over each day as part of your job. Designing a CLI tool is probably quite simple, right? Erm, no. Making a CLI for thousands of other developers to use every day takes a lot of thought. We're going to look at the art of the CLI.
-            <br></br>
-            <br></br>
-            This talk was written by Chuck Reeves and I earlier this year: Chuck realised that, when writing the new version of the company CLI, developers have to make a mountain of decisions that have tech debt repercussions for years if shortcutted. Which way round do arguments go? I like shiny emojis, I'll put those in to make an accessibility disaster. It also gives a chance to show some of the absolutely bizarre everyday things we are doing as developers in our day-to-day, because Alex in 1982 had to make a decision on terminal command orders.
-            <br></br>
-            <br></br>
-            In this talk, while I amuse the audience with examples of _terrible_ design choices that for some reason include me talking about a failed 2008 video game that has the best ending ever, an energy drink that shouldn't exist and me standing and pointing at a coffee shop putting out weird signs. While it's fun to laugh at bad stuff, it's time to use those examples of how to write _good_ CLIs that are consumed by developers. After all, if we're all going to supposedly be prompt engineers, we should probably learn how to sanitise our inputs.
-            <br></br>
-            <br></br>
-            </>
-        ),
-        image: JimSeconde,
-        linkedin: "https://uk.linkedin.com/in/secondej",
-        website: "https://developer.vonage.com/en/blog/authors/james-seconde",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "DileepMarway": {
-        name: "Dileep Marway",
-        jobTitle: "Director of Engineering @ PebblePad",
-        bio: (
-            <>
-                <p>
-                    With over 19 years of technical expertise and strong commercial and operational skills, I focus on delivering measurable business results. I set strategic vision and effectively communicate across all levels to build consensus and achieve corporate goals. As a leader, I cultivate teams based on trust, empowerment, and continuous learning. Outside of work I’m an avid Aston Villa fan and love making lego!
-                </p>
-            </>
-        ),
-        talkTitle:
-            "Turning Tension into Teamwork - With a Little Help from AI ",
-        description: (
-            <>
-                Turning team conflict into your biggest strength. I reveal how to embrace disagreements for innovation and growth - plus, how AI can coach you to handle tough moments, build trust, and unlock higher performance at every level.
-                <br></br>
-                <br></br>
-                What if conflict in your team wasn’t a problem, but rather an advantage? Even the best teams clash, but those who embrace conflict constructively innovate faster and build stronger bonds. In this talk, I’ll show how to turn difficult conversations into breakthroughs, and how AI can act as your on-demand coach, helping you practise the skills you need to handle those tough moments.
-                <br></br>
-                <br></br>
-                In my 19 years leading engineering teams, I’ve learned that conflict isn’t the enemy, rather complacency is.
-                <br></br>
-                <br></br>
-                I’ll open with a scenario most engineers recognise: a project kick off where voices rise, bias colours judgment, and frustration takes the wheel. In moments like these, many leaders default to avoiding tension. But that’s a missed opportunity, because when managed well, conflict can fuel innovation, trust, and high performance.
-                <br></br>
-                <br></br>
-                We’ll explore the “Collusion Cycle” - how tiny misunderstandings spiral into major friction, and I’ll share the proven techniques I’ve used to break that cycle:
-                <br></br>
-                <br></br>
-                By the end, attendees will walk away with five practical tips - blending human emotional intelligence with AI’s coaching potential. Ultimately to turn team tension into collaboration and higher performance.
-            </>
-        ),
-        image: DileepMarway,
-        linkedin: "https://www.linkedin.com/in/dileepmarway",
-        website: "https://www.aston.ac.uk/eps/student-blogs/dileep-marway",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "JamesHolland": {
-        name: "James Holland",
-        jobTitle: "Technology Innovation @ Palo Alto Networks",
-        bio: (
-            <>
-                <p>
-                    James is a technology enthusiast and cybersecurity professional based in the West Midlands. He’s a CISSP-certified specialist with a career in IT and information security that started in 2003, having tackled everything from design and architecture to support and technical pre-sales. He is currently part of the Technology Innovation team at Palo Alto Networks, where he focuses on building the future of security operations.
-
-                    His recent work includes leading the security infrastructure for the world-renowned Black Hat conferences, evolving the use of generative AI in cybersecurity for projects related to purple teaming and detection engineering, and he’s a strong advocate for automation.
-
-                    When not immersed in his day job, he enjoys public speaking and has presented at many events. You’ll also find him running, hiking, sometimes snowboarding, and occasionally working on his guitar skills. And yes, he does STILL own too many t-shirts.
-                </p>
-            </>
-        ),
-        talkTitle:
-            "The Stack that Secures the Stack: A Deep Dive into Automating Black Hat's Next Gen SOC",
-        description: (
-            <>
-                Pull back the curtain on the security infrastructure of Black Hat, the world’s most renowned security conference. Learn how we built a globally consistent, automated NOC and SOC that achieved zero downtime, democratised IaC and PaC, and revolutionised our approach to event operations.
-                <br></br>
-                <br></br>
-                Behind every major conference is a complex, often unseen, technology stack. For a security-focused event like Black Hat, this stack itself is a critical target, requiring a resilient, scalable, and automated security posture. In this talk, we’ll pull back the curtain on the operational and security infrastructure of the Black Hat conferences. We will explore the journey from a collection of ad-hoc systems to a globally consistent, single-config architecture that empowers us to manage operations with unprecedented efficiency. This is a story of how we built a stack that not only supports the event, but actively secures it, demonstrating how a strategic approach to automation and platform consolidation can revolutionise operations.
-            </>
-        ),
-        image: JamesHolland,
-        linkedin: "",
-        website: "",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "ChrisMiller": {
-        name: "Chris Miller",
-        jobTitle: "Software Engineer @ PHP Architect",
-        bio: (
-            <>
-                <p>
-                    In 1983, Christopher was introduced to computers by his dad, at the tender age of 3. now, over 40 years later, he has been working in the industry for over 20 years making an impact across multiple sectors of the industry. Starting with launching the first web development company in Staffordshire, Christopher dealt with the web – when the web was little more than just pretty text. He established the websites for many different businesses in their first inception, before moving onto web applications a little while later. He has worked with a large number of languages, specialising in supporting businesses to grow standards for their code base, and now he is ready to share his processes with the world.
-                </p>
-            </>
-        ),
-        talkTitle:
-            "The Gift of Beginner's Mind: Why Getting Older in Tech Isn't About Keeping Up",
-        description: (
-            <>
-            In tech, youth and shiny tools steal the spotlight—but experience brings wisdom. This talk is for developers feeling pressured to constantly reinvent themselves. It reframes experience as a powerful asset and reminds us: staying curious, not just current, is what keeps us truly relevant. 
-
-            <br></br>
-            <br></br>
-            Tech culture worships youth, celebrates the latest frameworks, and makes us feel like dinosaurs if we haven't mastered the newest JavaScript library. But what if experience isn't about knowing everything—it's about knowing what matters? 
-            
-            <br></br>
-            <br></br>
-            This talk is for every developer who has felt the pressure to constantly reinvent themselves to stay relevant. It's about recognizing the wisdom that comes with experience while maintaining the curiosity that makes us great developers. Age isn't the enemy of innovation—it's the foundation of wisdom.
-
-            <br></br>
-            <h4 style={{"font-weight": "bold"}}>Key Themes:</h4>
-            <ul>
-                <li>- Reframing experience as an asset, not a liability</li>
-                <li>- The unique value that comes with having seen multiple technology cycles</li>
-                <li>- Maintaining curiosity and learning ability throughout your career</li>
-                <li>- Mentoring and knowledge transfer as core skills</li>
-                <li>- Building confidence in your accumulated wisdom</li>
-            </ul>
-            </>
-        ),
-        image: ChrisMiller,
-        linkedin: "https://www.linkedin.com/in/ccmiller2018/",
-        website: "https://christophermiller.tech/",
+        image: EriolFox,
+        linkedin: "https://www.linkedin.com/in/eriolfox/",
+        website: "https://erioldoesdesign.github.io/",
+        github: "https://github.com/erioldoesdesign",
+        bluesky: "https://bsky.app/profile/erioldoesdesign.bsky.social",
+        mastodon: "https://hachyderm.io/@erioldoesdesign",
+        instagram: "https://www.instagram.com/erioldoesdesign/",
+        youtube: "https://www.youtube.com/channel/UCZdlFO4kG6MsaZxWJi-1GLQ",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
     },
     "EliHolderness": {
         name: "Eli Holderness",
-        jobTitle: "Research Software Advocate @ Bennett Institute",
+        jobTitle: "Developer advocate @ Bennett Institute",
         bio: (
             <>
-                <p>
-                    Eli is a software engineer, conference speaker, and professional problem-solver who works at the Bennett Institute as a research software advocate. They spend their work time making researchers’ lives easier with code and documentation, and by connecting them with the right knowledge. They spend their non-work time knitting, travelling, and catching up on their functionally-infinite reading list.
-                </p>
+                <p>{"Eli has been in tech since being released back into the wild from studying maths at university 9 years ago. They've spent their time working in industries ranging from telecoms to biotech to analog circuit design to developer advocacy, continually getting nerd-sniped along the way. These days, they work at the Bennett Institute, helping to build the next generation of healthcare research tooling. In their spare time, they like to go bouldering, knit and sew, and hang out with their cat."}</p>
             </>
         ),
         talkTitle:
-            "You Shall Not Password: Modern Authentication for Web Apps",
+            "Language Games",
         description: (
             <>
-            Once upon a time, your users would log into a web service with a username and password. But now we've got a bewildering array of options - SSO, MFA, passwordless, and more. Learn how to keep your users safe as we discuss the good, the bad and the ugly of modern authentication mechanisms for the Web.
-            <br></br>
-            <br></br>
-            In the good old days, your users would log into a web app with a username and password. But now people expect an alphabet soup of SSO, 2FA, OAuth, OIDC, SAML, FIDO2, OTP... What do they all mean - and why do they matter? Why is central authentication useful? What does two-factor authentication really protect us from, and what's still wide open? How can you decide whether or not to trust an identity provider to keep your and your users' secrets? Learn how to keep your users safe as we discuss the good, the bad and the ugly of modern authentication mechanisms for the Web.
-            <br></br>
-            <br></br>
-            This talk is aimed at anyone passingly familiar with web development, with an interest in security, or who simply wants to know what’s really going on when you ‘sign in with Google’.
+                <p>{"This is a rigorous look at how language and communication function, and provides a framework for thinking about how we as humans try to get ideas from our heads into others' (both ideally and in practice). Past audience members have said it totally changed their outlook on the topic, and let them understand incidents and paradigms they'd previously been baffled by. It's also funny, and the slides are banging."}</p>
+                <p>{"Communication: it's the oldest problem we have. It's already hard enough to talk to people, but as software engineers we have to talk to computers as well - often at the same time. Getting communication wrong leads to problems anywhere between 'my code is buggy' to 'this project is 6 months overdue and doesn't meet any of the requirements'. There are thousands of books, webinars and conference talks out there about how to communicate more effectively, and we still haven't figured it out."}</p>
+                <p>{"In this talk, I'll take you through some rigorous frameworks for thinking about communication, and explain how they can help you talk both to people and to computers. I'll argue that it's actually much easier to communicate with computers than other human beings, and that the inability to communicate perfectly isn't a failure - it's normal. Finally, I'll talk about what all of this means for us as engineers, designers and producers of software, and what we can do to make all our lives a little easier."}</p>
             </>
         ),
         image: EliHolderness,
         linkedin: "https://www.linkedin.com/in/eli-holderness-4890b886/",
         website: "https://www.bennett.ox.ac.uk/about-us/eli-holderness/",
+        github: "https://github.com/eli-miriam",
+        x: "https://x.com/eliholderness",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "MartinReynolds": {
+        name: "Martin Reynolds",
+        jobTitle: "Field CTO @ Harness",
+        bio: (
+            <>
+                <p>{"Martin Reynolds is Field CTO at Harness and Community Director for EngineeringX, a community of senior engineering leaders focused on developer experience and engineering excellence. He's spent 30+ years in software development, architecture, and delivery, including building and scaling the first DevOps function at Advanced. He's a recognised voice on DevOps, DevSecOps, and developer experience, with commentary featured in The New Stack and LeadDev, and he co-hosts ShipTalk, a podcast that breaks down the biggest headlines in AI, DevOps, and software delivery every other week. He talks a lot about the gap between how fast we ship and how safely we ship - and he's fairly convinced most of us aren't as far ahead as we think."}</p>
+            </>
+        ),
+        talkTitle:
+            "Who Approved This PR? Oh Right, Nobody Did.",
+        description: (
+            <>
+                <p>{"In July 2026, OpenAI admitted that two of its own AI models broke out of a test sandbox, reached the open internet, and hacked Hugging Face, on their own, during an internal red-team exercise. The same week, OpenAI, Anthropic, and Google all shipped repository-wide coding agents that run unsupervised for 30-60 steps and rewrite hundreds of files at a time."}</p>
+                <p>{"We spent twenty years building rigor around human-written code: review, testing, security scanning, staged rollouts, audit trails, and rollback. Most of it wasn't optional — it was the price of admission for shipping software an organization could actually trust."}</p>
+                <p>{"Then we handed the keys to autonomous agents and skipped nearly every one of those steps."}</p>
+                <p>{"This talk is about the widening gap between how fast we're building agents and how little we're governing them, and why that gap is now the biggest operational risk in software delivery. We'll walk through real, recent incidents (not hypotheticals), talk about the uncomfortable difference between autonomy and authority, and dig into what a real delivery lifecycle for agents needs to look like: evaluation before merge, policy at deploy time, and a trace of what an agent actually did once it went live."}</p>
+                <p>{"No product pitches. No slideware fantasy architecture. Just an honest look at what's breaking right now, why it's breaking, and what engineering and platform teams need to put in place before the next \"unprecedented cyber incident\" happens to them."}</p>
+            </>
+        ),
+        image: MartinReynolds,
+        linkedin: "https://www.linkedin.com/in/martinreynolds/",
+        website: "",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
@@ -745,211 +167,443 @@ export const Sessions = {
         jobTitle: "Technical Team Lead @ Evoluted",
         bio: (
             <>
-                <p>
-                    Andy is a Technical Team Lead at Sheffield based Web agency, Evoluted. With over two decades of coding experience, he now uses that passion and insight to support others; helping people develop their skills and promoting best practices.
-
-Away from the work, Andy runs Street Art Sheffield, documenting the Steel City’s incredible murals and running the occasional street art tour.
-                </p>
+                <p>{"Andy is a Technical Team Lead at Sheffield based Web agency, Evoluted. With over two decades of coding experience, he now uses that passion and insight to support others; helping people develop their skills and promoting best practices."}</p>
+                <p>{"Away from the work, Andy runs Street Art Sheffield, documenting the Steel City’s incredible murals and running the occasional street art tour. His claim to fame is appearing in an episode of Family Guy."}</p>
             </>
         ),
         talkTitle:
-            "Ulysses versus The Very Hungry Caterpillar",
+            "Building without barriers: a11y for backend engineers",
         description: (
             <>
-            As AI becomes more prevalent in our industry, it’s more important than ever to recognise the value of true craftsmanship. In this talk, we’ll draw insights from two literary classics to explore why writing clean, thoughtful code still matters.
-            <br></br>
-            <br></br>
-            As developers, we spend a significant proportion of our time reading code. The quality of that code can really impact how easily we understand and follow what it does. Poor code can be costly!
-            <br></br>
-            <br></br>
-            Taking two literary classics we will explore the challenges of complex code from the reader’s perspective. We will also look at the benefits simple code can bring.
-            <br></br>
-            <br></br>
-            With people increasingly utilising AI as part of their developer-toolkit, it’s important we examine the quality of our work. We need to embrace our creativity and write code that tell’s a simple and eloquent story.
+                <p>{"Breaking down the hidden barriers. Backend engineers rarely talk about accessibility — we assume it's another domain’s problem, as a result users get excluded. This talk explores real backend scenarios where accessibility matters, and how to build more inclusive products."}</p>
+                <p>{"Backend engineers rarely talk about accessibility — often from a lack of awareness or a misplaced assumption that it is someone else’s problem."}</p>
+                <p>{"However, the systems we build can create hidden barriers for our users. Timeouts, error handling and API design all have accessibility consequences, often for users with disabilities we don’t see."}</p>
+                <p>{"In this talk, I'll walk through the core principles of accessibility (no prior knowledge required) and apply them to real backend scenarios: from designing APIs that support assistive tech, to clear and understandable error responses."}</p>
+                <p>{"You'll leave with new ways of thinking about how the apps and websites we build impact users. Plus, a checklist of principles to verify your code is built inclusively."}</p>
             </>
         ),
         image: AndyCarter,
         linkedin: "https://www.linkedin.com/in/drandycarter/",
         website: "https://andycarter.dev/",
+        github: "https://github.com/drmonkeyninja",
+        bluesky: "https://bsky.app/profile/andycarter.dev",
+        mastodon: "https://mastodon.social/@drmonkeyninja",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
     },
-    "OliverDavies": {
-        name: "Oliver Davies",
-        jobTitle: "Drupal Developer, Consultant and Speaker",
+    "CliffAgius": {
+        name: "Cliff Agius",
+        jobTitle: "Freelance .NET / IoT Developer",
         bio: (
-            <>Oliver is a Software Developer and Drupal expert with 18 years experience. He specialises in code quality, automated testing and test-driven development, is a Linux enthusiast and an advocate for open source software.</>
+            <>
+                <p>{"My Name is Clifford Agius but everyone just calls me Cliff unless I’m in trouble that is."}</p>
+                <p>{"I am an Airline Pilot for a Major UK carrier and I have the fantastic priviledge to fly the Airbus A320 family around Europe from our home at London Heathrow. This is an amazing aircraft that burns next to no fuel passengers in comfort at Mach 0.78."}</p>
+                <p>{"When I’m not flying I spend my time working as a freelance .Net, MAUI and IoT Developer working on various client and Open Source projects (Like #Handy & #Leggy). I was awarded Microsoft MVP in 2020-2021 for my work in the community where I enjoy giving talks at Meet-ups and International Conferences about MAUI/IoT."}</p>
+                <p>{"I have an amazing and supportive wife Mrs A! as well as 3 boys and two dogs, so life is busy but I wouldn’t want it any other way."}</p>
+            </>
         ),
         talkTitle:
-             "Nix for PHP Developers (and everyone else)",
+            "Using the ESP32 and DotNET NanoFramework to secure Aircraft",
         description: (
-            <>Nix is a package manager with more than 120,000 packages, an operating system with more than 20,000 options, and a build tool for creating reproducible and reliable software that works the same for everyone, every time.
-            <br></br>
-            In this talk, Oliver will explain what Nix is, show how to create development shells for PHP (or anything else) that mean you no longer need to use containers or virtual machines, and how to package applications that are easy to deploy and distribute.
-            <br></br>
-            Note the slides and code examples are focus on PHP, but the same concepts and tools apply to other programming languages. You don't need to be a PHP Developer to learn from this talk.</>),
-        image: OliverDavies,
-        website: "https://www.oliverdavies.uk/",
+            <>
+                <p>{"This talk walks through how I’ve used .NET C# on a tiny IoT board running nanoFramework, combined with the power of Azure, to bring real security to light aircraft. We’ll look at the ideas behind the solution, why certain choices were made, and then dig into the code, the Azure stack, and the current (very alpha) state of the project. I’ll also cover what’s planned next, including a MAUI mobile app and Azure-based messaging."}</p>
+                <p>{"Light aircraft are expensive bits of kit, and the priciest component by far is the engine — usually somewhere between £30–£50K. So imagine discovering that your aircraft’s engine has been stolen. Now imagine that, during the investigation, that same engine turns up in a war zone bolted onto a large drone. How would you feel then…"}</p>
+                <p>{"This isn’t a hypothetical. I have friends who’ve been through exactly this. And unlike cars with noisy alarms sitting on your driveway, aircraft tend to live in a hangar tucked away in a corner of an airfield — no power, no internet, and basically no security. So, being the resident techy IoT guy, I got asked the obvious question: is there anything we can do about this?"}</p>
+                <p>{"This talk walks through how I’ve used .NET C# on a tiny IoT board running nanoFramework, combined with the power of Azure, to bring real security to light aircraft. We’ll look at the ideas behind the solution, why certain choices were made, and then dig into the code, the Azure stack, and the current (very alpha) state of the project. I’ll also cover what’s planned next, including a MAUI mobile app and Azure-based messaging."}</p>
+                <p>{"So come along, join the fight against stolen engines, and let’s make life a lot harder for the bad guys."}</p>
+            </>
+        ),
+        image: CliffAgius,
+        linkedin: "https://www.linkedin.com/in/clifford-agius/",
+        website: "https://www.cliffordagius.co.uk/",
+        github: "https://github.com/CliffAgius",
+        x: "https://x.com/CliffordAgius",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
     },
-    "DanielTallentire": {
-        name: "Daniel Tallentire",
-        jobTitle: "Engineering Manager @ The Citation Group",
+    "TonyEdwards": {
+        name: "Tony Edwards",
+        jobTitle: "Lead Mobile Developer @ Sapphire Holidays",
         bio: (
             <>
-                <p>
-                    I’m an Engineering Manager at Citation Group. I build software, teams and systems to giving the best opportunities for success.
-
-I have 18 years of experience working in both SaaS & on-prem software companies. I helped shape product and technical direction both as a software engineer, manager and director.
-
-I focus on working out what the next most important problem to solve is, then solving that. To do this I have reorganized teams, built new products, spent weeks on-site with customers, hired and grown staff, created new internal systems. I do this with an emphasis on making life better for those who will be on the journey too – the customers, the engineers who I support, and our other internal teams.
-                </p>
+                <p>{"Tony is a full time Mobile developer, part time cat carer, occasional rapper, and reluctant Morris Dancer. When he's not talking at events, organising conferences, or tinkering with code, you'll find him tucked away in a sunny corner of the garden tending this years vegetables or preparing for next years."}</p>
+                <p>{"With a background in community events management, a multi award winning career in the education sector, and a long history of making a fool of himself, Tony's sessions are sure to engage the audience, teach you something new, and spark conversation."}</p>
             </>
         ),
         talkTitle:
-            "Jar-gone... how to talk tech to non-techies",
+            "How to be a Hip-Hop MC. . . P",
         description: (
             <>
-            
-            "Jar-gone” helps engineers ditch jargon, tell compelling stories, and connect. I’ll share experiences and tips to make your communication clearer and truly impactful. Transform from that engineer who confuses everyone to the one who gets called when clarity on technical decisions is needed.
-            <br></br>
-            <br></br>
-            Your system is down. Support are struggling with the phone calls. The big boss demands answers. You know exactly what the problem is, but as you explain, eyes glaze over. The more detail you provide, the more frustrated you sense they are becoming. Have you been there too?
-            <br></br>
-            <br></br>
-            Every day around the world, brilliant engineers solve complex problems worth millions. Yet when explaining those solutions, we might as well be speaking Klingon.
-            <br></br>
-            <br></br>
-            This isn't dumbing things down. It's about wielding communication as a superpower that transforms careers, prevents disasters, and builds bridges between engineering and the rest of the business.
-            <br></br>
-            <br></br>      
-            <h4 style={{"font-weight": "bold"}}>In this practical, story-driven talk, you'll discover:</h4>
-            <ul>
-                <li>- Why smart people sound confusing – and the three mental traps that make us difficult to understand</li>
-                <li>- The SOAR framework adapted for technical communication – the same structure that wins interviews now helps you explain any technical concept</li>
-                <li>- Battle-tested metaphors that help understanding – from "technical debt as credit cards" to "APIs as restaurant menus"</li>
-                <li>- My 2-minute explanation template that works for everything from bug reports to board presentations</li>
-            </ul>
-            <br></br>    
-            Drawing from 15+ years across startups, scale-ups, and enterprises, I'll share the communication patterns that separate engineers who get stuck from those who become indispensable.
+                <p>{"Admit it. You've always wanted to become a hip-hop MC. Well. . . I have some good news. Shaping your organisations data into something consumable by an LLM is exactly the same thing. . . kind of. This talk will blur the lines between between forming a rap super group and crafting the perfect MCP."}</p>
+                <p>{"The recipe for becoming a good hip-hop group is simple enough. A strong name. A solid flow. And flawless features. These will get you started."}</p>
+                <p>{"The same is surprisingly true for MCPs."}</p>
+                <p>{"In this talk, Tony Edwards will walk the audience through the refinement of an MCP (Model Context Protocol) server. Starting with something that is, quite frankly useless, and tuning it into the ultimate AI assistant plus the tooling that sits behind it. As a continuation of his Beats, Rhymes, and Neural Nets side project, the talk will look at creating a server that follows the protocol to make the most out of the standard through the lens of a hip-hop supergroup."}</p>
+                <p>{"Whilst the session is light-hearted, the lessons within are practical and real. "}</p>
+                <p>{"After taking 25 years of data from around the Sapphire Holidays group and getting it into secure, locally hosted LLMs (Large Language Model), Tony has learned a thing or two. Standing them alongside Azure Foundry, Microsoft's hosted AI platform, offers a comparison between the high upfront cost of the DIY option against the ongoing cost of an off the shelf enterprise offering. Spoiler alert. They can both quickly turn into fun time sinks."}</p>
+                <p>{"If you are thinking of incorporating LLMs into your business or side project, you'll walk away from this session with a grounded overview of two of the main options, next steps in opening up your data in a sensible way regardless of tech stack, and quite possibly a desire to form a rap ensemble."}</p>
             </>
         ),
-        image: DanielTallentire,
-        linkedin: "https://www.linkedin.com/in/danieltallentire/",
+        image: TonyEdwards,
+        linkedin: "https://www.linkedin.com/in/tonyedwardspz/",
+        website: "https://tonyedwardspz.co.uk/",
+        github: "https://github.com/tonyedwardspz",
+        bluesky: "https://bsky.app/profile/tonyedwardspz.bsky.social",
+        x: "https://x.com/tonyedwardspz",
+        youtube: "https://www.youtube.com/channel/UCeUTkW7-_b0vbhV04SRb_2A",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "KevlinHenney": {
+        name: "Kevlin Henney",
+        jobTitle: "Independent Consultant, Trainer, Speaker & Writer",
+        bio: (
+            <>
+                <p>{"Kevlin Henney is an independent consultant, trainer, speaker and writer. His development interests and work with companies covers programming, practice and people. He is a contributor to the Modern Software Engineering YouTube channel and has written for many publications, including The Register and the O'Reilly Radar. Kevlin is also co-author of two volumes in the Pattern-Oriented Software Architecture series, editor of 97 Things Every Programmer Should Know and co-editor of 97 Things Every Java Programmer Should Know."}</p>
+            </>
+        ),
+        talkTitle:
+            "Wibbly-Wobbly, Timey-Wimey Stuff",
+        description: (
+            <>
+                <p>{"If you think you know everything you need to know about date–time handling, you are almost certainly wrong. If you think you don’t, you are almost certainly right. Come along to this talk to find out just wibbly-wobbly our grasp of time is."}</p>
+                <p>{"Time... in our code we can capture from the past and from the future, we tidy it into data structures, snapshotting it into databases and watch its sands trickle through our APIs. It's all nice and logical, right?"}</p>
+                <p>{"Sadly not. If you think you know everything you need to know about date–time handling, you are almost certainly wrong. If you think you don’t, you are almost certainly right."}</p>
+                <p>{"In this talk we'll have some fun by looking at some of the not-quite-right assumptions we hold and and learn from the messes that w̶e̶ other people have made."}</p>
+            </>
+        ),
+        image: KevlinHenney,
+        linkedin: "https://www.linkedin.com/in/kevlin/",
+        bluesky: "https://bsky.app/profile/kevlin.bsky.social",
+        mastodon: "https://mastodon.social/@kevlin",
+        x: "https://x.com/KevlinHenney",
+        website: "https://about.me/kevlin",
+        youtube: "https://www.youtube.com/@KevlinHenney",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "ColindaLatour": {
+        name: "Colinda Latour",
+        jobTitle: "Author",
+        bio: (
+            <>
+                <p>{"After more than 20 years working in technology and information environments, I reached a plateau in my own self-development and realised I wanted more love in my very corporate, tech-filled life. So I created a 31-day experiment and set out to complete ten intentional acts of love every day. What began as a personal challenge became a way of living, then my book Living in Love, and ultimately the foundation of the Love Action Methodology I now teach and coach."}</p>
+                <p>{"Today, as an internationally accredited self-love coach, I work particularly with women in tech who are navigating the internal pressure, second-guessing and difficulty switching off that I recognise from my own years in the industry."}</p>
+            </>
+        ),
+        talkTitle:
+            "Love in the Machine: The Human Upgrade Tech Is Missing",
+        description: (
+            <>
+                <p>{"Tech taught us to debug systems, optimise performance and solve the impossible. But what happens when the system under pressure is us? After 20+ years in tech, I found an unexpected upgrade: love. Through science, stories and laughter, discover 3 Love Actions to change how you work under pressure."}</p>
+                <p>{"I think tech has a love problem."}</p>
+                <p>{"Yes, love."}</p>
+                <p>{"In an industry obsessed with upgrading systems, improving performance and adopting the next technology, we’ve overlooked one of the most powerful technologies we already have: the human capacity to intentionally change how we show up for ourselves and each other."}</p>
+                <p>{"After 20+ years working in tech and information environments, I left to become an internationally accredited self-love coach. What I discovered changed how I think about pressure, performance and the way we work."}</p>
+                <p>{"Love belongs in tech."}</p>
+                <p>{"Not group hugs around the server rack. Practical actions for very real tech moments."}</p>
+                <p>{"The meeting where your heart races before you speak."}<br />{"The message you rewrite six times before pressing Send."}<br />{"The security incident where everyone is communicating at 100mph."}<br />{"The evening when your laptop shuts down, but your brain doesn’t."}</p>
+                <p>{"In this interactive session, I’ll introduce the Love Action Methodology and we’ll put three tiny actions to the test:"}</p>
+                <p>{"Heart Breathing to reset when pressure hijacks your clear thinking."}</p>
+                <p>{"Send Love Into the Room to change how you enter meetings, difficult conversations and high-pressure interactions."}</p>
+                <p>{"The Appreciation Ping to create the tiny human interactions that shape team culture."}</p>
+                <p>{"We’ll explore the science behind why these actions can influence our state, behaviour and interactions, and challenge the assumption that relentless internal pressure is simply part of working in tech."}</p>
+                <p>{"You’ll leave with three tools you can use on Monday morning, including one that takes less time than waiting for Teams to load."}</p>
+                <p>{"No 47-slide training deck. No vague advice to “practise more self-care.” And nobody has to hug the person sitting next to them."}</p>
+                <p>{"Just a provocative question:"}</p>
+                <p>{"What if one of the upgrades tech needs most isn’t artificial intelligence, but intentional love?"}</p>
+            </>
+        ),
+        image: ColindaLatour,
+        linkedin: "https://www.linkedin.com/in/colindalatour/",
+        website: "https://colindalatour.com/",
+        youtube: "https://www.youtube.com/@colindalatour",
+        instagram: "https://www.instagram.com/colindalatour/",
+        facebook: "https://www.facebook.com/Colindalatourauthor",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "LiamWestley": {
+        name: "Liam Westley",
+        jobTitle: "Senior Software Engineer @ ClearBank",
+        bio: (
+            <>
+                <p>{"Liam Westley was most recently Head of Engineering at FreemarketFX, a fintech startup specializing in foreign currency trading, with a cloud native platform in Azure, helping expand a single development and QA team from eight people, to five teams, while obtaining an Ireland banking licence."}</p>
+                <p>{"Before that, Liam worked at Huddle and Criteria MX, and as a consultant specialising in software for Broadcast Television. His Niagara SMS moderation system was used by QVC UK for eight years to display SMS messages from viewers, live, on screen, and he is responsible for the ticketing system for Hat Trick Productions which provides e-tickets to shows such as Have I Got News For You and Room 101. In his time he created the first in house weather system for Sky News using Visual Basic 1.0 and helped launch the first live shopping channel in the Netherlands."}</p>
+            </>
+        ),
+        talkTitle:
+            "The Secret Life of Programmers",
+        description: (
+            <>
+                <p>{"How to build diverse, strong teams through the medium of characters from The Secret Life of Pets and Top Trumps."}</p>
+                <p>{"Building great development teams is not just about technology - it is about people. Using characters from The Secret Life of Pets to highlight individual developer traits, we will see how diversity creates strong teams."}</p>
+            </>
+        ),
+        image: LiamWestley,
+        linkedin: "https://www.linkedin.com/in/liamwestley/",
+        github: "https://github.com/westleyl",
+        x: "https://x.com/westleyl",
+        bluesky: "https://bsky.app/profile/westleyl.bsky.social",
         website: "",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
     },
-    "SiJobling": {
-        name: "Si Jobling",
-        jobTitle: "Engineering Manager @ Rightmove",
+    "MikeIrving": {
+        name: "Mike Irving",
+        jobTitle: "Microsoft MVP & Senior Web Developer @ Klipboard ",
         bio: (
             <>
-                <p>
-                    I'm Si Jobling, an Engineering Manager at Rightmove with over 20 years in tech and a background spanning ASOS, Alibaba, and Yahoo. I started my career at West Midlands Fire Service where I also engaged with the local community through our monthly Multipack meetups and hosting events with ASOS at Custard Factory. I've led teams through complex delivery, cultural shifts, and burnout recovery. I created the PETALS framework to help teams reflect more honestly and consistently on their wellbeing, and it's now used by over 100 active teams across multiple organisations.
-                </p>
+                <p>{"Mike is a Microsoft MVP, and the Co-organiser of both Dot Net North and Macc Tech. He started programming as a young child on the Dragon 32 micro computer, and later on a ZX Spectrum."}</p>
+                <p>{"Professionally, Mike started out in web development on the Microsoft Stack, and in more recent times he has been heavily involved in mobile development, both native and cross-platform. Though regularly coding Swift, Kotlin and JavaScript, C# / .NET has remained a constant through his career."}</p>
             </>
         ),
         talkTitle:
-            "Burndown Charts bs Burnt-Out Teams: A people-first approach to improving psychological safety in tech",
+            ".NET, IoT and Hedgehogs!",
         description: (
             <>
-                Your sprint velocity looks great; your burndown chart's on target. But half your team is quietly overwhelmed, two are looking for new jobs, and retros feel like a box-ticking exercise.
-
-                In this talk, we'll explore why traditional delivery metrics don't tell the whole story, and how burnout, disengagement, and disconnection can hide in plain sight. You'll learn about PETALS, a lightweight, people-first framework used by tech teams around the world to spot early signs of team strain and build psychologically safe, high-trust environments.
-
-                Expect real-world stories, simple tools, and an honest look at what makes teams thrive, or quietly unravel. Whether you're part of a team or lead one, this talk will give you practical ways to start better conversations, before the people behind the code burn out.
+                <p>{"Using C# / .NET Technologies and IoT to curate and automate video footage of garden hedgehogs. An experimental journey through device access, cloud storage, serverless functions, and a public website.  With insights into problem-solving changes necessary to allow the code to run on a Raspberry Pi."}</p>
+                <p>{"Using C# / .NET Technologies and IoT to curate and automate video footage of garden hedgehogs."}</p>
+                <p>{"An experimental journey through device access, cloud storage, serverless functions, and a public website."}</p>
+                <p>{"With an insight into problem-solving changes necessary to bring the code cross-platform to run on Linux on a Raspberry Pi."}</p>
             </>
         ),
-        image: SiJobling,
-        linkedin: "https://www.linkedin.com/in/sijobling/",
-        website: "https://petals.team/",
+        image: MikeIrving,
+        linkedin: "https://www.linkedin.com/in/mikeirving/",
+        website: "https://www.mike-irving.co.uk/",
+        github: "https://github.com/mikeirvingweb",
+        bluesky: "https://bsky.app/profile/mikeirvingweb.bsky.social",
+        mastodon: "https://mastodon.social/@mikeirvingweb",
+        x: "https://x.com/mikeirvingweb",
+        instagram: "https://www.instagram.com/mikeirving1982/",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
     },
-    "IndyPahal": {
-        name: "Indy Pahal",
-        jobTitle: "IT Director @ SOCOTEC UK",
+    "StevenTrotter": {
+        name: "Dr Steven Trotter",
+        jobTitle: "Head of Development @ Wyser",
         bio: (
             <>
-                <p>
-                    I'm an experienced Tech Leader, having gone through the journey myself and mentored multiple people going from technical roles to more management and leadership roles.
-                </p>
+                <p>{"I'm Steven. I'm a principal software engineer/architect who spends far too much time playing with really nerdy things like what I'll be giving a talk on. I started in IT over 20 years ago now and have seen a lot of different things. I've worked in finance, insurance, gambling, ecommerce, even video games. I've been in software and platform and worked with more technologies than I can realistically remember now both inside and outside of work. I like cats more than people, though I still like people (mostly), just not as much as my cats."}</p>
             </>
         ),
         talkTitle:
-            "Leadership and Management for Techies",
+            "TUI or not TUI, that is the question",
         description: (
-            <>Many brilliant software developers eventually find themselves asking: what's next? For some, the natural step is to move into leadership or management—but the leap isn't as straightforward as it seems. My talk is designed to help technical professionals explore this transition, understand what it really means, and decide if leadership is the path they want to take.
-
-</>
+            <>
+                <p>{"Terminal UIs (TUIs) rule. Did you know you can play doom in a Terminal? This talk will show some of the mad and cool things people have done with TUIs and how to write a very basic TUI."}</p>
+                <p>{"Somewhere in history we decided GUIs were going to be all the rage. Then they were too hard, so we started building web UIs instead and now you need a browser, a build step and 400MB of node_modules to render a list. Here's the thing though, it doesn't have to be like this, Terminal UIs (TUIs) are amazing. This talk is a fun tour of some genuinely mad things people have built in the terminal, a look at what makes the really good ones good, and a demo of how you'd write your own (it's much more straightforward than you think)."}</p>
+            </>
         ),
-        image: IndyPahal,
-        linkedin: "https://www.linkedin.com/in/indy-pahal-76328075/",
+        image: StevenTrotter,
+        linkedin: "https://www.linkedin.com/in/dr-steven-trotter-11b2294/",
+        website: "https://strottos.dev/",
+        github: "https://github.com/strottos",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "StefanCornea": {
+        name: "Stefan Cornea",
+        jobTitle: "Software Engineer @ Signapse ",
+        bio: (
+            <>
+                <p>{"I'm Stefan, a backend and streaming engineer at Signapse, where I build the real-time systems that deliver AI-generated sign-language video. I work mostly in Go and Rust, with a soft spot for the unglamorous parts: streaming protocols, concurrency, and systems that stay up when things go wrong. I lead GDG London, so community and sharing what I learn is a big part of what I do, and I write a newsletter called The Control Loop. Outside work I'm usually building something for the fun of it, which is exactly where this project came from."}</p>
+            </>
+        ),
+        talkTitle:
+            "A practical example of how routing and ETAs actually work.",
+        description: (
+            <>
+                <p>{"Ever wondered how your maps app finds the fastest route or knows you're 12 minutes away? This is a practical look at the graph traversal behind every route: from \"roads are a graph\" to a live map moving hundreds of vehicles, so you leave knowing how routing and ETAs really work."}</p>
+                <p>{"Every time your phone plans a route or counts down an ETA, it's quietly running a graph search across a whole city of roads. This talk is a practical look at how that actually works, and how you'd build it yourself."}</p>
+                <p>{"We start from the idea that a road network is just a graph, then walk through how you find a shortest path across it, why doing that at city scale is hard and the trick real routing engines use to answer in milliseconds. To make it concrete, I run a live map that simulates hundreds of vehicles routing and moving across London at once, and show the handful of ideas that keep it fast and stable."}</p>
+                <p>{"You'll leave understanding how routing and ETAs really work under the hood, where the genuinely hard parts are and a set of patterns you can reuse in anything that has to find paths or juggle many moving things at once."}</p>
+            </>
+        ),
+        image: StefanCornea,
+        linkedin: "https://www.linkedin.com/in/stefansolves/",
+        github: "https://github.com/StefanSolves",
         website: "",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
     },
-
-    // "LenaPismeny": {
-    //     name: "Lena Pismeny",
-    //     jobTitle: "Senior DevOps Engineer",
-    //     bio: (
-    //         <>
-    //             <p>
-    //                 Lena is a Senior DevOps and DevSecOps Engineer with over 12 years of experience designing secure, scalable, cloud-native infrastructure. I specialize in automating cloud environments (AWS, GCP), infrastructure as code (Terraform, CloudFormation), Configuration management (Ansible, Puppet), and building robust CI/CD pipelines (Jenkins, GitLab). I enjoy building things from scratch, improving team velocity, and ensuring security is embedded in every stage of the delivery process. I bring a strong mix of hands-on engineering and cross-functional collaboration across security, legal, and development teams.
-    //             </p>
-    //         </>
-    //     ),
-    //     talkTitle:
-    //         "Steps and Struggles: My Journey Through Tech, Disability, and Immigration",
-    //     description: (
-    //         <>
-    //             What happens when a DevOps engineer with deep AWS and security expertise is forced to start over—this time with vision loss, limited mobility, and in a foreign country?
-    //             <br></br>    
-    //             <br></br>    
-
-    //             This talk isn’t just about technology—it’s about grit, identity, and adaptation. Before moving to the Netherlands, I had already lost much of my vision. Over the past year, walking long distances and climbing stairs has also become difficult. Yet through it all, I’ve rebuilt my tech career from the ground up—drawing on my expertise in cloud infrastructure, DevOps, and security to stay in the game.
-    //             <br></br>    
-    //             <br></br>    
-
-    //             I’ll share the raw, real story of navigating a new country and industry while my body demanded new ways of working. From accessibility gaps in tech to the emotional toll of “just pushing through,” this talk brings a rare perspective on resilience, inclusion, and thriving when nothing is easy. Whether you come for the cloud or the human story behind it, you’ll leave with fresh insight into what adaptability really looks like in tech.
-    //         </>
-    //     ),
-    //     image: LenaPismeny,
-    //     linkedin: "https://www.linkedin.com/in/laenaren/",
-    //     website: "",
-    //     sessionType: "Talk",
-    //     speakerCard: false,
-    //     speakerCardImage: "",
-    // },
-
-    //     "": {
-    //     name: "",
-    //     jobTitle: "",
-    //     bio: (
-    //         <>
-    //             <p>
-                    
-    //             </p>
-    //         </>
-    //     ),
-    //     talkTitle:
-    //         "TBC",
-    //     description: (
-    //         <></>
-    //     ),
-    //     image: ,
-    //     linkedin: "",
-    //     website: "",
-    //     sessionType: "Talk",
-    //     speakerCard: false,
-    //     speakerCardImage: "",
-    // },
+    "EdaEren": {
+        name: "Eda Eren",
+        jobTitle: "Software Developer",
+        bio: (
+            <>
+                <p>{"Eda Eren is a self-taught developer with wide-ranging interests across web technologies and software development. She's come to tech from a philology background, bringing with her a keen interest in language (both human and programming), how we learn, and how we shape language to communicate our ideas. She believes in technology's potential for good and shares her passion through writing and volunteering. In her free time, she enjoys nature, surrealist art, and (mostly heavy) music."}</p>
+            </>
+        ),
+        talkTitle:
+            "Forgetting Machines: AI Coding Tools and Skill",
+        description: (
+            <>
+                <p>{"Recent neuroscience research into the impact of AI tools on learning has shown that while they can be helpful in cognitive offloading, relying on these tools interrupts several other processes necessary for learning. Many of us don't have a say in using these tools in professional work, so we'll look at what we can do as individuals for our skill growth. We'll also briefly touch on what seniors and managers can do to prevent skills rot in their team and why we even need human skills. This is not an AI hype or an anti-AI talk, but a practical (and hopeful!) look at how we can care for our skills in an era where AI feels inescapable. "}</p>
+                <p>{"AI code tooling hype is everywhere right now, making some big claims: they'll make you a faster programmer, they'll write your code for you, they'll…replace you?! While the efficacy of these tools may be hotly debated, research is piling up documenting their impact on our learning and skills development. Explore an overview of how these tools work alongside an introduction to the neuroscience behind how and when we learn. By abstracting away programming processes, AI coding tools remove the friction needed to build foundational understanding that develops into expertise. We'll also deep dive into the practical strategies and mitigations you can put in place to keep learning in the age of AI. As AI coding tools impact our individual skills over time, the pool of skills available to our projects, teams, and the tech industry itself will change. By recognizing the potential and pitfalls of these tools, we can plan our own paths in a way that's informed by AI, not led by it."}</p>
+            </>
+        ),
+        image: EdaEren,
+        website: "https://edaeren.com/",
+        github: "https://github.com/rivea0",
+        mastodon: "https://mastodon.social/@rivea0",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "FaithSodipe": {
+        name: "Faith Sodipe",
+        jobTitle: "Software Engineer @ Bauer Media Outdoor",
+        bio: (
+            <>
+                <p>{"I am Faith Sodipe — a software engineer, practitioner-researcher, and community advocate based in London, UK, with over 5 years of experience building scalable, production-grade systems across fintech, enterprise technology, and IoT infrastructure. I am developing practitioner research in AI systems and mentoring the next generation of engineers through codebar and the Women Coding Community. I believe the most important things in this industry are not the tools you adopt but the judgment you develop about when not to adopt them."}</p>
+                <p>{"Outside of engineering I am building The Lab, a results-based fitness initiative. And my favourite member of One Direction is Niall. Someone had to say it."}</p>
+            </>
+        ),
+        talkTitle:
+            "You Don't Need Kubernetes: How We Scaled Our API Layer Without the Infrastructure Theatre",
+        description: (
+            <>
+                <p>{"We had a scaling problem. Everyone said Kubernetes. We said no and scaled anyway. This is the story of what we built instead, what we learned, and why the most powerful engineering decision we made was knowing what not to build."}</p>
+                <p>{"Every engineering team hits a scaling problem eventually. And somewhere along the way, the industry convinced us that the answer was always the same, Kubernetes, service meshes, container orchestration, and an infrastructure stack that requires its own dedicated team just to keep the lights on. We have been sold complexity as a sign of sophistication, and a lot of teams are paying the price for it."}</p>
+                <p>{"This talk is the honest story of what we did instead."}</p>
+                <p>{"When our production ETL engine started showing signs of strain under growing data volume, we resisted the pull toward heavyweight infrastructure. We containerised with Docker for clean, consistent deployment  and then we stopped. We drew a hard line between containerisation as a sensible engineering tool and orchestration as an unnecessary leap, and we scaled our API layer using what our stack already gave us, without the theatre."}</p>
+                <p>{"We will walk through the real decisions that made the difference, how we diagnosed the actual bottlenecks instead of the assumed ones, how we kept our API surface clean and predictable under increasing load, how we used the tools already available to us before reaching for anything exotic, and what we learned about the true cost of complexity when you are the one maintaining it at 2am."}</p>
+                <p>{"This is not a talk against Kubernetes. It is a talk about knowing when you need it and having the confidence to say not yet when you do not. Because the most sophisticated engineering decision you can make is sometimes knowing exactly what not to build."}</p>
+                <p>{"You will leave with a practical framework for making infrastructure decisions that match your actual scale, the language to push back on complexity for its own sake, and a story that might just save your team months of unnecessary work."}</p>
+            </>
+        ),
+        image: FaithSodipe,
+        linkedin: "https://www.linkedin.com/in/sodipefaith/",
+        website: "https://www.faithsodipe.dev",
+        github: "https://github.com/classyk12",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "RobertCurran": {
+        name: "Robert Curran",
+        jobTitle: "Software Engineer @ Perk",
+        bio: (
+            <>
+                <p>{"Agentic Software engineer currently based out of Barcelona "}</p>
+            </>
+        ),
+        talkTitle:
+            "Everything We Stopped Owning (And the One Thing We Never Did)",
+        description: (
+            <>
+                <p>{"Serverless was never about servers — it's about ownership. Mechanical ownership keeps shrinking; strategic ownership keeps growing. AI is next in line. The real differentiator now is investing in the mental models that tell you what to build."}</p>
+                <p>{"Serverless was never really about servers. It's about ownership. And it turns out that's the same story engineering has told for thirty years — we just keep moving which layer of the stack we're talking about."}</p>
+                <p>{"From pets (you own the machine) to cattle and DevOps (you own the fleet) to containers (you own the orchestration) to serverless (you own the business logic, and nothing below it) — grounded in real examples at each step. Mechanical ownership decreases; strategic ownership increases. What disappears is the machinery. What's left is judgement."}</p>
+                <p>{"Then the pattern moves to its next stage: AI is doing to code authorship what serverless did to infrastructure. We're abstracting away who writes the code — but we've always owned the outcome, and we still do. As mechanical ownership keeps shrinking, the differentiator for the next decade won't be how well you write code. It'll be how well you've invested in the mental models that tell you what to build."}</p>
+            </>
+        ),
+        image: RobertCurran,
+        linkedin: "https://www.linkedin.com/in/robert-curran-3634a112a/",
+        website: "https://robertcurran.uk",
+        github: "https://github.com/Ro5635",
+        x: "https://x.com/RobertCurranUK",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "SteveWade": {
+        name: "Steve Wade",
+        jobTitle: "Founder @ Platform Fix",
+        bio: (
+            <>
+                <p>{"Steve rescues failed Kubernetes migrations, transforming platform chaos into clarity in 30 days. After saving £100M+ in doomed cloud-native projects and successfully leading 50+ CNCF transformations, he created Platform Fix OS - a systematic approach to platform simplification. Known for his \"learn by breaking\" philosophy and no-BS take on Kubernetes complexity, Steve delivers the uncomfortable truths vendors won't tell you. His signature talk, \"From K8s Chaos to Clarity\" has helped thousands of engineers escape the complexity trap. Steve is the straight-talking engineer organisations call when their cloud-native dreams become expensive nightmares. He speaks at KubeCon, DevOps Days, and enterprise summits worldwide, helping teams achieve freedom through radical simplification."}</p>
+            </>
+        ),
+        talkTitle:
+            "The Killer Question: How One Sentence Can Transform Your Engineering Career",
+        description: (
+            <>
+                <p>{"I GitOps-splained at a wedding. Brilliant at code, terrible at people. So I debugged myself. Three frameworks: the Killer Question, the Gesture Stack, the Triple-P Method. One engineer went from ignored to VP in six months. Live practice, no fluff. You might enjoy your next standup."}</p>
+                <p>{"Your code is brilliant. Your architecture elegant. But your manager just promoted someone else. Again. Someone \"less technical\" who \"communicates well.\""}</p>
+                <p>{"This is the career-limiting bug killing more engineering careers than bad code ever will."}</p>
+                <p>{"I know because I had it. The engineer who GitOps-splained at a wedding. Who could rescue £100M platforms but couldn't rescue a conversation. Who watched colleagues advance while my ideas died in silence."}</p>
+                <p>{"So I debugged myself. Systematically."}</p>
+                <p>{"Three frameworks that changed everything:"}<br />{"Killer Question - Makes networking effortless. Turned awkward conferences into three advisory boards."}<br />{"Gesture Stack - Three movements that command authority. Your ideas get heard, not interrupted."}<br />{"Triple-P Method - Translate Kubernetes to CEO-speak: Problem to Process to Payoff. Get buy-in, not blank stares."}</p>
+                <p>{"Through live practice and roleplay, you'll master communication like coding, systematically. Battle-tested across £100M in transformations."}</p>
+                <p>{"One engineer used these to go from ignored to VP in six months."}</p>
+                <p>{"Your technical brilliance deserves communication superpowers."}</p>
+                <p>{"Warning: You might enjoy your next standup."}</p>
+            </>
+        ),
+        image: SteveWade,
+        linkedin: "https://www.linkedin.com/in/stevendavidwade/",
+        github: "https://github.com/swade1987",
+        website: "",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "SteveHeyes": {
+        name: "Steve Heyes",
+        jobTitle: "Team Lead @ GoGlobal",
+        bio: (
+            <>
+                <p>{"I believe that technologies purpose is to improve peoples’ lives, be that of an individual, a society or a business. The way I do that currently is by building teams that solve users problems which then moves the needle for businesses. I focus on outcomes over outputs, and I am an advocate for good DevEx and going slow to go smooth which then enables us to go fast."}</p>
+                <p>{"I live in Birmingham with my wife, 3 kids and a dog. I've been actively part of the Birmingham Tech scene for 20 years and, along with some other great folks, I run ManageOps which is a community for technical leaders and engineering managers."}</p>
+            </>
+        ),
+        talkTitle:
+            "How to lead with hope when it all feels hopeless",
+        description: (
+            <>
+                <p>{"It's all gone a bit pear shaped. What it means to be a software engineer has fundamentally changed forever. Jobs are being replaced with a genie in a box. The promise of the Internet solving all our problems has been shattered.  And yet we have a job to do. We have real problems to solve for real people. We need a salary to pay the bills.  In this talk, Steve will look at hope; moving from a fluffy abstract term to a concrete example on why it is important, how we can apply to our careers and what we can do to instil it in our teams. This will look at how to lead a team, but also yourself, to create a vision, build trust and create agency for change."}</p>
+                <p>{"It's all a bit rubbish right now. No one knows what software engineering is going to look like in a years time, or even if they will have a job. AI is writing all our code now. The very thing that we built our identity around. "}</p>
+                <p>{"And yet, we have a job to do. We have teams to lead. We have OKRs and goals. How can we do all that we need to do in age of uncertainty. According to research, Hope is the single biggest thing a follower wants from a leader. Which makes sense. It's a bit hopeless. "}</p>
+                <p>{"But what even is hope? A feeling? Is it subjective? Or is it only really for children's wish lists for their birthdays?"}</p>
+                <p>{"It turns out that it's not. Hope is having a vision for a better future while having some agency to make that future come about."}</p>
+                <p>{"In this talk I will unpack the current state of the industry. I will paint as honest picture as I can on what is happening and how it's all change. I will then explore hope; what it is, what it isn't. My aim is that people will come away from this with an idea of how they can improve their teams (and their own lives) by instilling some hope."}</p>
+            </>
+        ),
+        image: SteveHeyes,
+        linkedin: "https://www.linkedin.com/in/steveheyes/",
+        website: "https://steveheyes.co.uk",
+        github: "https://github.com/mrsteveheyes",
+        x: "https://x.com/mrsteveheyes",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "JimSeconde": {
+        name: "Jim Seconde",
+        jobTitle: "Senior Developer Advocate @ Vonage",
+        bio: (
+            <>
+                <p>{"I let it get out of control. One day, I snapped and couldn't deal with junior PHP developers running around LinkedIn posting slop everywhere to sound important. After this, everyone in PHP-land knows me as \"The PHP Bot Guy\", which grabbed the attention of The PHP Foundation. I am now actively working with the PHP Foundation by writing the strategy for it's Outreach outside the PHP space."}</p>
+                <p>{"The thing is: this isn't a PHP talk. It's a far bigger problem: we are becoming more stupid, more lazy than ever before. Anti intellectualism has somehow won, so I'm fighting back to make the tech industry less rubbish."}</p>
+            </>
+        ),
+        talkTitle:
+            "Slop-Driven Development",
+        description: (
+            <>
+                <p>{"I think I'm going to add call and response audio to pretend that I'm talking to Alexa, ordering her to make me up horrendous AI slop that I will extremely proud of."}</p>
+                <p>{"The year is 2026. We were promised hoverboots. That did not become the world we live in."}</p>
+                <p>{"The world we live in is teaching every developer that they must be an influencer of some sort, for some reason, and AI has arrived to help us do it."}</p>
+                <p>{"Join me on a quite frankly ridiculous journey, as I delve into the world of attempting to look at the top of your game, while actually showing everyone that you believe Arrays start at 1."}</p>
+            </>
+        ),
+        image: JimSeconde,
+        linkedin: "https://www.linkedin.com/in/secondej/",
+        website: "https://developer.vonage.com/en/blog/authors/james-seconde",
+        github: "https://github.com/SecondeJK",
+        x: "https://x.com/SecondeJ",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
 }

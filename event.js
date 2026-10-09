@@ -27,7 +27,7 @@ export const EVENT = {
 export const AVAILABLE_INFORMATION = {
     scheduleAvailable: false,
     locationAvailable: true, 
-    speakersAvailable: false,
+    speakersAvailable: true,
     sponsorsAvailable: true,
 }
 
