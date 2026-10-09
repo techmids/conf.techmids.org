@@ -359,16 +359,18 @@ export const Sessions = {
         jobTitle: "Microsoft MVP & Senior Web Developer @ Klipboard ",
         bio: (
             <>
-                <p>{"Mike is a Microsoft MVP, and the Co-organiser of both Dot Net North and Macc Tech."}</p>
-                <p>{"He started programming as a young child on the Dragon 32 micro computer, and later on a ZX Spectrum."}</p>
-                <p>{"Professionally, Mike started out in web development on the Microsoft Stack. However, and in more recent times he has been heavily involved in mobile development, both native and cross-platform. Though regularly coding Swift, Kotlin and JavaScript, C# / .NET has remained a constant through his career."}</p>
+                <p>{"Mike is a Microsoft MVP, and the Co-organiser of both Dot Net North and Macc Tech. He started programming as a young child on the Dragon 32 micro computer, and later on a ZX Spectrum."}</p>
+                <p>{"Professionally, Mike started out in web development on the Microsoft Stack, and in more recent times he has been heavily involved in mobile development, both native and cross-platform. Though regularly coding Swift, Kotlin and JavaScript, C# / .NET has remained a constant through his career."}</p>
             </>
         ),
         talkTitle:
             ".NET, IoT and Hedgehogs!",
         description: (
             <>
-                <p>{"Using C# / .NET Technologies and IoT to curate and automate video footage of garden hedgehogs. An experimental journey through device access, cloud storage, serverless functions, and a public website. With an insight into problem-solving changes necessary to bring the code cross-platform to run on Linux on a Raspberry Pi."}</p>
+                <p>{"Using C# / .NET Technologies and IoT to curate and automate video footage of garden hedgehogs. An experimental journey through device access, cloud storage, serverless functions, and a public website.  With insights into problem-solving changes necessary to allow the code to run on a Raspberry Pi."}</p>
+                <p>{"Using C# / .NET Technologies and IoT to curate and automate video footage of garden hedgehogs."}</p>
+                <p>{"An experimental journey through device access, cloud storage, serverless functions, and a public website."}</p>
+                <p>{"With an insight into problem-solving changes necessary to bring the code cross-platform to run on Linux on a Raspberry Pi."}</p>
             </>
         ),
         image: MikeIrving,
@@ -471,9 +473,12 @@ export const Sessions = {
         description: (
             <>
                 <p>{"We had a scaling problem. Everyone said Kubernetes. We said no and scaled anyway. This is the story of what we built instead, what we learned, and why the most powerful engineering decision we made was knowing what not to build."}</p>
-                <p>{"When our production ETL engine started showing signs of strain under growing data volume, we resisted the pull toward heavyweight infrastructure. We containerised with Docker for clean, consistent deployment and then we stopped, and we scaled our API layer using what our stack already gave us, without the theatre."}</p>
-                <p>{"We will walk through how we diagnosed the actual bottlenecks instead of the assumed ones, how we kept our API surface clean and predictable under increasing load, and what we learned about the true cost of complexity when you are the one maintaining it at 2am."}</p>
-                <p>{"This is not a talk against Kubernetes. It is a talk about knowing when you need it and having the confidence to say not yet when you do not. You will leave with a practical framework for making infrastructure decisions that match your actual scale, and the language to push back on complexity for its own sake."}</p>
+                <p>{"Every engineering team hits a scaling problem eventually. And somewhere along the way, the industry convinced us that the answer was always the same, Kubernetes, service meshes, container orchestration, and an infrastructure stack that requires its own dedicated team just to keep the lights on. We have been sold complexity as a sign of sophistication, and a lot of teams are paying the price for it."}</p>
+                <p>{"This talk is the honest story of what we did instead."}</p>
+                <p>{"When our production ETL engine started showing signs of strain under growing data volume, we resisted the pull toward heavyweight infrastructure. We containerised with Docker for clean, consistent deployment  and then we stopped. We drew a hard line between containerisation as a sensible engineering tool and orchestration as an unnecessary leap, and we scaled our API layer using what our stack already gave us, without the theatre."}</p>
+                <p>{"We will walk through the real decisions that made the difference, how we diagnosed the actual bottlenecks instead of the assumed ones, how we kept our API surface clean and predictable under increasing load, how we used the tools already available to us before reaching for anything exotic, and what we learned about the true cost of complexity when you are the one maintaining it at 2am."}</p>
+                <p>{"This is not a talk against Kubernetes. It is a talk about knowing when you need it and having the confidence to say not yet when you do not. Because the most sophisticated engineering decision you can make is sometimes knowing exactly what not to build."}</p>
+                <p>{"You will leave with a practical framework for making infrastructure decisions that match your actual scale, the language to push back on complexity for its own sake, and a story that might just save your team months of unnecessary work."}</p>
             </>
         ),
         image: FaithSodipe,
@@ -556,9 +561,12 @@ export const Sessions = {
             "How to lead with hope when it all feels hopeless",
         description: (
             <>
-                <p>{"It's all gone a bit pear shaped. What it means to be a software engineer has fundamentally changed forever. Jobs are being replaced with a genie in a box. And yet, we have a job to do. We have teams to lead. We have real problems to solve for real people."}</p>
-                <p>{"According to research, Hope is the single biggest thing a follower wants from a leader. But what even is hope? A feeling? Is it subjective? Or is it only really for children's wish lists for their birthdays? It turns out that it's not. Hope is having a vision for a better future while having some agency to make that future come about."}</p>
-                <p>{"In this talk I will unpack the current state of the industry and explore hope; what it is, what it isn't, and how to lead a team, but also yourself, to create a vision, build trust and create agency for change. My aim is that people will come away with an idea of how they can improve their teams (and their own lives) by instilling some hope."}</p>
+                <p>{"It's all gone a bit pear shaped. What it means to be a software engineer has fundamentally changed forever. Jobs are being replaced with a genie in a box. The promise of the Internet solving all our problems has been shattered.  And yet we have a job to do. We have real problems to solve for real people. We need a salary to pay the bills.  In this talk, Steve will look at hope; moving from a fluffy abstract term to a concrete example on why it is important, how we can apply to our careers and what we can do to instil it in our teams. This will look at how to lead a team, but also yourself, to create a vision, build trust and create agency for change."}</p>
+                <p>{"It's all a bit rubbish right now. No one knows what software engineering is going to look like in a years time, or even if they will have a job. AI is writing all our code now. The very thing that we built our identity around. "}</p>
+                <p>{"And yet, we have a job to do. We have teams to lead. We have OKRs and goals. How can we do all that we need to do in age of uncertainty. According to research, Hope is the single biggest thing a follower wants from a leader. Which makes sense. It's a bit hopeless. "}</p>
+                <p>{"But what even is hope? A feeling? Is it subjective? Or is it only really for children's wish lists for their birthdays?"}</p>
+                <p>{"It turns out that it's not. Hope is having a vision for a better future while having some agency to make that future come about."}</p>
+                <p>{"In this talk I will unpack the current state of the industry. I will paint as honest picture as I can on what is happening and how it's all change. I will then explore hope; what it is, what it isn't. My aim is that people will come away from this with an idea of how they can improve their teams (and their own lives) by instilling some hope."}</p>
             </>
         ),
         image: SteveHeyes,
