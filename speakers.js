@@ -1,5 +1,4 @@
 import BeckiFloyd from "./public/speakers/BeckiFloyd.jpeg"
-import LisaVentura from "./public/speakers/LisaVentura.jpeg"
 import ShaunLawrence from "./public/speakers/ShaunLawrence.jpeg"
 import EriolFox from "./public/speakers/EriolFox.jpeg"
 import EliHolderness from "./public/speakers/EliHolderness.jpeg"
@@ -48,37 +47,6 @@ export const Sessions = {
         speakerCard: false,
         speakerCardImage: "",
     },
-    "LisaVentura": {
-        name: "Lisa Ventura MBE",
-        jobTitle: "Founder & CEO @ AI and Cyber Security Association",
-        bio: (
-            <>
-                <p>{"Lisa Ventura MBE FCIIS has worked in cyber security awareness for over 16 years, and started her career in journalism and broadcasting. She is the founder and CEO of the AI and Cyber Security Association (AICSA), a global not-for-profit trade association focused on the convergence of AI and cyber security. She is the author of Artificial Intelligence in Cybersecurity, published by Kogan Page in April 2026, and Human Factors in Cyber Security published by BPB Publications in June 2026."}</p>
-                <p>{"She was awarded an MBE in 2023 for services to cyber security and to diversity, equity, inclusion and belonging, and is a Fellow of the Chartered Institute of Information Security. She is the Founder of "}<a href="https://www.cyberkindness.org.uk" target="_blank" rel="noreferrer noopener">{"Cyber Kindness"}</a>{" - www.cyberkindness.org.uk and the Founder of "}<a href="https://www.neurounity.org.uk" target="_blank" rel="noreferrer noopener">{"Neuro Unity"}</a>{" - www.neurounity.org.uk. Lisa is #OpenlyNeurodivergent and is autistic and has ADHD, diagnosed at 48, and writes about neuroinclusion in tech at "}<a href="https://cybergeekgirl.co.uk" target="_blank" rel="noreferrer noopener">{"cybergeekgirl.co.uk"}</a>{". She lives in Worcester with her husband Russ and their dog Poppy and runs "}<a href="https://www.retrotechhub.co.uk" target="_blank" rel="noreferrer noopener">{"RetroTechHub"}</a>{" - www.retrotechhub.co.uk - a retro computing project with her husband."}</p>
-            </>
-        ),
-        talkTitle:
-            "Your Hiring Process Is A Neurodiversity Filter",
-        description: (
-            <>
-                <p>{"Your interview format tests performance under social load. Your open plan office is an unadvertised job requirement. Your vague briefs select for guessing. None of that was designed to exclude neurodivergent people, and all of it does. Here is what it costs you and what to change."}</p>
-                <p>{"Nobody designed a hiring process to exclude neurodivergent candidates. The exclusion happens anyway, and it keeps happening after the offer letter."}</p>
-                <p>{"The panel interview tests how well someone performs under social load, which is a different skill from the job. The take home task with no brief tests tolerance for ambiguity rather than capability. The open plan office and the always on chat tool operate as job requirements nobody wrote down. The vague ticket rewards guessing over asking. Each of these looks neutral. Each filters the same people out, at hiring or 18 months later through burnout."}</p>
-                <p>{"This session names the mechanisms and shows what they cost. You will see how a candidate who thinks precisely gets read as difficult in a panel setting, why the person who raises the edge case nobody wanted to hear about often leaves shortly afterwards, and how compensating for an environment consumes the capacity you hired someone for."}</p>
-                <p>{"I bring first hand evidence. I worked in broadcasting and then in cyber security for 30 years before finding out at 48 that I am autistic and ADHD. Every system in this talk is one I moved through undiagnosed, so I know what each looked like from the receiving end and what the organisation lost as a result. Late diagnosis in women is a pattern rather than a coincidence, and the reasons sit inside workplace and clinical assumptions rather than inside the people."}</p>
-                <p>{"The final section is practical and aimed at anyone who runs a team, sits on a panel or writes a job description. Specific changes, what each one costs, and what happens to your existing team when you make them. Most cost nothing. Several improve outcomes for everybody, which is the point of neuroinclusion rather than a bonus feature of it."}</p>
-                <p>{"You do not need to be neurodivergent to use this talk. If a talented person on your team keeps stalling, the answer is probably in here."}</p>
-            </>
-        ),
-        image: LisaVentura,
-        linkedin: "https://www.linkedin.com/in/lisasventura/",
-        website: "https://www.lisaventura.co.uk/",
-        youtube: "https://www.youtube.com/@CyberSecurityLisa",
-        instagram: "https://www.instagram.com/lsventurauk",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
     "ShaunLawrence": {
         name: "Shaun Lawrence",
         jobTitle: "Principal Software Engineer @ TinySoft Ltd",
@@ -118,10 +86,8 @@ export const Sessions = {
         jobTitle: "Open Source Designer",
         bio: (
             <>
-                <p>{"Eriol has been working as a designer for 15+ years working in for-profits and then NGO’s and open-source software organisations, working on complex problems like sustainable food systems, peace-building, censorship circumvention OSS, Human Rights OSS tools and crisis response technology. Eriol now works at The Open Home Foundation on OSS first smart home technology."}</p>
-                <p>{"Eriol is part of the core teams at "}<a href="https://opensourcedesign.net/" target="_blank" rel="noreferrer noopener">{"Open Source Design"}</a>{" http://opensourcedesign.net/ "}<a href="https://sustainoss.org/working-groups/design-and-ux/" target="_blank" rel="noreferrer noopener">{"Sustain UX & Design working group"}</a>{" https://sustainoss.org/working-groups/design-and-ux/ and help host a "}<a href="https://sosdesign.sustainoss.org/" target="_blank" rel="noreferrer noopener">{"podcast about open source and design"}</a>{" https://sosdesign.sustainoss.org/."}</p>
-                <p>{"Eriol is a non-binary, queer person who uses they/them pronouns."}</p>
-                <p>{"Eriol speaks at conferences for both FOSS and Design and speaks about one to the other. So to designers about FOSS and contribution and to FOSS about design and designers. Eriol’s talks, workshops and panels all ultimately have the same goal: To improve the usability of FOSS for all kinds of users and contributors and ensure that design in FOSS becomes a standard and design’s value is supported and recognised."}</p>
+                <p>{"Eriol has been working as a designer for 15+ years in for-profits and then NGO’s and open-source software organisations, working on complex problems like sustainable food systems, peace-building, censorship circumvention OSS, Human Rights OSS tools and crisis response technology. Eriol now works at The Open Home Foundation on OSS first smart home technology, and is a non-binary, queer person who uses they/them pronouns."}</p>
+                <p>{"Eriol is part of the core teams at "}<a href="https://opensourcedesign.net/" target="_blank" rel="noreferrer noopener">{"Open Source Design"}</a>{" and the "}<a href="https://sustainoss.org/working-groups/design-and-ux/" target="_blank" rel="noreferrer noopener">{"Sustain UX & Design working group"}</a>{", and helps host a "}<a href="https://sosdesign.sustainoss.org/" target="_blank" rel="noreferrer noopener">{"podcast about open source and design"}</a>{". Eriol speaks at conferences for both FOSS and Design, and Eriol’s talks, workshops and panels all ultimately have the same goal: To improve the usability of FOSS for all kinds of users and contributors and ensure that design in FOSS becomes a standard and design’s value is supported and recognised."}</p>
             </>
         ),
         talkTitle:
@@ -324,14 +290,8 @@ export const Sessions = {
         jobTitle: "Author",
         bio: (
             <>
-                <p>{"I’m uniquely placed to deliver this talk because the Love Action Methodology wasn’t created for a conference. It grew from something I actually lived."}</p>
-                <p>{"After more than 20 years working in technology and information environments, I reached a plateau in my own self-development and realised I wanted more love in my very corporate, tech-filled life. So I created a 31-day experiment and set out to complete ten intentional acts of love every day."}</p>
-                <p>{"What began as a personal challenge became a way of living, then my book Living in Love, and ultimately the foundation of the methodology I now teach and coach."}</p>
+                <p>{"After more than 20 years working in technology and information environments, I reached a plateau in my own self-development and realised I wanted more love in my very corporate, tech-filled life. So I created a 31-day experiment and set out to complete ten intentional acts of love every day. What began as a personal challenge became a way of living, then my book Living in Love, and ultimately the foundation of the Love Action Methodology I now teach and coach."}</p>
                 <p>{"Today, as an internationally accredited self-love coach, I work particularly with women in tech who are navigating the internal pressure, second-guessing and difficulty switching off that I recognise from my own years in the industry."}</p>
-                <p>{"That gives me an unusual perspective for this session: I understand the technology workplace from the inside, but I now view it through the lens of human behaviour, self-love and conscious, intentional action."}</p>
-                <p>{"I’m not presenting a theory I discovered while researching a conference talk. I created the original challenge, wrote the book, developed the methodology, live these practices myself and now teach them to others."}</p>
-                <p>{"TechMids feels particularly suited to this conversation because it brings together technical communities, Women in Tech and the human side of working in this industry. I’d love to contribute something genuinely different to that mix."}</p>
-                <p>{"The session requires no specialist technical setup beyond standard presentation facilities. It will be practical and interactive, with participation invited but never forced."}</p>
             </>
         ),
         talkTitle:
@@ -372,9 +332,8 @@ export const Sessions = {
         jobTitle: "Senior Software Engineer @ ClearBank",
         bio: (
             <>
-                <p>{"Liam Westley was most recently Head of Engineering at FreemarketFX, a fintech startup specializing in foreign currency trading, with a cloud native platform in Azure, helping expand a single development and QA team from eight people, to five teams, while obtaining an Ireland banking licence and implementing full Azure regional redundancy."}</p>
-                <p>{"Previous to FreemarketFX, Liam worked at Huddle helping the mobile and desktop teams create apps to play nicely with microservices. At Criteria MX, a digital media startup and he has worked as a consultant specialising in software for Broadcast Television. His Niagara SMS moderation system was used by QVC UK for eight years to display SMS messages from viewers, live, on screen. Liam is also responsible for the ticketing system for Hat Trick Productions which provides e-tickets to shows such as Have I Got News For You and Room 101."}</p>
-                <p>{"Liam has worked for chellomedia, GMTV, BSkyB, SmashedAtom and Original Thinking Group. In his time he created the first in house weather system for Sky News using Visual Basic 1.0, acted as architect for two general election systems, project managed the launch of the GMTV web site, was key to delivering the first interactive television chat service in the UK for BSkyB and helped launch the first live shopping channel in the Netherlands."}</p>
+                <p>{"Liam Westley was most recently Head of Engineering at FreemarketFX, a fintech startup specializing in foreign currency trading, with a cloud native platform in Azure, helping expand a single development and QA team from eight people, to five teams, while obtaining an Ireland banking licence."}</p>
+                <p>{"Before that, Liam worked at Huddle and Criteria MX, and as a consultant specialising in software for Broadcast Television. His Niagara SMS moderation system was used by QVC UK for eight years to display SMS messages from viewers, live, on screen, and he is responsible for the ticketing system for Hat Trick Productions which provides e-tickets to shows such as Have I Got News For You and Room 101. In his time he created the first in house weather system for Sky News using Visual Basic 1.0 and helped launch the first live shopping channel in the Netherlands."}</p>
             </>
         ),
         talkTitle:
@@ -409,10 +368,7 @@ export const Sessions = {
             ".NET, IoT and Hedgehogs!",
         description: (
             <>
-                <p>{"Using C# / .NET Technologies and IoT to curate and automate video footage of garden hedgehogs. An experimental journey through device access, cloud storage, serverless functions, and a public website.  With insights into problem-solving changes necessary to allow the code to run on a Raspberry Pi."}</p>
-                <p>{"Using C# / .NET Technologies and IoT to curate and automate video footage of garden hedgehogs."}</p>
-                <p>{"An experimental journey through device access, cloud storage, serverless functions, and a public website."}</p>
-                <p>{"With an insight into problem-solving changes necessary to bring the code cross-platform to run on Linux on a Raspberry Pi."}</p>
+                <p>{"Using C# / .NET Technologies and IoT to curate and automate video footage of garden hedgehogs. An experimental journey through device access, cloud storage, serverless functions, and a public website. With an insight into problem-solving changes necessary to bring the code cross-platform to run on Linux on a Raspberry Pi."}</p>
             </>
         ),
         image: MikeIrving,
@@ -506,11 +462,8 @@ export const Sessions = {
         jobTitle: "Software Engineer @ Bauer Media Outdoor",
         bio: (
             <>
-                <p>{"I am Faith Sodipe — a software engineer, practitioner-researcher, and community advocate based in London, UK, with over 5 years of experience building scalable, production-grade systems across fintech, enterprise technology, and IoT infrastructure."}</p>
-                <p>{"By day I build software systems that handle real data at real scale. By night I am developing practitioner research in AI systems, mentoring the next generation of engineers through codebar and the Women Coding Community, and apparently submitting CFPs to every conference that will have me."}</p>
-                <p>{"My work sits at the intersection of software engineering, artificial intelligence, and the kind of honest, unglamorous engineering decisions that actually keep systems running. I believe the most important things in this industry are not the tools you adopt but the judgment you develop about when not to adopt them which is more or less what this talk is about."}</p>
-                <p>{"Outside of engineering I am building The Lab, a results-based fitness initiative that puts skin in the game on both sides because I believe the most powerful system you can optimise is yourself."}</p>
-                <p>{"And my favourite member of One Direction is Niall. Someone had to say it."}</p>
+                <p>{"I am Faith Sodipe — a software engineer, practitioner-researcher, and community advocate based in London, UK, with over 5 years of experience building scalable, production-grade systems across fintech, enterprise technology, and IoT infrastructure. I am developing practitioner research in AI systems and mentoring the next generation of engineers through codebar and the Women Coding Community. I believe the most important things in this industry are not the tools you adopt but the judgment you develop about when not to adopt them."}</p>
+                <p>{"Outside of engineering I am building The Lab, a results-based fitness initiative. And my favourite member of One Direction is Niall. Someone had to say it."}</p>
             </>
         ),
         talkTitle:
@@ -518,12 +471,9 @@ export const Sessions = {
         description: (
             <>
                 <p>{"We had a scaling problem. Everyone said Kubernetes. We said no and scaled anyway. This is the story of what we built instead, what we learned, and why the most powerful engineering decision we made was knowing what not to build."}</p>
-                <p>{"Every engineering team hits a scaling problem eventually. And somewhere along the way, the industry convinced us that the answer was always the same, Kubernetes, service meshes, container orchestration, and an infrastructure stack that requires its own dedicated team just to keep the lights on. We have been sold complexity as a sign of sophistication, and a lot of teams are paying the price for it."}</p>
-                <p>{"This talk is the honest story of what we did instead."}</p>
-                <p>{"When our production ETL engine started showing signs of strain under growing data volume, we resisted the pull toward heavyweight infrastructure. We containerised with Docker for clean, consistent deployment  and then we stopped. We drew a hard line between containerisation as a sensible engineering tool and orchestration as an unnecessary leap, and we scaled our API layer using what our stack already gave us, without the theatre."}</p>
-                <p>{"We will walk through the real decisions that made the difference, how we diagnosed the actual bottlenecks instead of the assumed ones, how we kept our API surface clean and predictable under increasing load, how we used the tools already available to us before reaching for anything exotic, and what we learned about the true cost of complexity when you are the one maintaining it at 2am."}</p>
-                <p>{"This is not a talk against Kubernetes. It is a talk about knowing when you need it and having the confidence to say not yet when you do not. Because the most sophisticated engineering decision you can make is sometimes knowing exactly what not to build."}</p>
-                <p>{"You will leave with a practical framework for making infrastructure decisions that match your actual scale, the language to push back on complexity for its own sake, and a story that might just save your team months of unnecessary work."}</p>
+                <p>{"When our production ETL engine started showing signs of strain under growing data volume, we resisted the pull toward heavyweight infrastructure. We containerised with Docker for clean, consistent deployment and then we stopped, and we scaled our API layer using what our stack already gave us, without the theatre."}</p>
+                <p>{"We will walk through how we diagnosed the actual bottlenecks instead of the assumed ones, how we kept our API surface clean and predictable under increasing load, and what we learned about the true cost of complexity when you are the one maintaining it at 2am."}</p>
+                <p>{"This is not a talk against Kubernetes. It is a talk about knowing when you need it and having the confidence to say not yet when you do not. You will leave with a practical framework for making infrastructure decisions that match your actual scale, and the language to push back on complexity for its own sake."}</p>
             </>
         ),
         image: FaithSodipe,
@@ -598,22 +548,17 @@ export const Sessions = {
         jobTitle: "Team Lead @ GoGlobal",
         bio: (
             <>
-                <p>{"I believe that technologies purpose is to improve peoples’ lives, be that of an individual, a society or a business. Technology is a tool that when utilised properly can bring great and powerful change. "}</p>
-                <p>{"I find the possibility of this transformation exciting and it inspires me to explore the many ways this can be achieved. I always seek to be learning new and different methods so that I can be a forerunner in bringing about that change."}</p>
-                <p>{"The way I do that currently is by building teams that solve users problems which then moves the needle for businesses. I focus on outcomes over outputs and shaping environments that produce the best rests for all involved. I am advocate for good DevEx and going slow to go smooth which then enables us to go fast."}</p>
-                <p>{"I live in Birmingham with my wife, 3 kids and a dog. I've been actively part of the Birmingham Tech scene for 20 years. Along with some other great folks, I run ManageOps which is a community for technical leaders and engineering managers. "}</p>
+                <p>{"I believe that technologies purpose is to improve peoples’ lives, be that of an individual, a society or a business. The way I do that currently is by building teams that solve users problems which then moves the needle for businesses. I focus on outcomes over outputs, and I am an advocate for good DevEx and going slow to go smooth which then enables us to go fast."}</p>
+                <p>{"I live in Birmingham with my wife, 3 kids and a dog. I've been actively part of the Birmingham Tech scene for 20 years and, along with some other great folks, I run ManageOps which is a community for technical leaders and engineering managers."}</p>
             </>
         ),
         talkTitle:
             "How to lead with hope when it all feels hopeless",
         description: (
             <>
-                <p>{"It's all gone a bit pear shaped. What it means to be a software engineer has fundamentally changed forever. Jobs are being replaced with a genie in a box. The promise of the Internet solving all our problems has been shattered.  And yet we have a job to do. We have real problems to solve for real people. We need a salary to pay the bills.  In this talk, Steve will look at hope; moving from a fluffy abstract term to a concrete example on why it is important, how we can apply to our careers and what we can do to instil it in our teams. This will look at how to lead a team, but also yourself, to create a vision, build trust and create agency for change."}</p>
-                <p>{"It's all a bit rubbish right now. No one knows what software engineering is going to look like in a years time, or even if they will have a job. AI is writing all our code now. The very thing that we built our identity around. "}</p>
-                <p>{"And yet, we have a job to do. We have teams to lead. We have OKRs and goals. How can we do all that we need to do in age of uncertainty. According to research, Hope is the single biggest thing a follower wants from a leader. Which makes sense. It's a bit hopeless. "}</p>
-                <p>{"But what even is hope? A feeling? Is it subjective? Or is it only really for children's wish lists for their birthdays?"}</p>
-                <p>{"It turns out that it's not. Hope is having a vision for a better future while having some agency to make that future come about."}</p>
-                <p>{"In this talk I will unpack the current state of the industry. I will paint as honest picture as I can on what is happening and how it's all change. I will then explore hope; what it is, what it isn't. My aim is that people will come away from this with an idea of how they can improve their teams (and their own lives) by instilling some hope."}</p>
+                <p>{"It's all gone a bit pear shaped. What it means to be a software engineer has fundamentally changed forever. Jobs are being replaced with a genie in a box. And yet, we have a job to do. We have teams to lead. We have real problems to solve for real people."}</p>
+                <p>{"According to research, Hope is the single biggest thing a follower wants from a leader. But what even is hope? A feeling? Is it subjective? Or is it only really for children's wish lists for their birthdays? It turns out that it's not. Hope is having a vision for a better future while having some agency to make that future come about."}</p>
+                <p>{"In this talk I will unpack the current state of the industry and explore hope; what it is, what it isn't, and how to lead a team, but also yourself, to create a vision, build trust and create agency for change. My aim is that people will come away with an idea of how they can improve their teams (and their own lives) by instilling some hope."}</p>
             </>
         ),
         image: SteveHeyes,
