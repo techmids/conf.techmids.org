@@ -94,7 +94,6 @@ export const Sessions = {
             "Designing for security and privacy: Design lessons from human rights and civic technology",
         description: (
             <>
-                <p>{"Techies want to know and hear that there is work to be done that makes the world better and not more evil/worse. This talk covers those projects and processes and gives hope to techies that they can make the world a better place with tech."}</p>
                 <p>{"Eriol has been working on human rights technology for over 10 years. When we think about how to design for privacy, security and known and unknown human rights, we start with a security and privacy focus to our human centred design, using methods and processes that think about what malicious people or governments could do with data, information and access to devices. Making sure all technology is safe for high risk people to use is critical to the future of private, secure and respectful design that doesn't rely on dark/deceptive design patterns and brings people into the full knowledge of what their software and hardware does. Eriol will talk about how they have worked with highly secure design research practices, how we design for journalists, human rights activists and civil society and how all designers can use methods to make their design more private, secure and resilient against malicious attacks."}</p>
             </>
         ),
@@ -122,7 +121,6 @@ export const Sessions = {
             "Language Games",
         description: (
             <>
-                <p>{"This is a rigorous look at how language and communication function, and provides a framework for thinking about how we as humans try to get ideas from our heads into others' (both ideally and in practice). Past audience members have said it totally changed their outlook on the topic, and let them understand incidents and paradigms they'd previously been baffled by. It's also funny, and the slides are banging."}</p>
                 <p>{"Communication: it's the oldest problem we have. It's already hard enough to talk to people, but as software engineers we have to talk to computers as well - often at the same time. Getting communication wrong leads to problems anywhere between 'my code is buggy' to 'this project is 6 months overdue and doesn't meet any of the requirements'. There are thousands of books, webinars and conference talks out there about how to communicate more effectively, and we still haven't figured it out."}</p>
                 <p>{"In this talk, I'll take you through some rigorous frameworks for thinking about communication, and explain how they can help you talk both to people and to computers. I'll argue that it's actually much easier to communicate with computers than other human beings, and that the inability to communicate perfectly isn't a failure - it's normal. Finally, I'll talk about what all of this means for us as engineers, designers and producers of software, and what we can do to make all our lives a little easier."}</p>
             </>
@@ -591,7 +589,6 @@ export const Sessions = {
             "Slop-Driven Development",
         description: (
             <>
-                <p>{"I think I'm going to add call and response audio to pretend that I'm talking to Alexa, ordering her to make me up horrendous AI slop that I will extremely proud of."}</p>
                 <p>{"The year is 2026. We were promised hoverboots. That did not become the world we live in."}</p>
                 <p>{"The world we live in is teaching every developer that they must be an influencer of some sort, for some reason, and AI has arrived to help us do it."}</p>
                 <p>{"Join me on a quite frankly ridiculous journey, as I delve into the world of attempting to look at the top of your game, while actually showing everyone that you believe Arrays start at 1."}</p>
