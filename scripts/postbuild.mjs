@@ -12,7 +12,6 @@ import path from 'path'
 
 const SITE_URL = 'https://conf.techmids.org'
 const OUT_DIR = path.resolve(process.argv[2] ?? 'out')
-const NOINDEX_TAG = '<meta name="robots" content="noindex"/>'
 const NOINDEX_PATTERN = /<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i
 
 async function htmlFiles(dir) {
@@ -20,18 +19,6 @@ async function htmlFiles(dir) {
     return entries
         .filter((entry) => entry.isFile() && entry.name.endsWith('.html'))
         .map((entry) => path.join(entry.parentPath ?? entry.path, entry.name))
-}
-
-async function noindexArchives() {
-    const pastDir = path.join(OUT_DIR, 'past')
-    let count = 0
-    for (const file of await htmlFiles(pastDir).catch(() => [])) {
-        const html = await fs.readFile(file, 'utf8')
-        if (NOINDEX_PATTERN.test(html)) continue
-        await fs.writeFile(file, html.replace(/<head([^>]*)>/i, `<head$1>${NOINDEX_TAG}`))
-        count++
-    }
-    console.log(`postbuild: added noindex to ${count} archived pages`)
 }
 
 function urlFor(relativeFile) {
@@ -63,5 +50,4 @@ async function writeSitemap() {
     console.log(`postbuild: wrote sitemap.xml with ${urls.length} URLs`)
 }
 
-await noindexArchives()
 await writeSitemap()
