@@ -2,6 +2,7 @@ import SharingCard from "@/components/SharingCard";
 
 import { useRouter } from 'next/router';
 import { Sessions } from "../../../speakers";
+import { PageMeta } from "@/components/PageMeta";
 
 const Sharing = ({ speaker }) => {
 
@@ -16,7 +17,10 @@ const Sharing = ({ speaker }) => {
 
 
     return (
-        <SharingCard talkTitle={speakerProfile.talkTitle} speaker={speakerProfile} />
+        <>
+            <PageMeta path={`/sharing/${speaker}`} noindex />
+            <SharingCard talkTitle={speakerProfile.talkTitle} speaker={speakerProfile} />
+        </>
     )
 }
 

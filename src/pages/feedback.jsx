@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { useRouter } from "next/router"
+import { PageMeta } from "@/components/PageMeta"
 
 export default function FeedbackRedirect() {
   const router = useRouter()
@@ -8,5 +9,5 @@ export default function FeedbackRedirect() {
     router.replace("https://forms.gle/XVHfMHjFDTQjRBsH6")
   }, [router])
 
-  return null
+  return <PageMeta path="/feedback" noindex />
 }

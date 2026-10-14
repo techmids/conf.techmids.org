@@ -1,10 +1,10 @@
-import Head from "next/head";
 import {Header} from "@/components/Header";
 import {Sponsors} from "@/components/Sponsors";
 import {Footer} from "@/components/Footer";
 import {Speaker} from "@/components/Speaker";
 import {Sessions} from "../../../speakers";
 import { useRouter } from 'next/router'
+import {PageMeta} from "@/components/PageMeta";
 
 
 export default function SpeakerPage({speaker}) {
@@ -17,16 +17,16 @@ export default function SpeakerPage({speaker}) {
         return <div></div>
     }
 
-    const speakerCard = speakerProfile.speakerCard? `https://conf.techmids.org/speakers/card/${speakerProfile.name}.png` : 'https://conf.techmids.org/launch.png'
+    const speakerCard = speakerProfile.speakerCard? `https://conf.techmids.org/speakers/card/${speakerProfile.name}.png` : 'https://conf.techmids.org/launch.jpg'
 
     return (
         <>
-            <Head>
-                <title>TechMids Conf Speaker - {speakerProfile.name}</title>
-                <meta content={speakerProfile.name} property="og:title" name="title" />
-                <meta content={speakerProfile.talkTitle} property="og:description" name="description" />
-                <meta content={speakerCard} property="og:image" name="image"/>
-            </Head>
+            <PageMeta
+                path={`/speakers/${speaker}`}
+                title={`TechMids Conf Speaker - ${speakerProfile.name}`}
+                description={speakerProfile.talkTitle}
+                image={speakerCard}
+            />
             <Header/>
             <main>
                 <Speaker speaker={speakerProfile}/>

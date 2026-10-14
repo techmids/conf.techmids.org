@@ -76,6 +76,9 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
+      - name: Generate sitemap and noindex archived sites
+        run: node scripts/postbuild.mjs
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import { PageMeta } from '@/components/PageMeta'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { PastEventsList } from '@/components/PastEventsList'
@@ -43,13 +43,11 @@ export const getStaticProps = async () => {
 export default function PastEvents({past_events}) {
   return (
     <>
-      <Head>
-        <title>TechMids Conf - Birmingham's community-driven tech conference</title>
-        <meta
-          name="description"
-          content={`TechMids Conf is an all day, full stack conference on ${EVENT.date} Come along for a day of inspiring talks, social chatter and fun.`}
-        />
-      </Head>
+      <PageMeta
+        path="/past-events"
+        title="Past events - TechMids Conf"
+        description={`TechMids Conf is an all day, full stack conference on ${EVENT.date} Come along for a day of inspiring talks, social chatter and fun.`}
+      />
       <Header />
       <main>
         <PastEventsList past_events={past_events}/>

@@ -1,8 +1,14 @@
 import {ButtonCTA} from "@/components/ButtonCTA";
+import {PageMeta} from "@/components/PageMeta";
 
 export default function HowToConvinceYourBoss() {
     return (
         <>
+        <PageMeta
+            path="/how-to-convince-your-boss"
+            title="How to convince your boss to send you to TechMids Conf"
+            description="Our guide to making the business case for a day at TechMids Conf, Birmingham's community-driven tech conference."
+        />
         <div className="relative bg-white">
             <div className="lg:absolute lg:inset-0">
                 <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">

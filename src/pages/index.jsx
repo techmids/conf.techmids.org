@@ -10,6 +10,8 @@ import {EVENT, AVAILABLE_INFORMATION} from "../../event";
 import Testimonials from "@/components/Testimonials";
 import {Speakers} from "@/components/Speakers";
 import {Schedule} from "@/components/Schedule";
+import {PageMeta} from "@/components/PageMeta";
+import {EventStructuredData} from "@/components/EventStructuredData";
 
 export default function Home() {
     return (
@@ -28,21 +30,13 @@ export default function Home() {
 
 const HomePageWrapper = ({children}) => {
     return <>
+            <PageMeta
+                path="/"
+                title="TechMids Conf - Birmingham's community-driven tech conference"
+                description={`TechMids Conf is an all day, full stack conference on ${EVENT.date} Come along for a day of inspiring talks, social chatter and fun.`}
+            />
+            <EventStructuredData/>
             <Head>
-                <title>TechMids Conf - Birmingham's community-driven tech conference</title>
-                <meta
-                    name="description"
-                    content={`TechMids Conf is an all day, full stack conference on ${EVENT.date} Come along for a day of inspiring talks, social chatter and fun.`}
-                />
-                <link rel="canonical" href="https://conf.techmids.org/" />
-                {/* Open Graph / Social Media cards */}
-                <meta property="og:site_name" content="TechMids Conf" />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://conf.techmids.org/" />
-                <meta property="og:title" content="TechMids Conf 2026" />
-                <meta property="og:description" content="Birmingham's community-driven tech conference." />
-                <meta property="og:image" content="https://conf.techmids.org/launch.jpg"/>
-
                 <script dangerouslySetInnerHTML={
                     {
                         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
