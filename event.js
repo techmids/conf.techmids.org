@@ -2,11 +2,14 @@ import { OVERALL_END, OVERALL_START} from "schedule"
 
 export const EVENT = {
     date: '27th November 2026',
+    isoDate: '2026-11-27',
     dateTbc: false,
     title: 'TechMids Conf',
     year: '2026',
     venue: 'Everyman Cinema',
     address: 'Mailbox, Birmingham',
+    streetAddress: 'The Mailbox, 116 Commercial St',
+    postalCode: 'B1 1RF',
     startTime: OVERALL_START,
     endTime: OVERALL_END,
     ticketLink: 'https://ti.to/tech-events-birmingham/techmids-conf-2026',
