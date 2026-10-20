@@ -25,7 +25,8 @@ function ukOffset(isoDate) {
 }
 
 export function EventStructuredData() {
-    const offset = ukOffset(EVENT.isoDate)
+    if (EVENT.dateTbc) return null
+
     const data = {
         '@context': 'https://schema.org',
         '@type': 'Event',
@@ -33,19 +34,18 @@ export function EventStructuredData() {
         description: `TechMids Conf is Birmingham's community-driven, all day, full stack tech conference on ${EVENT.date}.`,
         url: canonicalUrl('/'),
         image: [`${SITE_URL}/launch.jpg`],
-        startDate: `${EVENT.isoDate}T${to24Hour(EVENT.startTime)}:00${offset}`,
-        endDate: `${EVENT.isoDate}T${to24Hour(EVENT.endTime)}:00${offset}`,
+        // Until the schedule is published only the day is given
+        startDate: EVENT.isoDate,
+        endDate: EVENT.isoDate,
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-        maximumAttendeeCapacity: EVENT.capacity,
+        // Until the venue is announced only the city is given
         location: {
             '@type': 'Place',
-            name: `${EVENT.venue}, ${EVENT.address}`,
+            name: 'Birmingham',
             address: {
                 '@type': 'PostalAddress',
-                streetAddress: EVENT.streetAddress,
                 addressLocality: 'Birmingham',
-                postalCode: EVENT.postalCode,
                 addressCountry: 'GB',
             },
         },
@@ -54,6 +54,27 @@ export function EventStructuredData() {
             name: 'TechMids',
             url: 'https://techmids.org',
         },
+    }
+
+    // Start and end times come from the schedule
+    if (AVAILABLE_INFORMATION.scheduleAvailable) {
+        const offset = ukOffset(EVENT.isoDate)
+        data.startDate = `${EVENT.isoDate}T${to24Hour(EVENT.startTime)}:00${offset}`
+        data.endDate = `${EVENT.isoDate}T${to24Hour(EVENT.endTime)}:00${offset}`
+    }
+
+    // Capacity is listed with the venue, as on the site (see VenueInfo)
+    if (AVAILABLE_INFORMATION.locationAvailable) {
+        data.location = {
+            ...data.location,
+            name: `${EVENT.venue}, ${EVENT.address}`,
+            address: {
+                ...data.location.address,
+                streetAddress: EVENT.streetAddress,
+                postalCode: EVENT.postalCode,
+            },
+        }
+        data.maximumAttendeeCapacity = EVENT.capacity
     }
 
     if (EVENT.onSale || EVENT.soldOut) {
