@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /sharing/
+Disallow: /past/
 
 Sitemap: https://conf.techmids.org/sitemap.xml

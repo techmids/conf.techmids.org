@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { useRouter } from "next/router"
+import { PageMeta } from "@/components/PageMeta"
 
 export default function FlyersRedirect() {
   const router = useRouter()
@@ -8,5 +9,5 @@ export default function FlyersRedirect() {
     router.replace("/")
   }, [router])
 
-  return null
+  return <PageMeta path="/flyer" noindex />
 }
