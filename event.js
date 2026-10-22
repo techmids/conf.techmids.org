@@ -25,7 +25,7 @@ export const EVENT = {
 
 //  Marks what information is available on the website
 export const AVAILABLE_INFORMATION = {
-    scheduleAvailable: false,
+    scheduleAvailable: true,
     locationAvailable: true, 
     speakersAvailable: true,
     sponsorsAvailable: true,

@@ -346,10 +346,10 @@ export const OVERALL_START = '08:30AM'
 export const OVERALL_END = '17:15PM'
 
 // Event Metadata
-const eventDate = '2025-10-14'
+const eventDate = '2026-11-27'
 const eventOpenAndEndTime = `${OVERALL_START} - ${OVERALL_END} GMT`
 
-// Conference 2025 Overall Times
+// Conference 2026 Overall Times
 const registrationStart = '08:30AM';
 const registrationEnd = '09:30AM';
 
@@ -403,30 +403,16 @@ const placeholder = (name, startTime, endTime) => ({
 
 const registration =  {
     name: 'Registration',
-    description: 'Registration',
+    description: 'Doors open - registration and mingling',
     start: registrationStart,
     end: registrationEnd,
 }
 
 const welcome = {
     name: 'Welcome',
-    description: 'Welcome to TechMids Conf 2025!',
+    description: 'Welcome to TechMids Conf 2026!',
     start: '09:30AM',
     end: '09:45AM',
-}
-
-const openingKeynote = {
-    name: 'Matheus Guimarães',
-    description: 'Opening Keynote from Matheus Guimarães @ AWS - talk details TBC',
-    start: session1Start,
-    end: session1End,
-    session: ['MatheusGuimares'],
-}
-
-const closingKeynote = {
-    session: ['SalmaAlamNaylor'],
-    start: session8Start,
-    end: session8End,
 }
 
 // Breaks 
@@ -442,16 +428,6 @@ const afternoonBreak = {
     description: 'Coffee, Snacks, Sponsors, Chat!',
     start: afternoonBreakStart,
     end: afternoonBreakEnd,
-}
-
-const socialStart = '17:30 PM'
-const socialEnd = 'LATE'
-
-const social = {
-    name: 'Post-Conference Social 🎉',
-    description: 'Chats, drinks, and a generally fab time @ BOX Brindleyplace!',
-    start: socialStart,
-    end: socialEnd,
 }
 
 const conferenceSchedule = {
@@ -483,81 +459,71 @@ const conferenceSchedule = {
             start: lateAfternoonSessionStart,
             end: lateAfternoonSessionSessionEnd,
         },
-        social
     ]
 }
 
 
-const richardBrough = {
-    name: 'Richard Brough',
-    description: 'A llama sets up a lemonade stall',
+const faithSodipe = {
+    name: 'Faith Sodipe',
+    description: 'You Don\'t Need Kubernetes: How We Scaled Our API Layer Without the Infrastructure Theatre',
     start: session1Start,
     end: session1End,
-    session: ['RichardBrough'],
+    session: ['FaithSodipe'],
 }
 
-const joshuaMo = {
-    name: 'Joshua Mo',
-    description: 'Why is Rust taking over the Python ecosystem?',
+const eriolFox = {
+    name: 'Eriol Fox',
+    description: 'Designing for security and privacy: Design lessons from human rights and civic technology',
     start: session2Start,
     end: session2End,
-    session: ['JoshuaMo'],
+    session: ['EriolFox'],
 }
 
-const cynthiaAkiotu = {
-    name: 'Cynthia Akiotu',
-    description: 'Securing AI Agents Before They Secure Your Stack',
+const stefanCornea = {
+    name: 'Stefan Cornea',
+    description: 'A practical example of how routing and ETAs actually work.',
     start: session3Start,
     end: session3End,
-    session: ['CynthiaAkiotu'],
+    session: ['StefanCornea'],
 }
 
-const indyPahal = {
-    name: 'Indy Pahal',
-    description: 'Leadership and Management for Techies',
+const robertCurran = {
+    name: 'Robert Curran',
+    description: 'Everything We Stopped Owning (And the One Thing We Never Did)',
     start: session4Start,
     end: session4End,
-    session: ['IndyPahal'],
+    session: ['RobertCurran'],
 }
 
-const carlyRichmond = {
-    name: 'Carly Richmond',
-    description: 'OTel You It\'s Not Just for Backend!',
+const edaEren = {
+    name: 'Eda Eren',
+    description: 'Forgetting Machines: AI Coding Tools and Skill',
     start: session5Start,
     end: session5End,
-    session: ['CarlyRichmond'],
+    session: ['EdaEren'],
 }
 
-const andyCarter = {
-    name: 'Andy Carter',
-    description: 'Ulysses versus The Very Hungry Caterpillar',
+const matheusGuimaraes = {
+    name: 'Matheus Guimarães',
+    description: 'Talk details TBC',
     start: session6Start,
     end: session6End,
-    session: ['AndyCarter'],
 }
 
-const stuartLangridge = {
-    name: 'Stuart Langridge',
-    description: 'The mazy web she whirls: starting Open Web Advocacy',
-    start: session3Start,
-    end: session3End,
-    session: ['StuartLangridge'],
-}
-
-const oliverDavies = {
-    name: 'Oliver Davies',
-    description: 'Nix for PHP Developers',
+const steveWade = {
+    name: 'Steve Wade',
+    description: 'The Killer Question: How One Sentence Can Transform Your Engineering Career',
     start: session7Start,
     end: session7End,
-    session: ['OliverDavies'],
+    session: ['SteveWade'],
 }
 
-const shaunLawrence = {
-    name: 'Shaun Lawrence',
-    description: 'If .NET brewed beer',
+const liamWestley = {
+    name: 'Liam Westley',
+    description: 'The Secret Life of Programmers',
     start: session8Start,
     end: session8End,
-    session: ['ShaunLawrence'],
+    session: ['LiamWestley'],
 }
 
 const screen1Schedule = {
@@ -568,92 +534,82 @@ const screen1Schedule = {
     dayName: "Day 1",
     timeSlots: [
         welcome,
-        richardBrough,
-        joshuaMo,
-        cynthiaAkiotu,
+        faithSodipe,
+        eriolFox,
+        stefanCornea,
         lunch,
-        indyPahal,
-        carlyRichmond,
+        robertCurran,
+        edaEren,
         afternoonBreak,
-        andyCarter,
-        oliverDavies,
-        shaunLawrence,
+        matheusGuimaraes,
+        steveWade,
+        liamWestley,
     ]
 }
 
 
-const danielTallentire = {
-    name: 'Daniel Tallentire',
-    description: 'Jar-gone... how to talk tech to non-techies',
-    start: session1Start,
-    end: session1End,
-    session: ['DanielTallentire'],
-}
-
 const beckiFloyd = {
     name: 'Becki Floyd',
-    description: 'UX in 2025: Designing at the Speed of AI-Driven Development',
-    start: session2Start,
-    end: session2End,
+    description: 'From Hackathon to Parliament: Using Research and AI to Fix How Councils House People (Case study session)',
+    start: session1Start,
+    end: session1End,
     session: ['BeckiFloyd'],
 }
 
-const guyBarker = {
-    name: 'Guy Barker',
-    description: 'Empowering All Your Users: Simple Steps for Building Accessible App Experiences',
+const andyCarter = {
+    name: 'Andy Carter',
+    description: 'Building without barriers: a11y for backend engineers',
+    start: session2Start,
+    end: session2End,
+    session: ['AndyCarter'],
+}
+
+const goldmanSachsTalk = {
+    name: 'Goldman Sachs',
+    description: 'Talk from our sponsor Goldman Sachs - talk details TBC',
     start: session3Start,
     end: session3End,
-    session: ['GuyBarker'],
 }
 
-const jimSeconde = {
-    name: 'Jim Seconde',
-    description: 'CLIs Aren\'t As Easy As You Might Think',
+const cliffAgius = {
+    name: 'Cliff Agius',
+    description: 'Using the ESP32 and DotNET NanoFramework to secure Aircraft',
     start: session4Start,
     end: session4End,
-    session: ['JimSeconde'],
+    session: ['CliffAgius'],
 }
 
-const danBeglin = {
-    name: 'Dan Beglin',
-    description: 'What\'s Actually in Your 30-Year-Old Legacy Database? How We Used AST and Javascript to Find Out',
+const steveHeyes = {
+    name: 'Steve Heyes',
+    description: 'How to lead with hope when it all feels hopeless',
     start: session5Start,
     end: session5End,
-    session: ['DanBeglin'],
+    session: ['SteveHeyes'],
 }
 
-// const lenaPismeny = {
-//     name: 'Lena Pismeny',
-//     description: 'Steps and Struggles: My Journey Through Tech, Disability, and Immigration',
-//     start: session6Start,
-//     end: session6End,
-//     session: ['LenaPismeny'],
-// }
-
-const siJobling = {
-    name: 'Si Jobling',
-    description: 'Burndown Charts bs Burnt-Out Teams: A people-first approach to improving psychological safety in tech',  
+const mikeIrving = {
+    name: 'Mike Irving',
+    description: '.NET, IoT and Hedgehogs!',
     start: session6Start,
     end: session6End,
-    session: ['SiJobling'],
+    session: ['MikeIrving'],
 }
 
-const dileepMarway = {
-    name: 'Dileep Marway',
-    description: 'Turning Tension into Teamwork - With a Little Help from AI',
+const colindaLatour = {
+    name: 'Colinda Latour',
+    description: 'Love in the Machine: The Human Upgrade Tech Is Missing',
     start: session7Start,
     end: session7End,
-    session: ['DileepMarway'],
+    session: ['ColindaLatour'],
 }
 
-const chrisMiller = {
-    name: 'Chris Miller',
-    description: 'The Gift of Beginner\'s Mind: Why Getting Older in Tech Isn\'t About Keeping Up',
+const shaunLawrence = {
+    name: 'Shaun Lawrence',
+    description: 'Choose your own adventure',
     start: session8Start,
     end: session8End,
-    session: ['ChrisMiller'],
+    session: ['ShaunLawrence'],
 }
-
 
 const screen2Schedule = {
     room: "Screen 2",
@@ -663,31 +619,38 @@ const screen2Schedule = {
     dayName: "Day 1",
     timeSlots: [
         welcome,
-        danielTallentire,
         beckiFloyd,
-        guyBarker,
+        andyCarter,
+        goldmanSachsTalk,
         lunch,
-        jimSeconde,
-        danBeglin,
+        cliffAgius,
+        steveHeyes,
         afternoonBreak,
-        siJobling,
-        dileepMarway,
-        chrisMiller,
+        mikeIrving,
+        colindaLatour,
+        shaunLawrence,
     ]
 }
 
 
-const maxWoolf = {
-    name: 'Max Woolf',
-    description: 'Why Your Production Database Hates You (And How to Fix It)',
-    start: session2Start,
-    end: session2End,
-    session: ['MaxWoolf'],
+const goldmanSachsKeynote = {
+    name: 'Goldman Sachs',
+    description: 'Keynote from our sponsor Goldman Sachs - talk details TBC',
+    start: session1Start,
+    end: session1End,
 }
 
-const EliHolderness = {
+const martinReynolds = {
+    name: 'Martin Reynolds',
+    description: 'Who Approved This PR? Oh Right, Nobody Did.',
+    start: session2Start,
+    end: session2End,
+    session: ['MartinReynolds'],
+}
+
+const eliHolderness = {
     name: 'Eli Holderness',
-    description: 'You Shall Not Password: Modern Authentication for Web Apps',
+    description: 'Language Games',
     start: session3Start,
     end: session3End,
     session: ['EliHolderness'],
@@ -695,62 +658,61 @@ const EliHolderness = {
 
 const tonyEdwards = {
     name: 'Tony Edwards',
-    description: 'Beats, Rhymes, & Neural Nets',
+    description: 'How to be a Hip-Hop MC. . . P',
     start: session4Start,
     end: session4End,
     session: ['TonyEdwards'],
 }
 
-const tomCamp = {
-    name: 'Tom Camp',
-    description: 'One Small Favour: Growing a Gaming Plugin from Personal Project to 700k Weekly Users and a Thriving Open Source Community',
+const stevenTrotter = {
+    name: 'Dr Steven Trotter',
+    description: 'TUI or not TUI, that is the question',
     start: session5Start,
     end: session5End,
-    session: ['TomCamp'],
+    session: ['StevenTrotter'],
 }
 
-const jamesHolland = {
-    name: 'James Holland',
-    description: 'The Stack that Secures the Stack: A Deep Dive into Automating Black Hat\'s Next Gen SOC',
+const jimSeconde = {
+    name: 'Jim Seconde',
+    description: 'Slop-Driven Development',
     start: session6Start,
     end: session6End,
-    session: ['JamesHolland'],
+    session: ['JimSeconde'],
 }
 
-// const stuartClark = {
-//     name: 'Stuart Clark',
-//     description: 'Scale or Fail as Spotify\'s Growth Exposed the Abstraction Paradox',
-//     start: session7Start,
-//     end: session7End,
-//     session: ['StuartClark'],
-// }
-
-const ricardoSueiras = {
-    name: 'Ricardo Sueiras',
-    description: 'Build without limits - zero to shipped in 20 minutes',
+const kevlinHenney = {
+    name: 'Kevlin Henney',
+    description: 'Wibbly-Wobbly, Timey-Wimey Stuff',
     start: session7Start,
     end: session7End,
-    session: ['RicardoSueiras'],
+    session: ['KevlinHenney'],
+}
+
+const jessRose = {
+    name: 'Jess Rose',
+    description: 'Talk details TBC',
+    start: session8Start,
+    end: session8End,
 }
 
 const screen3Schedule = {
     room: "Screen 3",
     timeOfDay: 'Screen 3',
-    date: '2024-10-25',
+    date: eventDate,
     summary: eventOpenAndEndTime,
     dayName: "Day 1",
     timeSlots: [
         welcome,
-        openingKeynote,
-        maxWoolf,
-        stuartLangridge,
+        goldmanSachsKeynote,
+        martinReynolds,
+        eliHolderness,
         lunch,
         tonyEdwards,
-        tomCamp,
+        stevenTrotter,
         afternoonBreak,
-        jamesHolland,
-        ricardoSueiras,
-        closingKeynote,
+        jimSeconde,
+        kevlinHenney,
+        jessRose,
     ]
 }
 
@@ -769,4 +731,3 @@ export const Schedule = {
         day1: screen1Schedule,
     },
 }
-
