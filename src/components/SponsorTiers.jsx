@@ -11,13 +11,13 @@ export function SponsorTiers() {
             return null
         }
         return (
-            <div className="py-8">
+            <div className="py-4">
                 <p className="text-center text-base font-semibold uppercase tracking-wider text-gray-600">
                     {tier} Sponsor{sponsors.length > 1 ? "s": null}
                 </p>
-                <div className="mx-auto max-w-[70%] mt-6 flex flex-wrap justify-evenly grid-cols-3 gap-0.5 lg:mt-8" >
+                <div className="mx-auto max-w-[70%] mt-2 flex flex-wrap justify-evenly grid-cols-3 gap-0.5" >
                     {sponsors.map((sponsor) => (
-                        <div key={sponsor.name} className="flex justify-center items-center p-10">
+                        <div key={sponsor.name} className="flex justify-center items-center p-4">
                             <a
                                 href={sponsor.url}
                                 target="_blank"
@@ -40,8 +40,9 @@ export function SponsorTiers() {
     return (
         <div className="mt-12 mb-8 bg-white">
             {printSponsors("Headline", sponsorTiers.headline.sponsors, 2)}
+            {printSponsors("Gold", sponsorTiers.gold.sponsors, 1.75)}
             {printSponsors("Silver", sponsorTiers.silver.sponsors, 1.5)}
-            {printSponsors("Bronze", sponsorTiers.bronze.sponsors)}
+            {printSponsors("Bronze", sponsorTiers.bronze.sponsors, 0.75)}
 
         </div>
     )
