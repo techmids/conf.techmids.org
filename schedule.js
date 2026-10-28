@@ -474,16 +474,16 @@ const faithSodipe = {
 const eriolFox = {
     name: 'Eriol Fox',
     description: 'Designing for security and privacy: Design lessons from human rights and civic technology',
-    start: session2Start,
-    end: session2End,
+    start: session3Start,
+    end: session3End,
     session: ['EriolFox'],
 }
 
 const stefanCornea = {
     name: 'Stefan Cornea',
-    description: 'A practical example of how routing and ETAs actually work.',
-    start: session3Start,
-    end: session3End,
+    description: 'A practical example of how routing and ETAs actually work',
+    start: session2Start,
+    end: session2End,
     session: ['StefanCornea'],
 }
 
@@ -535,8 +535,8 @@ const screen1Schedule = {
     timeSlots: [
         welcome,
         faithSodipe,
-        eriolFox,
         stefanCornea,
+        eriolFox,
         lunch,
         robertCurran,
         edaEren,
@@ -559,8 +559,8 @@ const beckiFloyd = {
 const andyCarter = {
     name: 'Andy Carter',
     description: 'Building without barriers: a11y for backend engineers',
-    start: session2Start,
-    end: session2End,
+    start: session7Start,
+    end: session7End,
     session: ['AndyCarter'],
 }
 
@@ -590,16 +590,16 @@ const steveHeyes = {
 const mikeIrving = {
     name: 'Mike Irving',
     description: '.NET, IoT and Hedgehogs!',
-    start: session6Start,
-    end: session6End,
+    start: session2Start,
+    end: session2End,
     session: ['MikeIrving'],
 }
 
 const colindaLatour = {
     name: 'Colinda Latour',
     description: 'Love in the Machine: The Human Upgrade Tech Is Missing',
-    start: session7Start,
-    end: session7End,
+    start: session6Start,
+    end: session6End,
     session: ['ColindaLatour'],
 }
 
@@ -620,14 +620,14 @@ const screen2Schedule = {
     timeSlots: [
         welcome,
         beckiFloyd,
-        andyCarter,
+        mikeIrving,
         goldmanSachsTalk,
         lunch,
         cliffAgius,
         steveHeyes,
         afternoonBreak,
-        mikeIrving,
         colindaLatour,
+        andyCarter,
         shaunLawrence,
     ]
 }
@@ -643,16 +643,16 @@ const goldmanSachsKeynote = {
 const martinReynolds = {
     name: 'Martin Reynolds',
     description: 'Who Approved This PR? Oh Right, Nobody Did.',
-    start: session2Start,
-    end: session2End,
+    start: session3Start,
+    end: session3End,
     session: ['MartinReynolds'],
 }
 
 const eliHolderness = {
     name: 'Eli Holderness',
     description: 'Language Games',
-    start: session3Start,
-    end: session3End,
+    start: session2Start,
+    end: session2End,
     session: ['EliHolderness'],
 }
 
@@ -704,8 +704,8 @@ const screen3Schedule = {
     timeSlots: [
         welcome,
         goldmanSachsKeynote,
-        martinReynolds,
         eliHolderness,
+        martinReynolds,
         lunch,
         tonyEdwards,
         stevenTrotter,

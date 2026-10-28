@@ -354,7 +354,7 @@ export const Sessions = {
     },
     "MikeIrving": {
         name: "Mike Irving",
-        jobTitle: "Microsoft MVP & Senior Web Developer @ Klipboard ",
+        jobTitle: "Microsoft MVP & Senior Web Developer @ Klipboard",
         bio: (
             <>
                 <p>{"Mike is a Microsoft MVP, and the Co-organiser of both Dot Net North and Macc Tech. He started programming as a young child on the Dragon 32 micro computer, and later on a ZX Spectrum."}</p>
@@ -409,14 +409,14 @@ export const Sessions = {
     },
     "StefanCornea": {
         name: "Stefan Cornea",
-        jobTitle: "Software Engineer @ Signapse ",
+        jobTitle: "Backend and Streaming Engineer @ Signapse",
         bio: (
             <>
                 <p>{"I'm Stefan, a backend and streaming engineer at Signapse, where I build the real-time systems that deliver AI-generated sign-language video. I work mostly in Go and Rust, with a soft spot for the unglamorous parts: streaming protocols, concurrency, and systems that stay up when things go wrong. I lead GDG London, so community and sharing what I learn is a big part of what I do, and I write a newsletter called The Control Loop. Outside work I'm usually building something for the fun of it, which is exactly where this project came from."}</p>
             </>
         ),
         talkTitle:
-            "A practical example of how routing and ETAs actually work.",
+            "A practical example of how routing and ETAs actually work",
         description: (
             <>
                 <p>{"Ever wondered how your maps app finds the fastest route or knows you're 12 minutes away? This is a practical look at the graph traversal behind every route: from \"roads are a graph\" to a live map moving hundreds of vehicles, so you leave knowing how routing and ETAs really work."}</p>
