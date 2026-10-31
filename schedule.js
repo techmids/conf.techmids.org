@@ -505,9 +505,10 @@ const edaEren = {
 
 const matheusGuimaraes = {
     name: 'Matheus Guimarães',
-    description: 'Talk details TBC',
+    description: 'Architectural Trade-offs of Agentic Systems',
     start: session6Start,
     end: session6End,
+    session: ['MatheusGuimaraes'],
 }
 
 const steveWade = {
@@ -690,9 +691,10 @@ const kevlinHenney = {
 
 const jessRose = {
     name: 'Jess Rose',
-    description: 'Talk details TBC',
+    description: 'AI is Inevitable: Get on Board While You Still Can',
     start: session8Start,
     end: session8End,
+    session: ['JessRose'],
 }
 
 const screen3Schedule = {

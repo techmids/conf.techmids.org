@@ -18,6 +18,8 @@ import RobertCurran from "./public/speakers/RobertCurran.jpeg"
 import SteveWade from "./public/speakers/SteveWade.jpeg"
 import SteveHeyes from "./public/speakers/SteveHeyes.jpeg"
 import JimSeconde from "./public/speakers/JimSeconde.jpeg"
+import JessRose from "./public/speakers/JessRose.jpeg"
+import MatheusGuimaraes from "./public/speakers/MatheusGuimaraes.jpeg"
 
 export const Sessions = {
     "BeckiFloyd": {
@@ -599,6 +601,61 @@ export const Sessions = {
         website: "https://developer.vonage.com/en/blog/authors/james-seconde",
         github: "https://github.com/SecondeJK",
         x: "https://x.com/SecondeJ",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "JessRose": {
+        name: "Jess Rose",
+        jobTitle: "Technology Community Lead @ Mozilla Foundation (Common Voice)",
+        bio: (
+            <>
+                <p>{"Jessica Rose is a developer educator with a long career working in open source. She co-founded the Bad Website Club free online course, serving over 75,000 global learners, learning core web development skills. She works with open source projects and companies to help them reach more developers and users. She’s always excited to hear what you’re working on."}</p>
+            </>
+        ),
+        talkTitle:
+            "AI is Inevitable: Get on Board While You Still Can",
+        description: (
+            <>
+                <p>{"Across the tech industry, it feels like AI is the only thing people are talking about. But even in this age of AI saturation, many people are holding off on full adoption as they ask questions about the impact, ethics and even the quality of LLM outputs! Together, we'll step back to explore some of the past technological and social developments that changed the world, to better understand the inevitability of AI in our work and our larger lives. By exploring past periods of change, I hope that we'll all be ready to shrug off the shroud of FUD and get on board our shared AI future. But we'll need to hurry! You don't want to be left behind and certainly won't want to have to explain your Luddite ways to all-powerful AI overlords when AGI pulls into the station."}</p>
+            </>
+        ),
+        image: JessRose,
+        linkedin: "https://www.linkedin.com/in/jesslynnrose/",
+        website: "https://jessica.tech",
+        github: "https://github.com/jessicarose",
+        x: "https://x.com/jesslynnrose",
+        mastodon: "https://mastodon.social/@jessie",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "MatheusGuimaraes": {
+        name: "Matheus Guimarães",
+        jobTitle: "Senior Developer Advocate @ AWS",
+        bio: (
+            <>
+                <p>{"Matheus Guimarães (@techWithMatheus) is an international speaker focused on architecture, distributed systems, and cloud strategy."}</p>
+                <p>{"With over 25 years in the industry, he has worked across development, architecture, executive roles, and technical advocacy. His experience includes leading digital transformation initiatives, designing large-scale distributed systems, and guiding organizations through complex technical and organisational change."}</p>
+                <p>{"Matheus brings a combination of deep hands-on experience and strategic thinking, helping teams understand not just how systems are built, but how architectural decisions behave in real-world production environments."}</p>
+                <p>{"Today, he shares these insights through talks, articles, and videos, with a focus on tradeoffs, system design, and building software that performs under real constraints."}</p>
+                <p>{"Outside of work, he enjoys gaming, swimming, music, and exploring the creative side of engineering."}</p>
+            </>
+        ),
+        talkTitle:
+            "Architectural Trade-offs of Agentic Systems",
+        description: (
+            <>
+                <p>{"Agentic architecture introduces new execution models that challenge traditional backend design. This session explores the trade-offs between APIs, workflows, and agents through a progressive demo that evolves a real application step by step, highlighting what changes and where complexity increases."}</p>
+            </>
+        ),
+        image: MatheusGuimaraes,
+        linkedin: "https://www.linkedin.com/in/techwithmatheus",
+        website: "https://matheusguimaraes.com",
+        github: "https://github.com/techwithmatheus",
+        youtube: "https://www.youtube.com/@techwithmatheus",
+        instagram: "https://www.instagram.com/techwithmatheus",
+        tiktok: "https://www.tiktok.com/@techwithmatheus",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
