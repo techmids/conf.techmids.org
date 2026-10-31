@@ -504,7 +504,7 @@ const edaEren = {
 }
 
 const matheusGuimaraes = {
-    name: 'Matheus Guimaraes',
+    name: 'Matheus Guimarães',
     description: 'Architectural Trade-offs of Agentic Systems',
     start: session6Start,
     end: session6End,

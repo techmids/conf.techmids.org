@@ -631,11 +631,11 @@ export const Sessions = {
         speakerCardImage: "",
     },
     "MatheusGuimaraes": {
-        name: "Matheus Guimaraes",
+        name: "Matheus Guimarães",
         jobTitle: "Senior Developer Advocate @ AWS",
         bio: (
             <>
-                <p>{"Matheus Guimaraes (@techWithMatheus) is an international speaker focused on architecture, distributed systems, and cloud strategy."}</p>
+                <p>{"Matheus Guimarães (@techWithMatheus) is an international speaker focused on architecture, distributed systems, and cloud strategy."}</p>
                 <p>{"With over 25 years in the industry, he has worked across development, architecture, executive roles, and technical advocacy. His experience includes leading digital transformation initiatives, designing large-scale distributed systems, and guiding organizations through complex technical and organisational change."}</p>
                 <p>{"Matheus brings a combination of deep hands-on experience and strategic thinking, helping teams understand not just how systems are built, but how architectural decisions behave in real-world production environments."}</p>
                 <p>{"Today, he shares these insights through talks, articles, and videos, with a focus on tradeoffs, system design, and building software that performs under real constraints."}</p>
