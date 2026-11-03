@@ -607,7 +607,7 @@ export const Sessions = {
     },
     "JessRose": {
         name: "Jess Rose",
-        jobTitle: "Technology Community Lead @ Mozilla Foundation (Common Voice)",
+        jobTitle: "Developer Educator & Co-founder @ Bad Website Club",
         bio: (
             <>
                 <p>{"Jessica Rose is a developer educator with a long career working in open source. She co-founded the Bad Website Club free online course, serving over 75,000 global learners, learning core web development skills. She works with open source projects and companies to help them reach more developers and users. She’s always excited to hear what you’re working on."}</p>
