@@ -72,7 +72,7 @@ export const sponsorTiers = {
         sponsors: [
             {
                 name: "Harvey Nash",
-                image: "/sponsors/HarveyNash.jpg",
+                image: "/sponsors/HarveyNash.svg",
                 url: "https://www.harveynash.co.uk/"
             }
         ]
