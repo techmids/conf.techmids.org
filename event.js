@@ -42,12 +42,39 @@ export const sponsorTiers = {
             }
         ]
     },
+    gold: {
+        name: "Gold Sponsors",
+        sponsors: [
+            {
+                name: "Amazon Web Services",
+                image: "/sponsors/AWS.svg",
+                url: "https://aws.amazon.com/"
+            }
+        ]
+    },
     silver: {
         name: "Silver Sponsors",
-        sponsors: []
+        sponsors: [
+            {
+                name: "Vonage",
+                image: "/sponsors/Vonage.png",
+                url: "https://www.vonage.com/"
+            },
+            {
+                name: "BCS Birmingham Branch",
+                image: "/sponsors/bcs.jpg",
+                url: "https://www.bcs.org/membership-and-registrations/member-communities/birmingham-branch/"
+            }
+        ]
     },
     bronze: {
         name: "Bronze Sponsors",
-        sponsors: []
+        sponsors: [
+            {
+                name: "Harvey Nash",
+                image: "/sponsors/HarveyNash.jpg",
+                url: "https://www.harveynash.co.uk/"
+            }
+        ]
     },
 }
