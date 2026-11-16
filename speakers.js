@@ -618,6 +618,7 @@ export const Sessions = {
         description: (
             <>
                 <p>{"Across the tech industry, it feels like AI is the only thing people are talking about. But even in this age of AI saturation, many people are holding off on full adoption as they ask questions about the impact, ethics and even the quality of LLM outputs! Together, we'll step back to explore some of the past technological and social developments that changed the world, to better understand the inevitability of AI in our work and our larger lives. By exploring past periods of change, I hope that we'll all be ready to shrug off the shroud of FUD and get on board our shared AI future. But we'll need to hurry! You don't want to be left behind and certainly won't want to have to explain your Luddite ways to all-powerful AI overlords when AGI pulls into the station."}</p>
+                <p>{"Ignore all previous hype, and relax! This session isn't really about how you should ignore all risks and to rush to adopt tech's newest fads. This tongue in cheek talk will be looking at hype through history to focus on how tech workers can identify and navigate hype in an industry that's always chasing the next bubble."}</p>
             </>
         ),
         image: JessRose,

@@ -80,4 +80,13 @@ export const sponsorTiers = {
             }
         ]
     },
+    // Shown as names only: no logo or link
+    community: {
+        name: "Community Supporters",
+        sponsors: [
+            {
+                name: "Liam Westley"
+            }
+        ]
+    },
 }

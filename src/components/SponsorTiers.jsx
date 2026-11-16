@@ -43,7 +43,12 @@ export function SponsorTiers() {
             {printSponsors("Gold", sponsorTiers.gold.sponsors, 1.75)}
             {printSponsors("Silver", sponsorTiers.silver.sponsors, 1.5)}
             {printSponsors("Bronze", sponsorTiers.bronze.sponsors, 0.75)}
-
+            <p className="pt-4 text-center text-base font-semibold uppercase tracking-wider text-gray-600">
+                Community Supporters
+            </p>
+            <p className="p-4 text-center text-lg font-semibold text-gray-900">
+                {sponsorTiers.community.sponsors.map((supporter) => supporter.name).join(", ")}
+            </p>
         </div>
     )
 }
