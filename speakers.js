@@ -20,8 +20,44 @@ import SteveHeyes from "./public/speakers/SteveHeyes.jpeg"
 import JimSeconde from "./public/speakers/JimSeconde.jpeg"
 import JessRose from "./public/speakers/JessRose.jpeg"
 import MatheusGuimaraes from "./public/speakers/MatheusGuimaraes.jpeg"
+import SimonStevens from "./public/speakers/SimonStevens.jpeg"
+import MikolajMaciejak from "./public/speakers/MikolajMaciejak.jpeg"
 
 export const Sessions = {
+    "SimonStevens": {
+        name: "Simon Stevens",
+        jobTitle: "Executive Director of Software Engineering @ Goldman Sachs",
+        bio: (
+            <></>
+        ),
+        talkTitle:
+            "Financial Engineering - Electronic Quoting Platforms",
+        description: (
+            <></>
+        ),
+        image: SimonStevens,
+        website: "",
+        sessionType: "Keynote",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "MikolajMaciejak": {
+        name: "Mikolaj Maciejak",
+        jobTitle: "VP/Executive Director of Core IAM Services @ Goldman Sachs",
+        bio: (
+            <></>
+        ),
+        talkTitle:
+            "CVE Explosion and the Future of Open Source",
+        description: (
+            <></>
+        ),
+        image: MikolajMaciejak,
+        website: "",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
     "BeckiFloyd": {
         name: "Becki Floyd",
         jobTitle: "User Experience Designer @ Voxpopme",

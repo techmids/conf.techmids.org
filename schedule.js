@@ -566,10 +566,11 @@ const andyCarter = {
 }
 
 const goldmanSachsTalk = {
-    name: 'Goldman Sachs',
-    description: 'Talk from our sponsor Goldman Sachs - talk details TBC',
+    name: 'Mikolaj Maciejak, Goldman Sachs',
+    description: 'CVE Explosion and the Future of Open Source',
     start: session3Start,
     end: session3End,
+    session: ['MikolajMaciejak'],
 }
 
 const cliffAgius = {
@@ -635,10 +636,11 @@ const screen2Schedule = {
 
 
 const goldmanSachsKeynote = {
-    name: 'Goldman Sachs',
-    description: 'Keynote from our sponsor Goldman Sachs - talk details TBC',
+    name: 'Simon Stevens, Goldman Sachs',
+    description: 'Keynote: Financial Engineering - Electronic Quoting Platforms',
     start: session1Start,
     end: session1End,
+    session: ['SimonStevens'],
 }
 
 const martinReynolds = {
