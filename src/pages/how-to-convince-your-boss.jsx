@@ -9,7 +9,7 @@ export default function HowToConvinceYourBoss() {
             title="How to convince your boss to send you to TechMids Conf"
             description="Our guide to making the business case for a day at TechMids Conf, Birmingham's community-driven tech conference."
         />
-        <div className="relative bg-white">
+        <div className="relative bg-white dark:bg-techmids-night">
             <div className="lg:absolute lg:inset-0">
                 <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
                     <img
@@ -22,15 +22,15 @@ export default function HowToConvinceYourBoss() {
             <div className="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
                 <div className="lg:col-start-2 lg:pl-8">
                     <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
-                        <h2 className="leading-6 text-brand-900 font-semibold tracking-wide uppercase">Our Guide</h2>
-                        <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        <h2 className="leading-6 text-brand-900 dark:text-brand-100 font-semibold tracking-wide uppercase">Our Guide</h2>
+                        <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
                             How to convince your boss to send you to a conference
                         </h3>
-                        <p className="mt-8 text-lg text-gray-500">
+                        <p className="mt-8 text-lg text-gray-500 dark:text-gray-300">
                             You are part of a team building software solutions all day every day. How can you convince your
                             boss to give you a day to attend this amazing conference?
                         </p>
-                        <div className="mt-5 prose prose-yellow text-gray-500">
+                        <div className="mt-5 prose prose-yellow dark:prose-invert text-gray-500 dark:text-gray-300">
                             <h2>
                                 Talk business. There’s an ROI in attending a conference.
                             </h2>
@@ -82,13 +82,16 @@ export default function HowToConvinceYourBoss() {
                                 presence at TechMids Conf! You can raise awareness for your brand, get direct feedback from
                                 your users, gain some new ones, and show that your company cares about its community.
                             </p>
-                            <ButtonCTA/>
+                            {/* ButtonCTA is written for a dark background (white headings) */}
+                            <div className="not-prose mt-10 rounded-3xl bg-techmids-black px-4 py-2 sm:px-8 dark:bg-techmids-coal">
+                                <ButtonCTA/>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    <div className="relative bg-white">
+    <div className="relative bg-white dark:bg-techmids-night">
         <div className="lg:absolute lg:inset-0">
             <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
                 <img
@@ -101,7 +104,7 @@ export default function HowToConvinceYourBoss() {
         <div className="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
             <div className="lg:col-start-2 lg:pl-8">
                 <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
-                    <div className="mt-5 prose prose-yellow text-gray-500">
+                    <div className="mt-5 prose prose-yellow dark:prose-invert text-gray-500 dark:text-gray-300">
                         <h2>Be prepared for a NO – and don’t give up</h2>
                     <p>You might hear one of the following:</p>
                     <p className="italic">
@@ -146,7 +149,10 @@ export default function HowToConvinceYourBoss() {
                         above reasons apply, too. We’d even argue that a conference like TechMids Conf is the
                         place to meet and connect with new clients.
                     </p>
-                    <ButtonCTA/>
+                    {/* ButtonCTA is written for a dark background (white headings) */}
+                            <div className="not-prose mt-10 rounded-3xl bg-techmids-black px-4 py-2 sm:px-8 dark:bg-techmids-coal">
+                                <ButtonCTA/>
+                            </div>
                 </div>
                 </div>
             </div>

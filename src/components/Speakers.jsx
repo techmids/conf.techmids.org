@@ -44,11 +44,11 @@ export function Speakers({sharing = false}) {
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2
                 id="speakers-title"
-                className="font-display text-4xl font-medium tracking-tighter text-brand-800 sm:text-5xl"
+                className="font-display text-4xl font-medium tracking-tighter text-brand-800 dark:text-brand-400 sm:text-5xl"
             >
               Speakers
             </h2>
-            <p className="mt-4 font-display text-2xl tracking-tight text-brand-900">
+            <p className="mt-4 font-display text-2xl tracking-tight text-brand-900 dark:text-brand-100">
               Come away inspired from a day of talks from experts, ranging from
               front end engineering, to cloud platforms and operations, with
               everything in between.
@@ -56,21 +56,21 @@ export function Speakers({sharing = false}) {
           </div>
           {Object.keys(Sessions).length === 0 && (
               // <div className="col-span-full">
-              //   <p className="text-lg text-center text-slate-500">
+              //   <p className="text-lg text-center text-slate-500 dark:text-slate-400">
               //     We are working hard on the speaker line up. Check back soon!
               //     You can check out our previous speakers by viewing our past events.
               //     <a href={"/past-events"}>Past Events</a>
               //   </p>
               // </div>
-              <div className="bg-white">
+              <div className="bg-white dark:bg-techmids-night">
                 <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-                  <h2 className="text-3xl tracking-tight text-brand-900 sm:text-4xl">
+                  <h2 className="text-3xl tracking-tight text-brand-900 dark:text-brand-100 sm:text-4xl">
                     We are working hard on the speaker line up. Check back soon!
                   </h2>
                   <div className="mt-10 flex items-center gap-x-6">
                     <a
                         href="/past-events"
-                        className="rounded-md bg-brand-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-900"
+                        className="rounded-md bg-brand-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 dark:bg-brand-400 dark:text-black dark:hover:bg-brand-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-900"
                     >
                       Past Events
                     </a>
@@ -118,11 +118,11 @@ export function Speakers({sharing = false}) {
                           />
                         </div>
                       </div>
-                      <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
+                      <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900 dark:text-white">
                         {Sessions[speaker].name}
                       </h3>
                       <p>{Sessions[speaker].jobTitle}</p>
-                      <p className="mt-1 text-base tracking-tight text-slate-500">
+                      <p className="mt-1 text-base tracking-tight text-slate-500 dark:text-slate-400">
                         {Sessions[speaker].sessionType}
                       </p>
                     </div>
@@ -139,10 +139,10 @@ export function Speakers({sharing = false}) {
                       <path d="M50 15v70M15 50h70" stroke="currentColor" strokeWidth="10" strokeLinecap="round" />
                     </svg>
                   </div>
-                  <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
+                  <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900 dark:text-white">
                     More Speakers
                   </h3>
-                  <p className="mt-1 text-base tracking-tight text-slate-500">
+                  <p className="mt-1 text-base tracking-tight text-slate-500 dark:text-slate-400">
                     To be announced soon
                   </p>
                 </div>

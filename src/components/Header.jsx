@@ -2,7 +2,60 @@ import { ButtonLink } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import {EVENT, AVAILABLE_INFORMATION} from "../../event";
+
+// Follows the device setting until the toggle is used; after that the choice is kept on this device.
+// The class itself is set before paint by the script in _document.jsx.
+function ThemeToggle() {
+  const [dark, setDark] = useState(false)
+
+  useEffect(() => {
+    const root = document.documentElement
+    setDark(root.classList.contains('dark'))
+
+    const device = window.matchMedia('(prefers-color-scheme: dark)')
+    const followDevice = (event) => {
+      let saved = null
+      try {
+        saved = window.localStorage.getItem('theme')
+      } catch {
+        // No storage: keep following the device
+      }
+      if (saved) return
+      root.classList.toggle('dark', event.matches)
+      setDark(event.matches)
+    }
+    device.addEventListener?.('change', followDevice)
+    return () => device.removeEventListener?.('change', followDevice)
+  }, [])
+
+  const toggle = () => {
+    const next = !document.documentElement.classList.contains('dark')
+    document.documentElement.classList.toggle('dark', next)
+    setDark(next)
+    try {
+      window.localStorage.setItem('theme', next ? 'dark' : 'light')
+    } catch {
+      // Private browsing or storage full: the choice lasts until the page closes
+    }
+  }
+
+  // Pressed styling comes from the dark class, not state, so it is right before React loads
+  return (
+    <button
+      type="button"
+      aria-pressed={dark}
+      onClick={toggle}
+      className="inline-flex items-center gap-1.5 rounded-full border border-brand-600/60 px-3 py-0.5 hover:border-brand-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:border-brand-500 dark:bg-brand-500 dark:text-black"
+    >
+      <svg aria-hidden="true" viewBox="0 0 20 20" className="h-3.5 w-3.5 fill-current">
+        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+      </svg>
+      Dark mode
+    </button>
+  )
+}
 
 export function Header() {
   return (
@@ -43,13 +96,14 @@ export function Header() {
             ) : null}
         </div>
       </Container>
-      <nav aria-label="Main" className="mt-6 flex justify-center gap-6 font-mono text-sm text-brand-500">
+      <nav aria-label="Main" className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 px-4 font-mono text-sm text-brand-500">
         {AVAILABLE_INFORMATION.scheduleAvailable && (
           <Link href="/schedule" className="underline-offset-4 hover:underline">Schedule</Link>
         )}
         {AVAILABLE_INFORMATION.speakersAvailable && (
           <Link href="/speakers" className="underline-offset-4 hover:underline">Speakers</Link>
         )}
+        <ThemeToggle />
       </nav>
     </header>
   )

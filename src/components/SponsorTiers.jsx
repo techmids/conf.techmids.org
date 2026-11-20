@@ -12,12 +12,13 @@ export function SponsorTiers() {
         }
         return (
             <div className="py-4">
-                <p className="text-center text-base font-semibold uppercase tracking-wider text-gray-600">
+                <p className="text-center text-base font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-300">
                     {tier} Sponsor{sponsors.length > 1 ? "s": null}
                 </p>
                 <div className="mx-auto max-w-[70%] mt-2 flex flex-wrap justify-evenly grid-cols-3 gap-0.5" >
+                    {/* The logos are drawn for a light background, so in dark mode each keeps a white tile */}
                     {sponsors.map((sponsor) => (
-                        <div key={sponsor.name} className="flex justify-center items-center p-4">
+                        <div key={sponsor.name} className="flex justify-center items-center p-4 dark:m-2 dark:rounded-2xl dark:bg-white">
                             <a
                                 href={sponsor.url}
                                 target="_blank"
@@ -38,7 +39,7 @@ export function SponsorTiers() {
     }
 
     return (
-        <div className="mt-12 mb-8 bg-white">
+        <div className="mt-12 mb-8 bg-white dark:bg-techmids-night">
             {printSponsors("Headline", sponsorTiers.headline.sponsors, 2)}
             {printSponsors("Gold", sponsorTiers.gold.sponsors, 1.75)}
             {printSponsors("Silver", sponsorTiers.silver.sponsors, 1.5)}
