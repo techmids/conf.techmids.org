@@ -53,7 +53,9 @@ export const Sessions = {
         talkTitle:
             "CVE Explosion and the Future of Open Source",
         description: (
-            <></>
+            <>
+                <p>{"In 2026 we witnessed vulnerability explosion, which adds tremendous pressure on open source maintenance and costs. Let's have a closer look at why and how this happened and what it means for the future of open source software."}</p>
+            </>
         ),
         image: MikolajMaciejak,
         website: "",
