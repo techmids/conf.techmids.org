@@ -75,6 +75,18 @@ const buildRows = (parsedDate) => {
         });
 };
 
+// How one talk stands in its slot: picked, or passed over because another talk in the slot is picked
+const pickState = (row, room, picks) => {
+    const option = row?.options.find((o) => o.room === room);
+    if (!option) return null;
+    const picked = picks.includes(option.id);
+    const passedOver = !picked && row.options.some((o) => picks.includes(o.id));
+    return { option, picked, passedOver };
+};
+
+// Passed-over talks are greyed out but stay clickable, so a pick can be switched in one tap
+const pickTone = (state) => (state?.picked ? ' bg-brand-100' : state?.passedOver ? ' opacity-50 grayscale' : '');
+
 const PickButton = ({ picked, onClick }) => (
     <button
         type="button"
@@ -88,13 +100,18 @@ const PickButton = ({ picked, onClick }) => (
     </button>
 );
 
+// Shown instead of the button where picks can't be changed (someone else's shared day)
+const PickedMark = () => (
+    <span className="mt-2 inline-flex items-center rounded-md border border-black bg-black px-2 py-1 text-xs font-bold text-brand">✓ Picked</span>
+);
+
 // Component to render a single session cell in the combined view
 const SessionCell = ({ slot, isHappening, pick }) => {
     if (!slot) {
         return <td className="px-3 py-2 text-sm text-gray-400">-</td>;
     }
 
-    const cellClass = isHappening ? "px-3 py-2 text-sm bg-brand-400" : "px-3 py-2 text-sm";
+    const cellClass = `${isHappening ? "px-3 py-2 text-sm bg-brand-400" : "px-3 py-2 text-sm"}${pickTone(pick)}`;
 
     if (slot.session) {
         const speakerId = slot.session[0];
@@ -105,7 +122,7 @@ const SessionCell = ({ slot, isHappening, pick }) => {
                     <div className="font-semibold text-brand-900">{speaker?.name || slot.name}</div>
                     <div className="text-brand-700 mt-1">{slot.description || speaker?.talkTitle}</div>
                 </Link>
-                {pick && <PickButton picked={pick.picked} onClick={pick.onToggle} />}
+                {pick && (pick.onToggle ? <PickButton picked={pick.picked} onClick={pick.onToggle} /> : pick.picked && <PickedMark />)}
             </td>
         );
     }
@@ -114,13 +131,13 @@ const SessionCell = ({ slot, isHappening, pick }) => {
         <td className={cellClass}>
             <div className="font-semibold text-brand-900">{slot.name || 'TBC'}</div>
             <div className="text-brand-700 mt-1">{slot.description || 'TBC'}</div>
-            {pick && <PickButton picked={pick.picked} onClick={pick.onToggle} />}
+            {pick && (pick.onToggle ? <PickButton picked={pick.picked} onClick={pick.onToggle} /> : pick.picked && <PickedMark />)}
         </td>
     );
 };
 
 // The original "stacked" view for a single day/track
-function StackedScheduleView({ day, parsedDate, today, timeIrl }) {
+function StackedScheduleView({ day, room, rows, picks, onToggle, parsedDate, today, timeIrl }) {
     return (
         <div id="schedule" className="w-full mt-8 sm:-mx-8">
             <div className="sm:flex-auto">
@@ -134,10 +151,13 @@ function StackedScheduleView({ day, parsedDate, today, timeIrl }) {
             <table className="w-full divide-y divide-brand-700 table-auto">
                 <thead></thead>
                 <tbody className="divide-y divide-brand-700 bg-white">
-                    {day.timeSlots.map((timeSlot) => (
+                    {day.timeSlots.map((timeSlot) => {
+                        const row = rows.find((r) => r.key === `${timeSlot.start}-${timeSlot.end}`);
+                        const state = pickState(row, room, picks);
+                        return (
                         <tr
                             key={`${timeSlot.start}${timeSlot.name}`}
-                            className={isCurrentTimeSlot(timeSlot, parsedDate, today, timeIrl) ? "flex items-center bg-brand-400 justify-between" : "flex items-center justify-between"}
+                            className={`${isCurrentTimeSlot(timeSlot, parsedDate, today, timeIrl) ? "flex items-center bg-brand-400 justify-between" : "flex items-center justify-between"}${pickTone(state)}`}
                         >
                             {timeSlot.session ? (
                                 <>
@@ -156,6 +176,15 @@ function StackedScheduleView({ day, parsedDate, today, timeIrl }) {
                                     </td>
                                     <td className="summary font-semibold text-sm sm:text-md tracking-tight text-brand-700 w-1/2 sm:w-[400px]">
                                         <Link href={`/speakers/${timeSlot.session[0]}`}>{timeSlot.description || Sessions[timeSlot.session[0]]?.talkTitle}</Link>
+                                        {state && (
+                                            <div>
+                                                {onToggle ? (
+                                                    <PickButton picked={state.picked} onClick={() => onToggle(row, state.option.id)} />
+                                                ) : (
+                                                    state.picked && <PickedMark />
+                                                )}
+                                            </div>
+                                        )}
                                     </td>
                                 </>
                             ) : (
@@ -168,11 +197,21 @@ function StackedScheduleView({ day, parsedDate, today, timeIrl }) {
                                     </td>
                                     <td className="summary font-semibold text-sm sm:text-md tracking-tight text-brand-900 w-1/2 sm:w-[400px]">
                                         {timeSlot?.description ?? 'TBC'}
+                                        {state && (
+                                            <div>
+                                                {onToggle ? (
+                                                    <PickButton picked={state.picked} onClick={() => onToggle(row, state.option.id)} />
+                                                ) : (
+                                                    state.picked && <PickedMark />
+                                                )}
+                                            </div>
+                                        )}
                                     </td>
                                 </>
                             )}
                         </tr>
-                    ))}
+                        );
+                    })}
                 </tbody>
             </table>
         </div>
@@ -200,9 +239,9 @@ function CombinedScheduleView({ rows, parsedDate, today, timeIrl, picks, onToggl
                             const isRowActive = isCurrentTimeSlot(slot.screen3 || slot.screen2 || slot.screen1, parsedDate, today, timeIrl);
                             const isSameAcrossAll = slot.shared;
                             const pickFor = (room) => {
-                                const option = slot.options.find((o) => o.room === room);
-                                if (!option || !onToggle) return undefined;
-                                return { picked: picks.includes(option.id), onToggle: () => onToggle(slot, option.id) };
+                                const state = pickState(slot, room, picks);
+                                if (!state) return undefined;
+                                return { ...state, onToggle: onToggle && (() => onToggle(slot, state.option.id)) };
                             };
 
                             return (
@@ -246,14 +285,14 @@ function CombinedScheduleView({ rows, parsedDate, today, timeIrl, picks, onToggl
 }
 
 // One talk as a card: used for a picked talk and for the choices in an unpicked slot
-const TalkCard = ({ option, picked, onToggle }) => {
+const TalkCard = ({ option, picked, passedOver, onToggle }) => {
     const { slot, label, id } = option;
     const speaker = slot.session ? Sessions[slot.session[0]] : null;
     const title = slot.description || speaker?.talkTitle || 'TBC';
     const who = speaker ? `${speaker.name}${speaker.jobTitle ? ` · ${speaker.jobTitle}` : ''}` : slot.name;
 
     return (
-        <div className={`flex items-start gap-3 rounded-lg border p-3 ${picked ? 'border-black bg-brand-100' : 'border-brand-700 bg-white'}`}>
+        <div className={`flex items-start gap-3 rounded-lg border p-3 ${picked ? 'border-black bg-brand-100' : 'border-brand-700 bg-white'}${passedOver ? ' opacity-50 grayscale' : ''}`}>
             {speaker?.image && (
                 <Image className="h-12 w-12 flex-none rounded-full" src={speaker.image} alt="" style={{ objectFit: 'cover' }} />
             )}
@@ -326,6 +365,7 @@ function MyDayView({ rows, parsedDate, today, timeIrl, picks, onToggle }) {
                                             key={option.id}
                                             option={option}
                                             picked={picked?.id === option.id}
+                                            passedOver={Boolean(picked) && picked.id !== option.id}
                                             onToggle={
                                                 onToggle &&
                                                 ((id) => {
@@ -502,80 +542,81 @@ export function Schedule() {
                 </div>
 
                 <div className="flex flex-col items-center px-4 sm:px-6 lg:px-8 sm:m-8">
-                    {view === 'stacked' ? (
+                    {sharedPicks && (
+                        <div className="w-full max-w-3xl rounded-lg border border-black bg-brand-100 p-3 text-sm text-brand-900">
+                            <p className="font-semibold">You are looking at picks someone shared with you.</p>
+                            <div className="mt-2 flex flex-wrap gap-2">
+                                <button type="button" onClick={saveShared} className={`${buttonBaseClass} ${activeClass}`}>
+                                    Save as my picks
+                                </button>
+                                <button type="button" onClick={showMine} className={`${buttonBaseClass} ${inactiveClass}`}>
+                                    Back to my picks
+                                </button>
+                            </div>
+                        </div>
+                    )}
+                    {view === 'stacked' &&
                         Object.keys(schedule).map((track) =>
                             Object.keys(schedule[track]).map((day) => (
                                 <StackedScheduleView
                                     key={`${track}-${day}`}
                                     day={schedule[track][day]}
+                                    room={track}
+                                    rows={rows}
+                                    picks={shownPicks}
+                                    onToggle={onToggle}
                                     parsedDate={parsedDate}
                                     today={today}
                                     timeIrl={timeIrl}
                                 />
                             ))
-                        )
-                    ) : (
-                        <>
-                            {sharedPicks && (
-                                <div className="w-full max-w-3xl rounded-lg border border-black bg-brand-100 p-3 text-sm text-brand-900">
-                                    <p className="font-semibold">You are looking at picks someone shared with you.</p>
-                                    <div className="mt-2 flex flex-wrap gap-2">
-                                        <button type="button" onClick={saveShared} className={`${buttonBaseClass} ${activeClass}`}>
-                                            Save as my picks
-                                        </button>
-                                        <button type="button" onClick={showMine} className={`${buttonBaseClass} ${inactiveClass}`}>
-                                            Back to my picks
-                                        </button>
-                                    </div>
-                                </div>
-                            )}
-                            {view === 'combined' ? (
-                                <CombinedScheduleView
-                                    rows={rows}
-                                    parsedDate={parsedDate}
-                                    today={today}
-                                    timeIrl={timeIrl}
-                                    picks={shownPicks}
-                                    onToggle={onToggle}
-                                />
-                            ) : (
-                                <MyDayView
-                                    rows={rows}
-                                    parsedDate={parsedDate}
-                                    today={today}
-                                    timeIrl={timeIrl}
-                                    picks={shownPicks}
-                                    onToggle={onToggle}
-                                />
-                            )}
-                            {!sharedPicks && (
-                                <div className="mt-6 w-full max-w-3xl text-sm text-brand-900">
-                                    <div className="flex flex-wrap items-center gap-2">
-                                        <button
-                                            type="button"
-                                            onClick={share}
-                                            disabled={!shownPicks.length}
-                                            className={`${buttonBaseClass} ${inactiveClass} disabled:opacity-50`}
-                                        >
-                                            Share my picks
-                                        </button>
-                                        <button
-                                            type="button"
-                                            onClick={() => {
-                                                setPicks([]);
-                                                setShareNote('');
-                                            }}
-                                            disabled={!shownPicks.length}
-                                            className={`${buttonBaseClass} ${inactiveClass} disabled:opacity-50`}
-                                        >
-                                            Clear picks
-                                        </button>
-                                        <span role="status" className="break-all">{shareNote}</span>
-                                    </div>
-                                    <p className="mt-3">Your picks are saved on this device only. Nothing is sent anywhere.</p>
-                                </div>
-                            )}
-                        </>
+                        )}
+                    {view === 'combined' && (
+                        <CombinedScheduleView
+                            rows={rows}
+                            parsedDate={parsedDate}
+                            today={today}
+                            timeIrl={timeIrl}
+                            picks={shownPicks}
+                            onToggle={onToggle}
+                        />
+                    )}
+                    {view === 'myday' && (
+                        <MyDayView
+                            rows={rows}
+                            parsedDate={parsedDate}
+                            today={today}
+                            timeIrl={timeIrl}
+                            picks={shownPicks}
+                            onToggle={onToggle}
+                        />
+                    )}
+                    {!sharedPicks && (
+                        <div className="mt-6 w-full max-w-3xl text-sm text-brand-900">
+                            <div className="flex flex-wrap items-center gap-2">
+                                <button
+                                    type="button"
+                                    onClick={share}
+                                    disabled={!shownPicks.length}
+                                    className={`${buttonBaseClass} ${inactiveClass} disabled:opacity-50`}
+                                >
+                                    Share my picks
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        setPicks([]);
+                                        setShareNote('');
+                                    }}
+                                    disabled={!shownPicks.length}
+                                    className={`${buttonBaseClass} ${inactiveClass} disabled:opacity-50`}
+                                >
+                                    Clear picks
+                                </button>
+                                <span role="status" className="break-all">{shareNote}</span>
+                            </div>
+                            <p className="mt-3">Your picks are saved on this device only. Nothing is sent anywhere.</p>
+                        </div>
                     )}
                 </div>
             </div>
