@@ -86,7 +86,7 @@ const pickState = (row, room, picks) => {
 
 // Passed-over talks are greyed out but stay clickable, so a pick can be switched in one tap
 // In dark mode "now" is !important so, as in the light theme, it wins over the picked tint
-const pickTone = (state) => (state?.picked ? ' bg-brand-100 dark:bg-brand-950' : state?.passedOver ? ' opacity-50 grayscale' : '');
+const pickTone = (state) => (state?.picked ? ' bg-brand-100 dark:bg-brand-950' : state?.passedOver ? ' opacity-80 grayscale dark:opacity-60' : '');
 
 const PickButton = ({ picked, onClick }) => (
     <button
@@ -96,7 +96,7 @@ const PickButton = ({ picked, onClick }) => (
         className={`mt-2 inline-flex items-center rounded-md border px-2 py-1 text-xs font-bold focus:outline-none focus:ring-2 focus:ring-brand-500 ${
             picked
                 ? 'border-black bg-black text-brand dark:border-brand-400 dark:bg-brand-400 dark:text-black'
-                : 'border-brand-700 bg-white text-brand-900 hover:bg-brand-100 dark:border-brand-600 dark:bg-transparent dark:text-brand-100 dark:hover:border-brand-400 dark:hover:bg-transparent dark:hover:text-brand-400'
+                : 'border-brand-900 bg-white text-brand-900 hover:bg-brand-100 dark:border-brand-600 dark:bg-transparent dark:text-brand-100 dark:hover:border-brand-400 dark:hover:bg-transparent dark:hover:text-brand-400'
         }`}
     >
         {picked ? '✓ Picked' : 'Pick'}
@@ -114,7 +114,7 @@ const SessionCell = ({ slot, isHappening, pick }) => {
         return <td className="px-3 py-2 text-sm text-gray-400">-</td>;
     }
 
-    const cellClass = `${isHappening ? "px-3 py-2 text-sm bg-brand-400 dark:!bg-brand-900" : "px-3 py-2 text-sm"}${pickTone(pick)}`;
+    const cellClass = `${isHappening ? "px-3 py-2 text-sm bg-brand-400 dark:!bg-brand-900 outline outline-2 [outline-offset:-2px] outline-black dark:outline-brand-400" : "px-3 py-2 text-sm"}${pickTone(pick)}`;
 
     if (slot.session) {
         const speakerId = slot.session[0];
@@ -160,7 +160,7 @@ function StackedScheduleView({ day, room, rows, picks, onToggle, parsedDate, tod
                         return (
                         <tr
                             key={`${timeSlot.start}${timeSlot.name}`}
-                            className={`${isCurrentTimeSlot(timeSlot, parsedDate, today, timeIrl) ? "flex items-center bg-brand-400 dark:!bg-brand-900 justify-between" : "flex items-center justify-between"}${pickTone(state)}`}
+                            className={`${isCurrentTimeSlot(timeSlot, parsedDate, today, timeIrl) ? "flex items-center bg-brand-400 dark:!bg-brand-900 justify-between outline outline-2 [outline-offset:-2px] outline-black dark:outline-brand-400" : "flex items-center justify-between"}${pickTone(state)}`}
                         >
                             {timeSlot.session ? (
                                 <>
@@ -295,7 +295,7 @@ const TalkCard = ({ option, picked, passedOver, onToggle }) => {
     const who = speaker ? `${speaker.name}${speaker.jobTitle ? ` · ${speaker.jobTitle}` : ''}` : slot.name;
 
     return (
-        <div className={`flex items-start gap-3 rounded-lg border p-3 ${picked ? 'border-black bg-brand-100 dark:border-brand-400 dark:bg-brand-950' : 'border-brand-700 bg-white dark:border-neutral-700 dark:bg-techmids-coal'}${passedOver ? ' opacity-50 grayscale' : ''}`}>
+        <div className={`flex items-start gap-3 rounded-lg border p-3 ${picked ? 'border-black bg-brand-100 dark:border-brand-400 dark:bg-brand-950' : 'border-brand-800 bg-white dark:border-neutral-500 dark:bg-techmids-coal'}${passedOver ? ' opacity-80 grayscale dark:opacity-60' : ''}`}>
             {speaker?.image && (
                 <Image className="h-12 w-12 flex-none rounded-full" src={speaker.image} alt="" style={{ objectFit: 'cover' }} />
             )}
@@ -333,7 +333,7 @@ function MyDayView({ rows, parsedDate, today, timeIrl, picks, onToggle }) {
 
                     if (row.shared) {
                         return (
-                            <li key={row.key} className={`rounded-lg px-3 py-2 ${active ? 'bg-brand-200 dark:bg-brand-900' : 'bg-brand-100 dark:bg-techmids-coal'}`}>
+                            <li key={row.key} className={`rounded-lg px-3 py-2 ${active ? 'bg-brand-200 dark:bg-brand-900 outline outline-2 [outline-offset:-2px] outline-black dark:outline-brand-400' : 'bg-brand-100 dark:bg-techmids-coal'}`}>
                                 {time}
                                 <div className="text-sm text-brand-900 dark:text-brand-400">
                                     <span className="font-semibold">{row.screen1.name}</span>
@@ -347,7 +347,7 @@ function MyDayView({ rows, parsedDate, today, timeIrl, picks, onToggle }) {
                     const showChoices = !picked || changing === row.key;
 
                     return (
-                        <li key={row.key} className={`rounded-lg px-3 py-2 ${active ? 'bg-brand-200 dark:bg-brand-900' : ''}`}>
+                        <li key={row.key} className={`rounded-lg px-3 py-2 ${active ? 'bg-brand-200 dark:bg-brand-900 outline outline-2 [outline-offset:-2px] outline-black dark:outline-brand-400' : ''}`}>
                             <div className="mb-2 flex items-center justify-between">
                                 {time}
                                 {!picked && <span className="text-xs font-bold uppercase tracking-wide text-brand-900 dark:text-brand-300">Pick one</span>}
@@ -505,8 +505,8 @@ export function Schedule() {
     };
 
     const buttonBaseClass = "px-4 py-2 text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 dark:focus:ring-offset-techmids-night shadow-md";
-    const activeClass = "bg-black text-brand dark:bg-brand-400 dark:text-black";
-    const inactiveClass = "bg-white text-black hover:bg-brand-100 dark:bg-techmids-coal dark:text-gray-100 dark:hover:bg-neutral-700";
+    const activeClass = "border border-black bg-black text-brand dark:border-brand-400 dark:bg-brand-400 dark:text-black";
+    const inactiveClass = "border border-brand-800 bg-white text-black hover:bg-brand-100 dark:border-neutral-500 dark:bg-techmids-coal dark:text-gray-100 dark:hover:bg-neutral-700";
 
     return (
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10">
