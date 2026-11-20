@@ -614,7 +614,8 @@ export function Schedule() {
                                     Clear picks
                                 </button>
                                 <span role="status" className="break-all">{shareNote}</span>
-                            </div>                        </div>
+                            </div>
+                        </div>
                     )}
                 </div>
             </div>
