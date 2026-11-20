@@ -639,6 +639,7 @@ const goldmanSachsKeynote = {
     description: 'Keynote: Financial Engineering - Electronic Quoting Platforms',
     start: session1Start,
     end: session1End,
+    session: ['SimonStevens'],
 }
 
 const martinReynolds = {

@@ -20,8 +20,26 @@ import SteveHeyes from "./public/speakers/SteveHeyes.jpeg"
 import JimSeconde from "./public/speakers/JimSeconde.jpeg"
 import JessRose from "./public/speakers/JessRose.jpeg"
 import MatheusGuimaraes from "./public/speakers/MatheusGuimaraes.jpeg"
+import SimonStevens from "./public/speakers/SimonStevens.jpeg"
 
 export const Sessions = {
+    "SimonStevens": {
+        name: "Simon Stevens",
+        jobTitle: "Goldman Sachs",
+        bio: (
+            <></>
+        ),
+        talkTitle:
+            "Financial Engineering - Electronic Quoting Platforms",
+        description: (
+            <></>
+        ),
+        image: SimonStevens,
+        website: "",
+        sessionType: "Keynote",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
     "BeckiFloyd": {
         name: "Becki Floyd",
         jobTitle: "User Experience Designer @ Voxpopme",
