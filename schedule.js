@@ -637,7 +637,7 @@ const screen2Schedule = {
 
 const goldmanSachsKeynote = {
     name: 'Simon Stevens, Goldman Sachs',
-    description: 'Keynote: Financial Engineering - Electronic Quoting Platforms',
+    description: 'Keynote: Financial Engineering: How to build an electronic trading platform',
     start: session1Start,
     end: session1End,
     session: ['SimonStevens'],

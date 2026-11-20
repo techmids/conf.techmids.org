@@ -31,9 +31,12 @@ export const Sessions = {
             <></>
         ),
         talkTitle:
-            "Financial Engineering - Electronic Quoting Platforms",
+            "Financial Engineering: How to build an electronic trading platform",
         description: (
-            <></>
+            <>
+                <p>{"A client asks for a price on a five-year swap. Within a fraction of a second, a quoting system has to parse the request, work out who is asking, check risk limits, calculate a price, and send a quote back. If it's slow, the trade goes elsewhere. If it's wrong, it costs real money."}</p>
+                <p>{"So how would you build one? In this talk, we'll walk through a design for an electronic quoting and trading platform. You don't need any finance background. We'll start with the products and the maths behind pricing them, with real code. Then we'll look at the protocols that move quote requests around the world. From there we'll assemble the architecture piece by piece."}</p>
+            </>
         ),
         image: SimonStevens,
         website: "",
