@@ -62,14 +62,15 @@ const meetups = [
 
 export function Meetups() {
   return (
-      <div className="mt-10 bg-white">
+      <div className="mt-10 bg-white dark:bg-techmids-night">
         <div className="mx-auto max-w-6xl py-12 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
-            <h2 className="mb-16 text-center font-display text-4xl font-medium tracking-tighter text-brand-900 sm:text-5xl">
+            <h2 className="mb-16 text-center font-display text-4xl font-medium tracking-tighter text-brand-900 dark:text-brand-100 sm:text-5xl">
               Backed by your favourite meetups and organisations
             </h2>
           </div>
-          <div className="grid grid-cols-2 items-center gap-4 sm:grid-cols-4 lg:grid-cols-8">
+          {/* Many of these logos are dark on transparent, so in dark mode the grid keeps a white panel */}
+          <div className="grid grid-cols-2 items-center gap-4 sm:grid-cols-4 lg:grid-cols-8 dark:rounded-3xl dark:bg-white dark:px-4 dark:text-black">
             {meetups.map((meetup, index) => (
                 <div
                     className="col-span-1 flex justify-center py-8 backdrop-opacity-10"

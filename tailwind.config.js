@@ -3,6 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx}'],
+  darkMode: 'class',
   theme: {
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -64,7 +65,9 @@ module.exports = {
           black: '#000000',
           yellow: '#FFFF00',
           mustard: '#B2B119',
-          gold: '#D4A017'
+          gold: '#D4A017',
+          night: '#111111', // page background in dark mode
+          coal: '#1E1E1E', // raised panels in dark mode
         },
         btw: {
           black: '#000000',

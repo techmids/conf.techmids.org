@@ -111,7 +111,7 @@ export function Speaker(props) {
   const socials = Object.keys(speaker).filter((key) => SOCIALS[key] && speaker[key])
 
   return (
-    <div className="bg-white pt-4 lg:py-12">
+    <div className="bg-white dark:bg-techmids-night pt-4 lg:py-12">
       <svg aria-hidden="true" width={0} height={0}>
         <defs>
           <clipPath id={`1`} clipPathUnits="objectBoundingBox">
@@ -122,7 +122,7 @@ export function Speaker(props) {
       <div className="relative">
         <div className="absolute -inset-x-0 -top-48 -bottom-14 overflow-hidden bg-btw-blue">
           <div className="absolute top-0 left-0 -translate-y-[10%] -translate-x-[55%] -scale-x-100 sm:left-1/2 sm:-translate-y-[6%] sm:-translate-x-[98%] lg:-translate-x-[106%] xl:-translate-x-[122%]"></div>
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white dark:from-techmids-night" />
         </div>
         <Container className="relative lg:grid lg:grid-cols-6 lg:gap-8 lg:pb-24">
           <div className="lg:col-span-2">
@@ -199,13 +199,13 @@ export function Speaker(props) {
       </div>
       <Container className="relative">
         <div className="mx-auto max-w-xl pb-10 sm:max-w-3xl lg:max-w-4xl lg:px-12 lg:pt-8">
-          <h2 className="space-y-12 font-display text-4xl font-bold tracking-tighter text-brand-900 sm:text-5xl md:text-6xl">
+          <h2 className="space-y-12 font-display text-4xl font-bold tracking-tighter text-brand-900 dark:text-brand-100 sm:text-5xl md:text-6xl">
             <br /> {talkTitle}
           </h2>
-          <h3 className="space-y-12 font-display text-2xl font-bold tracking-tighter text-brand-800 sm:text-2xl">
+          <h3 className="space-y-12 font-display text-2xl font-bold tracking-tighter text-brand-800 dark:text-brand-400 sm:text-2xl">
             <br /> Session Type:{` ${sessionType}`}
           </h3>
-          <div className="text-md list-disc mt-6 space-y-6 font-display tracking-tight text-black sm:text-lg">
+          <div className="text-md list-disc mt-6 space-y-6 font-display tracking-tight text-black dark:text-gray-200 sm:text-lg">
             {description}
           </div>
         </div>

@@ -83,7 +83,7 @@ function classNames(...classes) {
 
 const Testimonials = () => {
     return (
-        <div className="relative isolate bg-white pb-32 pt-24 sm:pt-32">
+        <div className="relative isolate bg-white dark:bg-techmids-night pb-32 pt-24 sm:pt-32">
             <div
                 className="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
                 aria-hidden="true"
@@ -110,17 +110,17 @@ const Testimonials = () => {
             </div>
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-xl text-center">
-                    <h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-900">Testimonials</h2>
-                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    <h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-900 dark:text-brand-100">Testimonials</h2>
+                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
                         Hear from some of our past attendees, sponsors, and speakers
                     </p>
                 </div>
-                <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-                    <figure className="col-span-2 hidden sm:block sm:rounded-2xl sm:bg-white sm:shadow-lg sm:ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">
-                        <blockquote className="p-12 text-xl font-semibold leading-8 tracking-tight text-gray-900">
+                <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 dark:text-white sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
+                    <figure className="col-span-2 hidden sm:block sm:rounded-2xl sm:bg-white sm:shadow-lg sm:ring-1 sm:ring-gray-900/5 dark:sm:bg-techmids-coal dark:sm:ring-white/10 xl:col-start-2 xl:row-end-1">
+                        <blockquote className="p-12 text-xl font-semibold leading-8 tracking-tight text-gray-900 dark:text-white">
                             <p>{`“${featuredTestimonial.body}”`}</p>
                         </blockquote>
-                        <figcaption className="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
+                        <figcaption className="flex items-center gap-x-4 border-t border-gray-900/10 dark:border-white/10 px-6 py-4">
                             {featuredTestimonial.author.imageUrl &&
                                 <img
                                     className="h-10 w-10 flex-none rounded-full bg-gray-50"
@@ -150,9 +150,9 @@ const Testimonials = () => {
                                     {column.map((testimonial) => (
                                         <figure
                                             key={testimonial.author.name}
-                                            className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
+                                            className="rounded-2xl bg-white p-6 dark:bg-techmids-coal shadow-lg ring-1 ring-gray-900/5 dark:ring-white/10"
                                         >
-                                            <blockquote className="text-gray-900">
+                                            <blockquote className="text-gray-900 dark:text-white">
                                                 <p>{`“${testimonial.body}”`}</p>
                                             </blockquote>
                                             <figcaption className="mt-6 flex items-center gap-x-4">

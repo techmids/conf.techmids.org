@@ -5,3 +5,9 @@
 p > a {
     text-decoration: underline;
 }
+
+/* The dark class sits on <html> itself, which Tailwind's dark: variants (descendants of .dark) cannot style */
+html.dark {
+    background-color: theme('colors.techmids.night');
+    color-scheme: dark;
+}

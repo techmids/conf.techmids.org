@@ -85,7 +85,8 @@ const pickState = (row, room, picks) => {
 };
 
 // Passed-over talks are greyed out but stay clickable, so a pick can be switched in one tap
-const pickTone = (state) => (state?.picked ? ' bg-brand-100' : state?.passedOver ? ' opacity-50 grayscale' : '');
+// In dark mode "now" is !important so, as in the light theme, it wins over the picked tint
+const pickTone = (state) => (state?.picked ? ' bg-brand-100 dark:bg-brand-950' : state?.passedOver ? ' opacity-80 grayscale dark:opacity-60' : '');
 
 const PickButton = ({ picked, onClick }) => (
     <button
@@ -93,7 +94,9 @@ const PickButton = ({ picked, onClick }) => (
         aria-pressed={picked}
         onClick={onClick}
         className={`mt-2 inline-flex items-center rounded-md border px-2 py-1 text-xs font-bold focus:outline-none focus:ring-2 focus:ring-brand-500 ${
-            picked ? 'border-black bg-black text-brand' : 'border-brand-700 bg-white text-brand-900 hover:bg-brand-100'
+            picked
+                ? 'border-black bg-black text-brand dark:border-brand-400 dark:bg-brand-400 dark:text-black'
+                : 'border-brand-900 bg-white text-brand-900 hover:bg-brand-100 dark:border-brand-600 dark:bg-transparent dark:text-brand-100 dark:hover:border-brand-400 dark:hover:bg-transparent dark:hover:text-brand-400'
         }`}
     >
         {picked ? '✓ Picked' : 'Pick'}
@@ -102,7 +105,7 @@ const PickButton = ({ picked, onClick }) => (
 
 // Shown instead of the button where picks can't be changed (someone else's shared day)
 const PickedMark = () => (
-    <span className="mt-2 inline-flex items-center rounded-md border border-black bg-black px-2 py-1 text-xs font-bold text-brand">✓ Picked</span>
+    <span className="mt-2 inline-flex items-center rounded-md border border-black bg-black px-2 py-1 text-xs font-bold text-brand dark:border-brand-400 dark:bg-brand-400 dark:text-black">✓ Picked</span>
 );
 
 // Component to render a single session cell in the combined view
@@ -111,7 +114,7 @@ const SessionCell = ({ slot, isHappening, pick }) => {
         return <td className="px-3 py-2 text-sm text-gray-400">-</td>;
     }
 
-    const cellClass = `${isHappening ? "px-3 py-2 text-sm bg-brand-400" : "px-3 py-2 text-sm"}${pickTone(pick)}`;
+    const cellClass = `${isHappening ? "px-3 py-2 text-sm bg-brand-400 dark:!bg-brand-900 outline outline-2 [outline-offset:-2px] outline-black dark:outline-brand-400" : "px-3 py-2 text-sm"}${pickTone(pick)}`;
 
     if (slot.session) {
         const speakerId = slot.session[0];
@@ -119,8 +122,8 @@ const SessionCell = ({ slot, isHappening, pick }) => {
         return (
             <td className={cellClass}>
                 <Link href={`/speakers/${speakerId}`} className="block">
-                    <div className="font-semibold text-brand-900">{speaker?.name || slot.name}</div>
-                    <div className="text-brand-700 mt-1">{slot.description || speaker?.talkTitle}</div>
+                    <div className="font-semibold text-brand-900 dark:text-brand-100">{speaker?.name || slot.name}</div>
+                    <div className="text-brand-900 dark:text-brand-300 mt-1">{slot.description || speaker?.talkTitle}</div>
                 </Link>
                 {pick && (pick.onToggle ? <PickButton picked={pick.picked} onClick={pick.onToggle} /> : pick.picked && <PickedMark />)}
             </td>
@@ -129,8 +132,8 @@ const SessionCell = ({ slot, isHappening, pick }) => {
 
     return (
         <td className={cellClass}>
-            <div className="font-semibold text-brand-900">{slot.name || 'TBC'}</div>
-            <div className="text-brand-700 mt-1">{slot.description || 'TBC'}</div>
+            <div className="font-semibold text-brand-900 dark:text-brand-100">{slot.name || 'TBC'}</div>
+            <div className="text-brand-900 dark:text-brand-300 mt-1">{slot.description || 'TBC'}</div>
             {pick && (pick.onToggle ? <PickButton picked={pick.picked} onClick={pick.onToggle} /> : pick.picked && <PickedMark />)}
         </td>
     );
@@ -141,30 +144,30 @@ function StackedScheduleView({ day, room, rows, picks, onToggle, parsedDate, tod
     return (
         <div id="schedule" className="w-full mt-8 sm:-mx-8">
             <div className="sm:flex-auto">
-                <h1 className="font-display text-4xl font-medium tracking-tighter text-brand-800 sm:text-5xl">
+                <h1 className="font-display text-4xl font-medium tracking-tighter text-brand-800 dark:text-brand-400 sm:text-5xl">
                     {day.timeOfDay}
                 </h1>
-                <p className="mb-6 mt-2 text-md font-display font-bold sm:text-2xl tracking-tight text-brand-900">
+                <p className="mb-6 mt-2 text-md font-display font-bold sm:text-2xl tracking-tight text-brand-900 dark:text-brand-100">
                     {day.summary}
                 </p>
             </div>
-            <table className="w-full divide-y divide-brand-700 table-auto">
+            <table className="w-full divide-y divide-brand-700 dark:divide-brand-900 table-auto">
                 <thead></thead>
-                <tbody className="divide-y divide-brand-700 bg-white">
+                <tbody className="divide-y divide-brand-700 dark:divide-brand-900 bg-white dark:bg-transparent">
                     {day.timeSlots.map((timeSlot) => {
                         const row = rows.find((r) => r.key === `${timeSlot.start}-${timeSlot.end}`);
                         const state = pickState(row, room, picks);
                         return (
                         <tr
                             key={`${timeSlot.start}${timeSlot.name}`}
-                            className={`${isCurrentTimeSlot(timeSlot, parsedDate, today, timeIrl) ? "flex items-center bg-brand-400 justify-between" : "flex items-center justify-between"}${pickTone(state)}`}
+                            className={`${isCurrentTimeSlot(timeSlot, parsedDate, today, timeIrl) ? "flex items-center bg-brand-400 dark:!bg-brand-900 justify-between outline outline-2 [outline-offset:-2px] outline-black dark:outline-brand-400" : "flex items-center justify-between"}${pickTone(state)}`}
                         >
                             {timeSlot.session ? (
                                 <>
-                                    <td className="time w-1/2 whitespace-nowrap py-1 text-sm font-display font-bold sm:text-lg tracking-tight text-brand-900 sm:w-[200px]">
+                                    <td className="time w-1/2 whitespace-nowrap py-1 text-sm font-display font-bold sm:text-lg tracking-tight text-brand-900 dark:text-brand-100 sm:w-[200px]">
                                         <Link href={`/speakers/${timeSlot.session[0]}`}>{timeSlot.start} - {timeSlot.end}</Link>
                                     </td>
-                                    <td className="flex-col speaker hidden px-3 text-sm font-display sm:text-lg tracking-tight text-brand-800 w-1/2 sm:w-[250px] md:flex items-center">
+                                    <td className="flex-col speaker hidden px-3 text-sm font-display sm:text-lg tracking-tight text-brand-900 dark:text-brand-400 w-1/2 sm:w-[250px] md:flex items-center">
                                         {timeSlot.session.map((speakerId) => (
                                             <div className="w-full flex items-center" key={speakerId}>
                                                 <Link href={`/speakers/${speakerId}`}>
@@ -174,7 +177,7 @@ function StackedScheduleView({ day, room, rows, picks, onToggle, parsedDate, tod
                                             </div>
                                         ))}
                                     </td>
-                                    <td className="summary font-semibold text-sm sm:text-md tracking-tight text-brand-700 w-1/2 sm:w-[400px]">
+                                    <td className="summary font-semibold text-sm sm:text-md tracking-tight text-brand-900 dark:text-brand-300 w-1/2 sm:w-[400px]">
                                         <Link href={`/speakers/${timeSlot.session[0]}`}>{timeSlot.description || Sessions[timeSlot.session[0]]?.talkTitle}</Link>
                                         {state && (
                                             <div>
@@ -189,13 +192,13 @@ function StackedScheduleView({ day, room, rows, picks, onToggle, parsedDate, tod
                                 </>
                             ) : (
                                 <>
-                                    <td className="time w-1/2 whitespace-nowrap py-1 text-sm font-display font-bold sm:text-lg tracking-tight text-brand-900 sm:w-[200px]">
+                                    <td className="time w-1/2 whitespace-nowrap py-1 text-sm font-display font-bold sm:text-lg tracking-tight text-brand-900 dark:text-brand-100 sm:w-[200px]">
                                         {timeSlot.start} - {timeSlot.end}
                                     </td>
-                                    <td className="speaker hidden whitespace-nowrap px-3 text-sm font-display sm:text-lg tracking-tight text-brand-800 w-1/2 sm:w-[250px] md:table-cell">
+                                    <td className="speaker hidden whitespace-nowrap px-3 text-sm font-display sm:text-lg tracking-tight text-brand-900 dark:text-brand-400 w-1/2 sm:w-[250px] md:table-cell">
                                         {timeSlot?.name ?? 'TBC'}
                                     </td>
-                                    <td className="summary font-semibold text-sm sm:text-md tracking-tight text-brand-900 w-1/2 sm:w-[400px]">
+                                    <td className="summary font-semibold text-sm sm:text-md tracking-tight text-brand-900 dark:text-brand-100 w-1/2 sm:w-[400px]">
                                         {timeSlot?.description ?? 'TBC'}
                                         {state && (
                                             <div>
@@ -225,16 +228,16 @@ function CombinedScheduleView({ rows, parsedDate, today, timeIrl, picks, onToggl
     return (
         <div className="w-full mt-8 sm:-mx-8">
             <div className="overflow-x-auto">
-                <table className="w-full divide-y divide-brand-700 table-auto">
-                    <thead className="bg-brand-100 hidden md:table-header-group">
+                <table className="w-full divide-y divide-brand-700 dark:divide-brand-900 table-auto">
+                    <thead className="bg-brand-100 dark:bg-techmids-coal hidden md:table-header-group">
                         <tr>
-                            <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900">Time</th>
-                            <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900">Screen 3</th>
-                            <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900">Screen 2</th>
-                            <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900">Screen 1</th>
+                            <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900 dark:text-brand-100">Time</th>
+                            <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900 dark:text-brand-100">Screen 3</th>
+                            <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900 dark:text-brand-100">Screen 2</th>
+                            <th className="px-3 py-2 text-left text-sm font-display font-bold text-brand-900 dark:text-brand-100">Screen 1</th>
                         </tr>
                     </thead>
-                    <tbody className="divide-y divide-brand-700 bg-white">
+                    <tbody className="divide-y divide-brand-700 dark:divide-brand-900 bg-white dark:bg-transparent">
                         {timeSlots.map((slot, index) => {
                             const isRowActive = isCurrentTimeSlot(slot.screen3 || slot.screen2 || slot.screen1, parsedDate, today, timeIrl);
                             const isSameAcrossAll = slot.shared;
@@ -245,8 +248,8 @@ function CombinedScheduleView({ rows, parsedDate, today, timeIrl, picks, onToggl
                             };
 
                             return (
-                                <tr key={index} className={`block md:table-row border-b md:border-b-0 border-brand-700 mb-4 md:mb-0 rounded-lg md:rounded-none shadow-md md:shadow-none ${isRowActive ? "bg-brand-200" : ""}`}>
-                                    <td className="px-3 py-2 whitespace-nowrap text-sm font-display font-bold text-brand-900 block md:table-cell">
+                                <tr key={index} className={`block md:table-row border-b md:border-b-0 border-brand-700 dark:border-brand-900 mb-4 md:mb-0 rounded-lg md:rounded-none shadow-md md:shadow-none ${isRowActive ? "bg-brand-200 dark:bg-brand-900/50" : ""}`}>
+                                    <td className="px-3 py-2 whitespace-nowrap text-sm font-display font-bold text-brand-900 dark:text-brand-100 block md:table-cell">
                                         <span className="font-bold md:hidden">Time: </span>{slot.start} - {slot.end}
                                     </td>
                                     {isSameAcrossAll ? (
@@ -292,16 +295,16 @@ const TalkCard = ({ option, picked, passedOver, onToggle }) => {
     const who = speaker ? `${speaker.name}${speaker.jobTitle ? ` · ${speaker.jobTitle}` : ''}` : slot.name;
 
     return (
-        <div className={`flex items-start gap-3 rounded-lg border p-3 ${picked ? 'border-black bg-brand-100' : 'border-brand-700 bg-white'}${passedOver ? ' opacity-50 grayscale' : ''}`}>
+        <div className={`flex items-start gap-3 rounded-lg border p-3 ${picked ? 'border-black bg-brand-100 dark:border-brand-400 dark:bg-brand-950' : 'border-brand-800 bg-white dark:border-neutral-500 dark:bg-techmids-coal'}${passedOver ? ' opacity-80 grayscale dark:opacity-60' : ''}`}>
             {speaker?.image && (
                 <Image className="h-12 w-12 flex-none rounded-full" src={speaker.image} alt="" style={{ objectFit: 'cover' }} />
             )}
             <div className="min-w-0 flex-1">
-                <div className="text-xs font-bold uppercase tracking-wide text-brand-700">{label}</div>
-                <div className="font-semibold text-brand-900">
+                <div className="text-xs font-bold uppercase tracking-wide text-brand-900 dark:text-brand-300">{label}</div>
+                <div className="font-semibold text-brand-900 dark:text-brand-100">
                     {slot.session ? <Link href={`/speakers/${slot.session[0]}`}>{title}</Link> : title}
                 </div>
-                <div className="text-sm text-brand-800">{who}</div>
+                <div className="text-sm text-brand-900 dark:text-brand-400">{who}</div>
             </div>
             {onToggle && (
                 <div className="flex-none">
@@ -322,17 +325,17 @@ function MyDayView({ rows, parsedDate, today, timeIrl, picks, onToggle }) {
                 {rows.map((row) => {
                     const active = isCurrentTimeSlot(row, parsedDate, today, timeIrl);
                     const time = (
-                        <div className="font-display text-sm font-bold text-brand-900">
+                        <div className="font-display text-sm font-bold text-brand-900 dark:text-brand-100">
                             {row.start} - {row.end}
-                            {active && <span className="ml-2 rounded bg-black px-2 py-0.5 text-xs text-brand">Now</span>}
+                            {active && <span className="ml-2 rounded bg-black px-2 py-0.5 text-xs text-brand dark:bg-brand-400 dark:text-black">Now</span>}
                         </div>
                     );
 
                     if (row.shared) {
                         return (
-                            <li key={row.key} className={`rounded-lg px-3 py-2 ${active ? 'bg-brand-200' : 'bg-brand-100'}`}>
+                            <li key={row.key} className={`rounded-lg px-3 py-2 ${active ? 'bg-brand-200 dark:bg-brand-900 outline outline-2 [outline-offset:-2px] outline-black dark:outline-brand-400' : 'bg-brand-100 dark:bg-techmids-coal'}`}>
                                 {time}
-                                <div className="text-sm text-brand-800">
+                                <div className="text-sm text-brand-900 dark:text-brand-400">
                                     <span className="font-semibold">{row.screen1.name}</span>
                                     {row.screen1.description ? ` · ${row.screen1.description}` : ''}
                                 </div>
@@ -344,14 +347,14 @@ function MyDayView({ rows, parsedDate, today, timeIrl, picks, onToggle }) {
                     const showChoices = !picked || changing === row.key;
 
                     return (
-                        <li key={row.key} className={`rounded-lg px-3 py-2 ${active ? 'bg-brand-200' : ''}`}>
+                        <li key={row.key} className={`rounded-lg px-3 py-2 ${active ? 'bg-brand-200 dark:bg-brand-900 outline outline-2 [outline-offset:-2px] outline-black dark:outline-brand-400' : ''}`}>
                             <div className="mb-2 flex items-center justify-between">
                                 {time}
-                                {!picked && <span className="text-xs font-bold uppercase tracking-wide text-brand-700">Pick one</span>}
+                                {!picked && <span className="text-xs font-bold uppercase tracking-wide text-brand-900 dark:text-brand-300">Pick one</span>}
                                 {picked && onToggle && (
                                     <button
                                         type="button"
-                                        className="text-sm font-semibold text-brand-900 underline"
+                                        className="text-sm font-semibold text-brand-900 dark:text-brand-100 underline"
                                         onClick={() => setChanging(changing === row.key ? null : row.key)}
                                     >
                                         {changing === row.key ? 'Done' : 'Change'}
@@ -501,16 +504,16 @@ export function Schedule() {
         }
     };
 
-    const buttonBaseClass = "px-4 py-2 text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 shadow-md";
-    const activeClass = "bg-black text-brand";
-    const inactiveClass = "bg-white text-black hover:bg-brand-100";
+    const buttonBaseClass = "px-4 py-2 text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 dark:focus:ring-offset-techmids-night shadow-md";
+    const activeClass = "border border-black bg-black text-brand dark:border-brand-400 dark:bg-brand-400 dark:text-black";
+    const inactiveClass = "border border-brand-800 bg-white text-black hover:bg-brand-100 dark:border-neutral-500 dark:bg-techmids-coal dark:text-gray-100 dark:hover:bg-neutral-700";
 
     return (
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10">
             <div className="flex flex-col mx-auto">
                 <div className="flex flex-wrap items-center mb-4">
-                    <h1 className="font-display text-4xl font-medium text-brand-800 sm:text-7xl" id="schedule">Schedule</h1>
-                    <p className="w-full mt-4 font-display text-2xl text-brand-900">
+                    <h1 className="font-display text-4xl font-medium text-brand-800 dark:text-brand-400 sm:text-7xl" id="schedule">Schedule</h1>
+                    <p className="w-full mt-4 font-display text-2xl text-brand-900 dark:text-brand-100">
                         Your day will be composed of 30-45 minute sessions including plenty of time to chat, network and move between talks.
                     </p>
                 </div>
@@ -543,7 +546,7 @@ export function Schedule() {
 
                 <div className="flex flex-col items-center px-4 sm:px-6 lg:px-8 sm:m-8">
                     {sharedPicks && (
-                        <div className="w-full max-w-3xl rounded-lg border border-black bg-brand-100 p-3 text-sm text-brand-900">
+                        <div className="w-full max-w-3xl rounded-lg border border-black bg-brand-100 dark:border-brand-400 dark:bg-brand-950 p-3 text-sm text-brand-900 dark:text-brand-100">
                             <p className="font-semibold">You are looking at picks someone shared with you.</p>
                             <div className="mt-2 flex flex-wrap gap-2">
                                 <button type="button" onClick={saveShared} className={`${buttonBaseClass} ${activeClass}`}>
@@ -592,7 +595,7 @@ export function Schedule() {
                         />
                     )}
                     {!sharedPicks && (
-                        <div className="mt-6 w-full max-w-3xl text-sm text-brand-900">
+                        <div className="mt-6 w-full max-w-3xl text-sm text-brand-900 dark:text-brand-100">
                             <div className="flex flex-wrap items-center gap-2">
                                 <button
                                     type="button"

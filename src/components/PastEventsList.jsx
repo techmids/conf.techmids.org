@@ -52,7 +52,7 @@ export function PastEventsList({past_events}) {
   });
 
   return (
-    <div className="relative overflow-hidden bg-white py-16">
+    <div className="relative overflow-hidden bg-white dark:bg-techmids-night py-16">
       <div className="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full">
         <div
           className="relative mx-auto h-full max-w-prose text-lg"
@@ -79,7 +79,7 @@ export function PastEventsList({past_events}) {
                   y={0}
                   width={4}
                   height={4}
-                  className="text-gray-200"
+                  className="text-gray-200 dark:text-neutral-800"
                   fill="currentColor"
                 />
               </pattern>
@@ -111,7 +111,7 @@ export function PastEventsList({past_events}) {
                   y={0}
                   width={4}
                   height={4}
-                  className="text-gray-200"
+                  className="text-gray-200 dark:text-neutral-800"
                   fill="currentColor"
                 />
               </pattern>
@@ -143,7 +143,7 @@ export function PastEventsList({past_events}) {
                   y={0}
                   width={4}
                   height={4}
-                  className="text-gray-200"
+                  className="text-gray-200 dark:text-neutral-800"
                   fill="currentColor"
                 />
               </pattern>
@@ -156,11 +156,11 @@ export function PastEventsList({past_events}) {
           </svg>
         </div>
       </div>
-      <div className="bg-white">
+      <div className="bg-white dark:bg-techmids-night">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">See our past events</h2>
-            <p className="mt-2 text-lg leading-8 text-gray-600">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">See our past events</h2>
+            <p className="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300">
               A snapshot of our website from our previous events
             </p>
           </div>
