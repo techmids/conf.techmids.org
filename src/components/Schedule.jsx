@@ -105,7 +105,7 @@ const SessionCell = ({ slot, isHappening, pick }) => {
             <td className={cellClass}>
                 <Link href={`/speakers/${speakerId}`} className="block">
                     <div className="font-semibold text-brand-900 dark:text-brand-100">{speaker?.name || slot.name}</div>
-                    <div className="text-brand-700 dark:text-brand-300 mt-1">{slot.description || speaker?.talkTitle}</div>
+                    <div className="text-brand-900 dark:text-brand-300 mt-1">{slot.description || speaker?.talkTitle}</div>
                 </Link>
                 {pick && <PickButton picked={pick.picked} onClick={pick.onToggle} />}
             </td>
@@ -115,7 +115,7 @@ const SessionCell = ({ slot, isHappening, pick }) => {
     return (
         <td className={cellClass}>
             <div className="font-semibold text-brand-900 dark:text-brand-100">{slot.name || 'TBC'}</div>
-            <div className="text-brand-700 dark:text-brand-300 mt-1">{slot.description || 'TBC'}</div>
+            <div className="text-brand-900 dark:text-brand-300 mt-1">{slot.description || 'TBC'}</div>
             {pick && <PickButton picked={pick.picked} onClick={pick.onToggle} />}
         </td>
     );
@@ -146,7 +146,7 @@ function StackedScheduleView({ day, parsedDate, today, timeIrl }) {
                                     <td className="time w-1/2 whitespace-nowrap py-1 text-sm font-display font-bold sm:text-lg tracking-tight text-brand-900 dark:text-brand-100 sm:w-[200px]">
                                         <Link href={`/speakers/${timeSlot.session[0]}`}>{timeSlot.start} - {timeSlot.end}</Link>
                                     </td>
-                                    <td className="flex-col speaker hidden px-3 text-sm font-display sm:text-lg tracking-tight text-brand-800 dark:text-brand-400 w-1/2 sm:w-[250px] md:flex items-center">
+                                    <td className="flex-col speaker hidden px-3 text-sm font-display sm:text-lg tracking-tight text-brand-900 dark:text-brand-400 w-1/2 sm:w-[250px] md:flex items-center">
                                         {timeSlot.session.map((speakerId) => (
                                             <div className="w-full flex items-center" key={speakerId}>
                                                 <Link href={`/speakers/${speakerId}`}>
@@ -156,7 +156,7 @@ function StackedScheduleView({ day, parsedDate, today, timeIrl }) {
                                             </div>
                                         ))}
                                     </td>
-                                    <td className="summary font-semibold text-sm sm:text-md tracking-tight text-brand-700 dark:text-brand-300 w-1/2 sm:w-[400px]">
+                                    <td className="summary font-semibold text-sm sm:text-md tracking-tight text-brand-900 dark:text-brand-300 w-1/2 sm:w-[400px]">
                                         <Link href={`/speakers/${timeSlot.session[0]}`}>{timeSlot.description || Sessions[timeSlot.session[0]]?.talkTitle}</Link>
                                     </td>
                                 </>
@@ -165,7 +165,7 @@ function StackedScheduleView({ day, parsedDate, today, timeIrl }) {
                                     <td className="time w-1/2 whitespace-nowrap py-1 text-sm font-display font-bold sm:text-lg tracking-tight text-brand-900 dark:text-brand-100 sm:w-[200px]">
                                         {timeSlot.start} - {timeSlot.end}
                                     </td>
-                                    <td className="speaker hidden whitespace-nowrap px-3 text-sm font-display sm:text-lg tracking-tight text-brand-800 dark:text-brand-400 w-1/2 sm:w-[250px] md:table-cell">
+                                    <td className="speaker hidden whitespace-nowrap px-3 text-sm font-display sm:text-lg tracking-tight text-brand-900 dark:text-brand-400 w-1/2 sm:w-[250px] md:table-cell">
                                         {timeSlot?.name ?? 'TBC'}
                                     </td>
                                     <td className="summary font-semibold text-sm sm:text-md tracking-tight text-brand-900 dark:text-brand-100 w-1/2 sm:w-[400px]">
@@ -260,11 +260,11 @@ const TalkCard = ({ option, picked, onToggle }) => {
                 <Image className="h-12 w-12 flex-none rounded-full" src={speaker.image} alt="" style={{ objectFit: 'cover' }} />
             )}
             <div className="min-w-0 flex-1">
-                <div className="text-xs font-bold uppercase tracking-wide text-brand-700 dark:text-brand-300">{label}</div>
+                <div className="text-xs font-bold uppercase tracking-wide text-brand-900 dark:text-brand-300">{label}</div>
                 <div className="font-semibold text-brand-900 dark:text-brand-100">
                     {slot.session ? <Link href={`/speakers/${slot.session[0]}`}>{title}</Link> : title}
                 </div>
-                <div className="text-sm text-brand-800 dark:text-brand-400">{who}</div>
+                <div className="text-sm text-brand-900 dark:text-brand-400">{who}</div>
             </div>
             {onToggle && (
                 <div className="flex-none">
@@ -295,7 +295,7 @@ function MyDayView({ rows, parsedDate, today, timeIrl, picks, onToggle }) {
                         return (
                             <li key={row.key} className={`rounded-lg px-3 py-2 ${active ? 'bg-brand-200 dark:bg-brand-900' : 'bg-brand-100 dark:bg-techmids-coal'}`}>
                                 {time}
-                                <div className="text-sm text-brand-800 dark:text-brand-400">
+                                <div className="text-sm text-brand-900 dark:text-brand-400">
                                     <span className="font-semibold">{row.screen1.name}</span>
                                     {row.screen1.description ? ` · ${row.screen1.description}` : ''}
                                 </div>
@@ -310,7 +310,7 @@ function MyDayView({ rows, parsedDate, today, timeIrl, picks, onToggle }) {
                         <li key={row.key} className={`rounded-lg px-3 py-2 ${active ? 'bg-brand-200 dark:bg-brand-900' : ''}`}>
                             <div className="mb-2 flex items-center justify-between">
                                 {time}
-                                {!picked && <span className="text-xs font-bold uppercase tracking-wide text-brand-700 dark:text-brand-300">Pick one</span>}
+                                {!picked && <span className="text-xs font-bold uppercase tracking-wide text-brand-900 dark:text-brand-300">Pick one</span>}
                                 {picked && onToggle && (
                                     <button
                                         type="button"
