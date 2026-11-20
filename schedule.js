@@ -570,6 +570,7 @@ const goldmanSachsTalk = {
     description: 'CVE Explosion and the Future of Open Source',
     start: session3Start,
     end: session3End,
+    session: ['MikolajMaciejak'],
 }
 
 const cliffAgius = {
