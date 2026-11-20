@@ -1,7 +1,8 @@
 import { ButtonLink } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
-import {EVENT} from "../../event";
+import Link from 'next/link'
+import {EVENT, AVAILABLE_INFORMATION} from "../../event";
 
 export function Header() {
   return (
@@ -42,6 +43,14 @@ export function Header() {
             ) : null}
         </div>
       </Container>
+      <nav aria-label="Main" className="mt-6 flex justify-center gap-6 font-mono text-sm text-brand-500">
+        {AVAILABLE_INFORMATION.scheduleAvailable && (
+          <Link href="/schedule" className="underline-offset-4 hover:underline">Schedule</Link>
+        )}
+        {AVAILABLE_INFORMATION.speakersAvailable && (
+          <Link href="/speakers" className="underline-offset-4 hover:underline">Speakers</Link>
+        )}
+      </nav>
     </header>
   )
 }
