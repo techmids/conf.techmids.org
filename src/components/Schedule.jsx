@@ -614,9 +614,7 @@ export function Schedule() {
                                     Clear picks
                                 </button>
                                 <span role="status" className="break-all">{shareNote}</span>
-                            </div>
-                            <p className="mt-3">Your picks are saved on this device only. Nothing is sent anywhere.</p>
-                        </div>
+                            </div>                        </div>
                     )}
                 </div>
             </div>
