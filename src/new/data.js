@@ -5,8 +5,8 @@ import { Schedule } from '../../schedule'
 import { Sessions } from '../../speakers'
 import { EVENT } from '../../event'
 
-// Where the rebuilt site lives while it is being reviewed. Change to '' to go live at the root.
-export const BASE = '/new'
+// Path the site is served under. '' is the root; a value such as '/new' turns it back into a noindex preview.
+export const BASE = ''
 export const href = (path = '') => `${BASE}${path}` || '/'
 
 // Screen 3 first, matching the order the current site uses.
