@@ -1,4 +1,4 @@
-// `url` is optional: the rebuilt site links the logo when it is set
+// `url` is optional: the logo links to it when it is set
 export const meetups = [
   {
     name: 'Fusion Events',
@@ -90,12 +90,18 @@ export function Meetups() {
                     id={meetup.name}
                     key={index}
                 >
-                  <img
-                      className="h-16"
-                      src={meetup.image}
-                      alt={meetup.name}
-                      title={meetup.name}
-                  />
+                  {meetup.url ? (
+                      <a href={meetup.url} target="_blank" rel="noopener noreferrer" title={meetup.name}>
+                        <img className="h-16" src={meetup.image} alt={meetup.name} />
+                      </a>
+                  ) : (
+                      <img
+                          className="h-16"
+                          src={meetup.image}
+                          alt={meetup.name}
+                          title={meetup.name}
+                      />
+                  )}
                 </div>
             ))}
             <div className="col-span-1 flex justify-center py-8 backdrop-opacity-10">

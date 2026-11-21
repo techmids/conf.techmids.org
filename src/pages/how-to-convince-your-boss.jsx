@@ -1,45 +1,37 @@
-import { Layout } from '@/new/Layout'
-import { Arrow, Button, Eyebrow } from '@/new/ui'
-import { EVENT } from '../../event'
+import {ButtonCTA} from "@/components/ButtonCTA";
+import {PageMeta} from "@/components/PageMeta";
 
-const TicketCta = () =>
-  EVENT.onSale ? (
-    <div className="tm-cta">
-      <div>
-        <h3 className="tm-h3">
-          Tickets are <span className="tm-hl">on sale now!</span>
-        </h3>
-        <p>
-          {EVENT.date} · {EVENT.venue}, {EVENT.address}
-        </p>
-      </div>
-      <div>
-        <Button href={EVENT.ticketLink}>
-          Get your ticket for {EVENT.edition} now <Arrow />
-        </Button>
-      </div>
-    </div>
-  ) : null
-
-// Wording is unchanged from src/pages/how-to-convince-your-boss.jsx
 export default function HowToConvinceYourBoss() {
-  return (
-    <Layout
-      path="/how-to-convince-your-boss"
-      current="Convince your boss"
-      title="How to convince your boss to send you to TechMids Conf"
-      description="Our guide to making the business case for a day at TechMids Conf, Birmingham's community-driven tech conference."
-    >
-      <article className="tm-wrap tm-article">
-        <Eyebrow route="/how-to-convince-your-boss">Our Guide</Eyebrow>
-        <h1 className="tm-h1 tm-h1-page">How to convince your boss to send you to a conference</h1>
-        <p className="tm-lede">
-          You are part of a team building software solutions all day every day. How can you convince your boss
-          to give you a day to attend this amazing conference?
-        </p>
-        <img className="tm-article-img" src="/how-to-convince-your-boss/venue.jpg" alt="" />
-        <div className="tm-prose">
-          <h2>
+    return (
+        <>
+        <PageMeta
+            path="/how-to-convince-your-boss"
+            title="How to convince your boss to send you to TechMids Conf"
+            description="Our guide to making the business case for a day at TechMids Conf, Birmingham's community-driven tech conference."
+        />
+        <div className="relative bg-white dark:bg-techmids-night">
+            <div className="lg:absolute lg:inset-0">
+                <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
+                    <img
+                        className="h-56 w-full object-cover lg:absolute lg:h-full"
+                        src="/how-to-convince-your-boss/venue.jpg"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div className="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
+                <div className="lg:col-start-2 lg:pl-8">
+                    <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
+                        <h2 className="leading-6 text-brand-900 dark:text-brand-100 font-semibold tracking-wide uppercase">Our Guide</h2>
+                        <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                            How to convince your boss to send you to a conference
+                        </h3>
+                        <p className="mt-8 text-lg text-gray-500 dark:text-gray-300">
+                            You are part of a team building software solutions all day every day. How can you convince your
+                            boss to give you a day to attend this amazing conference?
+                        </p>
+                        <div className="mt-5 prose prose-yellow dark:prose-invert text-gray-500 dark:text-gray-300">
+                            <h2>
                                 Talk business. There’s an ROI in attending a conference.
                             </h2>
                             <p>
@@ -53,7 +45,7 @@ export default function HowToConvinceYourBoss() {
                                 your arguments, and you can convince even the most skeptical boss.</p>
 
                             <h3>Training</h3>
-                            <ul>
+                            <ul role="list">
                                 <li>Explain why you want to attend TechMids Conf, and what you plan to learn there.
                                     Mention any specific pain points your team might have: slow processes, knowledge
                                     gaps, lack of code quality; and point out how attending TechMids Conf would boost you
@@ -90,13 +82,32 @@ export default function HowToConvinceYourBoss() {
                                 presence at TechMids Conf! You can raise awareness for your brand, get direct feedback from
                                 your users, gain some new ones, and show that your company cares about its community.
                             </p>
+                            {/* ButtonCTA is written for a dark background (white headings) */}
+                            <div className="not-prose mt-10 rounded-3xl bg-techmids-black px-4 py-2 sm:px-8 dark:bg-techmids-coal">
+                                <ButtonCTA/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <TicketCta />
-        <img className="tm-article-img" src="/how-to-convince-your-boss/chairs.jpg" alt="" />
-        <div className="tm-prose">
-          <h2>Be prepared for a NO – and don’t give up</h2>
+    <div className="relative bg-white dark:bg-techmids-night">
+        <div className="lg:absolute lg:inset-0">
+            <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
+                <img
+                    className="h-56 w-full object-cover lg:absolute lg:h-full"
+                    src="/how-to-convince-your-boss/chairs.jpg"
+                    alt=""
+                />
+            </div>
+        </div>
+        <div className="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
+            <div className="lg:col-start-2 lg:pl-8">
+                <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
+                    <div className="mt-5 prose prose-yellow dark:prose-invert text-gray-500 dark:text-gray-300">
+                        <h2>Be prepared for a NO – and don’t give up</h2>
                     <p>You might hear one of the following:</p>
-                    <p className="tm-said">
+                    <p className="italic">
                         “We have no budget”
                     </p>
                     <p>
@@ -107,7 +118,7 @@ export default function HowToConvinceYourBoss() {
                     <p>
                         Is this investment in your training worth it or not? Ask your boss why they think that it isn’t.
                     </p>
-                    <p className="tm-said">
+                    <p className="italic">
                         “We have no time”
                     </p>
                     <p>
@@ -138,9 +149,15 @@ export default function HowToConvinceYourBoss() {
                         above reasons apply, too. We’d even argue that a conference like TechMids Conf is the
                         place to meet and connect with new clients.
                     </p>
+                    {/* ButtonCTA is written for a dark background (white headings) */}
+                            <div className="not-prose mt-10 rounded-3xl bg-techmids-black px-4 py-2 sm:px-8 dark:bg-techmids-coal">
+                                <ButtonCTA/>
+                            </div>
+                </div>
+                </div>
+            </div>
         </div>
-        <TicketCta />
-      </article>
-    </Layout>
-  )
+    </div>
+</>
+)
 }

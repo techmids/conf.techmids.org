@@ -1,6 +1,6 @@
 import 'focus-visible'
 import '@/styles/tailwind.css'
-// Site styles. Every rule is scoped to .tm-site; Tailwind stays for the few older pages (flyer, feedback, sharing).
+// Styles for the rebuilt site under /new. Every rule is scoped to .tm-site.
 import '@/new/tokens.css'
 import '@/new/site.css'
 

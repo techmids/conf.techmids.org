@@ -9,7 +9,8 @@ import { BlockLogo, Button, Wordmark } from './ui'
 const FONTS =
   'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Martian+Mono:wght@400;500;600&display=swap'
 
-// Uses the html.dark class and the `theme` localStorage key. The class is set before paint by _document.jsx.
+// Uses the same html.dark class and localStorage key as the current site, so the
+// choice carries between the two. The class is set before paint by _document.jsx.
 function ThemeToggle() {
   const [dark, setDark] = useState(false)
   useEffect(() => {
@@ -115,8 +116,7 @@ function Footer() {
   )
 }
 
-// Every page goes through this: brand fonts, header and footer.
-// If BASE in data.js is set to a sub-path, the site becomes a noindex preview with a strip saying so.
+// Every rebuilt page goes through this: brand fonts, noindex while it lives at /new, header and footer.
 export function Layout({ path = '', title, description, image, current, children }) {
   const preview = BASE !== ''
   return (
@@ -140,7 +140,7 @@ export function Layout({ path = '', title, description, image, current, children
         <p className="tm-preview" role="note">
           <span className="tm-badge tm-badge-solid">Preview</span>
           <span>
-            A proposed redesign, not public yet. <a href="/">See the live site</a>
+            A proposed redesign, not public yet. <a href="/">See the current site</a>
           </span>
         </p>
       )}
