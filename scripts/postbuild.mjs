@@ -6,8 +6,8 @@
 //    a 404 page or marked noindex, so new pages (and every /speakers/[speaker]
 //    page) are listed automatically. URLs match the canonical tags from
 //    src/components/PageMeta.jsx.
-// 3. The site was previewed at /new before it went live. Those links were
-//    shared around, so each one now forwards to the same page at the root.
+// 3. The preview of the rebuilt site at /new also answers at /new/. Its pages
+//    are all noindex, so step 2 leaves them out of the sitemap.
 
 import fs from 'fs/promises'
 import path from 'path'
@@ -52,29 +52,18 @@ async function writeSitemap() {
     console.log(`postbuild: wrote sitemap.xml with ${urls.length} URLs`)
 }
 
-// Forward the old preview URLs (/new, /new/schedule, /new/speakers/x ...) to the live pages.
-// GitHub Pages has no server redirects, so each one is a tiny noindex page that sends the browser on.
-// Written before the sitemap, which skips them because they are noindex.
-async function writePreviewRedirects() {
-    const routes = ['/']
-    for (const file of await htmlFiles(OUT_DIR)) {
-        const relative = path.relative(OUT_DIR, file).split(path.sep).join('/')
-        if (/^(past|sharing|new)\//.test(relative) || /^(404|500|index|new|flyer|feedback)\.html$/.test(relative)) continue
-        routes.push(`/${relative.replace(/\.html$/, '').replace(/\/index$/, '')}`)
+// The rebuilt site is previewed at /new. The export writes its homepage to
+// out/new.html; GitHub Pages serves that at /new but not at /new/, so a copy
+// goes to out/new/index.html to make the trailing-slash URL work as well.
+async function aliasPreviewIndex() {
+    const source = path.join(OUT_DIR, 'new.html')
+    try {
+        await fs.copyFile(source, path.join(OUT_DIR, 'new', 'index.html'))
+        console.log('postbuild: copied new.html to new/index.html')
+    } catch (error) {
+        if (error.code !== 'ENOENT') throw error
     }
-    const page = (target) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>TechMids Conf</title>` +
-        `<meta name="robots" content="noindex"><link rel="canonical" href="${SITE_URL}${target}">` +
-        `<meta http-equiv="refresh" content="0; url=${target}">` +
-        `<script>location.replace(${JSON.stringify(target)} + location.search + location.hash)</script>` +
-        `</head><body><p><a href="${target}">TechMids Conf has moved here</a></p></body></html>\n`
-    for (const route of routes) {
-        const file = path.join(OUT_DIR, 'new', route === '/' ? 'index.html' : `${route.slice(1)}.html`)
-        await fs.mkdir(path.dirname(file), {recursive: true})
-        await fs.writeFile(file, page(route))
-    }
-    await fs.writeFile(path.join(OUT_DIR, 'new.html'), page('/'))
-    console.log(`postbuild: wrote ${routes.length} redirects from /new`)
 }
 
-await writePreviewRedirects()
+await aliasPreviewIndex()
 await writeSitemap()
