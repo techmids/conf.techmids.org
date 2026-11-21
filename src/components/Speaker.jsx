@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 const asURL = (prefix) => (value) => value.startsWith('http') ? value : `${prefix}${value}`
 
-const SOCIALS = {
+export const SOCIALS = {
   linkedin: {
     label: 'LinkedIn',
     url: asURL('https://www.linkedin.com/in/'),

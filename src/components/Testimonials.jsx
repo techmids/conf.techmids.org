@@ -1,4 +1,4 @@
-const featuredTestimonial = {
+export const featuredTestimonial = {
     body: 'The TechMids October 2022 event was an absolute delight! The organisers\' dedication was evident in every aspect. The talks were highly engaging, the level of attendance was great, and the overall atmosphere was fantastic. I took away so many great lessons that I\'ve factored into my own working practices, but the main thing I loved was seeing such a large swathe of the midlands tech community (and beyond) show up. 10 out of 10.',
     author: {
         name: 'Andy Macdonald, Software Engineer',
@@ -7,7 +7,7 @@ const featuredTestimonial = {
         logoUrl: '/sponsors/stackwizards.png',
     },
 }
-const testimonials = [
+export const testimonials = [
     [
         [
             {

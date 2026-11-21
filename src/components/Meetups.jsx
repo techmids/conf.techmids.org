@@ -1,4 +1,4 @@
-const meetups = [
+export const meetups = [
   {
     name: 'Fusion Events',
     image: '/meetups/fusion-events.png',

@@ -1,4 +1,4 @@
-const images = [
+export const images = [
   {
     "name": "1",
     "source": "/gallery/2025/1.jpg"
