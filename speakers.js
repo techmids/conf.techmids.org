@@ -668,7 +668,7 @@ export const Sessions = {
         github: "https://github.com/jessicarose",
         x: "https://x.com/jesslynnrose",
         mastodon: "https://mastodon.social/@jessie",
-        sessionType: "Talk",
+        sessionType: "Keynote",
         speakerCard: false,
         speakerCardImage: "",
     },
