@@ -96,6 +96,11 @@ export function findTalk(speakerId) {
 
 export const speakerList = () => Object.entries(Sessions).map(([id, speaker]) => ({ id, ...speaker }))
 
+// True while the line up is still open: the event says so and a talk slot has no speaker yet.
+// Once every slot on the schedule is filled, the "more speakers" tile and wording go away.
+export const moreSpeakersToCome = () =>
+  Boolean(EVENT.speakersTBC) && buildRows().some((row) => row.options.some((option) => !option.speaker))
+
 // 'Fri 27 Nov 2026' style label for mono captions
 export const shortDate = () =>
   new Date(`${EVENT.isoDate}T12:00:00Z`).toLocaleDateString('en-GB', {

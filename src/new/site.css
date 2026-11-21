@@ -214,8 +214,10 @@ html:not(.dark) .tm-theme-dark, html.dark .tm-theme-light { display: inline; bac
 .tm-tiers { display: grid; gap: var(--space-6); }
 .tm-tier ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-3); }
 .tm-tier a { display: grid; place-items: center; background: #fff; border: 1px solid var(--tm-border); border-radius: var(--radius-md); padding: 14px; height: 88px; width: 156px; }
-.tm-tier img { max-height: 100%; max-width: 100%; object-fit: contain; }
-.tm-tier-xl a { height: 140px; width: 280px; padding: 20px; }
+/* One fixed grid track gives the logo a definite box, so a tall logo shrinks to fit instead of spilling out */
+.tm-tier a, .tm-meetups li, .tm-meetups a { grid-template: minmax(0, 1fr) / minmax(0, 1fr); }
+.tm-tier img { width: 100%; height: 100%; object-fit: contain; }
+.tm-tier-xl a { height: 150px; width: 280px; padding: 8px; }
 .tm-tier-lg a { height: 116px; width: 220px; }
 .tm-tier-md a { height: 100px; width: 180px; }
 .tm-cta { display: grid; gap: var(--space-5); margin-top: var(--space-7); padding: var(--space-5); background: var(--graphite-950); color: var(--graphite-400); border-radius: var(--radius-md); }
@@ -224,7 +226,9 @@ html:not(.dark) .tm-theme-dark, html.dark .tm-theme-light { display: inline; bac
 .tm-cta .tm-btn { max-width: 100%; }
 .tm-meetups { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
 .tm-meetups li { display: grid; place-items: center; background: #fff; border: 1px solid var(--tm-border); border-radius: var(--radius-md); height: 96px; padding: 14px; }
-.tm-meetups img { max-height: 100%; max-width: 100%; object-fit: contain; }
+.tm-meetups img { width: 100%; height: 100%; object-fit: contain; }
+.tm-meetups a { display: grid; place-items: center; width: 100%; height: 100%; }
+.tm-meetups li:has(a):hover, .tm-tier a:hover { border-color: var(--tm-text); }
 .tm-meetups-more { background: transparent !important; border-style: dashed !important; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--tm-text-muted); }
 
 /* ---------- article pages, past events ---------- */

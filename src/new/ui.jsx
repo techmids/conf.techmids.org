@@ -53,9 +53,17 @@ export function Button({ href, variant = 'primary', size, className = '', childr
       </button>
     )
   }
+  // Email links open the mail app, so they must not open a blank tab first
+  if (href.startsWith('mailto:')) {
+    return (
+      <a href={href} className={classes} {...props}>
+        {children}
+      </a>
+    )
+  }
   if (isExternal(href)) {
     return (
-      <a href={href} className={classes} rel="noopener" target="_blank" {...props}>
+      <a href={href} className={classes} rel="noopener noreferrer" target="_blank" {...props}>
         {children}
       </a>
     )

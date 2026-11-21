@@ -2,7 +2,7 @@ import Script from 'next/script'
 import Link from 'next/link'
 import { Layout } from '@/new/Layout'
 import { Arrow, Badge, BlockLogo, Button, Eyebrow, Section, Tag } from '@/new/ui'
-import { dayOutline, href, longDate, shortDate, speakerList } from '@/new/data'
+import { dayOutline, href, longDate, moreSpeakersToCome, shortDate, speakerList } from '@/new/data'
 import { SpeakerCard } from '@/new/SpeakerCard'
 import { images } from '@/components/Images'
 import { meetups } from '@/components/Meetups'
@@ -164,12 +164,13 @@ function Gallery() {
 
 function Speakers() {
   const speakers = speakerList()
+  const moreSpeakers = moreSpeakersToCome()
   return (
     <Section
       id="speakers"
       wide
       route="/speakers"
-      label={`${speakers.length} announced`}
+      label={moreSpeakers ? `${speakers.length} announced` : `${speakers.length} speakers`}
       title="Speakers"
       lede="Come away inspired from a day of talks from experts, ranging from front end engineering, to cloud platforms and operations, with everything in between."
     >
@@ -187,7 +188,7 @@ function Speakers() {
               <SpeakerCard speaker={speaker} />
             </li>
           ))}
-          {EVENT.speakersTBC && (
+          {moreSpeakers && (
             <li className="tm-speaker tm-speaker-more">
               <div className="tm-speaker-photo" aria-hidden="true">
                 +
@@ -286,7 +287,7 @@ function Sponsors() {
                 {sponsors.map((sponsor) => (
                   <li key={sponsor.name}>
                     {/* Sponsor logos are drawn for light backgrounds, so they always sit on a white tile */}
-                    <a href={sponsor.url} target="_blank" rel="noreferrer">
+                    <a href={sponsor.url} target="_blank" rel="noopener noreferrer" title={sponsor.name}>
                       <img src={sponsor.image} alt={sponsor.name} loading="lazy" />
                     </a>
                   </li>
@@ -318,7 +319,13 @@ function Meetups() {
       <ul className="tm-meetups">
         {meetups.map((meetup) => (
           <li key={meetup.name}>
-            <img src={meetup.image} alt={meetup.name} title={meetup.name} loading="lazy" />
+            {meetup.url ? (
+              <a href={meetup.url} target="_blank" rel="noopener noreferrer" title={meetup.name}>
+                <img src={meetup.image} alt={meetup.name} loading="lazy" />
+              </a>
+            ) : (
+              <img src={meetup.image} alt={meetup.name} title={meetup.name} loading="lazy" />
+            )}
           </li>
         ))}
         <li className="tm-meetups-more">... and more</li>
