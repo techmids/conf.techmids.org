@@ -1,42 +1,53 @@
+// `url` is optional: the rebuilt site links the logo when it is set
 export const meetups = [
   {
     name: 'Fusion Events',
     image: '/meetups/fusion-events.png',
+    url: 'https://meetup.thefusionhub.co.uk/',
   },
   {
     name: 'Brum PHP',
     image: '/meetups/brum-php.png',
+    url: 'https://www.meetup.com/brumphp/',
   },
   {
     name: 'BrumJS',
     image: '/meetups/brum-js.png',
+    url: 'https://www.meetup.com/brum_js/',
   },
   {
     name: 'Golang Birmingham',
     image: '/meetups/golang.png',
+    url: 'https://www.meetup.com/golang-birmingham/',
   },
   {
     name: '#YouEqualTech Midlands',
     image: '/meetups/you-equal-tech.png',
+    url: 'https://www.meetup.com/you-equal-tech-midlands/',
   },
   {
     name: 'BrumAI',
     image: '/meetups/brumai.png',
+    url: 'https://www.meetup.com/brum-ai/',
   },
   {
     name: 'ManageOps',
     image: '/meetups/manageops.png',
+    url: 'https://www.meetup.com/manageops/',
   },
   {
     name: 'Birmingham .NET User Group',
     image: '/meetups/net.png',
+    url: 'https://www.meetup.com/birmingham-dotnet-and-xamarin-user-group/',
   },
   { name: 'codebar',
     image: '/meetups/codebar.png',
+    url: 'https://codebar.io/birmingham',
   },
   {
     name: 'Code Your Future',
     image: '/meetups/code-your-future.png',
+    url: 'https://codeyourfuture.io/',
   },
   {
     name: 'Angular Birmingham',
@@ -45,6 +56,7 @@ export const meetups = [
   {
     name: 'CSS Birmingham University',
     image: '/meetups/css.png',
+    url: 'https://cssbham.com/',
   },
     {
       name: 'OWASP Birmingham',
@@ -53,6 +65,7 @@ export const meetups = [
     {
       name: 'Hack the Midlands',
         image: '/meetups/htm.png',
+        url: 'https://hackthemidlands.com/',
     },
     {
       name: 'Women in Tech',

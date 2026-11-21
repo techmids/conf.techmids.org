@@ -1,36 +1,39 @@
-import { PageMeta } from '@/components/PageMeta'
+import { Layout } from '@/new/Layout'
+import { ScheduleBoard } from '@/new/ScheduleBoard'
+import { Eyebrow } from '@/new/ui'
+import { shortDate } from '@/new/data'
+import { EVENT, AVAILABLE_INFORMATION } from '../../event'
+import { OVERALL_START, OVERALL_END } from '../../schedule'
+import { clock } from '@/new/data'
 
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
-import { Schedule } from '@/components/Schedule';
-import {EVENT, AVAILABLE_INFORMATION} from "../../event";
-import { Sponsors } from '@/components/Sponsors';
-
-export default function Covid() {
-  
+export default function SchedulePage() {
   return (
-    <>
-      <PageMeta
-        path="/schedule"
-        noindex={!AVAILABLE_INFORMATION.scheduleAvailable}
-        title="Schedule - TechMids Conf"
-        description={`TechMids Conf is an all day, full stack conference on ${EVENT.date} Come along for a day of inspiring talks, social chatter and fun.`}
-      />
-      <Header />
-      <main id="Schedule">
-        {AVAILABLE_INFORMATION.scheduleAvailable ? (
-          <main>
-            <h1 className="text-4xl font-bold text-center my-8">Schedule</h1>
-            <Schedule/>
-            <Sponsors/>
-          </main>
-        ) : (
-          <h1 className="text-4xl font-bold text-center my-8">Schedule Coming Soon</h1>
-        )}
-        
-        
-      </main>
-      <Footer />
-    </>
+    <Layout
+      path="/schedule"
+      current="Schedule"
+      title="Schedule - TechMids Conf"
+      description={`TechMids Conf is an all day, full stack conference on ${EVENT.date} Come along for a day of inspiring talks, social chatter and fun.`}
+    >
+      <section className="tm-pagehead">
+        <div className="tm-wrap tm-wrap-wide">
+          <Eyebrow route="/schedule">
+            {shortDate()} · {clock(OVERALL_START)}–{clock(OVERALL_END)} · {EVENT.venue}
+          </Eyebrow>
+          <h1 className="tm-h1 tm-h1-page">{AVAILABLE_INFORMATION.scheduleAvailable ? 'Schedule' : 'Schedule Coming Soon'}</h1>
+          {AVAILABLE_INFORMATION.scheduleAvailable && (
+            <p className="tm-lede">
+              Your day will be composed of 30-45 minute sessions including plenty of time to chat, network and
+              move between talks. Three screens run side by side: tap <b>Pick</b> on the talks you want and
+              they collect under <b>My day</b>.
+            </p>
+          )}
+        </div>
+      </section>
+      {AVAILABLE_INFORMATION.scheduleAvailable && (
+        <div className="tm-wrap tm-wrap-wide tm-schedule-wrap">
+          <ScheduleBoard />
+        </div>
+      )}
+    </Layout>
   )
 }

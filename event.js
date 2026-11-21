@@ -18,7 +18,7 @@ export const EVENT = {
     titoId: 'tech-events-birmingham/techmids-conf-2026',
     CFPLink: "https://forms.gle/mhQxq1BuJFiqzxS6A",
     CFPOpen: false,
-    speakersTBC: true,
+    speakersTBC: false, // every talk slot on the schedule has a speaker
     capacity: 250,
     tagline: "",
     get edition() {
