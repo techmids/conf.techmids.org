@@ -6,6 +6,8 @@
 //    a 404 page or marked noindex, so new pages (and every /speakers/[speaker]
 //    page) are listed automatically. URLs match the canonical tags from
 //    src/components/PageMeta.jsx.
+// 3. The preview of the rebuilt site at /new also answers at /new/. Its pages
+//    are all noindex, so step 2 leaves them out of the sitemap.
 
 import fs from 'fs/promises'
 import path from 'path'
@@ -50,4 +52,18 @@ async function writeSitemap() {
     console.log(`postbuild: wrote sitemap.xml with ${urls.length} URLs`)
 }
 
+// The rebuilt site is previewed at /new. The export writes its homepage to
+// out/new.html; GitHub Pages serves that at /new but not at /new/, so a copy
+// goes to out/new/index.html to make the trailing-slash URL work as well.
+async function aliasPreviewIndex() {
+    const source = path.join(OUT_DIR, 'new.html')
+    try {
+        await fs.copyFile(source, path.join(OUT_DIR, 'new', 'index.html'))
+        console.log('postbuild: copied new.html to new/index.html')
+    } catch (error) {
+        if (error.code !== 'ENOENT') throw error
+    }
+}
+
+await aliasPreviewIndex()
 await writeSitemap()

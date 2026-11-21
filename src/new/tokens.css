@@ -1,0 +1,163 @@
+/* TechMids design tokens, scoped to the rebuilt site.
+   Source of truth: https://github.com/techmids/branding (assets/techmids-tokens.css).
+   Differences from the source: variables live on .tm-site (not :root) so the
+   current site is untouched, and dark mode follows the html.dark class that
+   _document.jsx already sets. Keep values in sync with the branding repo. */
+
+.tm-site {
+  /* ---- Primitives: Signal (brand yellow) ---- */
+  --signal-50:  #FFFFE0;
+  --signal-100: #FFFFB0;
+  --signal-200: #FFFF70;
+  --signal-300: #FFFF3D;
+  --signal-400: #FFFF00; /* THE brand colour */
+  --signal-500: #E5E200;
+  --signal-600: #B8B400;
+  --signal-700: #8A8600;
+  --signal-800: #6E6A00; /* yellow-family text on light, 5.2:1 on paper */
+  --signal-900: #4A4700;
+
+  /* ---- Primitives: Graphite (warm neutral) ---- */
+  --graphite-0:   #FFFFFF;
+  --graphite-50:  #F7F6F1; /* Paper */
+  --graphite-100: #EEEDE7;
+  --graphite-200: #DEDCD4;
+  --graphite-300: #C2C0B7;
+  --graphite-400: #A3A29B;
+  --graphite-500: #8F8D85;
+  --graphite-600: #6B6A64;
+  --graphite-700: #55544E;
+  --graphite-800: #2E2E2B;
+  --graphite-850: #1E1E1E; /* Coal */
+  --graphite-900: #181817;
+  --graphite-925: #111111; /* Night */
+  --graphite-950: #0A0A0A; /* Ink */
+
+  /* ---- Primitives: accents ---- */
+  --brick-300: #FF7A5C;  --brick-500: #D8452E;  --brick-600: #B93A26;
+  --canal-300: #7EA6FF;  --canal-500: #3E74F2;  --canal-600: #2E62E6;
+  --leaf-300:  #4CC38A;  --leaf-500:  #2A9A65;  --leaf-600:  #1F7A4D;
+
+  /* ---- Type ---- */
+  --font-display: "Bricolage Grotesque", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-text:    "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Martian Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Major third (1.25) scale, 16px base */
+  --text-2xs: 0.6875rem; /* 11 — spec labels */
+  --text-xs:  0.75rem;   /* 12 */
+  --text-sm:  0.875rem;  /* 14 */
+  --text-md:  1rem;      /* 16 — body */
+  --text-lg:  1.25rem;   /* 20 */
+  --text-xl:  1.5625rem; /* 25 */
+  --text-2xl: 1.9375rem; /* 31 */
+  --text-3xl: 2.4375rem; /* 39 */
+  --text-4xl: 3.0625rem; /* 49 */
+  --text-5xl: 3.8125rem; /* 61 */
+  --text-6xl: 4.75rem;   /* 76 */
+  --text-7xl: 6rem;      /* 96 */
+
+  --leading-tight: 1.05;
+  --leading-snug:  1.25;
+  --leading-body:  1.6;
+  --tracking-display: -0.03em;
+  --tracking-label:   0.08em;
+
+  /* ---- Space (4px base) ---- */
+  --space-0: 0;     --space-1: 4px;  --space-2: 8px;  --space-3: 12px;
+  --space-4: 16px;  --space-5: 24px; --space-6: 32px; --space-7: 48px;
+  --space-8: 64px;  --space-9: 96px; --space-10: 128px;
+
+  /* ---- Shape ---- */
+  --radius-xs: 2px;   /* tags, badges */
+  --radius-sm: 6px;   /* inputs, buttons */
+  --radius-md: 10px;  /* cards */
+  --radius-lg: 16px;  /* media, large panels */
+  --radius-pill: 999px;
+  --border-width: 1px;
+
+  /* ---- Brand angles ---- */
+  --angle-slant: -9deg; /* from the wordmark stems; use with skewX() */
+  --angle-tag: 5deg;    /* the rotated Conf/Events tag */
+
+  /* ---- Motion ---- */
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+
+  /* ---- Layout ---- */
+  --container: 76rem;
+  --container-prose: 40rem;
+}
+
+/* ---- Semantic tokens: LIGHT (default) ---- */
+.tm-site {
+  color-scheme: light;
+  --tm-bg:            var(--graphite-50);
+  --tm-surface:       var(--graphite-0);
+  --tm-surface-2:     var(--graphite-100);
+  --tm-surface-inverse: var(--graphite-950);
+  --tm-border:        var(--graphite-200);
+  --tm-border-strong: var(--graphite-950);
+
+  --tm-text:          #141414;
+  --tm-text-muted:    var(--graphite-700);
+  --tm-text-subtle:   var(--graphite-600);   /* large text / non-essential only */
+  --tm-text-inverse:  var(--graphite-50);
+
+  --tm-accent:        var(--signal-400);     /* fills only on light */
+  --tm-accent-hover:  var(--signal-500);
+  --tm-on-accent:     var(--graphite-950);
+  --tm-accent-text:   var(--signal-800);     /* when yellow-family text is needed */
+  --tm-highlight:     var(--signal-400);     /* marker highlight behind ink text */
+
+  --tm-link:          var(--tm-text);
+  --tm-link-underline: var(--signal-500);
+  --tm-focus:         var(--graphite-950);
+  --tm-focus-halo:    var(--signal-400);
+
+  --tm-info:    var(--canal-600);
+  --tm-success: var(--leaf-600);
+  --tm-danger:  var(--brick-600);
+  --tm-warning: var(--signal-800);
+
+  --tm-shadow: 0 1px 2px rgb(10 10 10 / .06), 0 8px 24px -12px rgb(10 10 10 / .18);
+  --tm-shadow-hard: 3px 3px 0 var(--graphite-950);
+  --tm-logo: var(--graphite-950);
+}
+
+/* ---- Semantic tokens: DARK ---- */
+html.dark .tm-site {
+  color-scheme: dark;
+  --tm-bg:            var(--graphite-925);
+  --tm-surface:       var(--graphite-900);
+  --tm-surface-2:     var(--graphite-850);
+  --tm-surface-inverse: var(--signal-400);
+  --tm-border:        var(--graphite-800);
+  --tm-border-strong: var(--graphite-400);
+
+  --tm-text:          #F2F1EC;
+  --tm-text-muted:    var(--graphite-400);
+  --tm-text-subtle:   var(--graphite-500);
+  --tm-text-inverse:  var(--graphite-950);
+
+  --tm-accent:        var(--signal-400);
+  --tm-accent-hover:  var(--signal-300);
+  --tm-on-accent:     var(--graphite-950);
+  --tm-accent-text:   var(--signal-400);
+  --tm-highlight:     var(--signal-400);
+
+  --tm-link:          var(--signal-400);
+  --tm-link-underline: rgb(255 255 0 / .4);
+  --tm-focus:         var(--signal-400);
+  --tm-focus-halo:    rgb(255 255 0 / .25);
+
+  --tm-info:    var(--canal-300);
+  --tm-success: var(--leaf-300);
+  --tm-danger:  var(--brick-300);
+  --tm-warning: var(--signal-400);
+
+  --tm-shadow: 0 0 0 1px rgb(255 255 255 / .04), 0 12px 32px -12px rgb(0 0 0 / .8);
+  --tm-shadow-hard: 3px 3px 0 var(--signal-400);
+  --tm-logo: var(--signal-400);
+}

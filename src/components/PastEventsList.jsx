@@ -1,4 +1,4 @@
-const pastEventMetadata = {
+export const pastEventMetadata = {
   "2022-10": {
     title: 'The inaugural TechMids Conf',
     imageUrl: '/gallery/audience.jpg',
