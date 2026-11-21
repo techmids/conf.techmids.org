@@ -693,7 +693,7 @@ const kevlinHenney = {
 
 const jessRose = {
     name: 'Jess Rose',
-    description: 'AI is Inevitable: Get on Board While You Still Can',
+    description: 'Keynote: AI is Inevitable: Get on Board While You Still Can',
     start: session8Start,
     end: session8End,
     session: ['JessRose'],
