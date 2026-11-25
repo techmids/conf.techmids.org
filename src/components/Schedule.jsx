@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Sessions } from '../../speakers';
 import { Schedule as schedule } from '../../schedule';
 import { EVENT } from '../../event';
+import { changeText, usePicks } from '../picks/usePicks';
 
 // Helper function to check if a time slot is currently active
 const isCurrentTimeSlot = (slot, parsedDate, today, timeIrl) => {
@@ -21,8 +22,6 @@ const isCurrentTimeSlot = (slot, parsedDate, today, timeIrl) => {
     );
 };
 
-// Picks are kept in this browser only (the site has no server).
-const PICKS_KEY = `techmids:picks:${EVENT.isoDate}`;
 const ROOMS = [
     ['screen3', 'Screen 3'],
     ['screen2', 'Screen 2'],
@@ -390,61 +389,28 @@ function MyDayView({ rows, parsedDate, today, timeIrl, picks, onToggle }) {
     );
 }
 
-const readSavedPicks = () => {
-    try {
-        const saved = JSON.parse(window.localStorage.getItem(PICKS_KEY));
-        return Array.isArray(saved) ? saved.filter((id) => typeof id === 'string') : [];
-    } catch {
-        return [];
-    }
-};
-
-// A share link carries the picks after the #, so they never reach a server
-const readSharedPicks = () => {
-    const match = window.location.hash.match(/^#picks=(.*)$/);
-    if (!match) return null;
-    try {
-        return match[1].split(',').filter(Boolean).map(decodeURIComponent);
-    } catch {
-        return null;
-    }
-};
+// Picks the schedule has changed under: who, and whether their talk moved or went
+const ChangeList = ({ changes }) => (
+    <ul className="my-2 list-disc pl-5">
+        {changes.map((change) => (
+            <li key={change.id}>
+                <span className="font-semibold">{change.who}</span>
+                {changeText(change)}
+            </li>
+        ))}
+    </ul>
+);
 
 // Main component with toggle logic
 export function Schedule() {
     const [view, setView] = useState('stacked'); // 'stacked' or 'combined'
     const [today, setToday] = useState('');
     const [timeIrl, setTimeIrl] = useState(0);
-    const [picks, setPicks] = useState([]);
-    const [sharedPicks, setSharedPicks] = useState(null); // someone else's picks, from a share link
-    const [canSave, setCanSave] = useState(false);
     const [shareNote, setShareNote] = useState('');
-
-    // Picks are read after the page loads: the exported HTML is the same for everyone
-    useEffect(() => {
-        setPicks(readSavedPicks());
-        setCanSave(true);
-        const showShared = () => {
-            const shared = readSharedPicks();
-            if (shared) {
-                setSharedPicks(shared);
-                setView('myday');
-            }
-        };
-        showShared();
-        // A share link opened while already on the page changes only the #
-        window.addEventListener('hashchange', showShared);
-        return () => window.removeEventListener('hashchange', showShared);
-    }, []);
-
-    useEffect(() => {
-        if (!canSave) return;
-        try {
-            window.localStorage.setItem(PICKS_KEY, JSON.stringify(picks));
-        } catch {
-            // Private browsing or storage full: picks last until the page closes
-        }
-    }, [picks, canSave]);
+    // Picks live in this browser only; reading, saving and share links are shared with the rebuilt site
+    const { picks, toggle: onToggle, isShared, clear, backToMine, saveShared, changes, dismissChanges, shareUrl } = usePicks({
+        onShared: () => setView('myday'),
+    });
 
     useEffect(() => {
         let timeoutId;
@@ -466,31 +432,11 @@ export function Schedule() {
     const pickable = rows.filter((row) => !row.shared);
     const allIds = pickable.flatMap((row) => row.options.map((o) => o.id));
     // Ignore picks for talks no longer on the schedule
-    const shownPicks = (sharedPicks ?? picks).filter((id) => allIds.includes(id));
+    const shownPicks = picks.filter((id) => allIds.includes(id));
     const pickedCount = pickable.filter((row) => row.options.some((o) => shownPicks.includes(o.id))).length;
 
-    // One pick per slot: picking a talk replaces the slot's pick, picking it again clears it
-    const togglePick = (row, id) => {
-        const slotIds = row.options.map((o) => o.id);
-        setPicks((current) => {
-            const rest = current.filter((p) => !slotIds.includes(p));
-            return current.includes(id) ? rest : [...rest, id];
-        });
-    };
-    const onToggle = sharedPicks ? undefined : togglePick;
-
-    const clearHash = () => window.history.replaceState(null, '', window.location.pathname + window.location.search);
-    const showMine = () => {
-        setSharedPicks(null);
-        clearHash();
-    };
-    const saveShared = () => {
-        setPicks(shownPicks);
-        showMine();
-    };
-
     const share = async () => {
-        const url = `${window.location.origin}${window.location.pathname}#picks=${shownPicks.map(encodeURIComponent).join(',')}`;
+        const url = shareUrl();
         try {
             if (navigator.share) {
                 await navigator.share({ title: `My ${EVENT.edition} picks`, url });
@@ -545,14 +491,32 @@ export function Schedule() {
                 </div>
 
                 <div className="flex flex-col items-center px-4 sm:px-6 lg:px-8 sm:m-8">
-                    {sharedPicks && (
+                    {!isShared && changes.length > 0 && (
+                        <div role="alert" className="w-full max-w-3xl rounded-lg border-2 border-black bg-brand-100 dark:border-brand-400 dark:bg-brand-950 p-3 text-sm text-brand-900 dark:text-brand-100">
+                            <p className="font-semibold">Please note the speaker line-up has changed since you last made your picks.</p>
+                            <ChangeList changes={changes} />
+                            <p>We&apos;ve taken {changes.length === 1 ? 'it' : 'them'} out of My day, so have another look and pick again for {changes.length === 1 ? 'that time' : 'those times'}.</p>
+                            <div className="mt-2">
+                                <button type="button" onClick={dismissChanges} className={`${buttonBaseClass} ${activeClass}`}>
+                                    Got it
+                                </button>
+                            </div>
+                        </div>
+                    )}
+                    {isShared && (
                         <div className="w-full max-w-3xl rounded-lg border border-black bg-brand-100 dark:border-brand-400 dark:bg-brand-950 p-3 text-sm text-brand-900 dark:text-brand-100">
                             <p className="font-semibold">You are looking at picks someone shared with you.</p>
+                            {changes.length > 0 && (
+                                <>
+                                    <p className="mt-2">Please note the speaker line-up has changed since this link was made, so these aren&apos;t included:</p>
+                                    <ChangeList changes={changes} />
+                                </>
+                            )}
                             <div className="mt-2 flex flex-wrap gap-2">
-                                <button type="button" onClick={saveShared} className={`${buttonBaseClass} ${activeClass}`}>
+                                <button type="button" onClick={() => saveShared(shownPicks)} className={`${buttonBaseClass} ${activeClass}`}>
                                     Save as my picks
                                 </button>
-                                <button type="button" onClick={showMine} className={`${buttonBaseClass} ${inactiveClass}`}>
+                                <button type="button" onClick={backToMine} className={`${buttonBaseClass} ${inactiveClass}`}>
                                     Back to my picks
                                 </button>
                             </div>
@@ -594,7 +558,7 @@ export function Schedule() {
                             onToggle={onToggle}
                         />
                     )}
-                    {!sharedPicks && (
+                    {!isShared && (
                         <div className="mt-6 w-full max-w-3xl text-sm text-brand-900 dark:text-brand-100">
                             <div className="flex flex-wrap items-center gap-2">
                                 <button
@@ -608,7 +572,7 @@ export function Schedule() {
                                 <button
                                     type="button"
                                     onClick={() => {
-                                        setPicks([]);
+                                        clear();
                                         setShareNote('');
                                     }}
                                     disabled={!shownPicks.length}

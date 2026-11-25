@@ -1,0 +1,28 @@
+// One-off for 2026: talk times as synced from schedule.js on 25 November 2026.
+// Backwards-compatibility fix: older picks and share links stored only a speaker id.
+export const BASELINE = {
+  SimonStevens: { start: '09:45', end: '10:30', who: 'Simon Stevens' },
+  EliHolderness: { start: '10:30', end: '11:15', who: 'Eli Holderness' },
+  MartinReynolds: { start: '11:15', end: '12:00', who: 'Martin Reynolds' },
+  TonyEdwards: { start: '13:00', end: '13:45', who: 'Tony Edwards' },
+  StevenTrotter: { start: '13:45', end: '14:30', who: 'Dr Steven Trotter' },
+  JimSeconde: { start: '15:00', end: '15:45', who: 'Jim Seconde' },
+  KevlinHenney: { start: '15:45', end: '16:30', who: 'Kevlin Henney' },
+  JessRose: { start: '16:30', end: '17:15', who: 'Jess Rose' },
+  BeckiFloyd: { start: '09:45', end: '10:30', who: 'Becki Floyd' },
+  MikeIrving: { start: '10:30', end: '11:15', who: 'Mike Irving' },
+  MikolajMaciejak: { start: '11:15', end: '12:00', who: 'Mikolaj Maciejak' },
+  CliffAgius: { start: '13:00', end: '13:45', who: 'Cliff Agius' },
+  SteveHeyes: { start: '13:45', end: '14:30', who: 'Steve Heyes' },
+  ColindaLatour: { start: '15:00', end: '15:45', who: 'Colinda Latour' },
+  AndyCarter: { start: '15:45', end: '16:30', who: 'Andy Carter' },
+  ShaunLawrence: { start: '16:30', end: '17:15', who: 'Shaun Lawrence' },
+  FaithSodipe: { start: '09:45', end: '10:30', who: 'Faith Sodipe' },
+  StefanCornea: { start: '10:30', end: '11:15', who: 'Stefan Cornea' },
+  EriolFox: { start: '11:15', end: '12:00', who: 'Eriol Fox' },
+  RobertCurran: { start: '13:00', end: '13:45', who: 'Robert Curran' },
+  EdaEren: { start: '13:45', end: '14:30', who: 'Eda Eren' },
+  MatheusGuimaraes: { start: '15:00', end: '15:45', who: 'Matheus Guimarães' },
+  SteveWade: { start: '15:45', end: '16:30', who: 'Steve Wade' },
+  LiamWestley: { start: '16:30', end: '17:15', who: 'Liam Westley' },
+}
