@@ -655,18 +655,24 @@ export const Sessions = {
         jobTitle: "Drupal Developer, Consultant and Speaker",
         bio: (
             <>
-                <p>{"Oliver is a Software Developer and Drupal expert with 19 years experience. He specialises in code quality, automated testing and test-driven development, is a Linux enthusiast and an advocate for open source software."}</p>
+                <p>{"Oliver is a Software Developer and Drupal expert with 19 years experience. He specialises in code quality, automated testing and test-driven development, and has given over 115 talks and workshops in 6 countries since 2012."}</p>
             </>
         ),
         talkTitle:
-            "To be confirmed",
+            "jj: another way to Git",
         description: (
             <>
-                <p>{"To be confirmed"}</p>
+                <p>{"Rebase, stash, reflog, detached HEAD. Git can do anything, but some days it makes you work for it. jj is a version control system that sits on top of your existing Git repos and asks for far less ceremony. See what your workflow looks like with no staging area and no branches."}</p>
+                <p>{"Git is a powerful tool, but some everyday workflows take more effort than they should."}</p>
+                <p>{"Rewriting history, splitting commits and recovering from mistakes usually means juggling the staging area, stashes and detached HEADs."}</p>
+                <p>{"jj (Jujutsu) is a version control system that offers another way to work, backed by the same Git repositories and forges you already use."}</p>
+                <p>{"You'll see how to work without branches, reshape commits, and undo anything."}</p>
+                <p>{"Each idea is compared with its Git equivalent, so you'll know where your existing knowledge still applies."}</p>
+                <p>{"You'll learn how jj can make version control easier, without leaving Git behind."}</p>
             </>
         ),
         image: OliverDavies,
-        website: "https://www.oliverdavies.uk/",
+        website: "https://www.oliverdavies.uk",
         github: "https://github.com/opdavies",
         devto: "https://dev.to/opdavies",
         sessionType: "Talk",
@@ -675,22 +681,28 @@ export const Sessions = {
     },
     "DanBeglin": {
         name: "Dan Beglin",
-        jobTitle: "Lead Software Engineer @ Griffiths Waite",
+        jobTitle: "Lead Developer and Consultant @ Kainos",
         bio: (
             <>
-                <p>{"Dan is currently Lead Software Engineer at Griffiths Waite, based in Birmingham. He focuses on providing technical solutions to the Financial Services industry and building software development teams that don’t hate their job. Dan generally works with Typescript, OracleDB and Azure. Outside of work, his particular interests are catching pokemon, woodwork and trying new whiskeys."}</p>
+                <p>{"Dan is a lead developer and consultant at Kainos, based in Birmingham. His focus is on building psychologically safe teams that deliver great projects. As a technical lead, Dan has spent the last decade working across full-stack TypeScript and Python for clients in both the private and public sectors."}</p>
+                <p>{"Outside of work, he enjoys reading history, tinkering with electronics, and adding new features to his smart home system; in the fifteen minutes of free time a week he gets with a toddler."}</p>
             </>
         ),
         talkTitle:
-            "To be confirmed",
+            "Spec Driven Development - How to stop vibe coding and start writing really good specs instead",
         description: (
             <>
-                <p>{"To be confirmed"}</p>
+                <p>{"AI is here to stay. But have we just become prompt monkeys instead of Developers? Spec Driven Development is a good way to get the best out of AI without vibe coding. Using frameworks like GitHub Spec-Kit to deep dive into creating a specification can help get a much more accurate output from LLMs"}</p>
+                <p>{"Large Language Models have completely changed software development in recent years - and I’m not entirely convinced it’s all been for the better. Code is quick to produce but so are bugs and technical debt. We can spin up apps faster than ever, but maintaining them is harder than ever. Building sustainable codebases whilst maintaining a quicker pace of output has been a challenge we’ve all struggled with."}</p>
+                <p>{"I think one of the answers is Spec Driven Development."}</p>
+                <p>{"Instead of focusing on the immediate task and writing a quick prompt to produce some code that’s tough to really review - Spec Driven Development takes an entirely different approach. 90% of the work is focusing on a much higher level, looking at a whole feature end to end, spending time refining what is needed. Then, the output is a low-level specification that an LLM can work through. The specifications you produced are kept, so you can throw away the code and try again with a different model to get different results."}</p>
+                <p>{"Through this talk, I’ll unpack the concept of Spec Driven Development and frameworks such as GitHub Spec-Kit which implement it. We’ll walk through how I’ve been using it with my team recently on real professional projects, how it’s changed the profile of the teams I build, and demo how I’ve been using it on personal projects such as a smart home chatbot. We will cover recommended approaches to keep the credit use down, and different pitfalls to avoid."}</p>
             </>
         ),
         image: DanBeglin,
         linkedin: "https://www.linkedin.com/in/dan-beglin/",
         github: "https://github.com/danbeglin",
+        x: "https://x.com/smarthomedan",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",

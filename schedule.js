@@ -481,6 +481,7 @@ const eriolFox = {
 
 const oliverDavies = {
     name: 'Oliver Davies',
+    description: 'jj: another way to Git',
     start: session2Start,
     end: session2End,
     session: ['OliverDavies'],
@@ -520,6 +521,7 @@ const steveWade = {
 
 const danBeglin = {
     name: 'Dan Beglin',
+    description: 'Spec Driven Development - How to stop vibe coding and start writing really good specs instead',
     start: session8Start,
     end: session8End,
     session: ['DanBeglin'],
