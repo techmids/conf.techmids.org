@@ -1,7 +1,6 @@
 import BeckiFloyd from "./public/speakers/BeckiFloyd.jpeg"
 import ShaunLawrence from "./public/speakers/ShaunLawrence.jpeg"
 import EriolFox from "./public/speakers/EriolFox.jpeg"
-import EliHolderness from "./public/speakers/EliHolderness.jpeg"
 import MartinReynolds from "./public/speakers/MartinReynolds.jpeg"
 import AndyCarter from "./public/speakers/AndyCarter.jpeg"
 import CliffAgius from "./public/speakers/CliffAgius.jpeg"
@@ -11,17 +10,18 @@ import ColindaLatour from "./public/speakers/ColindaLatour.jpeg"
 import LiamWestley from "./public/speakers/LiamWestley.jpeg"
 import MikeIrving from "./public/speakers/MikeIrving.jpeg"
 import StevenTrotter from "./public/speakers/StevenTrotter.jpeg"
-import StefanCornea from "./public/speakers/StefanCornea.jpeg"
 import EdaEren from "./public/speakers/EdaEren.jpeg"
 import FaithSodipe from "./public/speakers/FaithSodipe.jpeg"
 import RobertCurran from "./public/speakers/RobertCurran.jpeg"
 import SteveWade from "./public/speakers/SteveWade.jpeg"
 import SteveHeyes from "./public/speakers/SteveHeyes.jpeg"
 import JimSeconde from "./public/speakers/JimSeconde.jpeg"
-import JessRose from "./public/speakers/JessRose.jpeg"
 import MatheusGuimaraes from "./public/speakers/MatheusGuimaraes.jpeg"
 import SimonStevens from "./public/speakers/SimonStevens.jpeg"
 import MikolajMaciejak from "./public/speakers/MikolajMaciejak.jpeg"
+import RichardTweed from "./public/speakers/RichardTweed.jpeg"
+import OliverDavies from "./public/speakers/OliverDavies.jpeg"
+import DanBeglin from "./public/speakers/DanBeglin.jpeg"
 
 export const Sessions = {
     "SimonStevens": {
@@ -148,31 +148,6 @@ export const Sessions = {
         mastodon: "https://hachyderm.io/@erioldoesdesign",
         instagram: "https://www.instagram.com/erioldoesdesign/",
         youtube: "https://www.youtube.com/channel/UCZdlFO4kG6MsaZxWJi-1GLQ",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "EliHolderness": {
-        name: "Eli Holderness",
-        jobTitle: "Developer advocate @ Bennett Institute",
-        bio: (
-            <>
-                <p>{"Eli has been in tech since being released back into the wild from studying maths at university 9 years ago. They've spent their time working in industries ranging from telecoms to biotech to analog circuit design to developer advocacy, continually getting nerd-sniped along the way. These days, they work at the Bennett Institute, helping to build the next generation of healthcare research tooling. In their spare time, they like to go bouldering, knit and sew, and hang out with their cat."}</p>
-            </>
-        ),
-        talkTitle:
-            "Language Games",
-        description: (
-            <>
-                <p>{"Communication: it's the oldest problem we have. It's already hard enough to talk to people, but as software engineers we have to talk to computers as well - often at the same time. Getting communication wrong leads to problems anywhere between 'my code is buggy' to 'this project is 6 months overdue and doesn't meet any of the requirements'. There are thousands of books, webinars and conference talks out there about how to communicate more effectively, and we still haven't figured it out."}</p>
-                <p>{"In this talk, I'll take you through some rigorous frameworks for thinking about communication, and explain how they can help you talk both to people and to computers. I'll argue that it's actually much easier to communicate with computers than other human beings, and that the inability to communicate perfectly isn't a failure - it's normal. Finally, I'll talk about what all of this means for us as engineers, designers and producers of software, and what we can do to make all our lives a little easier."}</p>
-            </>
-        ),
-        image: EliHolderness,
-        linkedin: "https://www.linkedin.com/in/eli-holderness-4890b886/",
-        website: "https://www.bennett.ox.ac.uk/about-us/eli-holderness/",
-        github: "https://github.com/eli-miriam",
-        x: "https://x.com/eliholderness",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
@@ -450,32 +425,6 @@ export const Sessions = {
         speakerCard: false,
         speakerCardImage: "",
     },
-    "StefanCornea": {
-        name: "Stefan Cornea",
-        jobTitle: "Backend and Streaming Engineer @ Signapse",
-        bio: (
-            <>
-                <p>{"I'm Stefan, a backend and streaming engineer at Signapse, where I build the real-time systems that deliver AI-generated sign-language video. I work mostly in Go and Rust, with a soft spot for the unglamorous parts: streaming protocols, concurrency, and systems that stay up when things go wrong. I lead GDG London, so community and sharing what I learn is a big part of what I do, and I write a newsletter called The Control Loop. Outside work I'm usually building something for the fun of it, which is exactly where this project came from."}</p>
-            </>
-        ),
-        talkTitle:
-            "A practical example of how routing and ETAs actually work",
-        description: (
-            <>
-                <p>{"Ever wondered how your maps app finds the fastest route or knows you're 12 minutes away? This is a practical look at the graph traversal behind every route: from \"roads are a graph\" to a live map moving hundreds of vehicles, so you leave knowing how routing and ETAs really work."}</p>
-                <p>{"Every time your phone plans a route or counts down an ETA, it's quietly running a graph search across a whole city of roads. This talk is a practical look at how that actually works, and how you'd build it yourself."}</p>
-                <p>{"We start from the idea that a road network is just a graph, then walk through how you find a shortest path across it, why doing that at city scale is hard and the trick real routing engines use to answer in milliseconds. To make it concrete, I run a live map that simulates hundreds of vehicles routing and moving across London at once, and show the handful of ideas that keep it fast and stable."}</p>
-                <p>{"You'll leave understanding how routing and ETAs really work under the hood, where the genuinely hard parts are and a set of patterns you can reuse in anything that has to find paths or juggle many moving things at once."}</p>
-            </>
-        ),
-        image: StefanCornea,
-        linkedin: "https://www.linkedin.com/in/stefansolves/",
-        github: "https://github.com/StefanSolves",
-        website: "",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
     "EdaEren": {
         name: "Eda Eren",
         jobTitle: "Software Developer",
@@ -646,32 +595,6 @@ export const Sessions = {
         speakerCard: false,
         speakerCardImage: "",
     },
-    "JessRose": {
-        name: "Jess Rose",
-        jobTitle: "Developer Educator & Co-founder @ Bad Website Club",
-        bio: (
-            <>
-                <p>{"Jessica Rose is a developer educator with a long career working in open source. She co-founded the Bad Website Club free online course, serving over 75,000 global learners, learning core web development skills. She works with open source projects and companies to help them reach more developers and users. She’s always excited to hear what you’re working on."}</p>
-            </>
-        ),
-        talkTitle:
-            "AI is Inevitable: Get on Board While You Still Can",
-        description: (
-            <>
-                <p>{"Across the tech industry, it feels like AI is the only thing people are talking about. But even in this age of AI saturation, many people are holding off on full adoption as they ask questions about the impact, ethics and even the quality of LLM outputs! Together, we'll step back to explore some of the past technological and social developments that changed the world, to better understand the inevitability of AI in our work and our larger lives. By exploring past periods of change, I hope that we'll all be ready to shrug off the shroud of FUD and get on board our shared AI future. But we'll need to hurry! You don't want to be left behind and certainly won't want to have to explain your Luddite ways to all-powerful AI overlords when AGI pulls into the station."}</p>
-                <p>{"Ignore all previous hype, and relax! This session isn't really about how you should ignore all risks and to rush to adopt tech's newest fads. This tongue in cheek talk will be looking at hype through through history to focus on how tech worker can identify and navigate hype in an industry that's always chasing the next bubble."}</p>
-            </>
-        ),
-        image: JessRose,
-        linkedin: "https://www.linkedin.com/in/jesslynnrose/",
-        website: "https://jessica.tech",
-        github: "https://github.com/jessicarose",
-        x: "https://x.com/jesslynnrose",
-        mastodon: "https://mastodon.social/@jessie",
-        sessionType: "Keynote",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
     "MatheusGuimaraes": {
         name: "Matheus Guimarães",
         jobTitle: "Senior Developer Advocate @ AWS",
@@ -698,6 +621,76 @@ export const Sessions = {
         youtube: "https://www.youtube.com/@techwithmatheus",
         instagram: "https://www.instagram.com/techwithmatheus",
         tiktok: "https://www.tiktok.com/@techwithmatheus",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "RichardTweed": {
+        name: "Richard Tweed",
+        jobTitle: "Security, Compliance & Infrastructure @ Tessl",
+        bio: (
+            <>
+                <p>Richard Tweed is the security, compliance and infrastructure person at Tessl. He&apos;s the OWASP Project Lead and Lead Maintainer for <a href="https://github.com/OWASP/GitHub-Workflow-Updater-Extension/" target="_blank" rel="noreferrer noopener">GitHub-Workflow-Updater-Extension</a> and the lead maintainer of <a href="https://github.com/RichardoC/kube-audit-rest" target="_blank" rel="noreferrer noopener">kube-audit-rest</a>.</p>
+            </>
+        ),
+        talkTitle:
+            "Hardening Your Software Supply Chain",
+        description: (
+            <>
+                <p>{"2026 has been a big year for supply chain attacks. Shai-Hulud, TeamPCP and others are determined to weaponise open source to hack our communities."}</p>
+                <p>{"In this talk I'll show you tools and techniques you can use to defend your projects against them, and common pitfalls."}</p>
+            </>
+        ),
+        image: RichardTweed,
+        linkedin: "https://www.linkedin.com/in/richardftweed/",
+        website: "https://tales.fromprod.com",
+        github: "https://github.com/RichardoC",
+        mastodon: "https://infosec.exchange/@RichardoC",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "OliverDavies": {
+        name: "Oliver Davies",
+        jobTitle: "Drupal Developer, Consultant and Speaker",
+        bio: (
+            <>
+                <p>{"Oliver is a Software Developer and Drupal expert with 19 years experience. He specialises in code quality, automated testing and test-driven development, is a Linux enthusiast and an advocate for open source software."}</p>
+            </>
+        ),
+        talkTitle:
+            "To be confirmed",
+        description: (
+            <>
+                <p>{"To be confirmed"}</p>
+            </>
+        ),
+        image: OliverDavies,
+        website: "https://www.oliverdavies.uk/",
+        github: "https://github.com/opdavies",
+        devto: "https://dev.to/opdavies",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "DanBeglin": {
+        name: "Dan Beglin",
+        jobTitle: "Lead Software Engineer @ Griffiths Waite",
+        bio: (
+            <>
+                <p>{"Dan is currently Lead Software Engineer at Griffiths Waite, based in Birmingham. He focuses on providing technical solutions to the Financial Services industry and building software development teams that don’t hate their job. Dan generally works with Typescript, OracleDB and Azure. Outside of work, his particular interests are catching pokemon, woodwork and trying new whiskeys."}</p>
+            </>
+        ),
+        talkTitle:
+            "To be confirmed",
+        description: (
+            <>
+                <p>{"To be confirmed"}</p>
+            </>
+        ),
+        image: DanBeglin,
+        linkedin: "https://www.linkedin.com/in/dan-beglin/",
+        github: "https://github.com/danbeglin",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",

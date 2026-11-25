@@ -86,6 +86,15 @@ export const SOCIALS = {
       </svg>
     ),
   },
+  devto: {
+    label: 'DEV',
+    url: asURL('https://dev.to/'),
+    Icon: (props) => (
+      <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" {...props}>
+        <path fillRule="evenodd" clipRule="evenodd" d="M3 3h18a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm1.5 5.5v7h2.2c1.6 0 2.6-1 2.6-2.5v-2c0-1.5-1-2.5-2.6-2.5H4.500zm1.6 1.5h.6c.6 0 1 .4 1 1v2c0 .6-.4 1-1 1h-.6v-4zm4.700-1.500v7h3.500v-1.500h-1.900v-1.300h1.500v-1.500h-1.500v-1.200h1.900V8.500h-3.500zm4.300 0 1.700 7h1.600l1.700-7h-1.700l-.8 4.200-.800-4.200h-1.700z" />
+      </svg>
+    ),
+  },
   tiktok: {
     label: 'TikTok',
     url: asURL('https://www.tiktok.com/@'),

@@ -479,12 +479,11 @@ const eriolFox = {
     session: ['EriolFox'],
 }
 
-const stefanCornea = {
-    name: 'Stefan Cornea',
-    description: 'A practical example of how routing and ETAs actually work',
+const oliverDavies = {
+    name: 'Oliver Davies',
     start: session2Start,
     end: session2End,
-    session: ['StefanCornea'],
+    session: ['OliverDavies'],
 }
 
 const robertCurran = {
@@ -519,12 +518,11 @@ const steveWade = {
     session: ['SteveWade'],
 }
 
-const liamWestley = {
-    name: 'Liam Westley',
-    description: 'The Secret Life of Programmers',
+const danBeglin = {
+    name: 'Dan Beglin',
     start: session8Start,
     end: session8End,
-    session: ['LiamWestley'],
+    session: ['DanBeglin'],
 }
 
 const screen1Schedule = {
@@ -536,7 +534,7 @@ const screen1Schedule = {
     timeSlots: [
         welcome,
         faithSodipe,
-        stefanCornea,
+        oliverDavies,
         eriolFox,
         lunch,
         robertCurran,
@@ -544,17 +542,17 @@ const screen1Schedule = {
         afternoonBreak,
         matheusGuimaraes,
         steveWade,
-        liamWestley,
+        danBeglin,
     ]
 }
 
 
-const beckiFloyd = {
-    name: 'Becki Floyd',
-    description: 'From Hackathon to Parliament: Using Research and AI to Fix How Councils House People (Case study session)',
+const richardTweed = {
+    name: 'Richard Tweed',
+    description: 'Hardening Your Software Supply Chain',
     start: session1Start,
     end: session1End,
-    session: ['BeckiFloyd'],
+    session: ['RichardTweed'],
 }
 
 const andyCarter = {
@@ -621,7 +619,7 @@ const screen2Schedule = {
     dayName: "Day 1",
     timeSlots: [
         welcome,
-        beckiFloyd,
+        richardTweed,
         mikeIrving,
         goldmanSachsTalk,
         lunch,
@@ -651,12 +649,12 @@ const martinReynolds = {
     session: ['MartinReynolds'],
 }
 
-const eliHolderness = {
-    name: 'Eli Holderness',
-    description: 'Language Games',
+const beckiFloyd = {
+    name: 'Becki Floyd',
+    description: 'From Hackathon to Parliament: Using Research and AI to Fix How Councils House People (Case study session)',
     start: session2Start,
     end: session2End,
-    session: ['EliHolderness'],
+    session: ['BeckiFloyd'],
 }
 
 const tonyEdwards = {
@@ -691,12 +689,12 @@ const kevlinHenney = {
     session: ['KevlinHenney'],
 }
 
-const jessRose = {
-    name: 'Jess Rose',
-    description: 'Keynote: AI is Inevitable: Get on Board While You Still Can',
+const liamWestley = {
+    name: 'Liam Westley',
+    description: 'The Secret Life of Programmers',
     start: session8Start,
     end: session8End,
-    session: ['JessRose'],
+    session: ['LiamWestley'],
 }
 
 const screen3Schedule = {
@@ -708,7 +706,7 @@ const screen3Schedule = {
     timeSlots: [
         welcome,
         goldmanSachsKeynote,
-        eliHolderness,
+        beckiFloyd,
         martinReynolds,
         lunch,
         tonyEdwards,
@@ -716,7 +714,7 @@ const screen3Schedule = {
         afternoonBreak,
         jimSeconde,
         kevlinHenney,
-        jessRose,
+        liamWestley,
     ]
 }
 
