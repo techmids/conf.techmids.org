@@ -659,12 +659,12 @@ const beckiFloyd = {
     session: ['BeckiFloyd'],
 }
 
-const tonyEdwards = {
-    name: 'Tony Edwards',
-    description: 'How to be a Hip-Hop MC. . . P',
+const bruceLawson = {
+    name: 'Bruce Lawson',
+    description: 'The Goose and the Common, or Bollocks to Big Tech',
     start: session4Start,
     end: session4End,
-    session: ['TonyEdwards'],
+    session: ['BruceLawson'],
 }
 
 const stevenTrotter = {
@@ -711,7 +711,7 @@ const screen3Schedule = {
         beckiFloyd,
         martinReynolds,
         lunch,
-        tonyEdwards,
+        bruceLawson,
         stevenTrotter,
         afternoonBreak,
         jimSeconde,

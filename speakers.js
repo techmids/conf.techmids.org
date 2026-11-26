@@ -4,7 +4,6 @@ import EriolFox from "./public/speakers/EriolFox.jpeg"
 import MartinReynolds from "./public/speakers/MartinReynolds.jpeg"
 import AndyCarter from "./public/speakers/AndyCarter.jpeg"
 import CliffAgius from "./public/speakers/CliffAgius.jpeg"
-import TonyEdwards from "./public/speakers/TonyEdwards.jpeg"
 import KevlinHenney from "./public/speakers/KevlinHenney.jpeg"
 import ColindaLatour from "./public/speakers/ColindaLatour.jpeg"
 import LiamWestley from "./public/speakers/LiamWestley.jpeg"
@@ -22,6 +21,7 @@ import MikolajMaciejak from "./public/speakers/MikolajMaciejak.jpeg"
 import RichardTweed from "./public/speakers/RichardTweed.jpeg"
 import OliverDavies from "./public/speakers/OliverDavies.jpeg"
 import DanBeglin from "./public/speakers/DanBeglin.jpeg"
+import BruceLawson from "./public/speakers/BruceLawson.jpeg"
 
 export const Sessions = {
     "SimonStevens": {
@@ -235,39 +235,6 @@ export const Sessions = {
         website: "https://www.cliffordagius.co.uk/",
         github: "https://github.com/CliffAgius",
         x: "https://x.com/CliffordAgius",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "TonyEdwards": {
-        name: "Tony Edwards",
-        jobTitle: "Lead Mobile Developer @ Sapphire Holidays",
-        bio: (
-            <>
-                <p>{"Tony is a full time Mobile developer, part time cat carer, occasional rapper, and reluctant Morris Dancer. When he's not talking at events, organising conferences, or tinkering with code, you'll find him tucked away in a sunny corner of the garden tending this years vegetables or preparing for next years."}</p>
-                <p>{"With a background in community events management, a multi award winning career in the education sector, and a long history of making a fool of himself, Tony's sessions are sure to engage the audience, teach you something new, and spark conversation."}</p>
-            </>
-        ),
-        talkTitle:
-            "How to be a Hip-Hop MC. . . P",
-        description: (
-            <>
-                <p>{"Admit it. You've always wanted to become a hip-hop MC. Well. . . I have some good news. Shaping your organisations data into something consumable by an LLM is exactly the same thing. . . kind of. This talk will blur the lines between between forming a rap super group and crafting the perfect MCP."}</p>
-                <p>{"The recipe for becoming a good hip-hop group is simple enough. A strong name. A solid flow. And flawless features. These will get you started."}</p>
-                <p>{"The same is surprisingly true for MCPs."}</p>
-                <p>{"In this talk, Tony Edwards will walk the audience through the refinement of an MCP (Model Context Protocol) server. Starting with something that is, quite frankly useless, and tuning it into the ultimate AI assistant plus the tooling that sits behind it. As a continuation of his Beats, Rhymes, and Neural Nets side project, the talk will look at creating a server that follows the protocol to make the most out of the standard through the lens of a hip-hop supergroup."}</p>
-                <p>{"Whilst the session is light-hearted, the lessons within are practical and real. "}</p>
-                <p>{"After taking 25 years of data from around the Sapphire Holidays group and getting it into secure, locally hosted LLMs (Large Language Model), Tony has learned a thing or two. Standing them alongside Azure Foundry, Microsoft's hosted AI platform, offers a comparison between the high upfront cost of the DIY option against the ongoing cost of an off the shelf enterprise offering. Spoiler alert. They can both quickly turn into fun time sinks."}</p>
-                <p>{"If you are thinking of incorporating LLMs into your business or side project, you'll walk away from this session with a grounded overview of two of the main options, next steps in opening up your data in a sensible way regardless of tech stack, and quite possibly a desire to form a rap ensemble."}</p>
-            </>
-        ),
-        image: TonyEdwards,
-        linkedin: "https://www.linkedin.com/in/tonyedwardspz/",
-        website: "https://tonyedwardspz.co.uk/",
-        github: "https://github.com/tonyedwardspz",
-        bluesky: "https://bsky.app/profile/tonyedwardspz.bsky.social",
-        x: "https://x.com/tonyedwardspz",
-        youtube: "https://www.youtube.com/channel/UCeUTkW7-_b0vbhV04SRb_2A",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
@@ -675,6 +642,31 @@ export const Sessions = {
         website: "https://www.oliverdavies.uk",
         github: "https://github.com/opdavies",
         devto: "https://dev.to/opdavies",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    "BruceLawson": {
+        name: "Bruce Lawson",
+        jobTitle: "Technical Communications Officer @ Vivaldi",
+        bio: (
+            <>
+                <p>{"Bruce works as Technical Communications Officer for Vivaldi. When not slaving over a hot keyboard, he's slaving over a hot music keyboard/ guitar/ microphone with his band the cruellest months, or being a fashion thought-leader."}</p>
+            </>
+        ),
+        talkTitle:
+            "The Goose and the Common, or Bollocks to Big Tech",
+        description: (
+            <>
+                <p>{"Bollocks to Big Tech."}</p>
+            </>
+        ),
+        linkedin: "https://www.linkedin.com/in/bruce-lawson-34b44/",
+        website: "https://www.brucelawson.co.uk",
+        github: "https://github.com/brucelawson",
+        bluesky: "https://bsky.app/profile/brucel.bsky.social",
+        mastodon: "https://social.vivaldi.net/@brucelawson",
+        image: BruceLawson,
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
