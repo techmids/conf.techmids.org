@@ -662,8 +662,8 @@ const beckiFloyd = {
 const bruceLawson = {
     name: 'Bruce Lawson',
     description: 'The Goose and the Common, or Bollocks to Big Tech',
-    start: session4Start,
-    end: session4End,
+    start: session6Start,
+    end: session6End,
     session: ['BruceLawson'],
 }
 
@@ -678,8 +678,8 @@ const stevenTrotter = {
 const jimSeconde = {
     name: 'Jim Seconde',
     description: 'Slop-Driven Development',
-    start: session6Start,
-    end: session6End,
+    start: session4Start,
+    end: session4End,
     session: ['JimSeconde'],
 }
 
@@ -711,10 +711,10 @@ const screen3Schedule = {
         beckiFloyd,
         martinReynolds,
         lunch,
-        bruceLawson,
+        jimSeconde,
         stevenTrotter,
         afternoonBreak,
-        jimSeconde,
+        bruceLawson,
         kevlinHenney,
         liamWestley,
     ]
