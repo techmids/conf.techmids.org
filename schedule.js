@@ -513,7 +513,7 @@ const matheusGuimaraes = {
 
 const leoRiviera = {
     name: 'Leo Riviera',
-    description: 'Build Software, Not Slopware',
+    description: 'Build Software, Not Slopware: How to Get LLMs to Do Your Bidding',
     start: session6Start,
     end: session6End,
     session: ['LeoRiviera'],
