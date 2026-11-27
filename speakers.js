@@ -1,7 +1,6 @@
 import BeckiFloyd from "./public/speakers/BeckiFloyd.jpeg"
 import ShaunLawrence from "./public/speakers/ShaunLawrence.jpeg"
 import EriolFox from "./public/speakers/EriolFox.jpeg"
-import MartinReynolds from "./public/speakers/MartinReynolds.jpeg"
 import AndyCarter from "./public/speakers/AndyCarter.jpeg"
 import CliffAgius from "./public/speakers/CliffAgius.jpeg"
 import KevlinHenney from "./public/speakers/KevlinHenney.jpeg"
@@ -22,6 +21,7 @@ import RichardTweed from "./public/speakers/RichardTweed.jpeg"
 import OliverDavies from "./public/speakers/OliverDavies.jpeg"
 import DanBeglin from "./public/speakers/DanBeglin.jpeg"
 import BruceLawson from "./public/speakers/BruceLawson.jpeg"
+import LeoRiviera from "./public/speakers/LeoRiviera.jpeg"
 
 export const Sessions = {
     "SimonStevens": {
@@ -148,32 +148,6 @@ export const Sessions = {
         mastodon: "https://hachyderm.io/@erioldoesdesign",
         instagram: "https://www.instagram.com/erioldoesdesign/",
         youtube: "https://www.youtube.com/channel/UCZdlFO4kG6MsaZxWJi-1GLQ",
-        sessionType: "Talk",
-        speakerCard: false,
-        speakerCardImage: "",
-    },
-    "MartinReynolds": {
-        name: "Martin Reynolds",
-        jobTitle: "Field CTO @ Harness",
-        bio: (
-            <>
-                <p>{"Martin Reynolds is Field CTO at Harness and Community Director for EngineeringX, a community of senior engineering leaders focused on developer experience and engineering excellence. He's spent 30+ years in software development, architecture, and delivery, including building and scaling the first DevOps function at Advanced. He's a recognised voice on DevOps, DevSecOps, and developer experience, with commentary featured in The New Stack and LeadDev, and he co-hosts ShipTalk, a podcast that breaks down the biggest headlines in AI, DevOps, and software delivery every other week. He talks a lot about the gap between how fast we ship and how safely we ship - and he's fairly convinced most of us aren't as far ahead as we think."}</p>
-            </>
-        ),
-        talkTitle:
-            "Who Approved This PR? Oh Right, Nobody Did.",
-        description: (
-            <>
-                <p>{"In July 2026, OpenAI admitted that two of its own AI models broke out of a test sandbox, reached the open internet, and hacked Hugging Face, on their own, during an internal red-team exercise. The same week, OpenAI, Anthropic, and Google all shipped repository-wide coding agents that run unsupervised for 30-60 steps and rewrite hundreds of files at a time."}</p>
-                <p>{"We spent twenty years building rigor around human-written code: review, testing, security scanning, staged rollouts, audit trails, and rollback. Most of it wasn't optional — it was the price of admission for shipping software an organization could actually trust."}</p>
-                <p>{"Then we handed the keys to autonomous agents and skipped nearly every one of those steps."}</p>
-                <p>{"This talk is about the widening gap between how fast we're building agents and how little we're governing them, and why that gap is now the biggest operational risk in software delivery. We'll walk through real, recent incidents (not hypotheticals), talk about the uncomfortable difference between autonomy and authority, and dig into what a real delivery lifecycle for agents needs to look like: evaluation before merge, policy at deploy time, and a trace of what an agent actually did once it went live."}</p>
-                <p>{"No product pitches. No slideware fantasy architecture. Just an honest look at what's breaking right now, why it's breaking, and what engineering and platform teams need to put in place before the next \"unprecedented cyber incident\" happens to them."}</p>
-            </>
-        ),
-        image: MartinReynolds,
-        linkedin: "https://www.linkedin.com/in/martinreynolds/",
-        website: "",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",
@@ -695,6 +669,32 @@ export const Sessions = {
         linkedin: "https://www.linkedin.com/in/dan-beglin/",
         github: "https://github.com/danbeglin",
         x: "https://x.com/smarthomedan",
+        sessionType: "Talk",
+        speakerCard: false,
+        speakerCardImage: "",
+    },
+    // TODO: stub - fill in bio, talk, photo and links once confirmed
+    "LeoRiviera": {
+        name: "Leo Riviera",
+        jobTitle: "Head of Platform Engineering @ Foundational",
+        bio: (
+            <>
+                <p>{"Leo is Head of Platform Engineering at space-tech startup Foundational. Across fintech, healthtech and spacetech, he's built payments infrastructure at Monzo, NHS-facing software used by over 410 UK schools, and a satellite laser ranging platform, with a particular interest in developer experience."}</p>
+                <p>{"Away from work, Leo organises codebar's West London chapter, helping people from underrepresented backgrounds into tech."}</p>
+            </>
+        ),
+        talkTitle:
+            "Build Software, Not Slopware",
+        description: (
+            <>
+                <p>{"AI coding assistants can write code faster than any team can review it. The problem is that they rarely write it the way your team would. Every codebase has its own conventions, patterns and unwritten rules, and when an LLM ignores them, you end up with slopware: code that works, but slowly erodes the consistency that makes a codebase maintainable."}</p>
+                <p>{"This talk introduces a practical approach to fixing that. You will see a set of skills that extract the defining traits of an existing codebase, from naming and structure to architectural patterns and error handling. Engineers can then review those traits and propose their own, so the result reflects how the team actually wants to build. Once codified, the traits give an LLM what it needs to enforce your conventions on every new pull request."}</p>
+                <p>{"You will leave knowing how to surface the implicit conventions already living in your codebase, combine extracted traits with human-proposed ones, use those traits to keep AI-assisted and human-written PRs consistent, and turn tribal knowledge into something both people and machines can follow."}</p>
+                <p>{"If you are using AI to write code, or reviewing code written by it, this talk will show you how to keep your codebase recognisably yours."}</p>
+            </>
+        ),
+        image: LeoRiviera,
+        linkedin: "https://www.linkedin.com/in/leoriviera/",
         sessionType: "Talk",
         speakerCard: false,
         speakerCardImage: "",

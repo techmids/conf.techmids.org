@@ -511,6 +511,14 @@ const matheusGuimaraes = {
     session: ['MatheusGuimaraes'],
 }
 
+const leoRiviera = {
+    name: 'Leo Riviera',
+    description: 'Build Software, Not Slopware',
+    start: session6Start,
+    end: session6End,
+    session: ['LeoRiviera'],
+}
+
 const steveWade = {
     name: 'Steve Wade',
     description: 'The Killer Question: How One Sentence Can Transform Your Engineering Career',
@@ -542,7 +550,7 @@ const screen1Schedule = {
         robertCurran,
         edaEren,
         afternoonBreak,
-        matheusGuimaraes,
+        leoRiviera,
         steveWade,
         danBeglin,
     ]
@@ -628,7 +636,7 @@ const screen2Schedule = {
         cliffAgius,
         steveHeyes,
         afternoonBreak,
-        colindaLatour,
+        matheusGuimaraes,
         andyCarter,
         shaunLawrence,
     ]
@@ -643,14 +651,6 @@ const goldmanSachsKeynote = {
     session: ['SimonStevens'],
 }
 
-const martinReynolds = {
-    name: 'Martin Reynolds',
-    description: 'Who Approved This PR? Oh Right, Nobody Did.',
-    start: session3Start,
-    end: session3End,
-    session: ['MartinReynolds'],
-}
-
 const beckiFloyd = {
     name: 'Becki Floyd',
     description: 'From Hackathon to Parliament: Using Research and AI to Fix How Councils House People (Case study session)',
@@ -662,8 +662,8 @@ const beckiFloyd = {
 const bruceLawson = {
     name: 'Bruce Lawson',
     description: 'The Goose and the Common, or Bollocks to Big Tech',
-    start: session6Start,
-    end: session6End,
+    start: session3Start,
+    end: session3End,
     session: ['BruceLawson'],
 }
 
@@ -714,7 +714,7 @@ const screen3Schedule = {
         jimSeconde,
         stevenTrotter,
         afternoonBreak,
-        martinReynolds,
+        colindaLatour,
         kevlinHenney,
         liamWestley,
     ]
