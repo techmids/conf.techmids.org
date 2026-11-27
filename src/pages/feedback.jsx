@@ -6,7 +6,7 @@ export default function FeedbackRedirect() {
   const router = useRouter()
 
   useEffect(() => {
-    router.replace("https://forms.gle/XVHfMHjFDTQjRBsH6")
+    router.replace("https://forms.gle/u9TvFsCvXUMPjN169")
   }, [router])
 
   return <PageMeta path="/feedback" noindex />
