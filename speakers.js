@@ -684,7 +684,7 @@ export const Sessions = {
             </>
         ),
         talkTitle:
-            "Build Software, Not Slopware",
+            "Build Software, Not Slopware: How to Get LLMs to Do Your Bidding",
         description: (
             <>
                 <p>{"AI coding assistants can write code faster than any team can review it. The problem is that they rarely write it the way your team would. Every codebase has its own conventions, patterns and unwritten rules, and when an LLM ignores them, you end up with slopware: code that works, but slowly erodes the consistency that makes a codebase maintainable."}</p>
